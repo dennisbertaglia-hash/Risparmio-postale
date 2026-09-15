@@ -1,0 +1,715 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body {
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Display",
+    "SF Pro Text",
+    Arial,
+    sans-serif;
+
+  color: #111111;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   PAGINA PRINCIPALE
+   ========================================= */
+
+.top-header {
+  position: relative;
+  padding: 35px 50px 5px;
+}
+
+
+.back-button {
+  width: 95px;
+  height: 95px;
+
+  padding: 0;
+
+  border: 1.5px solid #222;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.back-button svg {
+  width: 52px;
+  height: 52px;
+}
+
+
+.top-header h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -1px;
+
+  margin: 35px 0 10px;
+}
+
+
+.top-icons {
+  position: absolute;
+
+  right: 48px;
+  top: 37px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  font-size: 29px;
+}
+
+
+.eye-icon {
+  width: 47px;
+  height: 47px;
+}
+
+
+.question {
+  width: 35px;
+  height: 35px;
+
+  border: 2px solid #111;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 23px;
+}
+
+
+main {
+  padding: 12px 50px 60px;
+}
+
+
+.summary-card {
+  width: calc(100% - 32px);
+
+  background: #eef7ff;
+
+  border-radius: 28px;
+
+  padding: 62px 70px;
+
+  margin-top: 45px;
+
+  min-height: 470px;
+}
+
+
+.summary-card h2 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+.summary-item {
+  margin-top: 88px;
+}
+
+
+.summary-item.second {
+  margin-top: 52px;
+}
+
+
+.summary-label {
+  font-size: 31px;
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+
+.summary-value {
+  margin-top: 7px;
+
+  font-size: 39px;
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+
+.section-title {
+  margin: 48px 0 40px;
+
+  font-size: 40px;
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: -0.7px;
+}
+
+
+.operations {
+  display: flex;
+
+  gap: 65px;
+
+  align-items: flex-start;
+}
+
+
+.operation-button {
+  width: 175px;
+
+  min-height: 205px;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+
+.operation-icon {
+  width: 170px;
+  height: 170px;
+
+  margin: 0 auto;
+}
+
+
+.operation-icon svg {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+
+/*
+   IMPORTANTISSIMO:
+   testo nero ma NON grassetto
+*/
+
+.operation-button span {
+  display: block;
+
+  margin-top: 25px;
+
+  font-size: 27px;
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  color: #111111;
+}
+
+
+.your-bonds {
+  margin-top: 58px;
+  margin-bottom: 35px;
+}
+
+
+/* =========================================
+   FILTRI
+   ========================================= */
+
+.filtri {
+  display: flex;
+
+  gap: 28px;
+
+  width: max-content;
+
+  margin-left: -25px;
+
+  margin-bottom: 65px;
+}
+
+
+.filtro {
+  height: 70px;
+
+  padding: 0 35px;
+
+  border: 2.5px solid #0759c9;
+
+  border-radius: 38px;
+
+  background: #ffffff;
+
+  color: #0759c9;
+
+  font-family: inherit;
+
+  font-size: 29px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+.filtro.prodotto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 17px;
+}
+
+
+.freccia-down {
+  width: 17px;
+  height: 17px;
+
+  border-right: 4px solid #0759c9;
+  border-bottom: 4px solid #0759c9;
+
+  transform: rotate(45deg);
+
+  margin-top: -8px;
+}
+
+
+.periodo {
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+
+/* =========================================
+   ELENCO BUONI
+   ========================================= */
+
+.buono {
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 170px;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid #eeeeee;
+
+  cursor: pointer;
+}
+
+
+.buono-icon {
+  flex: 0 0 72px;
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+
+  background: #eef7ff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 25px;
+}
+
+
+.buono-icon svg {
+  width: 47px;
+  height: 47px;
+}
+
+
+.buono-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+
+.data {
+  color: #777777;
+
+  font-size: 25px;
+
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+
+.nome {
+  margin-top: 7px;
+
+  font-size: 27px;
+
+  line-height: 1.15;
+
+  font-weight: 500;
+
+  letter-spacing: -0.2px;
+}
+
+
+.valore {
+  margin-left: 15px;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+.operation-button:active,
+.buono:active {
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   PAGINA DETTAGLIO
+   ========================================= */
+
+.pagina-dettaglio {
+  display: none;
+
+  min-height: 100vh;
+
+  background: #ffffff;
+}
+
+
+.pagina-dettaglio.active {
+  display: block;
+}
+
+
+.detail-header {
+  position: relative;
+
+  height: 250px;
+
+  padding: 35px 50px 0;
+
+  display: flex;
+
+  align-items: flex-start;
+}
+
+
+.detail-back {
+  flex: 0 0 auto;
+
+  width: 95px;
+  height: 95px;
+
+  padding: 0;
+
+  border: 1.5px solid #222;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+
+.detail-back svg {
+  width: 54px;
+  height: 54px;
+}
+
+
+.detail-header h1 {
+  position: absolute;
+
+  left: 217px;
+  right: 35px;
+
+  top: 65px;
+
+  margin: 0;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: -0.7px;
+}
+
+
+/* =========================================
+   CARD DETTAGLIO
+   ========================================= */
+
+.detail-main {
+  padding: 0 50px 220px;
+}
+
+
+.detail-card {
+  position: relative;
+
+  width: 100%;
+
+  background: #eef7ff;
+
+  border-radius: 30px;
+
+  overflow: visible;
+
+  margin-top: 0;
+}
+
+
+.detail-card-top {
+  min-height: 285px;
+
+  padding-top: 145px;
+
+  text-align: center;
+
+  position: relative;
+}
+
+
+.detail-buono-icon {
+  position: absolute;
+
+  width: 170px;
+  height: 170px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  top: -60px;
+}
+
+
+.detail-buono-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+.detail-rimborso {
+  font-size: 66px;
+
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -2px;
+}
+
+
+.detail-rimborso-label {
+  margin-top: 20px;
+
+  font-size: 31px;
+
+  line-height: 1.2;
+
+  font-weight: 400;
+}
+
+
+.detail-account {
+  min-height: 130px;
+
+  border-top: 5px solid #ffffff;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 22px;
+
+  padding: 20px;
+}
+
+
+.account-icon {
+  width: 80px;
+  height: 60px;
+
+  flex: 0 0 80px;
+}
+
+
+.account-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+.account-text {
+  font-size: 31px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+}
+
+
+/* =========================================
+   RIEPILOGO
+   ========================================= */
+
+.detail-section-title {
+  margin: 75px 0 45px;
+
+  font-size: 40px;
+
+  line-height: 1.15;
+
+  font-weight: 700;
+
+  letter-spacing: -0.7px;
+}
+
+
+.detail-field {
+  margin-bottom: 67px;
+}
+
+
+.detail-label {
+  color: #707070;
+
+  font-size: 31px;
+
+  line-height: 1.35;
+
+  font-weight: 400;
+}
+
+
+.detail-value {
+  margin-top: 12px;
+
+  color: #111111;
+
+  font-size: 32px;
+
+  line-height: 1.25;
+
+  font-weight: 400;
+}
+
+
+.detail-divider {
+  height: 12px;
+
+  background: #f5f5f5;
+
+  margin: 45px -50px 40px;
+}
+
+
+.last-detail-field {
+  margin-bottom: 20px;
+}
+
+
+/* =========================================
+   PULSANTE FISSO
+   ========================================= */
+
+.bottom-action {
+  position: fixed;
+
+  left: 0;
+  right: 0;
+
+  bottom: 0;
+
+  height: 215px;
+
+  background: rgba(255, 255, 255, 0.98);
+
+  border-top: 1px solid #eeeeee;
+
+  padding: 35px 50px;
+
+  z-index: 100;
+}
+
+
+.bottom-action button {
+  width: 100%;
+
+  height: 105px;
+
+  border: 0;
+
+  border-radius: 55px;
+
+  background: #0755c7;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 34px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+.bottom-action button:active {
+  opacity: 0.75;
+}
