@@ -62,6 +62,12 @@
       gap: 6px !important;
     }
 
+    /* ASSISTENZA LEGGERMENTE PIU' A SINISTRA */
+
+    .home-header-item:last-child {
+      transform: translateX(-8px) !important;
+    }
+
     .home-round-icon {
       width: 46px !important;
       height: 46px !important;
@@ -105,6 +111,9 @@
       height: 100% !important;
       display: block !important;
     }
+
+
+    /* P2P */
 
     .p2p-icon {
       width: 58px !important;
@@ -533,129 +542,144 @@
 
             <div class="home-operation-circle">
 
+              <!-- STESSO PORTAFOGLIO DI "RICHIEDI RIMBORSO" -->
+
               <svg
-                viewBox="0 0 100 100"
+                viewBox="0 0 170 170"
                 xmlns="http://www.w3.org/2000/svg"
               >
 
-                <!-- SFONDO -->
-
                 <circle
-                  cx="50"
-                  cy="50"
-                  r="50"
+                  cx="85"
+                  cy="85"
+                  r="85"
                   fill="#f1f8ff"
                 />
 
-                <!-- BANCONOTE -->
-
-                <rect
-                  x="38"
-                  y="24"
-                  width="31"
-                  height="11"
-                  rx="2"
-                  fill="#55b96b"
-                  transform="rotate(-10 38 24)"
-                />
-
-                <rect
-                  x="43"
-                  y="25"
-                  width="29"
-                  height="10"
-                  rx="2"
-                  fill="#f0d000"
-                  transform="rotate(7 43 25)"
-                />
-
-                <!-- PORTAFOGLIO -->
-
-                <path
-                  d="M28 38
-                     H69
-                     C73 38 76 41 76 45
-                     V68
-                     C76 72 73 75 69 75
-                     H28
-                     C24 75 21 72 21 68
-                     V45
-                     C21 41 24 38 28 38Z"
-                  fill="#f4d900"
-                />
-
-                <path
-                  d="M29 38
-                     H70
-                     C74 38 77 41 77 45
-                     V50
-                     H29
-                     C25 50 22 47 22 44
-                     C22 41 25 38 29 38Z"
-                  fill="#f7df00"
-                />
-
-                <!-- CHIUSURA -->
-
-                <path
-                  d="M66 49
-                     H78
-                     C83 49 86 53 86 58
-                     C86 63 83 67 78 67
-                     H66
-                     Z"
-                  fill="#50b96b"
+                <circle
+                  cx="51"
+                  cy="57"
+                  r="13"
+                  fill="#ffd52a"
+                  stroke="#e5b800"
+                  stroke-width="2"
                 />
 
                 <circle
-                  cx="75"
-                  cy="58"
-                  r="4"
-                  fill="#fff"
+                  cx="64"
+                  cy="54"
+                  r="13"
+                  fill="#ffd52a"
+                  stroke="#e5b800"
+                  stroke-width="2"
                 />
 
-                <!-- FRECCIA SINISTRA -->
-
-                <path
-                  d="M22 57
-                     H11
-                     M11 57
-                     L18 50
-                     M11 57
-                     L18 64"
+                <circle
+                  cx="51"
+                  cy="57"
+                  r="8"
                   fill="none"
-                  stroke="#50b96b"
-                  stroke-width="6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  stroke="#f0c000"
+                  stroke-width="2"
                 />
 
-                <!-- FRECCIA DESTRA -->
-
-                <path
-                  d="M76 77
-                     H88
-                     M88 77
-                     L81 70
-                     M88 77
-                     L81 84"
+                <circle
+                  cx="64"
+                  cy="54"
+                  r="8"
                   fill="none"
-                  stroke="#50b96b"
-                  stroke-width="6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  stroke="#f0c000"
+                  stroke-width="2"
                 />
-
-                <!-- PICCOLO DETTAGLIO BANCONOTA -->
 
                 <rect
-                  x="46"
-                  y="45"
-                  width="23"
-                  height="4"
-                  rx="2"
-                  fill="#fff"
-                  opacity="0.9"
+                  x="38"
+                  y="62"
+                  width="80"
+                  height="48"
+                  rx="5"
+                  fill="#159957"
+                />
+
+                <rect
+                  x="45"
+                  y="68"
+                  width="66"
+                  height="34"
+                  rx="3"
+                  fill="#42b96d"
+                />
+
+                <path
+                  d="
+                    M45 72
+                    H106
+                    C113 72 118 77 118 84
+                    V103
+                    C118 110 113 114 106 114
+                    H46
+                    C39 114 35 110 35 103
+                    V83
+                    C35 76 39 72 45 72
+                    Z
+                  "
+                  fill="#f4d000"
+                />
+
+                <path
+                  d="
+                    M45 72
+                    H106
+                    C113 72 118 77 118 84
+                    V88
+                    H47
+                    C40 88 35 84 35 79
+                    C36 75 40 72 45 72
+                    Z
+                  "
+                  fill="#f7d500"
+                />
+
+                <path
+                  d="
+                    M35 125
+                    V96
+                    H25
+                    L41 79
+                    L57 96
+                    H47
+                    V125
+                    Z
+                  "
+                  fill="#3eb969"
+                />
+
+                <path
+                  d="
+                    M35 82
+                    H47
+                    V114
+                    H46
+                    C39 114 35 110 35 103
+                    Z
+                  "
+                  fill="#3eb969"
+                />
+
+                <rect
+                  x="96"
+                  y="82"
+                  width="27"
+                  height="20"
+                  rx="7"
+                  fill="#145db5"
+                />
+
+                <circle
+                  cx="104"
+                  cy="92"
+                  r="3.5"
+                  fill="#ffd900"
                 />
 
               </svg>
@@ -703,53 +727,63 @@
 
                 <text
                   x="50"
-                  y="54"
+                  y="57"
                   text-anchor="middle"
                   font-family="Arial, sans-serif"
-                  font-size="24"
+                  font-size="23"
                   font-weight="500"
                   fill="#111"
-                  letter-spacing="-1"
+                  letter-spacing="-0.5"
                 >p2p</text>
 
-                <!-- FRECCIA CURVA -->
+
+                <!-- FRECCIA CURVA SUPERIORE -->
 
                 <path
-                  d="M34 64
-                     C42 71 58 72 67 63"
+                  d="M66 38
+                     C59 32 46 32 37 39"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.8"
+                  stroke-width="2.2"
                   stroke-linecap="round"
                 />
 
+                <!-- PUNTA FRECCIA SUPERIORE -->
+
                 <path
-                  d="M63 59
-                     L68 63
-                     L63 68"
+                  d="M40 34
+                     L36.5 39
+                     L41.5 40.5"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.8"
+                  stroke-width="2.2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
 
+
+                <!-- FRECCIA CURVA INFERIORE -->
+
                 <path
-                  d="M66 37
-                     C59 31 45 31 37 38"
+                  d="M34 63
+                     C42 70
+                     58 70
+                     67 62"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.8"
+                  stroke-width="2.2"
                   stroke-linecap="round"
                 />
 
+                <!-- PUNTA FRECCIA INFERIORE -->
+
                 <path
-                  d="M40 33
-                     L36 38
-                     L41 40"
+                  d="M63 58
+                     L67.5 62
+                     L63 66.5"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.8"
+                  stroke-width="2.2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
