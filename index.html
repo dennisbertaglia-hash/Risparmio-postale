@@ -538,10 +538,6 @@
 
             <div class="home-operation-circle bonifico-sepa-icon">
 
-              <!-- STESSA GRAFICA DEL PORTAFOGLIO
-                   USATA IN "RICHIEDI RIMBORSO"
-                   CENTRATA MATEMATICAMENTE NEL CERCHIO -->
-
               <svg
                 viewBox="0 0 170 170"
                 xmlns="http://www.w3.org/2000/svg"
@@ -554,10 +550,6 @@
                   fill="#f1f8ff"
                 />
 
-
-                <!-- PORTAFOGLIO
-                     GRAFICA ORIGINALE TRASLATA DI 11 PX
-                     PER PORTARE IL CENTRO VISIVO DA X=74 A X=85 -->
 
                 <g transform="translate(11 0)">
 
@@ -726,9 +718,34 @@
                   fill="#f1d900"
                 />
 
+                <!-- FRECCIA SUPERIORE -->
+
+                <path
+                  d="M69 33
+                     C60 26 42 26 33 34"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M36 29
+                     L32 34
+                     L37 36"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+
+                <!-- TESTO P2P -->
+
                 <text
                   x="50"
-                  y="54"
+                  y="56"
                   text-anchor="middle"
                   font-family="Arial, sans-serif"
                   font-size="24"
@@ -738,51 +755,28 @@
                 >p2p</text>
 
 
-                <!-- FRECCIA SUPERIORE -->
-
-                <path
-                  d="M66 37
-                     C59 31 45 31 37 38"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-
-                <path
-                  d="M40 33
-                     L36 38
-                     L41 40"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-
-
                 <!-- FRECCIA INFERIORE
-                     COPIA IDENTICA DELLA SUPERIORE
-                     RUOTATA ESATTAMENTE DI 180° -->
+                     PERFETTAMENTE SIMMETRICA
+                     RISPETTO A QUELLA SUPERIORE -->
 
                 <g transform="rotate(180 50 50)">
 
                   <path
-                    d="M66 37
-                       C59 31 45 31 37 38"
+                    d="M69 33
+                       C60 26 42 26 33 34"
                     fill="none"
                     stroke="#111"
-                    stroke-width="2"
+                    stroke-width="2.2"
                     stroke-linecap="round"
                   />
 
                   <path
-                    d="M40 33
-                       L36 38
-                       L41 40"
+                    d="M36 29
+                       L32 34
+                       L37 36"
                     fill="none"
                     stroke="#111"
-                    stroke-width="2"
+                    stroke-width="2.2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
