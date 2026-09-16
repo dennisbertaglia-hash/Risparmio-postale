@@ -12,7 +12,7 @@
 
   <title>MyPoste</title>
 
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 
   <style>
 
@@ -718,11 +718,13 @@
                   fill="#f1d900"
                 />
 
+
                 <!-- FRECCIA SUPERIORE -->
 
                 <path
-                  d="M69 33
-                     C60 26 42 26 33 34"
+                  d="M34 46
+                     C39 38 50 35 61 39
+                     C65 40 68 42 70 45"
                   fill="none"
                   stroke="#111"
                   stroke-width="2.2"
@@ -730,9 +732,9 @@
                 />
 
                 <path
-                  d="M36 29
-                     L32 34
-                     L37 36"
+                  d="M66 40
+                     L70 45
+                     L64 46"
                   fill="none"
                   stroke="#111"
                   stroke-width="2.2"
@@ -741,11 +743,11 @@
                 />
 
 
-                <!-- TESTO P2P -->
+                <!-- SCRITTA P2P -->
 
                 <text
                   x="50"
-                  y="56"
+                  y="55"
                   text-anchor="middle"
                   font-family="Arial, sans-serif"
                   font-size="24"
@@ -756,32 +758,28 @@
 
 
                 <!-- FRECCIA INFERIORE
-                     PERFETTAMENTE SIMMETRICA
-                     RISPETTO A QUELLA SUPERIORE -->
+                     SIMMETRICA ALLA SUPERIORE -->
 
-                <g transform="rotate(180 50 50)">
+                <path
+                  d="M66 60
+                     C61 68 50 71 39 67
+                     C35 66 32 64 30 61"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                />
 
-                  <path
-                    d="M69 33
-                       C60 26 42 26 33 34"
-                    fill="none"
-                    stroke="#111"
-                    stroke-width="2.2"
-                    stroke-linecap="round"
-                  />
-
-                  <path
-                    d="M36 29
-                       L32 34
-                       L37 36"
-                    fill="none"
-                    stroke="#111"
-                    stroke-width="2.2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                </g>
+                <path
+                  d="M34 66
+                     L30 61
+                     L36 60"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
 
               </svg>
 
@@ -2481,9 +2479,9 @@
 
 
 
-  <!-- CACHE BUST: VERSIONE 8 -->
+  <!-- CACHE BUST: VERSIONE 9 -->
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 
 </body>
 
