@@ -8,6 +8,11 @@ body {
   margin: 0;
   padding: 0;
   background: #ffffff;
+
+  /* BLOCCA LO SCORRIMENTO ORIZZONTALE */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -257,6 +262,12 @@ main {
   margin-left: -13px;
 
   margin-bottom: 32px;
+
+  /*
+     I filtri possono continuare oltre
+     il bordo dello schermo, ma la pagina
+     non può essere trascinata lateralmente.
+  */
 }
 
 
@@ -280,6 +291,8 @@ main {
   font-weight: 600;
 
   white-space: nowrap;
+
+  flex-shrink: 0;
 }
 
 
