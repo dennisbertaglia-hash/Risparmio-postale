@@ -3,144 +3,132 @@
    ========================================= */
 
 const buoni = [
+
   {
-    sottoscrizione: "16 Settembre 2026",
-    scadenza: "16 Settembre 2038",
-    nominale: 500
+    nominale: 500,
+    sottoscritto: "16 Settembre 2026",
+    scadenza: "16 Settembre 2038"
   },
 
   {
-    sottoscrizione: "14 Luglio 2026",
-    scadenza: "14 Luglio 2038",
-    nominale: 1500
+    nominale: 1500,
+    sottoscritto: "14 Luglio 2026",
+    scadenza: "14 Luglio 2038"
   },
 
   {
-    sottoscrizione: "12 Giugno 2026",
-    scadenza: "12 Giugno 2038",
-    nominale: 1000
+    nominale: 1000,
+    sottoscritto: "12 Giugno 2026",
+    scadenza: "12 Giugno 2038"
   },
 
   {
-    sottoscrizione: "16 Aprile 2026",
-    scadenza: "16 Aprile 2038",
-    nominale: 1500
+    nominale: 1500,
+    sottoscritto: "16 Aprile 2026",
+    scadenza: "16 Aprile 2038"
   },
 
   {
-    sottoscrizione: "11 Febbraio 2026",
-    scadenza: "11 Febbraio 2038",
-    nominale: 1500
+    nominale: 1500,
+    sottoscritto: "11 Febbraio 2026",
+    scadenza: "11 Febbraio 2038"
   },
 
   {
-    sottoscrizione: "15 Novembre 2025",
-    scadenza: "15 Novembre 2037",
-    nominale: 1200
+    nominale: 1200,
+    sottoscritto: "15 Novembre 2025",
+    scadenza: "15 Novembre 2037"
   },
 
   {
-    sottoscrizione: "13 Ottobre 2025",
-    scadenza: "13 Ottobre 2037",
-    nominale: 800
+    nominale: 800,
+    sottoscritto: "13 Ottobre 2025",
+    scadenza: "13 Ottobre 2037"
   },
 
   {
-    sottoscrizione: "11 Ottobre 2025",
-    scadenza: "11 Ottobre 2037",
-    nominale: 900
+    nominale: 900,
+    sottoscritto: "11 Ottobre 2025",
+    scadenza: "11 Ottobre 2037"
   },
 
   {
-    sottoscrizione: "18 Giugno 2025",
-    scadenza: "18 Giugno 2037",
-    nominale: 800
+    nominale: 800,
+    sottoscritto: "18 Giugno 2025",
+    scadenza: "18 Giugno 2037"
   },
 
   {
-    sottoscrizione: "14 Maggio 2025",
-    scadenza: "14 Maggio 2037",
-    nominale: 800
+    nominale: 800,
+    sottoscritto: "14 Maggio 2025",
+    scadenza: "14 Maggio 2037"
   },
 
   {
-    sottoscrizione: "11 Aprile 2025",
-    scadenza: "11 Aprile 2037",
-    nominale: 500
+    nominale: 500,
+    sottoscritto: "11 Aprile 2025",
+    scadenza: "11 Aprile 2037"
   },
 
   {
-    sottoscrizione: "16 Marzo 2025",
-    scadenza: "16 Marzo 2037",
-    nominale: 800
+    nominale: 800,
+    sottoscritto: "16 Marzo 2025",
+    scadenza: "16 Marzo 2037"
   },
 
   {
-    sottoscrizione: "12 Febbraio 2025",
-    scadenza: "12 Febbraio 2037",
-    nominale: 700
+    nominale: 700,
+    sottoscritto: "12 Febbraio 2025",
+    scadenza: "12 Febbraio 2037"
   },
 
   {
-    sottoscrizione: "15 Gennaio 2025",
-    scadenza: "15 Gennaio 2037",
-    nominale: 500
+    nominale: 500,
+    sottoscritto: "15 Gennaio 2025",
+    scadenza: "15 Gennaio 2037"
   },
 
   {
-    sottoscrizione: "13 Dicembre 2024",
-    scadenza: "13 Dicembre 2036",
-    nominale: 1000
+    nominale: 1000,
+    sottoscritto: "13 Dicembre 2024",
+    scadenza: "13 Dicembre 2036"
   },
 
   {
-    sottoscrizione: "11 Novembre 2024",
-    scadenza: "11 Novembre 2036",
-    nominale: 500
+    nominale: 500,
+    sottoscritto: "11 Novembre 2024",
+    scadenza: "11 Novembre 2036"
   },
 
   {
-    sottoscrizione: "10 Ottobre 2024",
-    scadenza: "10 Ottobre 2036",
-    nominale: 800
+    nominale: 800,
+    sottoscritto: "10 Ottobre 2024",
+    scadenza: "10 Ottobre 2036"
   },
 
   {
-    sottoscrizione: "18 Settembre 2024",
-    scadenza: "18 Settembre 2036",
-    nominale: 700
+    nominale: 700,
+    sottoscritto: "18 Settembre 2024",
+    scadenza: "18 Settembre 2036"
   },
 
   {
-    sottoscrizione: "10 Luglio 2024",
-    scadenza: "10 Luglio 2036",
-    nominale: 500
+    nominale: 500,
+    sottoscritto: "10 Luglio 2024",
+    scadenza: "10 Luglio 2036"
   },
 
   {
-    sottoscrizione: "12 Maggio 2024",
-    scadenza: "12 Maggio 2036",
-    nominale: 500
+    nominale: 500,
+    sottoscritto: "12 Maggio 2024",
+    scadenza: "12 Maggio 2036"
   }
+
 ];
 
 
 /* =========================================
-   ELEMENTI PAGINA
-   ========================================= */
-
-const contenitore =
-  document.getElementById("buoni");
-
-const paginaPrincipale =
-  document.getElementById("paginaPrincipale");
-
-const paginaDettaglio =
-  document.getElementById("paginaDettaglio");
-
-
-/* =========================================
-   FORMATTAZIONE EURO
+   FUNZIONI
    ========================================= */
 
 function euro(numero) {
@@ -154,44 +142,7 @@ function euro(numero) {
 
 
 /* =========================================
-   AGGIORNA RIEPILOGO PRINCIPALE
-   ========================================= */
-
-const totaleBuoni =
-  buoni.reduce(
-    (totale, buono) => totale + buono.nominale,
-    0
-  );
-
-
-const titoloRiepilogo =
-  document.querySelector(".summary-card h2");
-
-const valoriRiepilogo =
-  document.querySelectorAll(".summary-value");
-
-
-if (titoloRiepilogo) {
-
-  titoloRiepilogo.textContent =
-    buoni.length + " Buoni";
-
-}
-
-
-if (valoriRiepilogo.length >= 2) {
-
-  valoriRiepilogo[0].textContent =
-    euro(totaleBuoni);
-
-  valoriRiepilogo[1].textContent =
-    euro(totaleBuoni);
-
-}
-
-
-/* =========================================
-   CALCOLO DATI DETTAGLIO
+   CALCOLO DATI BUONO
    ========================================= */
 
 function calcolaDati(nominale) {
@@ -223,7 +174,6 @@ function calcolaDati(nominale) {
   const nettoConPremio =
     nominale * (1234.60 / 900);
 
-
   return {
 
     lordoSenzaPremio,
@@ -244,110 +194,154 @@ function calcolaDati(nominale) {
 
 
 /* =========================================
-   CREA ELENCO BUONI
+   TOTALE BUONI
    ========================================= */
 
-buoni.forEach((buono, indice) => {
+const totaleBuoni =
+  buoni.reduce(
+    (totale, buono) => totale + buono.nominale,
+    0
+  );
 
-  const elemento =
-    document.createElement("div");
 
-  elemento.className = "buono";
+/* =========================================
+   AGGIORNA RIEPILOGO PRINCIPALE
+   ========================================= */
+
+const titoloRiepilogo =
+  document.getElementById("totaleBuoni");
+
+const valoreNominale =
+  document.getElementById("valoreNominale");
+
+const valoreRimborsoLordo =
+  document.getElementById("valoreRimborsoLordo");
 
 
-  elemento.innerHTML = `
+if (titoloRiepilogo) {
 
-    <div class="buono-icon">
+  titoloRiepilogo.textContent =
+    "20 Buoni";
 
-      <svg
-        viewBox="0 0 60 60"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+}
 
-        <circle
-          cx="30"
-          cy="30"
-          r="30"
-          fill="#eef7ff"
-        />
 
-        <rect
-          x="12"
-          y="19"
-          width="36"
-          height="23"
-          rx="4"
+if (valoreNominale) {
+
+  valoreNominale.textContent =
+    "17.000,00 €";
+
+}
+
+
+if (valoreRimborsoLordo) {
+
+  valoreRimborsoLordo.textContent =
+    "17.000,00 €";
+
+}
+
+
+/* =========================================
+   GENERA ELENCO BUONI
+   ========================================= */
+
+const listaBuoni =
+  document.getElementById("listaBuoni");
+
+
+if (listaBuoni) {
+
+  listaBuoni.innerHTML = "";
+
+  buoni.forEach((buono, indice) => {
+
+    const elemento =
+      document.createElement("div");
+
+    elemento.className = "bond-item";
+
+    elemento.innerHTML = `
+
+      <div class="bond-icon">
+
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
           fill="none"
-          stroke="#1261b9"
-          stroke-width="3"
-        />
+          xmlns="http://www.w3.org/2000/svg"
+        >
 
-        <text
-          x="17"
-          y="35"
-          font-size="15"
-          font-family="Arial"
-          font-weight="bold"
-          fill="#1261b9"
-        >€</text>
+          <rect
+            x="4"
+            y="5"
+            width="20"
+            height="18"
+            rx="2"
+            stroke="currentColor"
+            stroke-width="1.8"
+          />
 
-        <line
-          x1="30"
-          y1="27"
-          x2="43"
-          y2="27"
-          stroke="#1261b9"
-          stroke-width="2.5"
-          stroke-linecap="round"
-        />
+          <path
+            d="M8 10H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
 
-        <line
-          x1="30"
-          y1="33"
-          x2="40"
-          y2="33"
-          stroke="#1261b9"
-          stroke-width="2.5"
-          stroke-linecap="round"
-        />
+          <path
+            d="M8 14H20"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
 
-      </svg>
+          <path
+            d="M8 18H15"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
 
-    </div>
+        </svg>
 
-
-    <div class="buono-info">
-
-      <div class="data">
-        Sottoscritto il ${buono.sottoscrizione}
       </div>
 
-      <div class="nome">
-        Buono 3×4 con premio
+
+      <div class="bond-info">
+
+        <div class="bond-date">
+          ${buono.sottoscritto}
+        </div>
+
+        <div class="bond-type">
+          Buono 3×4 con premio
+        </div>
+
       </div>
 
-    </div>
+
+      <div class="bond-value">
+
+        ${euro(buono.nominale)}
+
+      </div>
+
+    `;
 
 
-    <div class="valore">
-      ${euro(buono.nominale)}
-    </div>
+    elemento.addEventListener(
+      "click",
+      () => apriDettaglio(indice)
+    );
 
-  `;
 
-
-  /* CLICK SUL BUONO */
-
-  elemento.addEventListener("click", () => {
-
-    apriDettaglio(indice);
+    listaBuoni.appendChild(elemento);
 
   });
 
-
-  contenitore.appendChild(elemento);
-
-});
+}
 
 
 /* =========================================
@@ -356,125 +350,204 @@ buoni.forEach((buono, indice) => {
 
 function apriDettaglio(indice) {
 
-  const buono = buoni[indice];
+  const buono =
+    buoni[indice];
 
   const dati =
     calcolaDati(buono.nominale);
 
 
-  /* TITOLO */
+  const paginaPrincipale =
+    document.getElementById("mainPage");
 
-  document.getElementById(
-    "detailTitolo"
-  ).textContent =
-    "Buono 3×4 con premio";
-
-
-  /* RIMBORSO */
-
-  document.getElementById(
-    "detailValoreRimborso"
-  ).textContent =
-    euro(buono.nominale);
+  const paginaDettaglio =
+    document.getElementById("detailPage");
 
 
-  /* DATE */
+  if (paginaPrincipale) {
 
-  document.getElementById(
-    "detailSottoscritto"
-  ).textContent =
-    buono.sottoscrizione;
+    paginaPrincipale.style.display =
+      "none";
 
-
-  document.getElementById(
-    "detailScadenza"
-  ).textContent =
-    buono.scadenza;
+  }
 
 
-  /* NOMINALE */
+  if (paginaDettaglio) {
 
-  document.getElementById(
-    "detailNominale"
-  ).textContent =
-    euro(buono.nominale);
+    paginaDettaglio.style.display =
+      "block";
 
-
-  /* VALORI ECONOMICI */
-
-  document.getElementById(
-    "detailNetto"
-  ).textContent =
-    euro(buono.nominale);
+  }
 
 
-  document.getElementById(
-    "detailLordoSenzaPremio"
-  ).textContent =
-    euro(dati.lordoSenzaPremio);
+  const detailTitolo =
+    document.getElementById("detailTitolo");
+
+  const detailValoreRimborso =
+    document.getElementById("detailValoreRimborso");
+
+  const detailSottoscritto =
+    document.getElementById("detailSottoscritto");
+
+  const detailScadenza =
+    document.getElementById("detailScadenza");
+
+  const detailNominale =
+    document.getElementById("detailNominale");
+
+  const detailNetto =
+    document.getElementById("detailNetto");
 
 
-  document.getElementById(
-    "detailRitenutaScadenza"
-  ).textContent =
-    euro(dati.ritenutaSenzaPremio);
+  if (detailTitolo) {
+
+    detailTitolo.textContent =
+      "Buono 3×4 con premio";
+
+  }
 
 
-  document.getElementById(
-    "detailNettoSenzaPremio"
-  ).textContent =
-    euro(dati.nettoSenzaPremio);
+  if (detailValoreRimborso) {
+
+    detailValoreRimborso.textContent =
+      euro(dati.nettoConPremio);
+
+  }
 
 
-  document.getElementById(
-    "detailPremioLordo"
-  ).textContent =
-    euro(dati.premioLordo);
+  if (detailSottoscritto) {
+
+    detailSottoscritto.textContent =
+      buono.sottoscritto;
+
+  }
 
 
-  document.getElementById(
-    "detailRitenutaPremio"
-  ).textContent =
-    euro(dati.ritenutaPremio);
+  if (detailScadenza) {
+
+    detailScadenza.textContent =
+      buono.scadenza;
+
+  }
 
 
-  document.getElementById(
-    "detailPremioNetto"
-  ).textContent =
-    euro(dati.premioNetto);
+  if (detailNominale) {
+
+    detailNominale.textContent =
+      euro(buono.nominale);
+
+  }
 
 
-  document.getElementById(
-    "detailLordoConPremio"
-  ).textContent =
-    euro(dati.lordoConPremio);
+  if (detailNetto) {
+
+    detailNetto.textContent =
+      euro(dati.nettoConPremio);
+
+  }
 
 
-  document.getElementById(
-    "detailRitenutaTotale"
-  ).textContent =
-    euro(dati.ritenutaTotale);
+  const detailLordoSenzaPremio =
+    document.getElementById("detailLordoSenzaPremio");
+
+  const detailRitenutaScadenza =
+    document.getElementById("detailRitenutaScadenza");
+
+  const detailNettoSenzaPremio =
+    document.getElementById("detailNettoSenzaPremio");
+
+  const detailPremioLordo =
+    document.getElementById("detailPremioLordo");
+
+  const detailRitenutaPremio =
+    document.getElementById("detailRitenutaPremio");
+
+  const detailPremioNetto =
+    document.getElementById("detailPremioNetto");
+
+  const detailLordoConPremio =
+    document.getElementById("detailLordoConPremio");
+
+  const detailRitenutaTotale =
+    document.getElementById("detailRitenutaTotale");
+
+  const detailNettoConPremio =
+    document.getElementById("detailNettoConPremio");
 
 
-  document.getElementById(
-    "detailNettoConPremio"
-  ).textContent =
-    euro(dati.nettoConPremio);
+  if (detailLordoSenzaPremio) {
+
+    detailLordoSenzaPremio.textContent =
+      euro(dati.lordoSenzaPremio);
+
+  }
 
 
-  /* CAMBIO PAGINA */
+  if (detailRitenutaScadenza) {
 
-  paginaPrincipale.style.display = "none";
+    detailRitenutaScadenza.textContent =
+      euro(dati.ritenutaSenzaPremio);
 
-  paginaDettaglio.classList.add("active");
+  }
 
 
-  /* TORNA IN CIMA ALLA PAGINA */
+  if (detailNettoSenzaPremio) {
 
-  window.scrollTo({
-    top: 0,
-    behavior: "instant"
-  });
+    detailNettoSenzaPremio.textContent =
+      euro(dati.nettoSenzaPremio);
+
+  }
+
+
+  if (detailPremioLordo) {
+
+    detailPremioLordo.textContent =
+      euro(dati.premioLordo);
+
+  }
+
+
+  if (detailRitenutaPremio) {
+
+    detailRitenutaPremio.textContent =
+      euro(dati.ritenutaPremio);
+
+  }
+
+
+  if (detailPremioNetto) {
+
+    detailPremioNetto.textContent =
+      euro(dati.premioNetto);
+
+  }
+
+
+  if (detailLordoConPremio) {
+
+    detailLordoConPremio.textContent =
+      euro(dati.lordoConPremio);
+
+  }
+
+
+  if (detailRitenutaTotale) {
+
+    detailRitenutaTotale.textContent =
+      euro(dati.ritenutaTotale);
+
+  }
+
+
+  if (detailNettoConPremio) {
+
+    detailNettoConPremio.textContent =
+      euro(dati.nettoConPremio);
+
+  }
+
+
+  window.scrollTo(0, 0);
 
 }
 
@@ -485,15 +558,30 @@ function apriDettaglio(indice) {
 
 function tornaAllaLista() {
 
-  paginaDettaglio.classList.remove("active");
+  const paginaPrincipale =
+    document.getElementById("mainPage");
 
-  paginaPrincipale.style.display = "block";
+  const paginaDettaglio =
+    document.getElementById("detailPage");
 
 
-  window.scrollTo({
-    top: 0,
-    behavior: "instant"
-  });
+  if (paginaDettaglio) {
+
+    paginaDettaglio.style.display =
+      "none";
+
+  }
+
+
+  if (paginaPrincipale) {
+
+    paginaPrincipale.style.display =
+      "block";
+
+  }
+
+
+  window.scrollTo(0, 0);
 
 }
 
@@ -505,8 +593,7 @@ function tornaAllaLista() {
 function operationMessage(nome) {
 
   alert(
-    nome +
-    "\n\nQuesta funzione è simulata."
+    nome + " — operazione simulata."
   );
 
 }
