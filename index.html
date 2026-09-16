@@ -14,6 +14,106 @@
 
   <link rel="stylesheet" href="style.css?v=6">
 
+  <!-- =====================================================
+       MODIFICHE HOME MYPOSTE
+       NON MODIFICA PAGINA BUONI / DETTAGLIO
+       ===================================================== -->
+
+  <style>
+
+    /* HEADER HOME PIÙ COMPATTO */
+
+    .home-header {
+      height: 144px !important;
+      min-height: 144px !important;
+      padding: 18px 24px 12px !important;
+      box-sizing: border-box !important;
+    }
+
+    .home-saluto {
+      margin-top: 38px !important;
+    }
+
+    .home-ciao {
+      font-size: 16px !important;
+      line-height: 1.05 !important;
+    }
+
+    .home-nome {
+      font-size: 25px !important;
+      line-height: 1.05 !important;
+      margin-top: 2px !important;
+    }
+
+    .home-header-icons {
+      gap: 22px !important;
+      align-items: flex-start !important;
+      margin-top: 14px !important;
+    }
+
+    .home-header-item {
+      gap: 6px !important;
+    }
+
+    .home-round-icon {
+      width: 46px !important;
+      height: 46px !important;
+    }
+
+    .home-header-label {
+      font-size: 14px !important;
+      line-height: 1 !important;
+    }
+
+
+    /* OCCHIO NASCONDI SALDO */
+
+    .saldo-eye {
+      width: 25px !important;
+      height: 25px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-shrink: 0 !important;
+    }
+
+    .saldo-eye svg {
+      width: 24px !important;
+      height: 24px !important;
+      display: block !important;
+    }
+
+
+    /* OPERAZIONI */
+
+    .home-operation-circle {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      overflow: hidden !important;
+    }
+
+    .home-operation-circle svg {
+      width: 100% !important;
+      height: 100% !important;
+      display: block !important;
+    }
+
+    .p2p-icon {
+      width: 58px !important;
+      height: 58px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      font-size: 24px !important;
+      font-weight: 500 !important;
+      font-family: Arial, sans-serif !important;
+      letter-spacing: -1px !important;
+    }
+
+  </style>
+
 </head>
 
 
@@ -420,6 +520,8 @@
         <div class="home-operations-scroll">
 
 
+          <!-- BONIFICO SEPA -->
+
           <div class="home-operation">
 
             <div class="home-operation-circle">
@@ -429,31 +531,106 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
 
-                <rect
-                  x="24"
-                  y="35"
-                  width="52"
-                  height="34"
-                  rx="3"
+                <!-- SFONDO -->
+
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="50"
+                  fill="#f1f8ff"
+                />
+
+                <!-- PORTAFOGLIO -->
+
+                <path
+                  d="M27 36
+                     H70
+                     C74 36 77 39 77 43
+                     V69
+                     C77 73 74 76 70 76
+                     H27
+                     C23 76 20 73 20 69
+                     V43
+                     C20 39 23 36 27 36Z"
                   fill="#f1d900"
                 />
 
+                <path
+                  d="M27 36
+                     C31 29 38 25 46 25
+                     H67
+                     C72 25 76 29 76 34
+                     V39
+                     H29
+                     Z"
+                  fill="#f5d900"
+                />
+
+                <!-- BANCONOTE -->
+
+                <rect
+                  x="32"
+                  y="27"
+                  width="28"
+                  height="10"
+                  rx="2"
+                  fill="#55b96b"
+                  transform="rotate(-12 32 27)"
+                />
+
+                <rect
+                  x="39"
+                  y="23"
+                  width="27"
+                  height="10"
+                  rx="2"
+                  fill="#e9c900"
+                  transform="rotate(8 39 23)"
+                />
+
+                <!-- LINGUETTA -->
+
+                <path
+                  d="M65 49
+                     H78
+                     C83 49 86 53 86 58
+                     C86 63 83 67 78 67
+                     H65
+                     Z"
+                  fill="#4eb96c"
+                />
+
                 <circle
-                  cx="70"
-                  cy="69"
-                  r="12"
-                  fill="#50b96b"
+                  cx="73"
+                  cy="58"
+                  r="4"
+                  fill="#fff"
+                />
+
+                <!-- FRECCE -->
+
+                <path
+                  d="M20 53
+                     H11
+                     L18 46
+                     M11 53
+                     L18 60"
+                  fill="none"
+                  stroke="#50b96b"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
                 />
 
                 <path
-                  d="M29 50
-                     H18
-                     L25 43
-                     M18 50
-                     L25 57"
+                  d="M77 78
+                     H88
+                     L81 71
+                     M88 78
+                     L81 85"
                   fill="none"
                   stroke="#50b96b"
-                  stroke-width="7"
+                  stroke-width="6"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
@@ -469,13 +646,87 @@
           </div>
 
 
+
+          <!-- P2P -->
+
           <div class="home-operation">
 
             <div class="home-operation-circle">
 
-              <div class="p2p-icon">
-                p2p
-              </div>
+              <svg
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="50"
+                  fill="#f1f8ff"
+                />
+
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="31"
+                  fill="#f1d900"
+                />
+
+                <path
+                  d="M34 51
+                     C34 42 39 37 46 37
+                     C52 37 56 41 56 47
+                     C56 54 51 57 45 57
+                     H39"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M55 49
+                     C55 41 60 37 67 37
+                     C73 37 77 41 77 47
+                     C77 54 72 57 66 57
+                     H60"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M35 67
+                     H65"
+                  stroke="#111"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M30 64
+                     L35 68
+                     L30 72"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="M70 64
+                     L65 68
+                     L70 72"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+              </svg>
 
             </div>
 
@@ -487,6 +738,9 @@
           </div>
 
 
+
+          <!-- CERCA UFFICIO -->
+
           <div class="home-operation">
 
             <div class="home-operation-circle">
@@ -496,12 +750,21 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
 
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="50"
+                  fill="#f1f8ff"
+                />
+
+                <!-- CALENDARIO -->
+
                 <rect
                   x="24"
                   y="29"
                   width="52"
                   height="48"
-                  rx="3"
+                  rx="4"
                   fill="#fff"
                   stroke="#42955d"
                   stroke-width="5"
@@ -515,11 +778,13 @@
                   fill="#f4dd00"
                 />
 
+                <!-- ANELLI -->
+
                 <line
-                  x1="37"
+                  x1="36"
                   y1="23"
-                  x2="37"
-                  y2="34"
+                  x2="36"
+                  y2="35"
                   stroke="#777"
                   stroke-width="4"
                   stroke-linecap="round"
@@ -529,43 +794,75 @@
                   x1="50"
                   y1="23"
                   x2="50"
-                  y2="34"
+                  y2="35"
                   stroke="#777"
                   stroke-width="4"
                   stroke-linecap="round"
                 />
 
                 <line
-                  x1="63"
+                  x1="64"
                   y1="23"
-                  x2="63"
-                  y2="34"
+                  x2="64"
+                  y2="35"
                   stroke="#777"
                   stroke-width="4"
                   stroke-linecap="round"
                 />
 
+                <!-- GIORNI -->
+
                 <rect
                   x="34"
                   y="50"
-                  width="10"
-                  height="10"
+                  width="9"
+                  height="9"
+                  rx="1"
                   fill="#ddd"
                 />
 
                 <rect
-                  x="49"
+                  x="46"
                   y="50"
-                  width="10"
-                  height="10"
+                  width="9"
+                  height="9"
+                  rx="1"
                   fill="#ddd"
                 />
 
                 <rect
-                  x="64"
+                  x="58"
                   y="50"
-                  width="8"
-                  height="10"
+                  width="9"
+                  height="9"
+                  rx="1"
+                  fill="#ddd"
+                />
+
+                <rect
+                  x="34"
+                  y="63"
+                  width="9"
+                  height="9"
+                  rx="1"
+                  fill="#ddd"
+                />
+
+                <rect
+                  x="46"
+                  y="63"
+                  width="9"
+                  height="9"
+                  rx="1"
+                  fill="#ddd"
+                />
+
+                <rect
+                  x="58"
+                  y="63"
+                  width="9"
+                  height="9"
+                  rx="1"
                   fill="#ddd"
                 />
 
@@ -580,6 +877,9 @@
 
           </div>
 
+
+
+          <!-- MOSTRA ALTRO -->
 
           <div class="home-operation">
 
@@ -771,11 +1071,57 @@
             Il mondo Poste
           </h2>
 
+
           <div class="nascondi-saldo">
+
             <span class="saldo-eye">
-              ◉
+
+              <svg
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <!-- OCCHIO -->
+
+                <path
+                  d="M4 16
+                     C7.5 10.5 11.8 7.5 16 7.5
+                     C20.2 7.5 24.5 10.5 28 16
+                     C24.5 21.5 20.2 24.5 16 24.5
+                     C11.8 24.5 7.5 21.5 4 16Z"
+                  fill="none"
+                  stroke="#0755c7"
+                  stroke-width="2.4"
+                  stroke-linejoin="round"
+                />
+
+                <circle
+                  cx="16"
+                  cy="16"
+                  r="4.2"
+                  fill="none"
+                  stroke="#0755c7"
+                  stroke-width="2.4"
+                />
+
+                <!-- SBARRA -->
+
+                <line
+                  x1="5"
+                  y1="5"
+                  x2="27"
+                  y2="27"
+                  stroke="#0755c7"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
             </span>
+
             Nascondi saldo
+
           </div>
 
         </div>
