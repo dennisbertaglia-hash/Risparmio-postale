@@ -87,8 +87,6 @@ main {
    ========================= */
 
 .summary-card {
-  border: 10px solid red;
-
   width: 100%;
   background: #eef7ff;
   border-radius: 15px;
@@ -183,14 +181,24 @@ main {
   margin-bottom: 18px;
 }
 
+/* La fila può scorrere, ma la pagina intera no */
 .filtri {
   display: flex;
   gap: 14px;
-  width: 100%;
-  max-width: 100%;
+  width: calc(100% + 26px);
+  max-width: none;
   margin-left: 0;
+  margin-right: -26px;
   margin-bottom: 32px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-right: 26px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filtri::-webkit-scrollbar {
+  display: none;
 }
 
 .filtro {
@@ -539,6 +547,9 @@ main {
 
   .filtri {
     gap: 10px;
+    width: calc(100% + 22px);
+    margin-right: -22px;
+    padding-right: 22px;
   }
 
   .filtro {
