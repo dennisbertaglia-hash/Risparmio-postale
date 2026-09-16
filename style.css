@@ -368,47 +368,53 @@ body {
 }
 
 
-/* OCCHIO NASCONDI SALDO - CORRETTO */
+/* =========================
+   OCCHIO NASCONDI SALDO
+   ========================= */
 
 .saldo-eye {
   position: relative;
   display: inline-block;
-  width: 17px;
-  height: 12px;
-  flex: 0 0 17px;
+  width: 20px;
+  height: 15px;
+  flex: 0 0 20px;
   margin: 0;
-  transform: none;
   font-size: 0;
   line-height: 0;
-  background: radial-gradient(
-    circle at center,
-    #0755c7 0 2px,
-    transparent 2.3px
-  );
+  background: none;
 }
 
 .saldo-eye::before {
   content: "";
   position: absolute;
   left: 1px;
-  top: 2px;
-  width: 15px;
-  height: 8px;
-  border: 1.7px solid #0755c7;
-  border-radius: 50%;
+  top: 3px;
+  width: 17px;
+  height: 10px;
+  border: 1.8px solid #0755c7;
+  border-radius: 50% / 55%;
 }
 
 .saldo-eye::after {
   content: "";
   position: absolute;
-  left: 8px;
-  top: -2px;
-  width: 1.7px;
-  height: 17px;
+  left: 9px;
+  top: -1px;
+  width: 1.8px;
+  height: 19px;
   background: #0755c7;
   border-radius: 2px;
   transform: rotate(45deg);
   transform-origin: center;
+}
+
+.saldo-eye {
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      #0755c7 0 2px,
+      transparent 2.3px
+    );
 }
 
 
@@ -643,6 +649,7 @@ body {
   align-items: center;
   font-size: 12px;
 }
+
 
 main {
   padding: 6px 26px 35px;
@@ -1735,19 +1742,22 @@ main {
   }
 
   .saldo-eye {
-    width: 18px;
-    height: 13px;
-    flex-basis: 18px;
+    width: 20px;
+    height: 15px;
+    flex-basis: 20px;
   }
 
   .saldo-eye::before {
-    width: 16px;
-    height: 9px;
+    left: 1px;
+    top: 3px;
+    width: 17px;
+    height: 10px;
   }
 
   .saldo-eye::after {
-    left: 8.5px;
-    height: 18px;
+    left: 9px;
+    top: -1px;
+    height: 19px;
   }
 
   .mondo-grid {
