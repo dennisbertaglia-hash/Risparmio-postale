@@ -1,4 +1,4 @@
-const CACHE_NAME = "risparmio-postale-v4";
+const CACHE_NAME = "risparmio-postale-v5";
 
 const FILES_TO_CACHE = [
   "./",
