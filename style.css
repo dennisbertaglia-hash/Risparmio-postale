@@ -182,6 +182,7 @@ main {
 }
 
 /* FILTRI */
+
 .filtri {
   display: flex;
   gap: 14px;
@@ -359,7 +360,7 @@ main {
 }
 
 .detail-main {
-  padding: 0 26px 110px;
+  padding: 0 26px 150px;
 }
 
 .detail-card {
@@ -580,6 +581,7 @@ main {
   .detail-main {
     padding-left: 22px;
     padding-right: 22px;
+    padding-bottom: 150px;
   }
 
   .detail-divider {
