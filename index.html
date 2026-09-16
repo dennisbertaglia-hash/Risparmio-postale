@@ -110,6 +110,21 @@
       letter-spacing: -1px !important;
     }
 
+    /* =====================================================
+       CENTRAGGIO SIMBOLO BONIFICO SEPA
+       ===================================================== */
+
+    .bonifico-sepa-icon {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .bonifico-sepa-icon svg {
+      transform: translate(0, 0) !important;
+      transform-origin: center center !important;
+    }
+
   </style>
 
 </head>
@@ -520,7 +535,7 @@
 
           <div class="home-operation">
 
-            <div class="home-operation-circle">
+            <div class="home-operation-circle bonifico-sepa-icon">
 
               <!-- STESSA GRAFICA DEL PORTAFOGLIO
                    USATA IN "RICHIEDI RIMBORSO" -->
@@ -711,27 +726,6 @@
                   letter-spacing="-1"
                 >p2p</text>
 
-                <!-- FRECCIA INFERIORE -->
-
-                <path
-                  d="M34 64
-                     C42 71 58 72 67 63"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-
-                <path
-                  d="M63 59
-                     L68 63
-                     L63 68"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
 
                 <!-- FRECCIA SUPERIORE -->
 
@@ -748,6 +742,30 @@
                   d="M40 33
                      L36 38
                      L41 40"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+
+                <!-- FRECCIA INFERIORE
+                     SIMMETRICA E PIÙ VICINA ALLA SCRITTA -->
+
+                <path
+                  d="M34 63
+                     C41 69 55 69 63 62"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M60 58
+                     L64 63
+                     L59 65"
                   fill="none"
                   stroke="#111"
                   stroke-width="2"
