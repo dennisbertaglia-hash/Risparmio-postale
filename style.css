@@ -7,8 +7,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  max-width: 100%;
   background: #ffffff;
 }
 
@@ -27,23 +25,14 @@ body {
   overflow-x: hidden;
 }
 
-
 /* =========================================
    PAGINA PRINCIPALE
    ========================================= */
-
-#paginaPrincipale {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 
 .top-header {
   position: relative;
   padding: 18px 26px 3px;
 }
-
 
 .back-button {
   width: 48px;
@@ -63,12 +52,10 @@ body {
   cursor: pointer;
 }
 
-
 .back-button svg {
   width: 27px;
   height: 27px;
 }
-
 
 .top-header h1 {
   font-size: 24px;
@@ -78,7 +65,6 @@ body {
 
   margin: 18px 0 5px;
 }
-
 
 .top-icons {
   position: absolute;
@@ -94,12 +80,10 @@ body {
   font-size: 15px;
 }
 
-
 .eye-icon {
   width: 24px;
   height: 24px;
 }
-
 
 .question {
   width: 18px;
@@ -115,28 +99,12 @@ body {
   font-size: 12px;
 }
 
-
-/* =========================================
-   CONTENUTO PRINCIPALE
-   ========================================= */
-
 main {
-  width: 100%;
-  max-width: 100%;
-
   padding: 6px 26px 35px;
-
-  overflow-x: hidden;
 }
-
-
-/* =========================================
-   CARD RIEPILOGO
-   ========================================= */
 
 .summary-card {
   width: 100%;
-  max-width: 100%;
 
   background: #eef7ff;
 
@@ -149,7 +117,6 @@ main {
   min-height: 235px;
 }
 
-
 .summary-card h2 {
   margin: 0;
 
@@ -159,16 +126,13 @@ main {
   font-weight: 700;
 }
 
-
 .summary-item {
   margin-top: 44px;
 }
 
-
 .summary-item.second {
   margin-top: 26px;
 }
-
 
 .summary-label {
   font-size: 15.5px;
@@ -176,7 +140,6 @@ main {
 
   font-weight: 400;
 }
-
 
 .summary-value {
   margin-top: 4px;
@@ -186,11 +149,6 @@ main {
 
   font-weight: 400;
 }
-
-
-/* =========================================
-   TITOLI
-   ========================================= */
 
 .section-title {
   margin: 24px 0 20px;
@@ -203,28 +161,13 @@ main {
   letter-spacing: -0.35px;
 }
 
-
-.your-bonds {
-  margin-top: 29px;
-  margin-bottom: 18px;
-}
-
-
-/* =========================================
-   OPERAZIONI
-   ========================================= */
-
 .operations {
   display: flex;
 
   gap: 32px;
 
   align-items: flex-start;
-
-  width: 100%;
-  max-width: 100%;
 }
-
 
 .operation-button {
   width: 88px;
@@ -240,10 +183,7 @@ main {
   font-family: inherit;
 
   cursor: pointer;
-
-  flex: 0 0 auto;
 }
-
 
 .operation-icon {
   width: 85px;
@@ -252,14 +192,12 @@ main {
   margin: 0 auto;
 }
 
-
 .operation-icon svg {
   display: block;
 
   width: 100%;
   height: 100%;
 }
-
 
 /*
    Testo nero ma NON grassetto
@@ -278,11 +216,10 @@ main {
   color: #111111;
 }
 
-
-.operation-button:active {
-  opacity: 0.55;
+.your-bonds {
+  margin-top: 29px;
+  margin-bottom: 18px;
 }
-
 
 /* =========================================
    FILTRI
@@ -291,18 +228,14 @@ main {
 .filtri {
   display: flex;
 
-  flex-wrap: wrap;
+  gap: 14px;
 
-  gap: 10px;
+  width: max-content;
 
-  width: 100%;
-  max-width: 100%;
+  margin-left: -13px;
 
-  margin: 0 0 32px;
-
-  overflow: hidden;
+  margin-bottom: 32px;
 }
-
 
 .filtro {
   height: 35px;
@@ -324,20 +257,15 @@ main {
   font-weight: 600;
 
   white-space: nowrap;
-
-  flex: 0 0 auto;
 }
-
 
 .filtro.prodotto {
   display: flex;
-
   align-items: center;
   justify-content: center;
 
   gap: 8px;
 }
-
 
 .freccia-down {
   width: 8px;
@@ -351,23 +279,14 @@ main {
   margin-top: -4px;
 }
 
-
 .periodo {
   padding-left: 22px;
   padding-right: 22px;
 }
 
-
 /* =========================================
    ELENCO BUONI
    ========================================= */
-
-#buoni {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 
 .buono {
   display: flex;
@@ -375,7 +294,6 @@ main {
   align-items: center;
 
   width: 100%;
-  max-width: 100%;
 
   min-height: 85px;
 
@@ -384,10 +302,7 @@ main {
   border-bottom: 1px solid #eeeeee;
 
   cursor: pointer;
-
-  overflow: hidden;
 }
-
 
 .buono-icon {
   flex: 0 0 36px;
@@ -407,21 +322,16 @@ main {
   margin-right: 12px;
 }
 
-
 .buono-icon svg {
   width: 24px;
   height: 24px;
 }
 
-
 .buono-info {
   flex: 1;
 
   min-width: 0;
-
-  overflow: hidden;
 }
-
 
 .data {
   color: #777777;
@@ -431,10 +341,7 @@ main {
   line-height: 1.2;
 
   font-weight: 400;
-
-  white-space: nowrap;
 }
-
 
 .nome {
   margin-top: 4px;
@@ -446,10 +353,7 @@ main {
   font-weight: 500;
 
   letter-spacing: -0.1px;
-
-  white-space: nowrap;
 }
-
 
 .valore {
   margin-left: 8px;
@@ -461,15 +365,12 @@ main {
   font-weight: 600;
 
   white-space: nowrap;
-
-  flex: 0 0 auto;
 }
 
-
+.operation-button:active,
 .buono:active {
   opacity: 0.55;
 }
-
 
 /* =========================================
    PAGINA DETTAGLIO
@@ -478,21 +379,14 @@ main {
 .pagina-dettaglio {
   display: none;
 
-  width: 100%;
-  max-width: 100%;
-
   min-height: 100vh;
 
   background: #ffffff;
-
-  overflow-x: hidden;
 }
-
 
 .pagina-dettaglio.active {
   display: block;
 }
-
 
 .detail-header {
   position: relative;
@@ -505,7 +399,6 @@ main {
 
   align-items: flex-start;
 }
-
 
 .detail-back {
   flex: 0 0 auto;
@@ -529,12 +422,10 @@ main {
   cursor: pointer;
 }
 
-
 .detail-back svg {
   width: 27px;
   height: 27px;
 }
-
 
 .detail-header h1 {
   position: absolute;
@@ -555,26 +446,18 @@ main {
   letter-spacing: -0.35px;
 }
 
-
 /* =========================================
    CARD DETTAGLIO
    ========================================= */
 
 .detail-main {
-  width: 100%;
-  max-width: 100%;
-
   padding: 0 26px 110px;
-
-  overflow-x: hidden;
 }
-
 
 .detail-card {
   position: relative;
 
   width: 100%;
-  max-width: 100%;
 
   background: #eef7ff;
 
@@ -585,7 +468,6 @@ main {
   margin-top: 0;
 }
 
-
 .detail-card-top {
   min-height: 143px;
 
@@ -595,7 +477,6 @@ main {
 
   position: relative;
 }
-
 
 .detail-buono-icon {
   position: absolute;
@@ -610,12 +491,10 @@ main {
   top: -30px;
 }
 
-
 .detail-buono-icon svg {
   width: 100%;
   height: 100%;
 }
-
 
 .detail-rimborso {
   font-size: 33px;
@@ -627,7 +506,6 @@ main {
   letter-spacing: -1px;
 }
 
-
 .detail-rimborso-label {
   margin-top: 10px;
 
@@ -637,7 +515,6 @@ main {
 
   font-weight: 400;
 }
-
 
 .detail-account {
   min-height: 65px;
@@ -655,7 +532,6 @@ main {
   padding: 10px;
 }
 
-
 .account-icon {
   width: 40px;
   height: 30px;
@@ -663,12 +539,10 @@ main {
   flex: 0 0 40px;
 }
 
-
 .account-icon svg {
   width: 100%;
   height: 100%;
 }
-
 
 .account-text {
   font-size: 15.5px;
@@ -677,7 +551,6 @@ main {
 
   font-weight: 400;
 }
-
 
 /* =========================================
    RIEPILOGO
@@ -695,11 +568,9 @@ main {
   letter-spacing: -0.35px;
 }
 
-
 .detail-field {
   margin-bottom: 34px;
 }
-
 
 .detail-label {
   color: #707070;
@@ -710,7 +581,6 @@ main {
 
   font-weight: 400;
 }
-
 
 .detail-value {
   margin-top: 6px;
@@ -724,7 +594,6 @@ main {
   font-weight: 400;
 }
 
-
 .detail-divider {
   height: 6px;
 
@@ -733,11 +602,9 @@ main {
   margin: 23px -26px 20px;
 }
 
-
 .last-detail-field {
   margin-bottom: 10px;
 }
-
 
 /* =========================================
    PULSANTE FISSO
@@ -762,7 +629,6 @@ main {
   z-index: 100;
 }
 
-
 .bottom-action button {
   width: 100%;
 
@@ -785,14 +651,12 @@ main {
   cursor: pointer;
 }
 
-
 .bottom-action button:active {
   opacity: 0.75;
 }
 
-
 /* =========================================
-   SCHERMI MOLTO PICCOLI
+   ADATTAMENTO SCHERMI MOLTO PICCOLI
    ========================================= */
 
 @media (max-width: 360px) {
