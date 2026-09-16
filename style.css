@@ -1452,3 +1452,501 @@ main {
   }
 
 }
+/* =====================================================
+   OTTIMIZZAZIONE HOME MYPOSTE - IPHONE
+   NON MODIFICA LA PAGINA BUONI
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  /* =========================
+     HEADER GIALLO
+     ========================= */
+
+  .home-header {
+    height: 150px;
+    padding: 20px 20px 0;
+    border-bottom-right-radius: 30px;
+  }
+
+  .home-saluto {
+    left: 25px;
+    top: 76px;
+  }
+
+  .home-ciao {
+    font-size: 15px;
+    line-height: 1;
+  }
+
+  .home-nome {
+    margin-top: 3px;
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  .home-header-icons {
+    top: 57px;
+    right: 20px;
+    gap: 13px;
+  }
+
+  .home-header-item {
+    width: 54px;
+    flex: 0 0 54px;
+    text-align: center;
+  }
+
+  .home-round-icon {
+    width: 54px;
+    height: 54px;
+    border-width: 1px;
+  }
+
+  .home-round-icon svg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .home-header-label {
+    margin-top: 7px;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+
+  /* =========================
+     CONTENUTO HOME
+     ========================= */
+
+  .home-main {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-bottom: 80px;
+  }
+
+
+  /* =========================
+     ASSOCIA NUMERO
+     ========================= */
+
+  .numero-box {
+    min-height: 190px;
+    margin-left: -22px;
+    margin-right: -22px;
+    padding: 27px 25px 25px;
+  }
+
+  .numero-text {
+    width: 66%;
+  }
+
+  .numero-title {
+    font-size: 18px;
+    line-height: 1.1;
+    margin-bottom: 7px;
+  }
+
+  .numero-description {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  .numero-illustration {
+    right: 8px;
+    bottom: 24px;
+    width: 130px;
+    height: 110px;
+  }
+
+
+  /* =========================
+     SEZIONI
+     ========================= */
+
+  .home-section {
+    margin-top: 38px;
+  }
+
+  .home-section h2,
+  .mondo-poste h2 {
+    font-size: 21px;
+    line-height: 1.1;
+    letter-spacing: -0.3px;
+  }
+
+  .home-carousel-arrows {
+    gap: 10px;
+  }
+
+  .home-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 21px;
+  }
+
+
+  /* =========================
+     OPERAZIONI
+     ========================= */
+
+  .home-operations-scroll {
+    gap: 22px;
+    margin-top: 28px;
+    margin-left: 0;
+    margin-right: -22px;
+  }
+
+  .home-operation {
+    flex: 0 0 115px;
+  }
+
+  .home-operation-circle {
+    width: 90px;
+    height: 90px;
+  }
+
+  .home-operation-circle svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .home-operation-label {
+    margin-top: 17px;
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
+  .p2p-icon {
+    width: 51px;
+    height: 51px;
+    font-size: 17px;
+  }
+
+  .home-more-icon {
+    width: 51px;
+    height: 51px;
+    font-size: 31px;
+  }
+
+
+  /* =========================
+     SITUAZIONE FINANZIARIA
+     ========================= */
+
+  .situazione {
+    margin-top: 40px;
+  }
+
+  .patrimonio-card {
+    min-height: 125px;
+    margin-top: 32px;
+    border-radius: 18px;
+    padding: 14px 16px;
+  }
+
+  .patrimonio-image {
+    width: 90px;
+    height: 80px;
+    flex: 0 0 90px;
+  }
+
+  .patrimonio-text {
+    margin-left: 10px;
+    padding-right: 28px;
+  }
+
+  .patrimonio-title {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .patrimonio-description {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .patrimonio-arrow {
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+  }
+
+
+  /* =========================
+     IL MONDO POSTE
+     ========================= */
+
+  .mondo-poste {
+    margin-top: 38px;
+  }
+
+  .nascondi-saldo {
+    height: 34px;
+    padding: 0 12px;
+    gap: 7px;
+    font-size: 13px;
+    border-radius: 18px;
+  }
+
+  .saldo-eye {
+    font-size: 14px;
+  }
+
+  .mondo-grid {
+    margin-top: 24px;
+    gap: 10px;
+  }
+
+  .poste-card {
+    min-height: 130px;
+    border-radius: 17px;
+  }
+
+  .poste-card-title {
+    padding: 9px 14px 7px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .poste-card-content {
+    min-height: 96px;
+    border-radius: 17px;
+    padding: 13px 14px;
+  }
+
+  .poste-number {
+    font-size: 25px;
+  }
+
+  .poste-number span {
+    font-size: 15px;
+  }
+
+  .normal-number {
+    font-size: 17px !important;
+  }
+
+  .poste-description {
+    margin-top: 6px;
+    font-size: 14px;
+    line-height: 1.15;
+  }
+
+  .poste-description.large {
+    font-size: 16px;
+    margin-top: 1px;
+  }
+
+  .info-description {
+    gap: 5px;
+  }
+
+  .info-circle {
+    width: 15px;
+    height: 15px;
+    flex: 0 0 15px;
+    border-width: 1.5px;
+    font-size: 9px;
+  }
+
+  .risparmio-card {
+    min-height: 135px;
+  }
+
+  .risparmio-card .poste-card-content {
+    min-height: 100px;
+  }
+
+
+  /* =========================
+     BANNER
+     ========================= */
+
+  .mondo-banner {
+    margin-top: 10px;
+    height: 135px;
+    border-radius: 15px;
+  }
+
+  .banner-text {
+    left: 15px;
+    top: 22px;
+    font-size: 17px;
+    line-height: 1.15;
+  }
+
+  .banner-link {
+    margin-top: 13px;
+    font-size: 16px;
+  }
+
+
+  /* =========================
+     NAVIGAZIONE INFERIORE
+     ========================= */
+
+  .home-bottom-nav {
+    left: 18px;
+    right: 18px;
+    bottom: 14px;
+    height: 66px;
+    border-radius: 34px;
+    border-width: 1px;
+  }
+
+  .nav-item {
+    font-size: 11px;
+    gap: 1px;
+  }
+
+  .nav-item svg {
+    width: 28px;
+    height: 28px;
+  }
+
+}
+
+
+/* =====================================================
+   IPHONE MOLTO PICCOLI
+   ===================================================== */
+
+@media (max-width: 390px) {
+
+  .home-header {
+    height: 145px;
+  }
+
+  .home-header-icons {
+    right: 12px;
+    gap: 9px;
+  }
+
+  .home-header-item {
+    width: 51px;
+    flex-basis: 51px;
+  }
+
+  .home-round-icon {
+    width: 51px;
+    height: 51px;
+  }
+
+  .home-round-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .home-header-label {
+    font-size: 11px;
+  }
+
+  .home-saluto {
+    left: 22px;
+    top: 75px;
+  }
+
+  .home-ciao {
+    font-size: 14px;
+  }
+
+  .home-nome {
+    font-size: 20px;
+  }
+
+  .numero-box {
+    min-height: 180px;
+  }
+
+  .numero-title {
+    font-size: 17px;
+  }
+
+  .numero-description {
+    font-size: 15px;
+  }
+
+  .numero-illustration {
+    width: 120px;
+    height: 100px;
+  }
+
+  .home-section h2,
+  .mondo-poste h2 {
+    font-size: 20px;
+  }
+
+  .home-operation {
+    flex-basis: 108px;
+  }
+
+  .home-operation-circle {
+    width: 84px;
+    height: 84px;
+  }
+
+  .home-operation-label {
+    font-size: 13px;
+  }
+
+  .patrimonio-card {
+    min-height: 115px;
+  }
+
+  .patrimonio-image {
+    width: 78px;
+    flex-basis: 78px;
+  }
+
+  .patrimonio-title {
+    font-size: 17px;
+  }
+
+  .patrimonio-description {
+    font-size: 13px;
+  }
+
+  .poste-card {
+    min-height: 125px;
+  }
+
+  .poste-card-title {
+    font-size: 15px;
+  }
+
+  .poste-card-content {
+    min-height: 91px;
+    padding: 12px;
+  }
+
+  .poste-number {
+    font-size: 23px;
+  }
+
+  .poste-description {
+    font-size: 13px;
+  }
+
+  .risparmio-card {
+    min-height: 130px;
+  }
+
+  .home-bottom-nav {
+    left: 15px;
+    right: 15px;
+    height: 63px;
+  }
+
+  .nav-item {
+    font-size: 10px;
+  }
+
+  .nav-item svg {
+    width: 27px;
+    height: 27px;
+  }
+}
