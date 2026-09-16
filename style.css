@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ffffff;
+  width: 100%;
 }
 
 body {
@@ -21,6 +22,7 @@ body {
 
   color: #111111;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 
@@ -30,13 +32,13 @@ body {
 
 .top-header {
   position: relative;
-  padding: 35px 50px 5px;
+  padding: 28px 24px 5px;
 }
 
 
 .back-button {
-  width: 95px;
-  height: 95px;
+  width: 72px;
+  height: 72px;
 
   padding: 0;
 
@@ -54,45 +56,45 @@ body {
 
 
 .back-button svg {
-  width: 52px;
-  height: 52px;
+  width: 42px;
+  height: 42px;
 }
 
 
 .top-header h1 {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -1px;
 
-  margin: 35px 0 10px;
+  margin: 30px 0 10px;
 }
 
 
 .top-icons {
   position: absolute;
 
-  right: 48px;
-  top: 37px;
+  right: 25px;
+  top: 31px;
 
   display: flex;
   align-items: center;
 
-  gap: 28px;
+  gap: 22px;
 
   font-size: 29px;
 }
 
 
 .eye-icon {
-  width: 47px;
-  height: 47px;
+  width: 39px;
+  height: 39px;
 }
 
 
 .question {
-  width: 35px;
-  height: 35px;
+  width: 32px;
+  height: 32px;
 
   border: 2px solid #111;
   border-radius: 50%;
@@ -101,34 +103,34 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-size: 23px;
+  font-size: 21px;
 }
 
 
 main {
-  padding: 12px 50px 60px;
+  padding: 10px 24px 60px;
 }
 
 
 .summary-card {
-  width: calc(100% - 32px);
+  width: 100%;
 
   background: #eef7ff;
 
   border-radius: 28px;
 
-  padding: 62px 70px;
+  padding: 45px 34px;
 
-  margin-top: 45px;
+  margin-top: 35px;
 
-  min-height: 470px;
+  min-height: 430px;
 }
 
 
 .summary-card h2 {
   margin: 0;
 
-  font-size: 38px;
+  font-size: 34px;
   line-height: 1.2;
 
   font-weight: 700;
@@ -136,17 +138,17 @@ main {
 
 
 .summary-item {
-  margin-top: 88px;
+  margin-top: 75px;
 }
 
 
 .summary-item.second {
-  margin-top: 52px;
+  margin-top: 45px;
 }
 
 
 .summary-label {
-  font-size: 31px;
+  font-size: 27px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -156,7 +158,7 @@ main {
 .summary-value {
   margin-top: 7px;
 
-  font-size: 39px;
+  font-size: 34px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -164,9 +166,9 @@ main {
 
 
 .section-title {
-  margin: 48px 0 40px;
+  margin: 42px 0 32px;
 
-  font-size: 40px;
+  font-size: 36px;
   line-height: 1.15;
 
   font-weight: 700;
@@ -178,16 +180,16 @@ main {
 .operations {
   display: flex;
 
-  gap: 65px;
+  gap: 42px;
 
   align-items: flex-start;
 }
 
 
 .operation-button {
-  width: 175px;
+  width: 145px;
 
-  min-height: 205px;
+  min-height: 185px;
 
   padding: 0;
 
@@ -202,8 +204,8 @@ main {
 
 
 .operation-icon {
-  width: 170px;
-  height: 170px;
+  width: 145px;
+  height: 145px;
 
   margin: 0 auto;
 }
@@ -217,17 +219,12 @@ main {
 }
 
 
-/*
-   IMPORTANTISSIMO:
-   testo nero ma NON grassetto
-*/
-
 .operation-button span {
   display: block;
 
-  margin-top: 25px;
+  margin-top: 20px;
 
-  font-size: 27px;
+  font-size: 24px;
   line-height: 1.15;
 
   font-weight: 400;
@@ -237,8 +234,8 @@ main {
 
 
 .your-bonds {
-  margin-top: 58px;
-  margin-bottom: 35px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 
@@ -249,20 +246,22 @@ main {
 .filtri {
   display: flex;
 
-  gap: 28px;
+  gap: 20px;
 
   width: max-content;
 
-  margin-left: -25px;
+  margin-left: 0;
 
-  margin-bottom: 65px;
+  margin-bottom: 55px;
+
+  overflow: visible;
 }
 
 
 .filtro {
-  height: 70px;
+  height: 64px;
 
-  padding: 0 35px;
+  padding: 0 27px;
 
   border: 2.5px solid #0759c9;
 
@@ -274,7 +273,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 29px;
+  font-size: 25px;
 
   font-weight: 600;
 
@@ -287,26 +286,26 @@ main {
   align-items: center;
   justify-content: center;
 
-  gap: 17px;
+  gap: 14px;
 }
 
 
 .freccia-down {
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
 
   border-right: 4px solid #0759c9;
   border-bottom: 4px solid #0759c9;
 
   transform: rotate(45deg);
 
-  margin-top: -8px;
+  margin-top: -7px;
 }
 
 
 .periodo {
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 
@@ -321,9 +320,9 @@ main {
 
   width: 100%;
 
-  min-height: 170px;
+  min-height: 145px;
 
-  padding: 24px 0;
+  padding: 20px 0;
 
   border-bottom: 1px solid #eeeeee;
 
@@ -332,10 +331,10 @@ main {
 
 
 .buono-icon {
-  flex: 0 0 72px;
+  flex: 0 0 62px;
 
-  width: 72px;
-  height: 72px;
+  width: 62px;
+  height: 62px;
 
   border-radius: 50%;
 
@@ -346,13 +345,13 @@ main {
   align-items: center;
   justify-content: center;
 
-  margin-right: 25px;
+  margin-right: 18px;
 }
 
 
 .buono-icon svg {
-  width: 47px;
-  height: 47px;
+  width: 41px;
+  height: 41px;
 }
 
 
@@ -366,7 +365,7 @@ main {
 .data {
   color: #777777;
 
-  font-size: 25px;
+  font-size: 22px;
 
   line-height: 1.2;
 
@@ -377,7 +376,7 @@ main {
 .nome {
   margin-top: 7px;
 
-  font-size: 27px;
+  font-size: 24px;
 
   line-height: 1.15;
 
@@ -388,9 +387,9 @@ main {
 
 
 .valore {
-  margin-left: 15px;
+  margin-left: 12px;
 
-  font-size: 32px;
+  font-size: 27px;
 
   line-height: 1;
 
@@ -427,9 +426,9 @@ main {
 .detail-header {
   position: relative;
 
-  height: 250px;
+  height: 205px;
 
-  padding: 35px 50px 0;
+  padding: 28px 24px 0;
 
   display: flex;
 
@@ -440,8 +439,8 @@ main {
 .detail-back {
   flex: 0 0 auto;
 
-  width: 95px;
-  height: 95px;
+  width: 72px;
+  height: 72px;
 
   padding: 0;
 
@@ -461,22 +460,22 @@ main {
 
 
 .detail-back svg {
-  width: 54px;
-  height: 54px;
+  width: 43px;
+  height: 43px;
 }
 
 
 .detail-header h1 {
   position: absolute;
 
-  left: 217px;
-  right: 35px;
+  left: 115px;
+  right: 24px;
 
-  top: 65px;
+  top: 50px;
 
   margin: 0;
 
-  font-size: 40px;
+  font-size: 32px;
 
   line-height: 1.15;
 
@@ -491,7 +490,7 @@ main {
    ========================================= */
 
 .detail-main {
-  padding: 0 50px 220px;
+  padding: 0 24px 220px;
 }
 
 
@@ -511,9 +510,9 @@ main {
 
 
 .detail-card-top {
-  min-height: 285px;
+  min-height: 250px;
 
-  padding-top: 145px;
+  padding-top: 125px;
 
   text-align: center;
 
@@ -524,14 +523,14 @@ main {
 .detail-buono-icon {
   position: absolute;
 
-  width: 170px;
-  height: 170px;
+  width: 145px;
+  height: 145px;
 
   left: 50%;
 
   transform: translateX(-50%);
 
-  top: -60px;
+  top: -50px;
 }
 
 
@@ -542,7 +541,7 @@ main {
 
 
 .detail-rimborso {
-  font-size: 66px;
+  font-size: 52px;
 
   line-height: 1;
 
@@ -553,9 +552,9 @@ main {
 
 
 .detail-rimborso-label {
-  margin-top: 20px;
+  margin-top: 18px;
 
-  font-size: 31px;
+  font-size: 27px;
 
   line-height: 1.2;
 
@@ -564,7 +563,7 @@ main {
 
 
 .detail-account {
-  min-height: 130px;
+  min-height: 110px;
 
   border-top: 5px solid #ffffff;
 
@@ -574,17 +573,17 @@ main {
 
   justify-content: center;
 
-  gap: 22px;
+  gap: 16px;
 
-  padding: 20px;
+  padding: 18px;
 }
 
 
 .account-icon {
-  width: 80px;
-  height: 60px;
+  width: 70px;
+  height: 52px;
 
-  flex: 0 0 80px;
+  flex: 0 0 70px;
 }
 
 
@@ -595,7 +594,7 @@ main {
 
 
 .account-text {
-  font-size: 31px;
+  font-size: 26px;
 
   line-height: 1.25;
 
@@ -608,9 +607,9 @@ main {
    ========================================= */
 
 .detail-section-title {
-  margin: 75px 0 45px;
+  margin: 60px 0 38px;
 
-  font-size: 40px;
+  font-size: 36px;
 
   line-height: 1.15;
 
@@ -621,14 +620,14 @@ main {
 
 
 .detail-field {
-  margin-bottom: 67px;
+  margin-bottom: 55px;
 }
 
 
 .detail-label {
   color: #707070;
 
-  font-size: 31px;
+  font-size: 27px;
 
   line-height: 1.35;
 
@@ -637,11 +636,11 @@ main {
 
 
 .detail-value {
-  margin-top: 12px;
+  margin-top: 10px;
 
   color: #111111;
 
-  font-size: 32px;
+  font-size: 28px;
 
   line-height: 1.25;
 
@@ -650,11 +649,11 @@ main {
 
 
 .detail-divider {
-  height: 12px;
+  height: 10px;
 
   background: #f5f5f5;
 
-  margin: 45px -50px 40px;
+  margin: 40px -24px 35px;
 }
 
 
@@ -675,13 +674,13 @@ main {
 
   bottom: 0;
 
-  height: 215px;
+  height: 170px;
 
   background: rgba(255, 255, 255, 0.98);
 
   border-top: 1px solid #eeeeee;
 
-  padding: 35px 50px;
+  padding: 25px 24px;
 
   z-index: 100;
 }
@@ -690,11 +689,11 @@ main {
 .bottom-action button {
   width: 100%;
 
-  height: 105px;
+  height: 82px;
 
   border: 0;
 
-  border-radius: 55px;
+  border-radius: 45px;
 
   background: #0755c7;
 
@@ -702,7 +701,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 34px;
+  font-size: 29px;
 
   font-weight: 600;
 
