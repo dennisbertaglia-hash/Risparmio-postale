@@ -125,7 +125,7 @@ main {
 
   border-radius: 58px;
 
-  padding: 40px 74px 42px;
+  padding: 38px 46px 34px;
 
   margin-top: 24px;
 
@@ -136,44 +136,44 @@ main {
 .summary-card h2 {
   margin: 0;
 
-  font-size: 32px;
+  font-size: 56px;
   line-height: 1.15;
 
-  font-weight: 600;
+  font-weight: 700;
 
-  letter-spacing: -0.8px;
+  letter-spacing: -1.5px;
 }
 
 
 .summary-item {
-  margin-top: 76px;
+  margin-top: 132px;
 }
 
 
 .summary-item.second {
-  margin-top: 57px;
+  margin-top: 91px;
 }
 
 
 .summary-label {
-  font-size: 29px;
+  font-size: 50px;
   line-height: 1.15;
 
   font-weight: 400;
 
-  letter-spacing: -0.7px;
+  letter-spacing: -1.2px;
 }
 
 
 .summary-value {
-  margin-top: 10px;
+  margin-top: 14px;
 
-  font-size: 30px;
+  font-size: 50px;
   line-height: 1.15;
 
   font-weight: 400;
 
-  letter-spacing: -0.7px;
+  letter-spacing: -1.2px;
 }
 
 
