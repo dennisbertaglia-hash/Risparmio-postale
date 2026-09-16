@@ -14,14 +14,12 @@
 
   <link rel="stylesheet" href="style.css?v=6">
 
-  <!-- =====================================================
-       MODIFICHE HOME MYPOSTE
-       NON MODIFICA PAGINA BUONI / DETTAGLIO
-       ===================================================== -->
-
   <style>
 
-    /* HEADER HOME */
+    /* =====================================================
+       MODIFICHE HOME MYPOSTE
+       NON MODIFICA PAGINA BUONI / DETTAGLIO
+       ===================================================== */
 
     .home-header {
       height: 144px !important;
@@ -30,8 +28,6 @@
       box-sizing: border-box !important;
       position: relative !important;
     }
-
-    /* SALUTO: POSIZIONE COME NELL'ESEMPIO */
 
     .home-saluto {
       position: absolute !important;
@@ -56,16 +52,11 @@
       gap: 22px !important;
       align-items: flex-start !important;
       margin-top: 14px !important;
+      transform: translateX(-8px) !important;
     }
 
     .home-header-item {
       gap: 6px !important;
-    }
-
-    /* ASSISTENZA LEGGERMENTE PIU' A SINISTRA */
-
-    .home-header-item:last-child {
-      transform: translateX(-8px) !important;
     }
 
     .home-round-icon {
@@ -77,9 +68,6 @@
       font-size: 14px !important;
       line-height: 1 !important;
     }
-
-
-    /* OCCHIO NASCONDI SALDO */
 
     .saldo-eye {
       width: 25px !important;
@@ -96,9 +84,6 @@
       display: block !important;
     }
 
-
-    /* OPERAZIONI */
-
     .home-operation-circle {
       display: flex !important;
       align-items: center !important;
@@ -111,9 +96,6 @@
       height: 100% !important;
       display: block !important;
     }
-
-
-    /* P2P */
 
     .p2p-icon {
       width: 58px !important;
@@ -142,8 +124,6 @@
 
   <div id="paginaHome">
 
-
-    <!-- HEADER GIALLO -->
 
     <header class="home-header">
 
@@ -542,7 +522,8 @@
 
             <div class="home-operation-circle">
 
-              <!-- STESSO PORTAFOGLIO DI "RICHIEDI RIMBORSO" -->
+              <!-- STESSA GRAFICA DEL PORTAFOGLIO
+                   USATA IN "RICHIEDI RIMBORSO" -->
 
               <svg
                 viewBox="0 0 170 170"
@@ -705,16 +686,12 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
 
-                <!-- SFONDO -->
-
                 <circle
                   cx="50"
                   cy="50"
                   r="50"
                   fill="#f1f8ff"
                 />
-
-                <!-- CERCHIO GIALLO -->
 
                 <circle
                   cx="50"
@@ -723,67 +700,57 @@
                   fill="#f1d900"
                 />
 
-                <!-- P2P -->
-
                 <text
                   x="50"
-                  y="57"
+                  y="54"
                   text-anchor="middle"
                   font-family="Arial, sans-serif"
-                  font-size="23"
+                  font-size="24"
                   font-weight="500"
                   fill="#111"
-                  letter-spacing="-0.5"
+                  letter-spacing="-1"
                 >p2p</text>
 
-
-                <!-- FRECCIA CURVA SUPERIORE -->
+                <!-- FRECCIA INFERIORE -->
 
                 <path
-                  d="M66 38
-                     C59 32 46 32 37 39"
+                  d="M34 64
+                     C42 71 58 72 67 63"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.2"
+                  stroke-width="2"
                   stroke-linecap="round"
                 />
 
-                <!-- PUNTA FRECCIA SUPERIORE -->
-
                 <path
-                  d="M40 34
-                     L36.5 39
-                     L41.5 40.5"
+                  d="M63 59
+                     L68 63
+                     L63 68"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.2"
+                  stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
 
-
-                <!-- FRECCIA CURVA INFERIORE -->
+                <!-- FRECCIA SUPERIORE -->
 
                 <path
-                  d="M34 63
-                     C42 70
-                     58 70
-                     67 62"
+                  d="M66 37
+                     C59 31 45 31 37 38"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.2"
+                  stroke-width="2"
                   stroke-linecap="round"
                 />
 
-                <!-- PUNTA FRECCIA INFERIORE -->
-
                 <path
-                  d="M63 58
-                     L67.5 62
-                     L63 66.5"
+                  d="M40 33
+                     L36 38
+                     L41 40"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.2"
+                  stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
@@ -819,8 +786,6 @@
                   fill="#f1f8ff"
                 />
 
-                <!-- CALENDARIO -->
-
                 <rect
                   x="24"
                   y="29"
@@ -839,8 +804,6 @@
                   height="13"
                   fill="#f4dd00"
                 />
-
-                <!-- ANELLI -->
 
                 <line
                   x1="36"
@@ -871,8 +834,6 @@
                   stroke-width="4"
                   stroke-linecap="round"
                 />
-
-                <!-- GIORNI -->
 
                 <rect
                   x="34"
@@ -1143,8 +1104,6 @@
                 xmlns="http://www.w3.org/2000/svg"
               >
 
-                <!-- ICONA NASCONDI SALDO PULITA -->
-
                 <path
                   d="M7 16
                      C9.5 12
@@ -1174,11 +1133,8 @@
                   stroke-width="2.2"
                 />
 
-                <!-- LINEA CENTRALE INTEGRATA -->
-
                 <path
-                  d="M16 5
-                     V27"
+                  d="M16 5 V27"
                   fill="none"
                   stroke="#0755c7"
                   stroke-width="2.2"
@@ -1198,8 +1154,6 @@
 
         <div class="mondo-grid">
 
-
-          <!-- CONTI -->
 
           <div class="poste-card">
 
@@ -1222,8 +1176,6 @@
           </div>
 
 
-          <!-- CARTE -->
-
           <div class="poste-card">
 
             <div class="poste-card-title">
@@ -1241,8 +1193,6 @@
           </div>
 
 
-          <!-- POSTA -->
-
           <div class="poste-card">
 
             <div class="poste-card-title">
@@ -1259,8 +1209,6 @@
 
           </div>
 
-
-          <!-- LIBRETTI -->
 
           <div class="poste-card">
 
@@ -1285,8 +1233,6 @@
 
           </div>
 
-
-          <!-- RISPARMIO -->
 
           <button
             class="poste-card risparmio-card"
@@ -1314,8 +1260,6 @@
 
         </div>
 
-
-        <!-- BANNER INFERIORE -->
 
         <div class="mondo-banner">
 
@@ -2509,7 +2453,9 @@
 
 
 
-  <script src="script.js"></script>
+  <!-- CACHE BUST: VERSIONE 7 -->
+
+  <script src="script.js?v=7"></script>
 
 </body>
 
