@@ -361,35 +361,37 @@ if (listaBuoni) {
         >
 
           <rect
-            x="4"
-            y="5"
-            width="20"
-            height="18"
-            rx="2"
-            stroke="currentColor"
-            stroke-width="1.8"
+            x="3"
+            y="6"
+            width="22"
+            height="16"
+            rx="2.5"
+            stroke="#0757B8"
+            stroke-width="2"
           />
 
           <path
-            d="M8 10H20"
-            stroke="currentColor"
-            stroke-width="1.8"
+            d="M8 11H20"
+            stroke="#0757B8"
+            stroke-width="2"
             stroke-linecap="round"
           />
 
           <path
-            d="M8 14H20"
-            stroke="currentColor"
-            stroke-width="1.8"
+            d="M14 16H20"
+            stroke="#0757B8"
+            stroke-width="2"
             stroke-linecap="round"
           />
 
-          <path
-            d="M8 18H15"
-            stroke="currentColor"
-            stroke-width="1.8"
-            stroke-linecap="round"
-          />
+          <text
+            x="5.5"
+            y="18"
+            font-family="Arial, sans-serif"
+            font-size="9"
+            font-weight="700"
+            fill="#0757B8"
+          >€</text>
 
         </svg>
 
@@ -482,10 +484,15 @@ function apriDettaglio(indice) {
   }
 
 
+  /* =========================================
+     VALORE GRANDE IN ALTO
+     MOSTRA IL NOMINALE DEL BUONO
+     ========================================= */
+
   if (detailValoreRimborso) {
 
     detailValoreRimborso.textContent =
-      euro(dati.nettoConPremio);
+      euro(buono.nominale);
 
   }
 
