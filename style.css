@@ -143,8 +143,7 @@ main {
 
   border-radius: 28px;
 
-  /* MODIFICATO */
-  padding: 50px 50px 42px;
+  padding: 34px 34px 36px;
 
   margin-top: 38px;
 
@@ -155,7 +154,6 @@ main {
 .summary-card h2 {
   margin: 0;
 
-  /* MODIFICATO */
   font-size: 28px;
   line-height: 1.2;
 
@@ -164,20 +162,17 @@ main {
 
 
 .summary-item {
-  /* MODIFICATO */
-  margin-top: 64px;
+  margin-top: 52px;
 }
 
 
 .summary-item.second {
-  /* MODIFICATO */
-  margin-top: 42px;
+  margin-top: 34px;
 }
 
 
 .summary-label {
-  /* MODIFICATO */
-  font-size: 24px;
+  font-size: 23px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -187,8 +182,7 @@ main {
 .summary-value {
   margin-top: 7px;
 
-  /* MODIFICATO */
-  font-size: 26px;
+  font-size: 25px;
   line-height: 1.2;
 
   font-weight: 400;
