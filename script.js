@@ -129,7 +129,8 @@ const buoni = [
    ELEMENTI PAGINA
    ========================================= */
 
-const contenitore = document.getElementById("buoni");
+const contenitore =
+  document.getElementById("buoni");
 
 const paginaPrincipale =
   document.getElementById("paginaPrincipale");
@@ -148,6 +149,43 @@ function euro(numero) {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }) + " €";
+
+}
+
+
+/* =========================================
+   AGGIORNA RIEPILOGO PRINCIPALE
+   ========================================= */
+
+const totaleBuoni =
+  buoni.reduce(
+    (totale, buono) => totale + buono.nominale,
+    0
+  );
+
+
+const titoloRiepilogo =
+  document.querySelector(".summary-card h2");
+
+const valoriRiepilogo =
+  document.querySelectorAll(".summary-value");
+
+
+if (titoloRiepilogo) {
+
+  titoloRiepilogo.textContent =
+    buoni.length + " Buoni";
+
+}
+
+
+if (valoriRiepilogo.length >= 2) {
+
+  valoriRiepilogo[0].textContent =
+    euro(totaleBuoni);
+
+  valoriRiepilogo[1].textContent =
+    euro(totaleBuoni);
 
 }
 
