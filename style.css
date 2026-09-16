@@ -313,7 +313,6 @@ main {
   display: none;
   min-height: 100vh;
   background: #fff;
-  overflow: hidden;
 }
 
 .pagina-dettaglio.active {
