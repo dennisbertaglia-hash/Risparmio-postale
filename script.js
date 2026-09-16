@@ -128,7 +128,7 @@ const buoni = [
 
 
 /* =========================================
-   FUNZIONI
+   FUNZIONE EURO
    ========================================= */
 
 function euro(numero) {
@@ -205,6 +205,92 @@ const totaleBuoni =
 
 
 /* =========================================
+   PAGINE
+   ========================================= */
+
+const paginaHome =
+  document.getElementById("paginaHome");
+
+const paginaPrincipale =
+  document.getElementById("paginaPrincipale");
+
+const paginaDettaglio =
+  document.getElementById("paginaDettaglio");
+
+
+/* =========================================
+   AVVIO APP
+   ========================================= */
+
+function mostraHome() {
+
+  if (paginaHome) {
+    paginaHome.style.display = "block";
+  }
+
+  if (paginaPrincipale) {
+    paginaPrincipale.style.display = "none";
+  }
+
+  if (paginaDettaglio) {
+    paginaDettaglio.style.display = "none";
+  }
+
+  window.scrollTo(0, 0);
+
+}
+
+
+mostraHome();
+
+
+/* =========================================
+   APRI RISPARMIO
+   ========================================= */
+
+function apriRisparmio() {
+
+  if (paginaHome) {
+    paginaHome.style.display = "none";
+  }
+
+  if (paginaPrincipale) {
+    paginaPrincipale.style.display = "block";
+  }
+
+  if (paginaDettaglio) {
+    paginaDettaglio.style.display = "none";
+  }
+
+  window.scrollTo(0, 0);
+
+}
+
+
+/* =========================================
+   TORNA ALLA HOME
+   ========================================= */
+
+function tornaAllaHome() {
+
+  if (paginaDettaglio) {
+    paginaDettaglio.style.display = "none";
+  }
+
+  if (paginaPrincipale) {
+    paginaPrincipale.style.display = "none";
+  }
+
+  if (paginaHome) {
+    paginaHome.style.display = "block";
+  }
+
+  window.scrollTo(0, 0);
+
+}
+
+
+/* =========================================
    AGGIORNA RIEPILOGO PRINCIPALE
    ========================================= */
 
@@ -247,7 +333,7 @@ if (valoreRimborsoLordo) {
    ========================================= */
 
 const listaBuoni =
-  document.getElementById("listaBuoni");
+  document.getElementById("buoni");
 
 
 if (listaBuoni) {
@@ -259,11 +345,12 @@ if (listaBuoni) {
     const elemento =
       document.createElement("div");
 
-    elemento.className = "bond-item";
+    elemento.className = "buono";
+
 
     elemento.innerHTML = `
 
-      <div class="bond-icon">
+      <div class="buono-icon">
 
         <svg
           width="28"
@@ -309,23 +396,21 @@ if (listaBuoni) {
       </div>
 
 
-      <div class="bond-info">
+      <div class="buono-info">
 
-        <div class="bond-date">
+        <div class="data">
           ${buono.sottoscritto}
         </div>
 
-        <div class="bond-type">
+        <div class="nome">
           Buono 3×4 con premio
         </div>
 
       </div>
 
 
-      <div class="bond-value">
-
+      <div class="valore">
         ${euro(buono.nominale)}
-
       </div>
 
     `;
@@ -357,26 +442,16 @@ function apriDettaglio(indice) {
     calcolaDati(buono.nominale);
 
 
-  const paginaPrincipale =
-    document.getElementById("mainPage");
-
-  const paginaDettaglio =
-    document.getElementById("detailPage");
-
-
-  if (paginaPrincipale) {
-
-    paginaPrincipale.style.display =
-      "none";
-
+  if (paginaHome) {
+    paginaHome.style.display = "none";
   }
 
+  if (paginaPrincipale) {
+    paginaPrincipale.style.display = "none";
+  }
 
   if (paginaDettaglio) {
-
-    paginaDettaglio.style.display =
-      "block";
-
+    paginaDettaglio.style.display = "block";
   }
 
 
@@ -558,28 +633,17 @@ function apriDettaglio(indice) {
 
 function tornaAllaLista() {
 
-  const paginaPrincipale =
-    document.getElementById("mainPage");
-
-  const paginaDettaglio =
-    document.getElementById("detailPage");
-
-
   if (paginaDettaglio) {
-
-    paginaDettaglio.style.display =
-      "none";
-
+    paginaDettaglio.style.display = "none";
   }
-
 
   if (paginaPrincipale) {
-
-    paginaPrincipale.style.display =
-      "block";
-
+    paginaPrincipale.style.display = "block";
   }
 
+  if (paginaHome) {
+    paginaHome.style.display = "none";
+  }
 
   window.scrollTo(0, 0);
 
