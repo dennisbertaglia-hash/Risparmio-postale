@@ -125,55 +125,55 @@ main {
 
   border-radius: 58px;
 
-  padding: 108px 106px 96px;
+  padding: 40px 74px 42px;
 
   margin-top: 24px;
 
-  min-height: 768px;
+  min-height: 0;
 }
 
 
 .summary-card h2 {
   margin: 0;
 
-  font-size: 56px;
+  font-size: 32px;
   line-height: 1.15;
 
-  font-weight: 700;
+  font-weight: 600;
 
-  letter-spacing: -1.5px;
+  letter-spacing: -0.8px;
 }
 
 
 .summary-item {
-  margin-top: 132px;
+  margin-top: 76px;
 }
 
 
 .summary-item.second {
-  margin-top: 91px;
+  margin-top: 57px;
 }
 
 
 .summary-label {
-  font-size: 50px;
+  font-size: 29px;
   line-height: 1.15;
 
   font-weight: 400;
 
-  letter-spacing: -1.2px;
+  letter-spacing: -0.7px;
 }
 
 
 .summary-value {
-  margin-top: 14px;
+  margin-top: 10px;
 
-  font-size: 50px;
+  font-size: 30px;
   line-height: 1.15;
 
   font-weight: 400;
 
-  letter-spacing: -1.2px;
+  letter-spacing: -0.7px;
 }
 
 
