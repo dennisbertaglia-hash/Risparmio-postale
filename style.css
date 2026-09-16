@@ -234,6 +234,7 @@ body {
 .home-operation-circle svg {
   width: 56px;
   height: 56px;
+  display: block;
 }
 
 .home-operation-label {
@@ -366,11 +367,50 @@ body {
   white-space: nowrap;
 }
 
+
+/* OCCHIO NASCONDI SALDO - CORRETTO */
+
 .saldo-eye {
-  font-size: 13px;
-  transform: rotate(45deg);
+  position: relative;
   display: inline-block;
+  width: 17px;
+  height: 12px;
+  flex: 0 0 17px;
+  margin: 0;
+  transform: none;
+  font-size: 0;
+  line-height: 0;
+  background: radial-gradient(
+    circle at center,
+    #0755c7 0 2px,
+    transparent 2.3px
+  );
 }
+
+.saldo-eye::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 2px;
+  width: 15px;
+  height: 8px;
+  border: 1.7px solid #0755c7;
+  border-radius: 50%;
+}
+
+.saldo-eye::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -2px;
+  width: 1.7px;
+  height: 17px;
+  background: #0755c7;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transform-origin: center;
+}
+
 
 .mondo-grid {
   margin-top: 23px;
@@ -1452,6 +1492,8 @@ main {
   }
 
 }
+
+
 /* =====================================================
    OTTIMIZZAZIONE HOME MYPOSTE - IPHONE
    NON MODIFICA LA PAGINA BUONI
@@ -1693,7 +1735,19 @@ main {
   }
 
   .saldo-eye {
-    font-size: 14px;
+    width: 18px;
+    height: 13px;
+    flex-basis: 18px;
+  }
+
+  .saldo-eye::before {
+    width: 16px;
+    height: 9px;
+  }
+
+  .saldo-eye::after {
+    left: 8.5px;
+    height: 18px;
   }
 
   .mondo-grid {
