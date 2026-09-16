@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 body {
@@ -111,7 +112,7 @@ main {
 
 
 .summary-card {
-  width: calc(100% - 32px);
+  width: 100%;
 
   background: #eef7ff;
 
@@ -217,11 +218,6 @@ main {
 }
 
 
-/*
-   IMPORTANTISSIMO:
-   testo nero ma NON grassetto
-*/
-
 .operation-button span {
   display: block;
 
@@ -249,20 +245,22 @@ main {
 .filtri {
   display: flex;
 
-  gap: 28px;
+  gap: 10px;
 
-  width: max-content;
+  width: 100%;
 
-  margin-left: -25px;
+  margin-left: 0;
 
   margin-bottom: 65px;
+
+  overflow: hidden;
 }
 
 
 .filtro {
   height: 70px;
 
-  padding: 0 35px;
+  padding: 0 20px;
 
   border: 2.5px solid #0759c9;
 
@@ -274,39 +272,46 @@ main {
 
   font-family: inherit;
 
-  font-size: 29px;
+  font-size: 25px;
 
   font-weight: 600;
 
   white-space: nowrap;
+
+  flex-shrink: 1;
 }
 
 
 .filtro.prodotto {
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  gap: 17px;
+  gap: 12px;
 }
 
 
 .freccia-down {
-  width: 17px;
-  height: 17px;
+  width: 15px;
+  height: 15px;
 
   border-right: 4px solid #0759c9;
   border-bottom: 4px solid #0759c9;
 
   transform: rotate(45deg);
 
-  margin-top: -8px;
+  margin-top: -7px;
+
+  flex-shrink: 0;
 }
 
 
 .periodo {
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  min-width: 0;
 }
 
 
