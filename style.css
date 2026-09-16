@@ -87,6 +87,8 @@ main {
    ========================= */
 
 .summary-card {
+  border: 10px solid red;
+
   width: 100%;
   background: #eef7ff;
   border-radius: 15px;
