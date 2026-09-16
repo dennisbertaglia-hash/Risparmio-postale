@@ -12,7 +12,7 @@
 
   <title>MyPoste</title>
 
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 
   <style>
 
@@ -72,16 +72,44 @@
     .saldo-eye {
       width: 25px !important;
       height: 25px !important;
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
+      display: inline-block !important;
+      position: relative !important;
       flex-shrink: 0 !important;
     }
 
-    .saldo-eye svg {
-      width: 24px !important;
-      height: 24px !important;
-      display: block !important;
+    /* Nasconde completamente l'SVG precedente */
+    .nascondi-saldo .saldo-eye svg {
+      display: none !important;
+    }
+
+    /*
+       Nuovo occhio barrato disegnato via CSS.
+       In questo modo Safari non usa più il vecchio SVG.
+    */
+
+    .nascondi-saldo .saldo-eye::before {
+      content: "" !important;
+      position: absolute !important;
+      width: 19px !important;
+      height: 12px !important;
+      left: 3px !important;
+      top: 6px !important;
+      border: 2px solid #0755c7 !important;
+      border-radius: 50% !important;
+      box-sizing: border-box !important;
+    }
+
+    .nascondi-saldo .saldo-eye::after {
+      content: "" !important;
+      position: absolute !important;
+      width: 25px !important;
+      height: 2px !important;
+      left: 0 !important;
+      top: 11px !important;
+      background: #0755c7 !important;
+      border-radius: 2px !important;
+      transform: rotate(45deg) !important;
+      transform-origin: center center !important;
     }
 
     .home-operation-circle {
@@ -717,8 +745,6 @@
                   fill="#f1d900"
                 />
 
-                <!-- SCRITTA P2P -->
-
                 <text
                   x="50"
                   y="54"
@@ -731,8 +757,7 @@
                 >p2p</text>
 
 
-                <!-- FRECCIA SUPERIORE
-                     LEGGERMENTE PIÙ IN ALTO E A SINISTRA -->
+                <!-- FRECCIA SUPERIORE -->
 
                 <g transform="translate(-1 -2)">
 
@@ -761,8 +786,7 @@
                 </g>
 
 
-                <!-- FRECCIA INFERIORE
-                     IDENTICA E SIMMETRICA -->
+                <!-- FRECCIA INFERIORE -->
 
                 <g transform="rotate(180 50 50)">
 
@@ -1134,12 +1158,12 @@
 
             <span class="saldo-eye">
 
+              <!-- SVG NASCOSTO VIA CSS -->
+
               <svg
                 viewBox="0 0 32 32"
                 xmlns="http://www.w3.org/2000/svg"
               >
-
-                <!-- OCCHIO -->
 
                 <path
                   d="M5.5 16
@@ -1158,10 +1182,7 @@
                   fill="none"
                   stroke="#0755c7"
                   stroke-width="2.2"
-                  stroke-linejoin="round"
                 />
-
-                <!-- PUPILLA -->
 
                 <circle
                   cx="16"
@@ -1171,8 +1192,6 @@
                   stroke="#0755c7"
                   stroke-width="2.2"
                 />
-
-                <!-- SBARRA DIAGONALE -->
 
                 <path
                   d="M5 5 L27 27"
@@ -2494,9 +2513,9 @@
 
 
 
-  <!-- CACHE BUST: VERSIONE 9 -->
+  <!-- CACHE BUST: VERSIONE 10 -->
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 
 </body>
 
