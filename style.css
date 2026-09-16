@@ -25,18 +25,20 @@ body {
   overflow-x: hidden;
 }
 
+
 /* =========================================
    PAGINA PRINCIPALE
    ========================================= */
 
 .top-header {
   position: relative;
-  padding: 18px 26px 3px;
+  padding: 18px 28px 3px;
 }
 
+
 .back-button {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
 
   padding: 0;
 
@@ -52,42 +54,47 @@ body {
   cursor: pointer;
 }
 
+
 .back-button svg {
-  width: 27px;
-  height: 27px;
+  width: 29px;
+  height: 29px;
 }
 
+
 .top-header h1 {
-  font-size: 24px;
+  font-size: 25px;
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.5px;
 
-  margin: 18px 0 5px;
+  margin: 19px 0 5px;
 }
+
 
 .top-icons {
   position: absolute;
 
-  right: 24px;
+  right: 27px;
   top: 19px;
 
   display: flex;
   align-items: center;
 
-  gap: 14px;
+  gap: 15px;
 
   font-size: 15px;
 }
 
+
 .eye-icon {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
 }
 
+
 .question {
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
 
   border: 1.5px solid #111;
   border-radius: 50%;
@@ -99,61 +106,77 @@ body {
   font-size: 12px;
 }
 
+
 main {
-  padding: 6px 26px 35px;
+  padding: 7px 28px 35px;
 }
+
+
+/* =========================================
+   RIQUADRO AZZURRO
+   ========================================= */
 
 .summary-card {
   width: 100%;
 
   background: #eef7ff;
 
-  border-radius: 15px;
+  border-radius: 16px;
 
-  padding: 31px 34px;
+  padding: 35px 35px;
 
-  margin-top: 24px;
+  margin-top: 27px;
 
-  min-height: 235px;
+  min-height: 258px;
 }
+
 
 .summary-card h2 {
   margin: 0;
 
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.2;
 
   font-weight: 700;
 }
 
+
 .summary-item {
-  margin-top: 44px;
+  margin-top: 47px;
 }
+
 
 .summary-item.second {
-  margin-top: 26px;
+  margin-top: 28px;
 }
+
 
 .summary-label {
-  font-size: 15.5px;
+  font-size: 16px;
   line-height: 1.2;
 
   font-weight: 400;
 }
+
 
 .summary-value {
-  margin-top: 4px;
+  margin-top: 5px;
 
-  font-size: 19.5px;
+  font-size: 20px;
   line-height: 1.2;
 
   font-weight: 400;
 }
 
-.section-title {
-  margin: 24px 0 20px;
 
-  font-size: 20px;
+/* =========================================
+   SEZIONE OPERAZIONI
+   ========================================= */
+
+.section-title {
+  margin: 29px 0 22px;
+
+  font-size: 21px;
   line-height: 1.15;
 
   font-weight: 700;
@@ -161,18 +184,20 @@ main {
   letter-spacing: -0.35px;
 }
 
+
 .operations {
   display: flex;
 
-  gap: 32px;
+  gap: 35px;
 
   align-items: flex-start;
 }
 
-.operation-button {
-  width: 88px;
 
-  min-height: 103px;
+.operation-button {
+  width: 91px;
+
+  min-height: 107px;
 
   padding: 0;
 
@@ -185,12 +210,14 @@ main {
   cursor: pointer;
 }
 
+
 .operation-icon {
-  width: 85px;
-  height: 85px;
+  width: 88px;
+  height: 88px;
 
   margin: 0 auto;
 }
+
 
 .operation-icon svg {
   display: block;
@@ -199,16 +226,13 @@ main {
   height: 100%;
 }
 
-/*
-   Testo nero ma NON grassetto
-*/
 
 .operation-button span {
   display: block;
 
-  margin-top: 12px;
+  margin-top: 13px;
 
-  font-size: 13.5px;
+  font-size: 14px;
   line-height: 1.15;
 
   font-weight: 400;
@@ -216,10 +240,12 @@ main {
   color: #111111;
 }
 
+
 .your-bonds {
-  margin-top: 29px;
-  margin-bottom: 18px;
+  margin-top: 31px;
+  margin-bottom: 19px;
 }
+
 
 /* =========================================
    FILTRI
@@ -228,23 +254,24 @@ main {
 .filtri {
   display: flex;
 
-  gap: 14px;
+  gap: 15px;
 
   width: max-content;
 
-  margin-left: -13px;
+  margin-left: -14px;
 
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
-.filtro {
-  height: 35px;
 
-  padding: 0 17px;
+.filtro {
+  height: 36px;
+
+  padding: 0 18px;
 
   border: 1.5px solid #0759c9;
 
-  border-radius: 19px;
+  border-radius: 20px;
 
   background: #ffffff;
 
@@ -252,12 +279,13 @@ main {
 
   font-family: inherit;
 
-  font-size: 14.5px;
+  font-size: 15px;
 
   font-weight: 600;
 
   white-space: nowrap;
 }
+
 
 .filtro.prodotto {
   display: flex;
@@ -266,6 +294,7 @@ main {
 
   gap: 8px;
 }
+
 
 .freccia-down {
   width: 8px;
@@ -279,10 +308,12 @@ main {
   margin-top: -4px;
 }
 
+
 .periodo {
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 23px;
+  padding-right: 23px;
 }
+
 
 /* =========================================
    ELENCO BUONI
@@ -295,7 +326,7 @@ main {
 
   width: 100%;
 
-  min-height: 85px;
+  min-height: 86px;
 
   padding: 12px 0;
 
@@ -304,11 +335,12 @@ main {
   cursor: pointer;
 }
 
-.buono-icon {
-  flex: 0 0 36px;
 
-  width: 36px;
-  height: 36px;
+.buono-icon {
+  flex: 0 0 37px;
+
+  width: 37px;
+  height: 37px;
 
   border-radius: 50%;
 
@@ -319,13 +351,15 @@ main {
   align-items: center;
   justify-content: center;
 
-  margin-right: 12px;
+  margin-right: 13px;
 }
 
+
 .buono-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
 }
+
 
 .buono-info {
   flex: 1;
@@ -333,20 +367,22 @@ main {
   min-width: 0;
 }
 
+
 .data {
   color: #777777;
 
-  font-size: 12.5px;
+  font-size: 13px;
 
   line-height: 1.2;
 
   font-weight: 400;
 }
 
+
 .nome {
   margin-top: 4px;
 
-  font-size: 13.5px;
+  font-size: 14px;
 
   line-height: 1.15;
 
@@ -355,10 +391,11 @@ main {
   letter-spacing: -0.1px;
 }
 
+
 .valore {
   margin-left: 8px;
 
-  font-size: 16px;
+  font-size: 16.5px;
 
   line-height: 1;
 
@@ -367,10 +404,12 @@ main {
   white-space: nowrap;
 }
 
+
 .operation-button:active,
 .buono:active {
   opacity: 0.55;
 }
+
 
 /* =========================================
    PAGINA DETTAGLIO
@@ -384,27 +423,30 @@ main {
   background: #ffffff;
 }
 
+
 .pagina-dettaglio.active {
   display: block;
 }
+
 
 .detail-header {
   position: relative;
 
   height: 125px;
 
-  padding: 18px 26px 0;
+  padding: 18px 28px 0;
 
   display: flex;
 
   align-items: flex-start;
 }
 
+
 .detail-back {
   flex: 0 0 auto;
 
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
 
   padding: 0;
 
@@ -422,15 +464,17 @@ main {
   cursor: pointer;
 }
 
+
 .detail-back svg {
-  width: 27px;
-  height: 27px;
+  width: 29px;
+  height: 29px;
 }
+
 
 .detail-header h1 {
   position: absolute;
 
-  left: 109px;
+  left: 112px;
   right: 18px;
 
   top: 32px;
@@ -446,13 +490,15 @@ main {
   letter-spacing: -0.35px;
 }
 
+
 /* =========================================
    CARD DETTAGLIO
    ========================================= */
 
 .detail-main {
-  padding: 0 26px 110px;
+  padding: 0 28px 110px;
 }
+
 
 .detail-card {
   position: relative;
@@ -461,12 +507,13 @@ main {
 
   background: #eef7ff;
 
-  border-radius: 15px;
+  border-radius: 16px;
 
   overflow: visible;
 
   margin-top: 0;
 }
+
 
 .detail-card-top {
   min-height: 143px;
@@ -477,6 +524,7 @@ main {
 
   position: relative;
 }
+
 
 .detail-buono-icon {
   position: absolute;
@@ -491,10 +539,12 @@ main {
   top: -30px;
 }
 
+
 .detail-buono-icon svg {
   width: 100%;
   height: 100%;
 }
+
 
 .detail-rimborso {
   font-size: 33px;
@@ -506,6 +556,7 @@ main {
   letter-spacing: -1px;
 }
 
+
 .detail-rimborso-label {
   margin-top: 10px;
 
@@ -515,6 +566,7 @@ main {
 
   font-weight: 400;
 }
+
 
 .detail-account {
   min-height: 65px;
@@ -532,6 +584,7 @@ main {
   padding: 10px;
 }
 
+
 .account-icon {
   width: 40px;
   height: 30px;
@@ -539,10 +592,12 @@ main {
   flex: 0 0 40px;
 }
 
+
 .account-icon svg {
   width: 100%;
   height: 100%;
 }
+
 
 .account-text {
   font-size: 15.5px;
@@ -551,6 +606,7 @@ main {
 
   font-weight: 400;
 }
+
 
 /* =========================================
    RIEPILOGO
@@ -568,9 +624,11 @@ main {
   letter-spacing: -0.35px;
 }
 
+
 .detail-field {
   margin-bottom: 34px;
 }
+
 
 .detail-label {
   color: #707070;
@@ -581,6 +639,7 @@ main {
 
   font-weight: 400;
 }
+
 
 .detail-value {
   margin-top: 6px;
@@ -594,17 +653,20 @@ main {
   font-weight: 400;
 }
 
+
 .detail-divider {
   height: 6px;
 
   background: #f5f5f5;
 
-  margin: 23px -26px 20px;
+  margin: 23px -28px 20px;
 }
+
 
 .last-detail-field {
   margin-bottom: 10px;
 }
+
 
 /* =========================================
    PULSANTE FISSO
@@ -624,10 +686,11 @@ main {
 
   border-top: 1px solid #eeeeee;
 
-  padding: 18px 26px;
+  padding: 18px 28px;
 
   z-index: 100;
 }
+
 
 .bottom-action button {
   width: 100%;
@@ -651,9 +714,11 @@ main {
   cursor: pointer;
 }
 
+
 .bottom-action button:active {
   opacity: 0.75;
 }
+
 
 /* =========================================
    ADATTAMENTO SCHERMI MOLTO PICCOLI
@@ -662,56 +727,56 @@ main {
 @media (max-width: 360px) {
 
   .top-header {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   main {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .summary-card {
-    padding-left: 28px;
-    padding-right: 28px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .operations {
-    gap: 24px;
+    gap: 27px;
   }
 
   .filtri {
-    gap: 10px;
+    gap: 11px;
   }
 
   .filtro {
-    padding-left: 13px;
-    padding-right: 13px;
+    padding-left: 14px;
+    padding-right: 14px;
     font-size: 13px;
   }
 
   .periodo {
-    padding-left: 17px;
-    padding-right: 17px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
 
   .detail-header {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .detail-main {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 
   .detail-divider {
-    margin-left: -22px;
-    margin-right: -22px;
+    margin-left: -24px;
+    margin-right: -24px;
   }
 
   .bottom-action {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
