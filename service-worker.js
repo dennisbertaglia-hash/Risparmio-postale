@@ -1,79 +1,31 @@
-const CACHE_NAME = "risparmio-postale-v9";
+const VERSIONE = "risparmio-postale-v10";
 
 self.addEventListener("install", event => {
+  console.log(VERSIONE + " installato");
   self.skipWaiting();
 });
 
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys()
-      .then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => caches.delete(cacheName))
-        );
-      })
-      .then(() => self.clients.claim())
+    (async () => {
+
+      // Elimina qualsiasi cache precedente
+      const cacheNames = await caches.keys();
+
+      await Promise.all(
+        cacheNames.map(cacheName => caches.delete(cacheName))
+      );
+
+      // Prende immediatamente il controllo delle pagine aperte
+      await self.clients.claim();
+
+      // Disinstalla completamente questo Service Worker
+      await self.registration.unregister();
+
+    })()
   );
 });
 
-self.addEventListener("fetch", event => {
-
-  if (event.request.method !== "GET") {
-    return;
-  }
-
-  const url = new URL(event.request.url);
-
-  /*
-   * HTML, CSS e JavaScript
-   * vengono sempre richiesti alla rete,
-   * così le modifiche compaiono subito.
-   */
-
-  if (
-    url.pathname.endsWith(".html") ||
-    url.pathname.endsWith(".css") ||
-    url.pathname.endsWith(".js") ||
-    url.pathname === "/" ||
-    url.pathname.endsWith("/")
-  ) {
-
-    event.respondWith(
-      fetch(event.request, {
-        cache: "no-store"
-      })
-    );
-
-    return;
-  }
-
-  /*
-   * Tutti gli altri file:
-   * prima rete, poi cache come fallback.
-   */
-
-  event.respondWith(
-
-    fetch(event.request)
-
-      .then(response => {
-
-        const responseClone = response.clone();
-
-        caches.open(CACHE_NAME).then(cache => {
-          cache.put(event.request, responseClone);
-        });
-
-        return response;
-
-      })
-
-      .catch(() => {
-
-        return caches.match(event.request);
-
-      })
-
-  );
-
-});
+// NESSUN fetch handler.
+// HTML, CSS, JS e immagini vengono quindi gestiti
+// direttamente dal browser/rete senza cache del Service Worker.
