@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="it">
 
 <head>
@@ -12,7 +12,7 @@
 
   <title>MyPoste</title>
 
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=8">
 
   <style>
 
@@ -719,35 +719,33 @@
                 />
 
 
-                <!-- FRECCIA SUPERIORE -->
+                <!-- FRECCIA SUPERIORE
+                     PIÙ CORTA E VICINA ALLA SCRITTA -->
 
                 <path
-                  d="M34 46
-                     C39 38 50 35 61 39
-                     C65 40 68 42 70 45"
+                  d="M61 39
+                     C56 35 49 35 43 39"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.2"
+                  stroke-width="2"
                   stroke-linecap="round"
                 />
 
                 <path
-                  d="M66 40
-                     L70 45
-                     L64 46"
+                  d="M46 36
+                     L42 39
+                     L46 41"
                   fill="none"
                   stroke="#111"
-                  stroke-width="2.2"
+                  stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
 
 
-                <!-- SCRITTA P2P -->
-
                 <text
                   x="50"
-                  y="55"
+                  y="54"
                   text-anchor="middle"
                   font-family="Arial, sans-serif"
                   font-size="24"
@@ -758,28 +756,31 @@
 
 
                 <!-- FRECCIA INFERIORE
-                     SIMMETRICA ALLA SUPERIORE -->
+                     IDENTICA E SIMMETRICA A QUELLA SUPERIORE -->
 
-                <path
-                  d="M66 60
-                     C61 68 50 71 39 67
-                     C35 66 32 64 30 61"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                />
+                <g transform="rotate(180 50 50)">
 
-                <path
-                  d="M34 66
-                     L30 61
-                     L36 60"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  <path
+                    d="M61 39
+                       C56 35 49 35 43 39"
+                    fill="none"
+                    stroke="#111"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M46 36
+                       L42 39
+                       L46 41"
+                    fill="none"
+                    stroke="#111"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </g>
 
               </svg>
 
@@ -2479,9 +2480,9 @@
 
 
 
-  <!-- CACHE BUST: VERSIONE 9 -->
+  <!-- CACHE BUST: VERSIONE 8 -->
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=8"></script>
 
 </body>
 
