@@ -42,13 +42,13 @@ body {
 .top-header {
   position: relative;
 
-  padding: 12px 27px 0;
+  padding: 18px 28px 0;
 }
 
 
 .back-button {
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
 
   padding: 0;
 
@@ -66,46 +66,46 @@ body {
 
 
 .back-button svg {
-  width: 31px;
-  height: 31px;
+  width: 40px;
+  height: 40px;
 }
 
 
 .top-header h1 {
-  font-size: 27px;
+  font-size: 40px;
   line-height: 1.15;
   font-weight: 700;
 
-  letter-spacing: -0.7px;
+  letter-spacing: -1px;
 
-  margin: 27px 0 0;
+  margin: 38px 0 0;
 }
 
 
 .top-icons {
   position: absolute;
 
-  right: 27px;
-  top: 17px;
+  right: 28px;
+  top: 25px;
 
   display: flex;
   align-items: center;
 
-  gap: 23px;
+  gap: 25px;
 
-  font-size: 20px;
+  font-size: 25px;
 }
 
 
 .eye-icon {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
 }
 
 
 .question {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
 
   border: 2px solid #111;
   border-radius: 50%;
@@ -114,7 +114,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-size: 19px;
+  font-size: 23px;
 }
 
 
@@ -126,7 +126,7 @@ main {
   width: 100%;
   max-width: 100%;
 
-  padding: 18px 27px 60px;
+  padding: 20px 28px 60px;
 
   overflow-x: hidden;
 }
@@ -142,11 +142,11 @@ main {
 
   background: #eef7ff;
 
-  border-radius: 25px;
+  border-radius: 28px;
 
-  padding: 34px 32px 35px;
+  padding: 36px 36px 40px;
 
-  margin-top: 28px;
+  margin-top: 38px;
 
   min-height: 0;
 }
@@ -155,7 +155,7 @@ main {
 .summary-card h2 {
   margin: 0;
 
-  font-size: 23px;
+  font-size: 27px;
   line-height: 1.2;
 
   font-weight: 700;
@@ -163,17 +163,17 @@ main {
 
 
 .summary-item {
-  margin-top: 47px;
+  margin-top: 58px;
 }
 
 
 .summary-item.second {
-  margin-top: 30px;
+  margin-top: 38px;
 }
 
 
 .summary-label {
-  font-size: 20px;
+  font-size: 23px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -181,9 +181,9 @@ main {
 
 
 .summary-value {
-  margin-top: 6px;
+  margin-top: 7px;
 
-  font-size: 21px;
+  font-size: 25px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -195,9 +195,9 @@ main {
    ========================================= */
 
 .section-title {
-  margin: 31px 0 25px;
+  margin: 42px 0 30px;
 
-  font-size: 27px;
+  font-size: 30px;
   line-height: 1.15;
 
   font-weight: 700;
@@ -207,8 +207,8 @@ main {
 
 
 .your-bonds {
-  margin-top: 36px;
-  margin-bottom: 24px;
+  margin-top: 48px;
+  margin-bottom: 28px;
 }
 
 
@@ -219,18 +219,20 @@ main {
 .operations {
   display: flex;
 
-  gap: 34px;
+  gap: 38px;
 
   align-items: flex-start;
 
   width: 100%;
+
+  overflow: hidden;
 }
 
 
 .operation-button {
-  width: 115px;
+  width: 125px;
 
-  min-height: 145px;
+  min-height: 160px;
 
   padding: 0;
 
@@ -247,8 +249,8 @@ main {
 
 
 .operation-icon {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
 
   margin: 0 auto;
 }
@@ -265,9 +267,9 @@ main {
 .operation-button span {
   display: block;
 
-  margin-top: 15px;
+  margin-top: 18px;
 
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.15;
 
   font-weight: 400;
@@ -295,7 +297,7 @@ main {
   width: 100%;
   max-width: 100%;
 
-  margin: 0 0 30px;
+  margin: 0 0 35px;
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -312,15 +314,15 @@ main {
 
 
 .filtro {
-  min-height: 44px;
+  min-height: 48px;
 
-  height: 44px;
+  height: 48px;
 
-  padding: 7px 18px;
+  padding: 9px 20px;
 
   border: 2px solid #0759c9;
 
-  border-radius: 24px;
+  border-radius: 28px;
 
   background: #ffffff;
 
@@ -328,7 +330,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 18px;
+  font-size: 19px;
 
   font-weight: 600;
 
@@ -344,26 +346,26 @@ main {
   align-items: center;
   justify-content: center;
 
-  gap: 11px;
+  gap: 12px;
 }
 
 
 .freccia-down {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
 
   border-right: 3px solid #0759c9;
   border-bottom: 3px solid #0759c9;
 
   transform: rotate(45deg);
 
-  margin-top: -5px;
+  margin-top: -6px;
 }
 
 
 .periodo {
-  padding-left: 18px;
-  padding-right: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
@@ -374,6 +376,7 @@ main {
 #buoni {
   width: 100%;
   max-width: 100%;
+
   overflow-x: hidden;
 }
 
@@ -386,9 +389,9 @@ main {
   width: 100%;
   max-width: 100%;
 
-  min-height: 88px;
+  min-height: 105px;
 
-  padding: 14px 0;
+  padding: 18px 0;
 
   border-bottom: 1px solid #eeeeee;
 
@@ -399,10 +402,10 @@ main {
 
 
 .buono-icon {
-  flex: 0 0 43px;
+  flex: 0 0 52px;
 
-  width: 43px;
-  height: 43px;
+  width: 52px;
+  height: 52px;
 
   border-radius: 50%;
 
@@ -413,13 +416,13 @@ main {
   align-items: center;
   justify-content: center;
 
-  margin-right: 13px;
+  margin-right: 16px;
 }
 
 
 .buono-icon svg {
-  width: 33px;
-  height: 33px;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -435,20 +438,24 @@ main {
 .data {
   color: #777777;
 
-  font-size: 16px;
+  font-size: 17px;
 
   line-height: 1.2;
 
   font-weight: 400;
 
   white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
 }
 
 
 .nome {
-  margin-top: 4px;
+  margin-top: 5px;
 
-  font-size: 17px;
+  font-size: 18px;
 
   line-height: 1.15;
 
@@ -457,13 +464,17 @@ main {
   letter-spacing: -0.1px;
 
   white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
 }
 
 
 .valore {
-  margin-left: 8px;
+  margin-left: 10px;
 
-  font-size: 19px;
+  font-size: 21px;
 
   line-height: 1;
 
@@ -506,21 +517,23 @@ main {
 .detail-header {
   position: relative;
 
-  height: 145px;
+  height: 180px;
 
-  padding: 12px 27px 0;
+  padding: 18px 28px 0;
 
   display: flex;
 
   align-items: flex-start;
+
+  overflow: hidden;
 }
 
 
 .detail-back {
   flex: 0 0 auto;
 
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
 
   padding: 0;
 
@@ -540,22 +553,22 @@ main {
 
 
 .detail-back svg {
-  width: 31px;
-  height: 31px;
+  width: 40px;
+  height: 40px;
 }
 
 
 .detail-header h1 {
   position: absolute;
 
-  left: 90px;
-  right: 27px;
+  left: 110px;
+  right: 28px;
 
-  top: 27px;
+  top: 48px;
 
   margin: 0;
 
-  font-size: 23px;
+  font-size: 25px;
 
   line-height: 1.15;
 
@@ -573,7 +586,7 @@ main {
   width: 100%;
   max-width: 100%;
 
-  padding: 0 27px 150px;
+  padding: 0 28px 170px;
 
   overflow-x: hidden;
 }
@@ -587,7 +600,7 @@ main {
 
   background: #eef7ff;
 
-  border-radius: 25px;
+  border-radius: 28px;
 
   overflow: visible;
 
@@ -596,9 +609,9 @@ main {
 
 
 .detail-card-top {
-  min-height: 185px;
+  min-height: 210px;
 
-  padding: 85px 18px 22px;
+  padding: 105px 20px 25px;
 
   text-align: center;
 
@@ -609,14 +622,14 @@ main {
 .detail-buono-icon {
   position: absolute;
 
-  width: 90px;
-  height: 90px;
+  width: 110px;
+  height: 110px;
 
   left: 50%;
 
   transform: translateX(-50%);
 
-  top: -38px;
+  top: -45px;
 }
 
 
@@ -627,7 +640,7 @@ main {
 
 
 .detail-rimborso {
-  font-size: 34px;
+  font-size: 42px;
 
   line-height: 1;
 
@@ -638,9 +651,9 @@ main {
 
 
 .detail-rimborso-label {
-  margin-top: 12px;
+  margin-top: 14px;
 
-  font-size: 19px;
+  font-size: 21px;
 
   line-height: 1.2;
 
@@ -649,9 +662,9 @@ main {
 
 
 .detail-account {
-  min-height: 75px;
+  min-height: 90px;
 
-  border-top: 3px solid #ffffff;
+  border-top: 4px solid #ffffff;
 
   display: flex;
 
@@ -659,17 +672,17 @@ main {
 
   justify-content: center;
 
-  gap: 12px;
+  gap: 14px;
 
-  padding: 13px;
+  padding: 15px;
 }
 
 
 .account-icon {
-  width: 48px;
-  height: 37px;
+  width: 55px;
+  height: 42px;
 
-  flex: 0 0 48px;
+  flex: 0 0 55px;
 }
 
 
@@ -680,7 +693,7 @@ main {
 
 
 .account-text {
-  font-size: 18px;
+  font-size: 20px;
 
   line-height: 1.25;
 
@@ -693,9 +706,9 @@ main {
    ========================================= */
 
 .detail-section-title {
-  margin: 42px 0 27px;
+  margin: 52px 0 32px;
 
-  font-size: 25px;
+  font-size: 28px;
 
   line-height: 1.15;
 
@@ -706,14 +719,14 @@ main {
 
 
 .detail-field {
-  margin-bottom: 35px;
+  margin-bottom: 42px;
 }
 
 
 .detail-label {
   color: #707070;
 
-  font-size: 18px;
+  font-size: 20px;
 
   line-height: 1.35;
 
@@ -722,11 +735,11 @@ main {
 
 
 .detail-value {
-  margin-top: 7px;
+  margin-top: 8px;
 
   color: #111111;
 
-  font-size: 19px;
+  font-size: 21px;
 
   line-height: 1.25;
 
@@ -735,16 +748,16 @@ main {
 
 
 .detail-divider {
-  height: 7px;
+  height: 8px;
 
   background: #f5f5f5;
 
-  margin: 27px -27px 27px;
+  margin: 32px -28px 32px;
 }
 
 
 .last-detail-field {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 
@@ -760,13 +773,13 @@ main {
 
   bottom: 0;
 
-  height: 105px;
+  height: 125px;
 
   background: rgba(255, 255, 255, 0.98);
 
   border-top: 1px solid #eeeeee;
 
-  padding: 14px 27px;
+  padding: 18px 28px;
 
   z-index: 100;
 }
@@ -775,11 +788,11 @@ main {
 .bottom-action button {
   width: 100%;
 
-  height: 62px;
+  height: 75px;
 
   border: 0;
 
-  border-radius: 32px;
+  border-radius: 40px;
 
   background: #0755c7;
 
@@ -787,7 +800,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 20px;
+  font-size: 22px;
 
   font-weight: 600;
 
@@ -801,56 +814,75 @@ main {
 
 
 /* =========================================
-   IPHONE - DIMENSIONI NORMALI
+   IPHONE 16
    ========================================= */
 
 @media (min-width: 361px) and (max-width: 430px) {
 
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  #paginaPrincipale,
+  .pagina-dettaglio,
+  main,
+  .detail-main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .top-header {
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   main {
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   .top-icons {
-    right: 27px;
+    right: 28px;
   }
 
   .summary-card {
-    padding-left: 32px;
-    padding-right: 32px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .operations {
-    gap: 34px;
-  }
-
-  .operation-button {
-    width: 115px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .detail-header {
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   .detail-main {
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .detail-card {
+    width: 100%;
+    max-width: 100%;
   }
 
   .detail-divider {
-    margin-left: -27px;
-    margin-right: -27px;
+    margin-left: -28px;
+    margin-right: -28px;
   }
 
   .bottom-action {
-    padding-left: 27px;
-    padding-right: 27px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 }
 
@@ -860,6 +892,13 @@ main {
    ========================================= */
 
 @media (max-width: 360px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
   .top-header {
     padding-left: 20px;
@@ -876,20 +915,21 @@ main {
   }
 
   .summary-card {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   .operations {
     gap: 18px;
+    overflow: hidden;
   }
 
   .operation-button {
-    width: 105px;
+    width: 112px;
   }
 
   .operation-button span {
-    font-size: 17px;
+    font-size: 18px;
   }
 
   .filtro {
@@ -899,7 +939,7 @@ main {
   }
 
   .valore {
-    font-size: 18px;
+    font-size: 19px;
   }
 
   .detail-header {
