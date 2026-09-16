@@ -3,36 +3,18 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-
-  width: 100%;
-  max-width: 100%;
-
-  overflow-x: clip !important;
-  overflow-y: auto;
-
-  overscroll-behavior-x: none;
-}
-
+html,
 body {
   margin: 0;
   padding: 0;
-
   width: 100%;
-  max-width: 100%;
   min-width: 0;
-
+  max-width: 100%;
   background: #ffffff;
+  overflow-x: hidden;
+}
 
-  overflow-x: clip !important;
-  overflow-y: auto;
-
-  overscroll-behavior-x: none;
-
-  touch-action: pan-y;
-
+body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -43,25 +25,8 @@ body {
 
   color: #111111;
   min-height: 100vh;
-}
-
-
-/* =========================================
-   BLOCCO ASSOLUTO DELLA PAGINA
-   ========================================= */
-
-#paginaPrincipale,
-#paginaDettaglio {
-  position: relative;
-
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-
-  margin: 0;
-  padding: 0;
-
-  overflow-x: clip !important;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 
@@ -69,15 +34,17 @@ body {
    PAGINA PRINCIPALE
    ========================================= */
 
-.top-header {
-  position: relative;
-
+#paginaPrincipale {
   width: 100%;
   max-width: 100%;
+  overflow-x: hidden;
+}
 
+
+.top-header {
+  position: relative;
+  width: 100%;
   padding: 35px 50px 5px;
-
-  overflow: hidden;
 }
 
 
@@ -97,8 +64,6 @@ body {
   justify-content: center;
 
   cursor: pointer;
-
-  flex-shrink: 0;
 }
 
 
@@ -130,16 +95,12 @@ body {
   gap: 28px;
 
   font-size: 29px;
-
-  max-width: calc(100% - 100px);
 }
 
 
 .eye-icon {
   width: 47px;
   height: 47px;
-
-  flex-shrink: 0;
 }
 
 
@@ -155,40 +116,34 @@ body {
   align-items: center;
 
   font-size: 23px;
-
-  flex-shrink: 0;
 }
 
 
 main {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
   padding: 12px 50px 60px;
-
-  overflow-x: clip !important;
+  overflow-x: hidden;
 }
 
 
 /* =========================================
-   CARD RIEPILOGO
+   CARD RIASSUNTIVA
    ========================================= */
 
 .summary-card {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   background: #eef7ff;
 
   border-radius: 28px;
 
-  padding: 62px 70px;
+  padding: 36px 70px;
 
   margin-top: 45px;
 
-  min-height: 470px;
+  min-height: 0;
 }
 
 
@@ -203,12 +158,12 @@ main {
 
 
 .summary-item {
-  margin-top: 88px;
+  margin-top: 72px;
 }
 
 
 .summary-item.second {
-  margin-top: 52px;
+  margin-top: 48px;
 }
 
 
@@ -231,7 +186,7 @@ main {
 
 
 /* =========================================
-   TITOLI
+   TITOLI SEZIONE
    ========================================= */
 
 .section-title {
@@ -257,16 +212,13 @@ main {
 
   align-items: flex-start;
 
+  width: 100%;
   max-width: 100%;
-
-  overflow: hidden;
 }
 
 
 .operation-button {
   width: 175px;
-
-  min-width: 175px;
 
   min-height: 205px;
 
@@ -280,7 +232,7 @@ main {
 
   cursor: pointer;
 
-  flex: 0 0 175px;
+  flex: 0 0 auto;
 }
 
 
@@ -337,14 +289,9 @@ main {
 
   margin-bottom: 65px;
 
-  overflow: visible;
+  white-space: nowrap;
 }
 
-
-/*
-   Il contenitore può essere più largo dello schermo,
-   ma viene tagliato dal main.
-*/
 
 .filtro {
   height: 70px;
@@ -367,13 +314,12 @@ main {
 
   white-space: nowrap;
 
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 
 .filtro.prodotto {
   display: flex;
-
   align-items: center;
   justify-content: center;
 
@@ -407,9 +353,7 @@ main {
 #buoni {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-
-  overflow-x: clip !important;
+  overflow-x: hidden;
 }
 
 
@@ -420,7 +364,6 @@ main {
 
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   min-height: 170px;
 
@@ -476,6 +419,8 @@ main {
   line-height: 1.2;
 
   font-weight: 400;
+
+  white-space: nowrap;
 }
 
 
@@ -489,6 +434,8 @@ main {
   font-weight: 500;
 
   letter-spacing: -0.2px;
+
+  white-space: nowrap;
 }
 
 
@@ -503,7 +450,7 @@ main {
 
   white-space: nowrap;
 
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 
@@ -520,17 +467,14 @@ main {
 .pagina-dettaglio {
   display: none;
 
-  position: relative;
-
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   min-height: 100vh;
 
   background: #ffffff;
 
-  overflow-x: clip !important;
+  overflow-x: hidden;
 }
 
 
@@ -543,7 +487,6 @@ main {
   position: relative;
 
   width: 100%;
-  max-width: 100%;
 
   height: 250px;
 
@@ -552,8 +495,6 @@ main {
   display: flex;
 
   align-items: flex-start;
-
-  overflow: hidden;
 }
 
 
@@ -613,11 +554,10 @@ main {
 .detail-main {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   padding: 0 50px 220px;
 
-  overflow-x: clip !important;
+  overflow-x: hidden;
 }
 
 
@@ -626,7 +566,6 @@ main {
 
   width: 100%;
   max-width: 100%;
-  min-width: 0;
 
   background: #eef7ff;
 
@@ -750,8 +689,6 @@ main {
 
 .detail-field {
   margin-bottom: 67px;
-
-  min-width: 0;
 }
 
 
@@ -806,7 +743,6 @@ main {
   bottom: 0;
 
   width: 100%;
-  max-width: 100%;
 
   height: 215px;
 
@@ -817,8 +753,6 @@ main {
   padding: 35px 50px;
 
   z-index: 100;
-
-  overflow: hidden;
 }
 
 
@@ -851,34 +785,101 @@ main {
 
 
 /* =========================================
-   PROTEZIONE FINALE IPHONE
+   BLOCCO ASSOLUTO DELLO SCORRIMENTO
+   ORIZZONTALE
    ========================================= */
 
-img,
-svg,
-video,
-canvas {
-  max-width: 100%;
-}
-
-
-/*
-   Impedisce a qualsiasi elemento diretto
-   di creare una larghezza maggiore della viewport.
-*/
-
-body > * {
-  max-width: 100vw;
-}
-
-
-/*
-   Blocca definitivamente il gesto orizzontale.
-   Lo scorrimento verticale rimane disponibile.
-*/
-
-html,
-body {
-  overscroll-behavior-x: none !important;
+body,
+#paginaPrincipale,
+.pagina-dettaglio,
+main,
+.detail-main,
+#buoni {
+  overscroll-behavior-x: none;
   touch-action: pan-y;
+}
+
+
+/* =========================================
+   IPHONE / SCHERMATE PIÙ STRETTE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+  .top-header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .top-icons {
+    right: 28px;
+  }
+
+  main {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .summary-card {
+    padding-left: 50px;
+    padding-right: 50px;
+
+    margin-top: 38px;
+  }
+
+  .summary-card h2 {
+    font-size: 34px;
+  }
+
+  .summary-label {
+    font-size: 27px;
+  }
+
+  .summary-value {
+    font-size: 34px;
+  }
+
+  .summary-item {
+    margin-top: 58px;
+  }
+
+  .summary-item.second {
+    margin-top: 40px;
+  }
+
+  .operations {
+    gap: 45px;
+  }
+
+  .operation-button {
+    width: 150px;
+  }
+
+  .operation-icon {
+    width: 150px;
+    height: 150px;
+  }
+
+  .operation-button span {
+    font-size: 24px;
+  }
+
+  .filtri {
+    margin-left: -5px;
+  }
+
+  .detail-header {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .detail-main {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .bottom-action {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
 }
