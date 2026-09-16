@@ -117,68 +117,64 @@ main {
    ========================================= */
 
 .summary-card {
-  width: calc(100% - 8px);
-
-  margin-left: 4px;
+  width: 100%;
 
   background: #eef7ff;
 
-  border-radius: 58px;
+  border-radius: 15px;
 
-  padding: 38px 46px 34px;
+  padding: 31px 34px 32px;
 
   margin-top: 24px;
 
-  min-height: 0;
+  min-height: 235px;
 }
 
 
 .summary-card h2 {
   margin: 0;
 
-  font-size: 56px;
-  line-height: 1.15;
+  font-size: 19px;
+  line-height: 1.2;
 
   font-weight: 700;
-
-  letter-spacing: -1.5px;
 }
 
 
 .summary-item {
-  margin-top: 132px;
+  margin-top: 44px;
 }
 
 
 .summary-item.second {
-  margin-top: 91px;
+  margin-top: 26px;
 }
 
 
 .summary-label {
-  font-size: 50px;
-  line-height: 1.15;
+  font-size: 15.5px;
+  line-height: 1.2;
 
   font-weight: 400;
-
-  letter-spacing: -1.2px;
 }
 
 
 .summary-value {
-  margin-top: 14px;
+  margin-top: 4px;
 
-  font-size: 50px;
-  line-height: 1.15;
+  font-size: 19.5px;
+  line-height: 1.2;
 
   font-weight: 400;
-
-  letter-spacing: -1.2px;
 }
 
 
+/* =========================================
+   TITOLI
+   ========================================= */
+
 .section-title {
-  margin: 48px 0 20px;
+  margin: 24px 0 20px;
 
   font-size: 20px;
   line-height: 1.15;
@@ -188,6 +184,16 @@ main {
   letter-spacing: -0.35px;
 }
 
+
+.your-bonds {
+  margin-top: 29px;
+  margin-bottom: 18px;
+}
+
+
+/* =========================================
+   OPERAZIONI
+   ========================================= */
 
 .operations {
   display: flex;
@@ -245,12 +251,6 @@ main {
 }
 
 
-.your-bonds {
-  margin-top: 29px;
-  margin-bottom: 18px;
-}
-
-
 /* =========================================
    FILTRI
    ========================================= */
@@ -260,11 +260,14 @@ main {
 
   gap: 14px;
 
-  width: max-content;
+  width: 100%;
+  max-width: 100%;
 
-  margin-left: -13px;
+  margin-left: 0;
 
   margin-bottom: 32px;
+
+  overflow: hidden;
 }
 
 
@@ -288,11 +291,14 @@ main {
   font-weight: 600;
 
   white-space: nowrap;
+
+  flex: 0 0 auto;
 }
 
 
 .filtro.prodotto {
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -337,6 +343,8 @@ main {
   border-bottom: 1px solid #eeeeee;
 
   cursor: pointer;
+
+  overflow: hidden;
 }
 
 
@@ -369,6 +377,8 @@ main {
   flex: 1;
 
   min-width: 0;
+
+  overflow: hidden;
 }
 
 
@@ -380,6 +390,8 @@ main {
   line-height: 1.2;
 
   font-weight: 400;
+
+  white-space: nowrap;
 }
 
 
@@ -393,6 +405,8 @@ main {
   font-weight: 500;
 
   letter-spacing: -0.1px;
+
+  white-space: nowrap;
 }
 
 
@@ -406,6 +420,8 @@ main {
   font-weight: 600;
 
   white-space: nowrap;
+
+  flex: 0 0 auto;
 }
 
 
@@ -425,6 +441,8 @@ main {
   min-height: 100vh;
 
   background: #ffffff;
+
+  overflow-x: hidden;
 }
 
 
@@ -501,6 +519,8 @@ main {
 
 .detail-main {
   padding: 0 26px 110px;
+
+  overflow-x: hidden;
 }
 
 
@@ -741,31 +761,35 @@ main {
   }
 
   .summary-card {
-    width: calc(100% - 6px);
+    width: 100%;
 
-    margin-left: 3px;
+    margin-left: 0;
 
-    padding-left: 45px;
-    padding-right: 45px;
+    padding: 28px 28px 30px;
 
-    border-radius: 40px;
+    border-radius: 15px;
+
+    min-height: 220px;
   }
 
   .summary-card h2 {
-    font-size: 40px;
+    font-size: 19px;
   }
 
-  .summary-label,
+  .summary-label {
+    font-size: 15px;
+  }
+
   .summary-value {
-    font-size: 36px;
+    font-size: 19px;
   }
 
   .summary-item {
-    margin-top: 90px;
+    margin-top: 40px;
   }
 
   .summary-item.second {
-    margin-top: 65px;
+    margin-top: 24px;
   }
 
   .operations {
