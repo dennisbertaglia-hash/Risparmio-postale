@@ -12,7 +12,7 @@
 
   <title>MyPoste</title>
 
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=8">
 
   <style>
 
@@ -112,7 +112,7 @@
 
     /* =====================================================
        BONIFICO SEPA
-       CENTRAGGIO REALE DEL PORTAFOGLIO
+       PORTAFOGLIO PERFETTAMENTE CENTRATO NEL CERCHIO
        ===================================================== */
 
     .bonifico-sepa-icon {
@@ -539,7 +539,8 @@
             <div class="home-operation-circle bonifico-sepa-icon">
 
               <!-- STESSA GRAFICA DEL PORTAFOGLIO
-                   USATA IN "RICHIEDI RIMBORSO" -->
+                   USATA IN "RICHIEDI RIMBORSO"
+                   CENTRATA MATEMATICAMENTE NEL CERCHIO -->
 
               <svg
                 viewBox="0 0 170 170"
@@ -554,7 +555,9 @@
                 />
 
 
-                <!-- PORTAFOGLIO CENTRATO -->
+                <!-- PORTAFOGLIO
+                     GRAFICA ORIGINALE TRASLATA DI 11 PX
+                     PER PORTARE IL CENTRO VISIVO DA X=74 A X=85 -->
 
                 <g transform="translate(11 0)">
 
@@ -759,7 +762,8 @@
 
 
                 <!-- FRECCIA INFERIORE
-                     ROTAZIONE ESATTA DELLA SUPERIORE -->
+                     COPIA IDENTICA DELLA SUPERIORE
+                     RUOTATA ESATTAMENTE DI 180° -->
 
                 <g transform="rotate(180 50 50)">
 
@@ -2483,9 +2487,9 @@
 
 
 
-  <!-- CACHE BUST: VERSIONE 7 -->
+  <!-- CACHE BUST: VERSIONE 8 -->
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 
 </body>
 
