@@ -7,7 +7,10 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  min-height: 100%;
   background: #ffffff;
+  overflow-x: hidden;
 }
 
 body {
@@ -21,8 +24,6 @@ body {
 
   color: #111111;
   min-height: 100vh;
-
-  overflow-x: hidden;
 }
 
 
@@ -30,15 +31,23 @@ body {
    PAGINA PRINCIPALE
    ========================================= */
 
+#paginaPrincipale {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 .top-header {
   position: relative;
-  padding: 18px 26px 3px;
+
+  padding: 35px 28px 0;
 }
 
 
 .back-button {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
 
   padding: 0;
 
@@ -56,81 +65,96 @@ body {
 
 
 .back-button svg {
-  width: 27px;
-  height: 27px;
+  width: 40px;
+  height: 40px;
 }
 
 
 .top-header h1 {
-  font-size: 24px;
+  font-size: 40px;
   line-height: 1.15;
   font-weight: 700;
-  letter-spacing: -0.5px;
 
-  margin: 18px 0 5px;
+  letter-spacing: -1px;
+
+  margin: 38px 0 0;
 }
 
 
 .top-icons {
   position: absolute;
 
-  right: 24px;
-  top: 19px;
+  right: 28px;
+  top: 38px;
 
   display: flex;
   align-items: center;
 
-  gap: 14px;
+  gap: 25px;
 
-  font-size: 15px;
+  font-size: 25px;
 }
 
 
 .eye-icon {
-  width: 24px;
-  height: 24px;
+  width: 44px;
+  height: 44px;
 }
 
 
 .question {
-  width: 18px;
-  height: 18px;
+  width: 36px;
+  height: 36px;
 
-  border: 1.5px solid #111;
+  border: 2px solid #111;
   border-radius: 50%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 12px;
+  font-size: 23px;
 }
 
+
+/* =========================================
+   CONTENUTO PRINCIPALE
+   ========================================= */
 
 main {
-  padding: 6px 26px 35px;
+  width: 100%;
+  max-width: 100%;
+
+  padding: 20px 28px 60px;
+
+  overflow-x: hidden;
 }
 
+
+/* =========================================
+   CARD RIEPILOGO
+   ========================================= */
 
 .summary-card {
   width: 100%;
+  max-width: 100%;
 
   background: #eef7ff;
 
-  border-radius: 15px;
+  border-radius: 28px;
 
-  padding: 31px 34px;
+  padding: 36px 36px 40px;
 
-  margin-top: 24px;
+  margin-top: 38px;
 
-  min-height: 235px;
+  min-height: 0;
 }
 
 
 .summary-card h2 {
   margin: 0;
 
-  font-size: 19px;
+  font-size: 27px;
   line-height: 1.2;
 
   font-weight: 700;
@@ -138,17 +162,17 @@ main {
 
 
 .summary-item {
-  margin-top: 44px;
+  margin-top: 58px;
 }
 
 
 .summary-item.second {
-  margin-top: 26px;
+  margin-top: 38px;
 }
 
 
 .summary-label {
-  font-size: 15.5px;
+  font-size: 23px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -156,40 +180,56 @@ main {
 
 
 .summary-value {
-  margin-top: 4px;
+  margin-top: 7px;
 
-  font-size: 19.5px;
+  font-size: 25px;
   line-height: 1.2;
 
   font-weight: 400;
 }
 
 
-.section-title {
-  margin: 24px 0 20px;
+/* =========================================
+   TITOLI SEZIONE
+   ========================================= */
 
-  font-size: 20px;
+.section-title {
+  margin: 42px 0 30px;
+
+  font-size: 30px;
   line-height: 1.15;
 
   font-weight: 700;
 
-  letter-spacing: -0.35px;
+  letter-spacing: -0.5px;
 }
 
+
+.your-bonds {
+  margin-top: 48px;
+  margin-bottom: 28px;
+}
+
+
+/* =========================================
+   OPERAZIONI
+   ========================================= */
 
 .operations {
   display: flex;
 
-  gap: 32px;
+  gap: 38px;
 
   align-items: flex-start;
+
+  width: 100%;
 }
 
 
 .operation-button {
-  width: 88px;
+  width: 125px;
 
-  min-height: 103px;
+  min-height: 160px;
 
   padding: 0;
 
@@ -200,12 +240,14 @@ main {
   font-family: inherit;
 
   cursor: pointer;
+
+  flex: 0 0 auto;
 }
 
 
 .operation-icon {
-  width: 85px;
-  height: 85px;
+  width: 100px;
+  height: 100px;
 
   margin: 0 auto;
 }
@@ -219,16 +261,12 @@ main {
 }
 
 
-/*
-   Testo nero ma NON grassetto
-*/
-
 .operation-button span {
   display: block;
 
-  margin-top: 12px;
+  margin-top: 18px;
 
-  font-size: 13.5px;
+  font-size: 20px;
   line-height: 1.15;
 
   font-weight: 400;
@@ -237,9 +275,8 @@ main {
 }
 
 
-.your-bonds {
-  margin-top: 29px;
-  margin-bottom: 18px;
+.operation-button:active {
+  opacity: 0.55;
 }
 
 
@@ -250,24 +287,29 @@ main {
 .filtri {
   display: flex;
 
-  gap: 14px;
+  flex-wrap: wrap;
 
-  width: max-content;
+  gap: 12px;
 
-  margin-left: -13px;
+  width: 100%;
+  max-width: 100%;
 
-  margin-bottom: 32px;
+  margin: 0 0 35px;
+
+  overflow: visible;
 }
 
 
 .filtro {
-  height: 35px;
+  min-height: 48px;
 
-  padding: 0 17px;
+  height: auto;
 
-  border: 1.5px solid #0759c9;
+  padding: 9px 20px;
 
-  border-radius: 19px;
+  border: 2px solid #0759c9;
+
+  border-radius: 28px;
 
   background: #ffffff;
 
@@ -275,7 +317,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 14.5px;
+  font-size: 19px;
 
   font-weight: 600;
 
@@ -285,29 +327,30 @@ main {
 
 .filtro.prodotto {
   display: flex;
+
   align-items: center;
   justify-content: center;
 
-  gap: 8px;
+  gap: 12px;
 }
 
 
 .freccia-down {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
 
-  border-right: 2px solid #0759c9;
-  border-bottom: 2px solid #0759c9;
+  border-right: 3px solid #0759c9;
+  border-bottom: 3px solid #0759c9;
 
   transform: rotate(45deg);
 
-  margin-top: -4px;
+  margin-top: -6px;
 }
 
 
 .periodo {
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
@@ -315,28 +358,38 @@ main {
    ELENCO BUONI
    ========================================= */
 
+#buoni {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 .buono {
   display: flex;
 
   align-items: center;
 
   width: 100%;
+  max-width: 100%;
 
-  min-height: 85px;
+  min-height: 105px;
 
-  padding: 12px 0;
+  padding: 18px 0;
 
   border-bottom: 1px solid #eeeeee;
 
   cursor: pointer;
+
+  overflow: hidden;
 }
 
 
 .buono-icon {
-  flex: 0 0 36px;
+  flex: 0 0 52px;
 
-  width: 36px;
-  height: 36px;
+  width: 52px;
+  height: 52px;
 
   border-radius: 50%;
 
@@ -347,13 +400,13 @@ main {
   align-items: center;
   justify-content: center;
 
-  margin-right: 12px;
+  margin-right: 16px;
 }
 
 
 .buono-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 }
 
 
@@ -361,47 +414,54 @@ main {
   flex: 1;
 
   min-width: 0;
+
+  overflow: hidden;
 }
 
 
 .data {
   color: #777777;
 
-  font-size: 12.5px;
+  font-size: 17px;
 
   line-height: 1.2;
 
   font-weight: 400;
+
+  white-space: nowrap;
 }
 
 
 .nome {
-  margin-top: 4px;
+  margin-top: 5px;
 
-  font-size: 13.5px;
+  font-size: 18px;
 
   line-height: 1.15;
 
   font-weight: 500;
 
   letter-spacing: -0.1px;
+
+  white-space: nowrap;
 }
 
 
 .valore {
-  margin-left: 8px;
+  margin-left: 10px;
 
-  font-size: 16px;
+  font-size: 21px;
 
   line-height: 1;
 
   font-weight: 600;
 
   white-space: nowrap;
+
+  flex: 0 0 auto;
 }
 
 
-.operation-button:active,
 .buono:active {
   opacity: 0.55;
 }
@@ -414,9 +474,14 @@ main {
 .pagina-dettaglio {
   display: none;
 
+  width: 100%;
+  max-width: 100%;
+
   min-height: 100vh;
 
   background: #ffffff;
+
+  overflow-x: hidden;
 }
 
 
@@ -428,9 +493,9 @@ main {
 .detail-header {
   position: relative;
 
-  height: 125px;
+  height: 180px;
 
-  padding: 18px 26px 0;
+  padding: 35px 28px 0;
 
   display: flex;
 
@@ -441,8 +506,8 @@ main {
 .detail-back {
   flex: 0 0 auto;
 
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
 
   padding: 0;
 
@@ -462,28 +527,28 @@ main {
 
 
 .detail-back svg {
-  width: 27px;
-  height: 27px;
+  width: 40px;
+  height: 40px;
 }
 
 
 .detail-header h1 {
   position: absolute;
 
-  left: 109px;
-  right: 18px;
+  left: 110px;
+  right: 28px;
 
-  top: 32px;
+  top: 48px;
 
   margin: 0;
 
-  font-size: 20px;
+  font-size: 25px;
 
   line-height: 1.15;
 
   font-weight: 700;
 
-  letter-spacing: -0.35px;
+  letter-spacing: -0.4px;
 }
 
 
@@ -492,7 +557,12 @@ main {
    ========================================= */
 
 .detail-main {
-  padding: 0 26px 110px;
+  width: 100%;
+  max-width: 100%;
+
+  padding: 0 28px 170px;
+
+  overflow-x: hidden;
 }
 
 
@@ -500,10 +570,11 @@ main {
   position: relative;
 
   width: 100%;
+  max-width: 100%;
 
   background: #eef7ff;
 
-  border-radius: 15px;
+  border-radius: 28px;
 
   overflow: visible;
 
@@ -512,9 +583,9 @@ main {
 
 
 .detail-card-top {
-  min-height: 143px;
+  min-height: 210px;
 
-  padding-top: 73px;
+  padding: 105px 20px 25px;
 
   text-align: center;
 
@@ -525,14 +596,14 @@ main {
 .detail-buono-icon {
   position: absolute;
 
-  width: 85px;
-  height: 85px;
+  width: 110px;
+  height: 110px;
 
   left: 50%;
 
   transform: translateX(-50%);
 
-  top: -30px;
+  top: -45px;
 }
 
 
@@ -543,7 +614,7 @@ main {
 
 
 .detail-rimborso {
-  font-size: 33px;
+  font-size: 42px;
 
   line-height: 1;
 
@@ -554,9 +625,9 @@ main {
 
 
 .detail-rimborso-label {
-  margin-top: 10px;
+  margin-top: 14px;
 
-  font-size: 15.5px;
+  font-size: 21px;
 
   line-height: 1.2;
 
@@ -565,9 +636,9 @@ main {
 
 
 .detail-account {
-  min-height: 65px;
+  min-height: 90px;
 
-  border-top: 2.5px solid #ffffff;
+  border-top: 4px solid #ffffff;
 
   display: flex;
 
@@ -575,17 +646,17 @@ main {
 
   justify-content: center;
 
-  gap: 11px;
+  gap: 14px;
 
-  padding: 10px;
+  padding: 15px;
 }
 
 
 .account-icon {
-  width: 40px;
-  height: 30px;
+  width: 55px;
+  height: 42px;
 
-  flex: 0 0 40px;
+  flex: 0 0 55px;
 }
 
 
@@ -596,7 +667,7 @@ main {
 
 
 .account-text {
-  font-size: 15.5px;
+  font-size: 20px;
 
   line-height: 1.25;
 
@@ -605,31 +676,31 @@ main {
 
 
 /* =========================================
-   RIEPILOGO
+   RIEPILOGO DETTAGLIO
    ========================================= */
 
 .detail-section-title {
-  margin: 38px 0 23px;
+  margin: 52px 0 32px;
 
-  font-size: 20px;
+  font-size: 28px;
 
   line-height: 1.15;
 
   font-weight: 700;
 
-  letter-spacing: -0.35px;
+  letter-spacing: -0.4px;
 }
 
 
 .detail-field {
-  margin-bottom: 34px;
+  margin-bottom: 42px;
 }
 
 
 .detail-label {
   color: #707070;
 
-  font-size: 15.5px;
+  font-size: 20px;
 
   line-height: 1.35;
 
@@ -638,11 +709,11 @@ main {
 
 
 .detail-value {
-  margin-top: 6px;
+  margin-top: 8px;
 
   color: #111111;
 
-  font-size: 16px;
+  font-size: 21px;
 
   line-height: 1.25;
 
@@ -651,16 +722,16 @@ main {
 
 
 .detail-divider {
-  height: 6px;
+  height: 8px;
 
   background: #f5f5f5;
 
-  margin: 23px -26px 20px;
+  margin: 32px -28px 32px;
 }
 
 
 .last-detail-field {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 
@@ -676,13 +747,13 @@ main {
 
   bottom: 0;
 
-  height: 108px;
+  height: 125px;
 
   background: rgba(255, 255, 255, 0.98);
 
   border-top: 1px solid #eeeeee;
 
-  padding: 18px 26px;
+  padding: 18px 28px;
 
   z-index: 100;
 }
@@ -691,11 +762,11 @@ main {
 .bottom-action button {
   width: 100%;
 
-  height: 53px;
+  height: 75px;
 
   border: 0;
 
-  border-radius: 28px;
+  border-radius: 40px;
 
   background: #0755c7;
 
@@ -703,7 +774,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 17px;
+  font-size: 22px;
 
   font-weight: 600;
 
@@ -717,19 +788,23 @@ main {
 
 
 /* =========================================
-   ADATTAMENTO SCHERMI MOLTO PICCOLI
+   SCHERMI MOLTO STRETTI
    ========================================= */
 
 @media (max-width: 360px) {
 
   .top-header {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   main {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .top-icons {
+    right: 20px;
   }
 
   .summary-card {
@@ -738,41 +813,44 @@ main {
   }
 
   .operations {
-    gap: 24px;
+    gap: 18px;
   }
 
-  .filtri {
-    gap: 10px;
+  .operation-button {
+    width: 112px;
+  }
+
+  .operation-button span {
+    font-size: 18px;
   }
 
   .filtro {
-    padding-left: 13px;
-    padding-right: 13px;
-    font-size: 13px;
+    font-size: 17px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
-  .periodo {
-    padding-left: 17px;
-    padding-right: 17px;
+  .valore {
+    font-size: 19px;
   }
 
   .detail-header {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .detail-main {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .detail-divider {
-    margin-left: -22px;
-    margin-right: -22px;
+    margin-left: -20px;
+    margin-right: -20px;
   }
 
   .bottom-action {
-    padding-left: 22px;
-    padding-right: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
