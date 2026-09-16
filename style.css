@@ -32,13 +32,13 @@ body {
 
 .top-header {
   position: relative;
-  padding: 18px 28px 3px;
+  padding: 18px 26px 3px;
 }
 
 
 .back-button {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
 
   padding: 0;
 
@@ -56,45 +56,45 @@ body {
 
 
 .back-button svg {
-  width: 29px;
-  height: 29px;
+  width: 27px;
+  height: 27px;
 }
 
 
 .top-header h1 {
-  font-size: 25px;
+  font-size: 24px;
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.5px;
 
-  margin: 19px 0 5px;
+  margin: 18px 0 5px;
 }
 
 
 .top-icons {
   position: absolute;
 
-  right: 27px;
+  right: 24px;
   top: 19px;
 
   display: flex;
   align-items: center;
 
-  gap: 15px;
+  gap: 14px;
 
   font-size: 15px;
 }
 
 
 .eye-icon {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
 }
 
 
 .question {
-  width: 19px;
-  height: 19px;
+  width: 18px;
+  height: 18px;
 
   border: 1.5px solid #111;
   border-radius: 50%;
@@ -108,7 +108,7 @@ body {
 
 
 main {
-  padding: 7px 28px 35px;
+  padding: 6px 26px 35px;
 }
 
 
@@ -117,66 +117,70 @@ main {
    ========================================= */
 
 .summary-card {
-  width: 100%;
+  width: calc(100% - 8px);
+
+  margin-left: 4px;
 
   background: #eef7ff;
 
-  border-radius: 16px;
+  border-radius: 58px;
 
-  padding: 35px 35px;
+  padding: 108px 106px 96px;
 
-  margin-top: 27px;
+  margin-top: 24px;
 
-  min-height: 258px;
+  min-height: 768px;
 }
 
 
 .summary-card h2 {
   margin: 0;
 
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 56px;
+  line-height: 1.15;
 
   font-weight: 700;
+
+  letter-spacing: -1.5px;
 }
 
 
 .summary-item {
-  margin-top: 47px;
+  margin-top: 132px;
 }
 
 
 .summary-item.second {
-  margin-top: 28px;
+  margin-top: 91px;
 }
 
 
 .summary-label {
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 50px;
+  line-height: 1.15;
 
   font-weight: 400;
+
+  letter-spacing: -1.2px;
 }
 
 
 .summary-value {
-  margin-top: 5px;
+  margin-top: 14px;
 
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 50px;
+  line-height: 1.15;
 
   font-weight: 400;
+
+  letter-spacing: -1.2px;
 }
 
 
-/* =========================================
-   SEZIONE OPERAZIONI
-   ========================================= */
-
 .section-title {
-  margin: 29px 0 22px;
+  margin: 48px 0 20px;
 
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.15;
 
   font-weight: 700;
@@ -188,16 +192,16 @@ main {
 .operations {
   display: flex;
 
-  gap: 35px;
+  gap: 32px;
 
   align-items: flex-start;
 }
 
 
 .operation-button {
-  width: 91px;
+  width: 88px;
 
-  min-height: 107px;
+  min-height: 103px;
 
   padding: 0;
 
@@ -212,8 +216,8 @@ main {
 
 
 .operation-icon {
-  width: 88px;
-  height: 88px;
+  width: 85px;
+  height: 85px;
 
   margin: 0 auto;
 }
@@ -230,9 +234,9 @@ main {
 .operation-button span {
   display: block;
 
-  margin-top: 13px;
+  margin-top: 12px;
 
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.15;
 
   font-weight: 400;
@@ -242,8 +246,8 @@ main {
 
 
 .your-bonds {
-  margin-top: 31px;
-  margin-bottom: 19px;
+  margin-top: 29px;
+  margin-bottom: 18px;
 }
 
 
@@ -254,24 +258,24 @@ main {
 .filtri {
   display: flex;
 
-  gap: 15px;
+  gap: 14px;
 
   width: max-content;
 
-  margin-left: -14px;
+  margin-left: -13px;
 
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 
 .filtro {
-  height: 36px;
+  height: 35px;
 
-  padding: 0 18px;
+  padding: 0 17px;
 
   border: 1.5px solid #0759c9;
 
-  border-radius: 20px;
+  border-radius: 19px;
 
   background: #ffffff;
 
@@ -279,7 +283,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 15px;
+  font-size: 14.5px;
 
   font-weight: 600;
 
@@ -310,8 +314,8 @@ main {
 
 
 .periodo {
-  padding-left: 23px;
-  padding-right: 23px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 
@@ -326,7 +330,7 @@ main {
 
   width: 100%;
 
-  min-height: 86px;
+  min-height: 85px;
 
   padding: 12px 0;
 
@@ -337,10 +341,10 @@ main {
 
 
 .buono-icon {
-  flex: 0 0 37px;
+  flex: 0 0 36px;
 
-  width: 37px;
-  height: 37px;
+  width: 36px;
+  height: 36px;
 
   border-radius: 50%;
 
@@ -351,13 +355,13 @@ main {
   align-items: center;
   justify-content: center;
 
-  margin-right: 13px;
+  margin-right: 12px;
 }
 
 
 .buono-icon svg {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
 }
 
 
@@ -371,7 +375,7 @@ main {
 .data {
   color: #777777;
 
-  font-size: 13px;
+  font-size: 12.5px;
 
   line-height: 1.2;
 
@@ -382,7 +386,7 @@ main {
 .nome {
   margin-top: 4px;
 
-  font-size: 14px;
+  font-size: 13.5px;
 
   line-height: 1.15;
 
@@ -395,7 +399,7 @@ main {
 .valore {
   margin-left: 8px;
 
-  font-size: 16.5px;
+  font-size: 16px;
 
   line-height: 1;
 
@@ -434,7 +438,7 @@ main {
 
   height: 125px;
 
-  padding: 18px 28px 0;
+  padding: 18px 26px 0;
 
   display: flex;
 
@@ -445,8 +449,8 @@ main {
 .detail-back {
   flex: 0 0 auto;
 
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
 
   padding: 0;
 
@@ -466,15 +470,15 @@ main {
 
 
 .detail-back svg {
-  width: 29px;
-  height: 29px;
+  width: 27px;
+  height: 27px;
 }
 
 
 .detail-header h1 {
   position: absolute;
 
-  left: 112px;
+  left: 109px;
   right: 18px;
 
   top: 32px;
@@ -496,7 +500,7 @@ main {
    ========================================= */
 
 .detail-main {
-  padding: 0 28px 110px;
+  padding: 0 26px 110px;
 }
 
 
@@ -507,7 +511,7 @@ main {
 
   background: #eef7ff;
 
-  border-radius: 16px;
+  border-radius: 15px;
 
   overflow: visible;
 
@@ -659,7 +663,7 @@ main {
 
   background: #f5f5f5;
 
-  margin: 23px -28px 20px;
+  margin: 23px -26px 20px;
 }
 
 
@@ -686,7 +690,7 @@ main {
 
   border-top: 1px solid #eeeeee;
 
-  padding: 18px 28px;
+  padding: 18px 26px;
 
   z-index: 100;
 }
@@ -721,62 +725,85 @@ main {
 
 
 /* =========================================
-   ADATTAMENTO SCHERMI MOLTO PICCOLI
+   SCHERMI PICCOLI
    ========================================= */
 
 @media (max-width: 360px) {
 
   .top-header {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   main {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   .summary-card {
-    padding-left: 30px;
-    padding-right: 30px;
+    width: calc(100% - 6px);
+
+    margin-left: 3px;
+
+    padding-left: 45px;
+    padding-right: 45px;
+
+    border-radius: 40px;
+  }
+
+  .summary-card h2 {
+    font-size: 40px;
+  }
+
+  .summary-label,
+  .summary-value {
+    font-size: 36px;
+  }
+
+  .summary-item {
+    margin-top: 90px;
+  }
+
+  .summary-item.second {
+    margin-top: 65px;
   }
 
   .operations {
-    gap: 27px;
+    gap: 24px;
   }
 
   .filtri {
-    gap: 11px;
+    gap: 10px;
   }
 
   .filtro {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 13px;
+    padding-right: 13px;
     font-size: 13px;
   }
 
   .periodo {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 17px;
+    padding-right: 17px;
   }
 
   .detail-header {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   .detail-main {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
   }
 
   .detail-divider {
-    margin-left: -24px;
-    margin-right: -24px;
+    margin-left: -22px;
+    margin-right: -22px;
   }
 
   .bottom-action {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 22px;
+    padding-right: 22px;
   }
 }
