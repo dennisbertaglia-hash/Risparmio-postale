@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 
 <head>
@@ -12,7 +12,7 @@
 
   <title>MyPoste</title>
 
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 
   <style>
 
@@ -550,7 +550,6 @@
                   fill="#f1f8ff"
                 />
 
-
                 <g transform="translate(11 0)">
 
                   <circle
@@ -718,30 +717,7 @@
                   fill="#f1d900"
                 />
 
-
-                <!-- FRECCIA SUPERIORE
-                     PIÙ CORTA E VICINA ALLA SCRITTA -->
-
-                <path
-                  d="M61 39
-                     C56 35 49 35 43 39"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
-
-                <path
-                  d="M46 36
-                     L42 39
-                     L46 41"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-
+                <!-- SCRITTA P2P -->
 
                 <text
                   x="50"
@@ -755,27 +731,55 @@
                 >p2p</text>
 
 
+                <!-- FRECCIA SUPERIORE
+                     PIÙ CORTA E VICINA ALLA SCRITTA -->
+
+                <path
+                  d="M61 39
+                     C56 35
+                     49 34
+                     43 38"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M45 35
+                     L41 38
+                     L46 40"
+                  fill="none"
+                  stroke="#111"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+
                 <!-- FRECCIA INFERIORE
-                     IDENTICA E SIMMETRICA A QUELLA SUPERIORE -->
+                     IDENTICA E SIMMETRICA -->
 
                 <g transform="rotate(180 50 50)">
 
                   <path
                     d="M61 39
-                       C56 35 49 35 43 39"
+                       C56 35
+                       49 34
+                       43 38"
                     fill="none"
                     stroke="#111"
-                    stroke-width="2"
+                    stroke-width="1.8"
                     stroke-linecap="round"
                   />
 
                   <path
-                    d="M46 36
-                       L42 39
-                       L46 41"
+                    d="M45 35
+                       L41 38
+                       L46 40"
                     fill="none"
                     stroke="#111"
-                    stroke-width="2"
+                    stroke-width="1.8"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
@@ -2480,9 +2484,9 @@
 
 
 
-  <!-- CACHE BUST: VERSIONE 8 -->
+  <!-- CACHE BUST: VERSIONE 9 -->
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 
 </body>
 
