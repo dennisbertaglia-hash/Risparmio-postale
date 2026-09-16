@@ -111,7 +111,8 @@
     }
 
     /* =====================================================
-       CENTRAGGIO SIMBOLO BONIFICO SEPA
+       BONIFICO SEPA
+       CENTRAGGIO REALE DEL PORTAFOGLIO
        ===================================================== */
 
     .bonifico-sepa-icon {
@@ -121,7 +122,7 @@
     }
 
     .bonifico-sepa-icon svg {
-      transform: translate(0, 0) !important;
+      transform: none !important;
       transform-origin: center center !important;
     }
 
@@ -552,131 +553,138 @@
                   fill="#f1f8ff"
                 />
 
-                <circle
-                  cx="51"
-                  cy="57"
-                  r="13"
-                  fill="#ffd52a"
-                  stroke="#e5b800"
-                  stroke-width="2"
-                />
 
-                <circle
-                  cx="64"
-                  cy="54"
-                  r="13"
-                  fill="#ffd52a"
-                  stroke="#e5b800"
-                  stroke-width="2"
-                />
+                <!-- PORTAFOGLIO CENTRATO -->
 
-                <circle
-                  cx="51"
-                  cy="57"
-                  r="8"
-                  fill="none"
-                  stroke="#f0c000"
-                  stroke-width="2"
-                />
+                <g transform="translate(11 0)">
 
-                <circle
-                  cx="64"
-                  cy="54"
-                  r="8"
-                  fill="none"
-                  stroke="#f0c000"
-                  stroke-width="2"
-                />
+                  <circle
+                    cx="51"
+                    cy="57"
+                    r="13"
+                    fill="#ffd52a"
+                    stroke="#e5b800"
+                    stroke-width="2"
+                  />
 
-                <rect
-                  x="38"
-                  y="62"
-                  width="80"
-                  height="48"
-                  rx="5"
-                  fill="#159957"
-                />
+                  <circle
+                    cx="64"
+                    cy="54"
+                    r="13"
+                    fill="#ffd52a"
+                    stroke="#e5b800"
+                    stroke-width="2"
+                  />
 
-                <rect
-                  x="45"
-                  y="68"
-                  width="66"
-                  height="34"
-                  rx="3"
-                  fill="#42b96d"
-                />
+                  <circle
+                    cx="51"
+                    cy="57"
+                    r="8"
+                    fill="none"
+                    stroke="#f0c000"
+                    stroke-width="2"
+                  />
 
-                <path
-                  d="
-                    M45 72
-                    H106
-                    C113 72 118 77 118 84
-                    V103
-                    C118 110 113 114 106 114
-                    H46
-                    C39 114 35 110 35 103
-                    V83
-                    C35 76 39 72 45 72
-                    Z
-                  "
-                  fill="#f4d000"
-                />
+                  <circle
+                    cx="64"
+                    cy="54"
+                    r="8"
+                    fill="none"
+                    stroke="#f0c000"
+                    stroke-width="2"
+                  />
 
-                <path
-                  d="
-                    M45 72
-                    H106
-                    C113 72 118 77 118 84
-                    V88
-                    H47
-                    C40 88 35 84 35 79
-                    C36 75 40 72 45 72
-                    Z
-                  "
-                  fill="#f7d500"
-                />
+                  <rect
+                    x="38"
+                    y="62"
+                    width="80"
+                    height="48"
+                    rx="5"
+                    fill="#159957"
+                  />
 
-                <path
-                  d="
-                    M35 125
-                    V96
-                    H25
-                    L41 79
-                    L57 96
-                    H47
-                    V125
-                    Z
-                  "
-                  fill="#3eb969"
-                />
+                  <rect
+                    x="45"
+                    y="68"
+                    width="66"
+                    height="34"
+                    rx="3"
+                    fill="#42b96d"
+                  />
 
-                <path
-                  d="
-                    M35 82
-                    H47
-                    V114
-                    H46
-                    C39 114 35 110 35 103
-                    Z
-                  "
-                  fill="#3eb969"
-                />
+                  <path
+                    d="
+                      M45 72
+                      H106
+                      C113 72 118 77 118 84
+                      V103
+                      C118 110 113 114 106 114
+                      H46
+                      C39 114 35 110 35 103
+                      V83
+                      C35 76 39 72 45 72
+                      Z
+                    "
+                    fill="#f4d000"
+                  />
 
-                <rect
-                  x="96"
-                  y="82"
-                  width="27"
-                  height="20"
-                  rx="7"
-                  fill="#145db5"
-                />
+                  <path
+                    d="
+                      M45 72
+                      H106
+                      C113 72 118 77 118 84
+                      V88
+                      H47
+                      C40 88 35 84 35 79
+                      C36 75 40 72 45 72
+                      Z
+                    "
+                    fill="#f7d500"
+                  />
 
-                <circle
-                  cx="104"
-                  cy="92"
-                  r="3.5"
-                  fill="#ffd900"
-                />
+                  <path
+                    d="
+                      M35 125
+                      V96
+                      H25
+                      L41 79
+                      L57 96
+                      H47
+                      V125
+                      Z
+                    "
+                    fill="#3eb969"
+                  />
+
+                  <path
+                    d="
+                      M35 82
+                      H47
+                      V114
+                      H46
+                      C39 114 35 110 35 103
+                      Z
+                    "
+                    fill="#3eb969"
+                  />
+
+                  <rect
+                    x="96"
+                    y="82"
+                    width="27"
+                    height="20"
+                    rx="7"
+                    fill="#145db5"
+                  />
+
+                  <circle
+                    cx="104"
+                    cy="92"
+                    r="3.5"
+                    fill="#ffd900"
+                  />
+
+                </g>
 
               </svg>
 
@@ -751,27 +759,31 @@
 
 
                 <!-- FRECCIA INFERIORE
-                     SIMMETRICA E PIÙ VICINA ALLA SCRITTA -->
+                     ROTAZIONE ESATTA DELLA SUPERIORE -->
 
-                <path
-                  d="M34 63
-                     C41 69 55 69 63 62"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                />
+                <g transform="rotate(180 50 50)">
 
-                <path
-                  d="M60 58
-                     L64 63
-                     L59 65"
-                  fill="none"
-                  stroke="#111"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                  <path
+                    d="M66 37
+                       C59 31 45 31 37 38"
+                    fill="none"
+                    stroke="#111"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M40 33
+                       L36 38
+                       L41 40"
+                    fill="none"
+                    stroke="#111"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+
+                </g>
 
               </svg>
 
