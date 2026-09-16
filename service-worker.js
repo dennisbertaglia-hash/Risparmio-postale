@@ -1,4 +1,4 @@
-const CACHE_NAME = "risparmio-postale-v6";
+const CACHE_NAME = "risparmio-postale-v7";
 
 const FILES_TO_CACHE = [
   "./",
@@ -52,4 +52,4 @@ self.addEventListener("fetch", event => {
         return caches.match(event.request);
       })
   );
-});
+});p
