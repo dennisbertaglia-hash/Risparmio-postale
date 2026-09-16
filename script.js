@@ -4,21 +4,123 @@
 
 const buoni = [
   {
-    sottoscrizione: "12 Agosto 2026",
-    scadenza: "12 Agosto 2038",
-    nominale: 900
-  },
-
-  {
-    sottoscrizione: "03 Settembre 2026",
-    scadenza: "03 Settembre 2038",
+    sottoscrizione: "16 Settembre 2026",
+    scadenza: "16 Settembre 2038",
     nominale: 500
   },
 
   {
-    sottoscrizione: "22 Agosto 2026",
-    scadenza: "22 Agosto 2038",
+    sottoscrizione: "14 Luglio 2026",
+    scadenza: "14 Luglio 2038",
+    nominale: 1500
+  },
+
+  {
+    sottoscrizione: "12 Giugno 2026",
+    scadenza: "12 Giugno 2038",
+    nominale: 1000
+  },
+
+  {
+    sottoscrizione: "16 Aprile 2026",
+    scadenza: "16 Aprile 2038",
+    nominale: 1500
+  },
+
+  {
+    sottoscrizione: "11 Febbraio 2026",
+    scadenza: "11 Febbraio 2038",
+    nominale: 1500
+  },
+
+  {
+    sottoscrizione: "15 Novembre 2025",
+    scadenza: "15 Novembre 2037",
     nominale: 1200
+  },
+
+  {
+    sottoscrizione: "13 Ottobre 2025",
+    scadenza: "13 Ottobre 2037",
+    nominale: 800
+  },
+
+  {
+    sottoscrizione: "11 Ottobre 2025",
+    scadenza: "11 Ottobre 2037",
+    nominale: 900
+  },
+
+  {
+    sottoscrizione: "18 Giugno 2025",
+    scadenza: "18 Giugno 2037",
+    nominale: 800
+  },
+
+  {
+    sottoscrizione: "14 Maggio 2025",
+    scadenza: "14 Maggio 2037",
+    nominale: 800
+  },
+
+  {
+    sottoscrizione: "11 Aprile 2025",
+    scadenza: "11 Aprile 2037",
+    nominale: 500
+  },
+
+  {
+    sottoscrizione: "16 Marzo 2025",
+    scadenza: "16 Marzo 2037",
+    nominale: 800
+  },
+
+  {
+    sottoscrizione: "12 Febbraio 2025",
+    scadenza: "12 Febbraio 2037",
+    nominale: 700
+  },
+
+  {
+    sottoscrizione: "15 Gennaio 2025",
+    scadenza: "15 Gennaio 2037",
+    nominale: 500
+  },
+
+  {
+    sottoscrizione: "13 Dicembre 2024",
+    scadenza: "13 Dicembre 2036",
+    nominale: 1000
+  },
+
+  {
+    sottoscrizione: "11 Novembre 2024",
+    scadenza: "11 Novembre 2036",
+    nominale: 500
+  },
+
+  {
+    sottoscrizione: "10 Ottobre 2024",
+    scadenza: "10 Ottobre 2036",
+    nominale: 800
+  },
+
+  {
+    sottoscrizione: "18 Settembre 2024",
+    scadenza: "18 Settembre 2036",
+    nominale: 700
+  },
+
+  {
+    sottoscrizione: "10 Luglio 2024",
+    scadenza: "10 Luglio 2036",
+    nominale: 500
+  },
+
+  {
+    sottoscrizione: "12 Maggio 2024",
+    scadenza: "12 Maggio 2036",
+    nominale: 500
   }
 ];
 
@@ -55,14 +157,6 @@ function euro(numero) {
    ========================================= */
 
 function calcolaDati(nominale) {
-
-  /*
-    I valori del primo Buono sono quelli
-    mostrati nelle schermate.
-
-    Gli altri Buoni vengono proporzionati
-    in base al loro valore nominale.
-  */
 
   const lordoSenzaPremio =
     nominale * (1210.40 / 900);
@@ -187,7 +281,7 @@ buoni.forEach((buono, indice) => {
     <div class="buono-info">
 
       <div class="data">
-        Scade il ${buono.scadenza}
+        Sottoscritto il ${buono.sottoscrizione}
       </div>
 
       <div class="nome">
