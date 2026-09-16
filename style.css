@@ -17,9 +17,534 @@ body {
   overflow-x: hidden;
 }
 
+
+/* =====================================================
+   HOME MYPOSTE
+   ===================================================== */
+
+#paginaHome {
+  min-height: 100vh;
+  background: #fff;
+  padding-bottom: 105px;
+}
+
+
 /* =========================
-   PAGINA PRINCIPALE
+   HEADER GIALLO
    ========================= */
+
+.home-header {
+  position: relative;
+  height: 304px;
+  background: #ffe500;
+  border-bottom-right-radius: 62px;
+  padding: 43px 43px 0;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.10);
+  z-index: 10;
+}
+
+.home-saluto {
+  position: absolute;
+  left: 51px;
+  top: 153px;
+}
+
+.home-ciao {
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.home-nome {
+  margin-top: 5px;
+  font-size: 39px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.home-header-icons {
+  position: absolute;
+  top: 124px;
+  right: 42px;
+  display: flex;
+  gap: 35px;
+}
+
+.home-header-item {
+  text-align: center;
+}
+
+.home-round-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #fffde9;
+  border: 1.5px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-round-icon svg {
+  width: 57px;
+  height: 57px;
+}
+
+.home-header-label {
+  margin-top: 14px;
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   CONTENUTO HOME
+   ========================= */
+
+.home-main {
+  padding: 0 44px 40px;
+}
+
+
+/* =========================
+   ASSOCIA NUMERO
+   ========================= */
+
+.numero-box {
+  min-height: 382px;
+  margin: 0 -44px;
+  padding: 53px 51px 40px;
+  background: #f1f7fd;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.numero-text {
+  width: 63%;
+  position: relative;
+  z-index: 2;
+}
+
+.numero-title {
+  color: #666;
+  font-size: 31px;
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.numero-description {
+  font-size: 28px;
+  line-height: 1.29;
+  font-weight: 400;
+}
+
+.numero-illustration {
+  position: absolute;
+  right: 18px;
+  bottom: 49px;
+  width: 260px;
+  height: 220px;
+}
+
+.numero-illustration svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================
+   SEZIONI HOME
+   ========================= */
+
+.home-section {
+  margin-top: 74px;
+}
+
+.home-section-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-section h2,
+.mondo-poste h2 {
+  margin: 0;
+  font-size: 37px;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.home-carousel-arrows {
+  display: flex;
+  gap: 29px;
+}
+
+.home-arrow {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  line-height: 1;
+}
+
+.home-arrow.grey {
+  border: 2px solid #777;
+  color: #777;
+}
+
+.home-arrow.blue {
+  border: 2px solid #0755c7;
+  color: #0755c7;
+}
+
+.home-operations-scroll {
+  display: flex;
+  gap: 54px;
+  margin-top: 55px;
+  margin-left: 2px;
+  margin-right: -44px;
+  overflow: hidden;
+}
+
+.home-operation {
+  flex: 0 0 215px;
+  text-align: center;
+}
+
+.home-operation-circle {
+  width: 171px;
+  height: 171px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: #f1f7fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-operation-circle svg {
+  width: 112px;
+  height: 112px;
+}
+
+.home-operation-label {
+  margin-top: 36px;
+  font-size: 27px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+.p2p-icon {
+  width: 91px;
+  height: 91px;
+  border-radius: 50%;
+  background: #f1d900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 31px;
+  font-weight: 500;
+  transform: rotate(-5deg);
+}
+
+.home-more-icon {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid #0755c7;
+  color: #0755c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  font-weight: 300;
+}
+
+
+/* =========================
+   SITUAZIONE FINANZIARIA
+   ========================= */
+
+.situazione {
+  margin-top: 75px;
+}
+
+.patrimonio-card {
+  position: relative;
+  min-height: 246px;
+  margin-top: 63px;
+  border-radius: 31px;
+  background: #fff;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  padding: 25px 29px;
+}
+
+.patrimonio-image {
+  width: 215px;
+  height: 165px;
+  flex: 0 0 215px;
+}
+
+.patrimonio-image svg {
+  width: 100%;
+  height: 100%;
+}
+
+.patrimonio-text {
+  margin-left: 28px;
+}
+
+.patrimonio-title {
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.patrimonio-description {
+  margin-top: 12px;
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+.patrimonio-arrow {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #e6e6e6;
+  color: #0755c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  line-height: 1;
+}
+
+
+/* =========================
+   IL MONDO POSTE
+   ========================= */
+
+.mondo-poste {
+  margin-top: 68px;
+}
+
+.mondo-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nascondi-saldo {
+  background: #e5e5e7;
+  color: #0755c7;
+  border-radius: 30px;
+  height: 59px;
+  padding: 0 27px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 25px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.saldo-eye {
+  font-size: 25px;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+.mondo-grid {
+  margin-top: 47px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19px;
+}
+
+.poste-card {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 228px;
+  border-radius: 29px;
+  background: #f0de00;
+  overflow: hidden;
+  text-align: left;
+  font-family: inherit;
+  color: #111;
+}
+
+.poste-card-title {
+  padding: 14px 27px 10px;
+  font-size: 29px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.poste-card-content {
+  min-height: 170px;
+  background: #fff4a1;
+  border-radius: 28px;
+  padding: 22px 27px;
+}
+
+.poste-number {
+  font-size: 43px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.poste-number span {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.normal-number {
+  font-size: 27px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+.poste-description {
+  margin-top: 9px;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.poste-description.large {
+  font-size: 27px;
+  margin-top: 2px;
+}
+
+.info-description {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.info-circle {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  border: 2px solid #0755c7;
+  border-radius: 50%;
+  color: #0755c7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.risparmio-card {
+  grid-column: 1 / 3;
+  min-height: 237px;
+  cursor: pointer;
+}
+
+.risparmio-card:active {
+  opacity: 0.7;
+}
+
+.risparmio-card .poste-card-content {
+  min-height: 179px;
+}
+
+.mondo-banner {
+  margin-top: 18px;
+  height: 245px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,255,255,0.35) 0 4px, transparent 5px),
+    radial-gradient(circle at 70% 40%, rgba(255,255,255,0.3) 0 5px, transparent 6px),
+    #f4dc00;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  left: 28px;
+  top: 42px;
+  font-size: 30px;
+  line-height: 1.18;
+  font-weight: 700;
+}
+
+.banner-link {
+  margin-top: 26px;
+  color: #0755c7;
+  font-size: 27px;
+}
+
+
+/* =========================
+   NAVIGAZIONE HOME
+   ========================= */
+
+.home-bottom-nav {
+  position: fixed;
+  left: 43px;
+  right: 43px;
+  bottom: 25px;
+  height: 112px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid #222;
+  border-radius: 58px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.nav-item {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.nav-item svg {
+  width: 48px;
+  height: 48px;
+}
+
+.nav-item.active {
+  color: #0755c7;
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   PAGINA PRINCIPALE BUONI
+   ===================================================== */
 
 .top-header {
   position: relative;
@@ -82,6 +607,7 @@ main {
   padding: 6px 26px 35px;
 }
 
+
 /* =========================
    CARD RIEPILOGO
    ========================= */
@@ -122,6 +648,7 @@ main {
   line-height: 1.2;
   font-weight: 400;
 }
+
 
 /* =========================
    OPERAZIONI
@@ -172,6 +699,7 @@ main {
   color: #111;
 }
 
+
 /* =========================
    ELENCO BUONI
    ========================= */
@@ -181,26 +709,18 @@ main {
   margin-bottom: 18px;
 }
 
-/* FILTRI */
-
 .filtri {
   display: flex;
   gap: 14px;
-
   width: 100vw;
   max-width: 100vw;
-
   margin-left: -26px;
   margin-right: 0;
-
   margin-bottom: 32px;
-
   padding-left: 26px;
   padding-right: 0;
-
   overflow-x: auto;
   overflow-y: hidden;
-
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -305,9 +825,10 @@ main {
   opacity: 0.55;
 }
 
-/* =========================
+
+/* =====================================================
    PAGINA DETTAGLIO
-   ========================= */
+   ===================================================== */
 
 .pagina-dettaglio {
   display: none;
@@ -470,6 +991,7 @@ main {
   margin-bottom: 10px;
 }
 
+
 /* =========================
    PULSANTE FISSO
    ========================= */
@@ -503,11 +1025,330 @@ main {
   opacity: 0.75;
 }
 
-/* =========================
-   SCHERMI PIÙ PICCOLI
-   ========================= */
 
-@media (max-width: 360px) {
+/* =====================================================
+   SCHERMI PIÙ PICCOLI
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+  .home-header {
+    height: 304px;
+    padding: 25px 25px 0;
+    border-bottom-right-radius: 58px;
+  }
+
+  .home-saluto {
+    left: 51px;
+    top: 153px;
+  }
+
+  .home-ciao {
+    font-size: 27px;
+  }
+
+  .home-nome {
+    font-size: 38px;
+  }
+
+  .home-header-icons {
+    top: 124px;
+    right: 43px;
+    gap: 29px;
+  }
+
+  .home-round-icon {
+    width: 86px;
+    height: 86px;
+  }
+
+  .home-header-label {
+    font-size: 25px;
+  }
+
+  .home-main {
+    padding-left: 44px;
+    padding-right: 44px;
+  }
+
+  .numero-box {
+    min-height: 382px;
+    padding-left: 51px;
+    padding-right: 30px;
+  }
+
+  .numero-title {
+    font-size: 30px;
+  }
+
+  .numero-description {
+    font-size: 27px;
+  }
+
+  .numero-illustration {
+    right: 0;
+    bottom: 44px;
+    width: 235px;
+  }
+
+  .home-section h2,
+  .mondo-poste h2 {
+    font-size: 35px;
+  }
+
+  .home-carousel-arrows {
+    gap: 20px;
+  }
+
+  .home-arrow {
+    width: 53px;
+    height: 53px;
+  }
+
+  .home-operations-scroll {
+    gap: 40px;
+  }
+
+  .home-operation {
+    flex-basis: 190px;
+  }
+
+  .home-operation-circle {
+    width: 165px;
+    height: 165px;
+  }
+
+  .home-operation-label {
+    font-size: 25px;
+  }
+
+  .patrimonio-card {
+    min-height: 235px;
+    padding: 20px;
+  }
+
+  .patrimonio-image {
+    width: 165px;
+    flex-basis: 165px;
+  }
+
+  .patrimonio-text {
+    margin-left: 15px;
+  }
+
+  .patrimonio-title {
+    font-size: 30px;
+  }
+
+  .patrimonio-description {
+    font-size: 24px;
+  }
+
+  .patrimonio-arrow {
+    right: 17px;
+  }
+
+  .nascondi-saldo {
+    height: 52px;
+    padding: 0 18px;
+    font-size: 20px;
+  }
+
+  .poste-card-title {
+    font-size: 27px;
+  }
+
+  .poste-number {
+    font-size: 38px;
+  }
+
+  .poste-description {
+    font-size: 22px;
+  }
+
+  .home-bottom-nav {
+    left: 37px;
+    right: 37px;
+    bottom: 22px;
+    height: 106px;
+  }
+
+  .nav-item {
+    font-size: 17px;
+  }
+
+  .nav-item svg {
+    width: 44px;
+    height: 44px;
+  }
+
+}
+
+
+/* =====================================================
+   IPHONE PICCOLI
+   ===================================================== */
+
+@media (max-width: 390px) {
+
+  .home-header {
+    height: 285px;
+  }
+
+  .home-header-icons {
+    right: 18px;
+    gap: 12px;
+  }
+
+  .home-round-icon {
+    width: 68px;
+    height: 68px;
+  }
+
+  .home-header-label {
+    font-size: 19px;
+  }
+
+  .home-saluto {
+    left: 31px;
+    top: 143px;
+  }
+
+  .home-ciao {
+    font-size: 23px;
+  }
+
+  .home-nome {
+    font-size: 32px;
+  }
+
+  .home-main {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .numero-box {
+    margin-left: -22px;
+    margin-right: -22px;
+    padding-left: 28px;
+    padding-right: 15px;
+  }
+
+  .numero-title {
+    font-size: 25px;
+  }
+
+  .numero-description {
+    font-size: 22px;
+  }
+
+  .numero-illustration {
+    width: 170px;
+    right: -4px;
+    bottom: 30px;
+  }
+
+  .home-section h2,
+  .mondo-poste h2 {
+    font-size: 28px;
+  }
+
+  .home-carousel-arrows {
+    display: none;
+  }
+
+  .home-operation {
+    flex-basis: 145px;
+  }
+
+  .home-operation-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .home-operation-label {
+    font-size: 19px;
+  }
+
+  .patrimonio-card {
+    margin-top: 40px;
+    min-height: 190px;
+  }
+
+  .patrimonio-image {
+    width: 105px;
+    flex-basis: 105px;
+  }
+
+  .patrimonio-title {
+    font-size: 24px;
+  }
+
+  .patrimonio-description {
+    font-size: 18px;
+  }
+
+  .patrimonio-arrow {
+    width: 43px;
+    height: 43px;
+    font-size: 37px;
+  }
+
+  .nascondi-saldo {
+    display: none;
+  }
+
+  .poste-card {
+    min-height: 190px;
+  }
+
+  .poste-card-title {
+    font-size: 22px;
+    padding-left: 18px;
+  }
+
+  .poste-card-content {
+    min-height: 145px;
+    padding: 18px;
+  }
+
+  .poste-number {
+    font-size: 31px;
+  }
+
+  .poste-number span {
+    font-size: 19px;
+  }
+
+  .poste-description {
+    font-size: 18px;
+  }
+
+  .risparmio-card {
+    min-height: 200px;
+  }
+
+  .risparmio-card .poste-card-content {
+    min-height: 155px;
+  }
+
+  .home-bottom-nav {
+    left: 18px;
+    right: 18px;
+    height: 92px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+  }
+
+  .nav-item svg {
+    width: 35px;
+    height: 35px;
+  }
+
+
+  /* BUONI */
 
   .top-header {
     padding-left: 22px;
@@ -520,8 +1361,6 @@ main {
   }
 
   .summary-card {
-    width: 100%;
-    margin-left: 0;
     padding: 28px 28px 30px;
     border-radius: 15px;
     min-height: 220px;
@@ -592,4 +1431,5 @@ main {
     padding-left: 22px;
     padding-right: 22px;
   }
+
 }
