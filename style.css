@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
   background: #ffffff;
-  width: 100%;
 }
 
 body {
@@ -22,6 +21,7 @@ body {
 
   color: #111111;
   min-height: 100vh;
+
   overflow-x: hidden;
 }
 
@@ -32,13 +32,13 @@ body {
 
 .top-header {
   position: relative;
-  padding: 28px 24px 5px;
+  padding: 18px 26px 3px;
 }
 
 
 .back-button {
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 48px;
 
   padding: 0;
 
@@ -56,59 +56,59 @@ body {
 
 
 .back-button svg {
-  width: 42px;
-  height: 42px;
+  width: 27px;
+  height: 27px;
 }
 
 
 .top-header h1 {
-  font-size: 40px;
+  font-size: 24px;
   line-height: 1.15;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 
-  margin: 30px 0 10px;
+  margin: 18px 0 5px;
 }
 
 
 .top-icons {
   position: absolute;
 
-  right: 25px;
-  top: 31px;
+  right: 24px;
+  top: 19px;
 
   display: flex;
   align-items: center;
 
-  gap: 22px;
+  gap: 14px;
 
-  font-size: 29px;
+  font-size: 15px;
 }
 
 
 .eye-icon {
-  width: 39px;
-  height: 39px;
+  width: 24px;
+  height: 24px;
 }
 
 
 .question {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
 
-  border: 2px solid #111;
+  border: 1.5px solid #111;
   border-radius: 50%;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 21px;
+  font-size: 12px;
 }
 
 
 main {
-  padding: 10px 24px 60px;
+  padding: 6px 26px 35px;
 }
 
 
@@ -117,20 +117,20 @@ main {
 
   background: #eef7ff;
 
-  border-radius: 28px;
+  border-radius: 15px;
 
-  padding: 45px 34px;
+  padding: 31px 34px;
 
-  margin-top: 35px;
+  margin-top: 24px;
 
-  min-height: 430px;
+  min-height: 235px;
 }
 
 
 .summary-card h2 {
   margin: 0;
 
-  font-size: 34px;
+  font-size: 19px;
   line-height: 1.2;
 
   font-weight: 700;
@@ -138,17 +138,17 @@ main {
 
 
 .summary-item {
-  margin-top: 75px;
+  margin-top: 44px;
 }
 
 
 .summary-item.second {
-  margin-top: 45px;
+  margin-top: 26px;
 }
 
 
 .summary-label {
-  font-size: 27px;
+  font-size: 15.5px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -156,9 +156,9 @@ main {
 
 
 .summary-value {
-  margin-top: 7px;
+  margin-top: 4px;
 
-  font-size: 34px;
+  font-size: 19.5px;
   line-height: 1.2;
 
   font-weight: 400;
@@ -166,30 +166,30 @@ main {
 
 
 .section-title {
-  margin: 42px 0 32px;
+  margin: 24px 0 20px;
 
-  font-size: 36px;
+  font-size: 20px;
   line-height: 1.15;
 
   font-weight: 700;
 
-  letter-spacing: -0.7px;
+  letter-spacing: -0.35px;
 }
 
 
 .operations {
   display: flex;
 
-  gap: 42px;
+  gap: 32px;
 
   align-items: flex-start;
 }
 
 
 .operation-button {
-  width: 145px;
+  width: 88px;
 
-  min-height: 185px;
+  min-height: 103px;
 
   padding: 0;
 
@@ -204,8 +204,8 @@ main {
 
 
 .operation-icon {
-  width: 145px;
-  height: 145px;
+  width: 85px;
+  height: 85px;
 
   margin: 0 auto;
 }
@@ -219,12 +219,16 @@ main {
 }
 
 
+/*
+   Testo nero ma NON grassetto
+*/
+
 .operation-button span {
   display: block;
 
-  margin-top: 20px;
+  margin-top: 12px;
 
-  font-size: 24px;
+  font-size: 13.5px;
   line-height: 1.15;
 
   font-weight: 400;
@@ -234,8 +238,8 @@ main {
 
 
 .your-bonds {
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 29px;
+  margin-bottom: 18px;
 }
 
 
@@ -246,26 +250,24 @@ main {
 .filtri {
   display: flex;
 
-  gap: 20px;
+  gap: 14px;
 
   width: max-content;
 
-  margin-left: 0;
+  margin-left: -13px;
 
-  margin-bottom: 55px;
-
-  overflow: visible;
+  margin-bottom: 32px;
 }
 
 
 .filtro {
-  height: 64px;
+  height: 35px;
 
-  padding: 0 27px;
+  padding: 0 17px;
 
-  border: 2.5px solid #0759c9;
+  border: 1.5px solid #0759c9;
 
-  border-radius: 38px;
+  border-radius: 19px;
 
   background: #ffffff;
 
@@ -273,7 +275,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 25px;
+  font-size: 14.5px;
 
   font-weight: 600;
 
@@ -286,26 +288,26 @@ main {
   align-items: center;
   justify-content: center;
 
-  gap: 14px;
+  gap: 8px;
 }
 
 
 .freccia-down {
-  width: 15px;
-  height: 15px;
+  width: 8px;
+  height: 8px;
 
-  border-right: 4px solid #0759c9;
-  border-bottom: 4px solid #0759c9;
+  border-right: 2px solid #0759c9;
+  border-bottom: 2px solid #0759c9;
 
   transform: rotate(45deg);
 
-  margin-top: -7px;
+  margin-top: -4px;
 }
 
 
 .periodo {
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 
@@ -320,9 +322,9 @@ main {
 
   width: 100%;
 
-  min-height: 145px;
+  min-height: 85px;
 
-  padding: 20px 0;
+  padding: 12px 0;
 
   border-bottom: 1px solid #eeeeee;
 
@@ -331,10 +333,10 @@ main {
 
 
 .buono-icon {
-  flex: 0 0 62px;
+  flex: 0 0 36px;
 
-  width: 62px;
-  height: 62px;
+  width: 36px;
+  height: 36px;
 
   border-radius: 50%;
 
@@ -345,13 +347,13 @@ main {
   align-items: center;
   justify-content: center;
 
-  margin-right: 18px;
+  margin-right: 12px;
 }
 
 
 .buono-icon svg {
-  width: 41px;
-  height: 41px;
+  width: 24px;
+  height: 24px;
 }
 
 
@@ -365,7 +367,7 @@ main {
 .data {
   color: #777777;
 
-  font-size: 22px;
+  font-size: 12.5px;
 
   line-height: 1.2;
 
@@ -374,22 +376,22 @@ main {
 
 
 .nome {
-  margin-top: 7px;
+  margin-top: 4px;
 
-  font-size: 24px;
+  font-size: 13.5px;
 
   line-height: 1.15;
 
   font-weight: 500;
 
-  letter-spacing: -0.2px;
+  letter-spacing: -0.1px;
 }
 
 
 .valore {
-  margin-left: 12px;
+  margin-left: 8px;
 
-  font-size: 27px;
+  font-size: 16px;
 
   line-height: 1;
 
@@ -426,9 +428,9 @@ main {
 .detail-header {
   position: relative;
 
-  height: 205px;
+  height: 125px;
 
-  padding: 28px 24px 0;
+  padding: 18px 26px 0;
 
   display: flex;
 
@@ -439,8 +441,8 @@ main {
 .detail-back {
   flex: 0 0 auto;
 
-  width: 72px;
-  height: 72px;
+  width: 48px;
+  height: 48px;
 
   padding: 0;
 
@@ -460,28 +462,28 @@ main {
 
 
 .detail-back svg {
-  width: 43px;
-  height: 43px;
+  width: 27px;
+  height: 27px;
 }
 
 
 .detail-header h1 {
   position: absolute;
 
-  left: 115px;
-  right: 24px;
+  left: 109px;
+  right: 18px;
 
-  top: 50px;
+  top: 32px;
 
   margin: 0;
 
-  font-size: 32px;
+  font-size: 20px;
 
   line-height: 1.15;
 
   font-weight: 700;
 
-  letter-spacing: -0.7px;
+  letter-spacing: -0.35px;
 }
 
 
@@ -490,7 +492,7 @@ main {
    ========================================= */
 
 .detail-main {
-  padding: 0 24px 220px;
+  padding: 0 26px 110px;
 }
 
 
@@ -501,7 +503,7 @@ main {
 
   background: #eef7ff;
 
-  border-radius: 30px;
+  border-radius: 15px;
 
   overflow: visible;
 
@@ -510,9 +512,9 @@ main {
 
 
 .detail-card-top {
-  min-height: 250px;
+  min-height: 143px;
 
-  padding-top: 125px;
+  padding-top: 73px;
 
   text-align: center;
 
@@ -523,14 +525,14 @@ main {
 .detail-buono-icon {
   position: absolute;
 
-  width: 145px;
-  height: 145px;
+  width: 85px;
+  height: 85px;
 
   left: 50%;
 
   transform: translateX(-50%);
 
-  top: -50px;
+  top: -30px;
 }
 
 
@@ -541,20 +543,20 @@ main {
 
 
 .detail-rimborso {
-  font-size: 52px;
+  font-size: 33px;
 
   line-height: 1;
 
   font-weight: 400;
 
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 }
 
 
 .detail-rimborso-label {
-  margin-top: 18px;
+  margin-top: 10px;
 
-  font-size: 27px;
+  font-size: 15.5px;
 
   line-height: 1.2;
 
@@ -563,9 +565,9 @@ main {
 
 
 .detail-account {
-  min-height: 110px;
+  min-height: 65px;
 
-  border-top: 5px solid #ffffff;
+  border-top: 2.5px solid #ffffff;
 
   display: flex;
 
@@ -573,17 +575,17 @@ main {
 
   justify-content: center;
 
-  gap: 16px;
+  gap: 11px;
 
-  padding: 18px;
+  padding: 10px;
 }
 
 
 .account-icon {
-  width: 70px;
-  height: 52px;
+  width: 40px;
+  height: 30px;
 
-  flex: 0 0 70px;
+  flex: 0 0 40px;
 }
 
 
@@ -594,7 +596,7 @@ main {
 
 
 .account-text {
-  font-size: 26px;
+  font-size: 15.5px;
 
   line-height: 1.25;
 
@@ -607,27 +609,27 @@ main {
    ========================================= */
 
 .detail-section-title {
-  margin: 60px 0 38px;
+  margin: 38px 0 23px;
 
-  font-size: 36px;
+  font-size: 20px;
 
   line-height: 1.15;
 
   font-weight: 700;
 
-  letter-spacing: -0.7px;
+  letter-spacing: -0.35px;
 }
 
 
 .detail-field {
-  margin-bottom: 55px;
+  margin-bottom: 34px;
 }
 
 
 .detail-label {
   color: #707070;
 
-  font-size: 27px;
+  font-size: 15.5px;
 
   line-height: 1.35;
 
@@ -636,11 +638,11 @@ main {
 
 
 .detail-value {
-  margin-top: 10px;
+  margin-top: 6px;
 
   color: #111111;
 
-  font-size: 28px;
+  font-size: 16px;
 
   line-height: 1.25;
 
@@ -649,16 +651,16 @@ main {
 
 
 .detail-divider {
-  height: 10px;
+  height: 6px;
 
   background: #f5f5f5;
 
-  margin: 40px -24px 35px;
+  margin: 23px -26px 20px;
 }
 
 
 .last-detail-field {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 
@@ -674,13 +676,13 @@ main {
 
   bottom: 0;
 
-  height: 170px;
+  height: 108px;
 
   background: rgba(255, 255, 255, 0.98);
 
   border-top: 1px solid #eeeeee;
 
-  padding: 25px 24px;
+  padding: 18px 26px;
 
   z-index: 100;
 }
@@ -689,11 +691,11 @@ main {
 .bottom-action button {
   width: 100%;
 
-  height: 82px;
+  height: 53px;
 
   border: 0;
 
-  border-radius: 45px;
+  border-radius: 28px;
 
   background: #0755c7;
 
@@ -701,7 +703,7 @@ main {
 
   font-family: inherit;
 
-  font-size: 29px;
+  font-size: 17px;
 
   font-weight: 600;
 
@@ -711,4 +713,66 @@ main {
 
 .bottom-action button:active {
   opacity: 0.75;
+}
+
+
+/* =========================================
+   ADATTAMENTO SCHERMI MOLTO PICCOLI
+   ========================================= */
+
+@media (max-width: 360px) {
+
+  .top-header {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  main {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .summary-card {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .operations {
+    gap: 24px;
+  }
+
+  .filtri {
+    gap: 10px;
+  }
+
+  .filtro {
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 13px;
+  }
+
+  .periodo {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  .detail-header {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .detail-main {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .detail-divider {
+    margin-left: -22px;
+    margin-right: -22px;
+  }
+
+  .bottom-action {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
 }
