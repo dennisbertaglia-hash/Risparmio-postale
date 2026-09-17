@@ -11,240 +11,7 @@
 
   <title>Buoni</title>
 
-  <link rel="stylesheet" href="style.css?v=36">
-
-
-  <!-- =====================================================
-       MODIFICHE VISUALI
-       ===================================================== -->
-
-  <style>
-
-    /* =========================
-       TITOLO BUONI
-       ========================= */
-
-    .top-header h1 {
-      bottom: 42px !important;
-      font-size: 22px !important;
-      line-height: 1 !important;
-      font-weight: 500 !important;
-      letter-spacing: -0.4px !important;
-    }
-
-
-    /* =========================
-       RIQUADRO AZZURRO
-       NON MODIFICARE POSIZIONE
-       ========================= */
-
-    .summary-card {
-      margin-top: 18px !important;
-      height: 215px !important;
-      padding: 30px 22px 8px !important;
-    }
-
-
-    /* =========================
-       20 BUONI
-       RESTA FERMO
-       ========================= */
-
-    .summary-card h2 {
-      margin-top: 4px !important;
-      margin-bottom: 57px !important;
-
-      font-size: 18px !important;
-      line-height: 1.1 !important;
-
-      font-weight: 500 !important;
-      letter-spacing: -0.35px !important;
-
-      position: relative !important;
-      top: 0 !important;
-    }
-
-
-    /* =========================
-       CONTENUTO RIQUADRO
-       ========================= */
-
-    .summary-item {
-      margin-bottom: 18px !important;
-
-      position: relative !important;
-      top: -7px !important;
-    }
-
-
-    .summary-item.second {
-      margin-bottom: 0 !important;
-
-      position: relative !important;
-      top: -7px !important;
-    }
-
-
-    .summary-label {
-      margin-bottom: 3px !important;
-
-      font-size: 15px !important;
-      line-height: 1.2 !important;
-
-      font-weight: 300 !important;
-    }
-
-
-    .summary-value {
-      font-size: 20px !important;
-      line-height: 1.1 !important;
-
-      font-weight: 500 !important;
-      letter-spacing: -0.2px !important;
-    }
-
-
-    /* =========================
-       OPERAZIONI
-       ========================= */
-
-    .section-title {
-      font-size: 22px !important;
-      line-height: 1.1 !important;
-
-      font-weight: 500 !important;
-      letter-spacing: -0.4px !important;
-    }
-
-
-    /* =========================
-       ELENCO BUONI
-       ========================= */
-
-    .elenco-title {
-      font-size: 22px !important;
-      line-height: 1.1 !important;
-
-      font-weight: 500 !important;
-      letter-spacing: -0.4px !important;
-    }
-
-
-    /* =========================
-       FILTRI SCHIACCIATI
-       ========================= */
-
-    .filtro {
-      height: 35px !important;
-      border-radius: 18px !important;
-    }
-
-
-    /* =========================
-       PUNTO INTERROGATIVO NERO
-       ========================= */
-
-    .question-button {
-      color: #111111 !important;
-      border-color: #111111 !important;
-    }
-
-
-    /* =========================
-       LISTA BUONI
-       ========================= */
-
-    .bond-item {
-      width: 100% !important;
-
-      display: grid !important;
-
-      grid-template-columns:
-        50px
-        minmax(0, 1fr)
-        112px !important;
-
-      column-gap: 8px !important;
-
-      align-items: center !important;
-
-      padding: 9px 0 !important;
-
-      background: #ffffff !important;
-    }
-
-
-    .bond-item-icon {
-      width: 50px !important;
-      height: 50px !important;
-
-      border-radius: 50% !important;
-
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-
-      background: #edf6ff !important;
-    }
-
-
-    .bond-item-icon svg {
-      width: 38px !important;
-      height: 38px !important;
-    }
-
-
-    .bond-item-info .data {
-      margin: 0 0 3px !important;
-
-      font-size: 12px !important;
-      line-height: 1.2 !important;
-
-      font-weight: 300 !important;
-
-      color: #777777 !important;
-    }
-
-
-    .bond-item-info .nome {
-      margin: 0 !important;
-
-      font-size: 15px !important;
-      line-height: 1.2 !important;
-
-      font-weight: 500 !important;
-
-      color: #111111 !important;
-    }
-
-
-    .bond-item-value {
-      text-align: right !important;
-    }
-
-
-    .bond-item-value .label {
-      margin: 0 0 3px !important;
-
-      font-size: 10px !important;
-      line-height: 1.1 !important;
-
-      font-weight: 300 !important;
-
-      color: #777777 !important;
-    }
-
-
-    .bond-item-value .valore {
-      font-size: 15px !important;
-      line-height: 1.1 !important;
-
-      font-weight: 500 !important;
-
-      color: #111111 !important;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css?v=37">
 
 </head>
 
@@ -261,12 +28,9 @@
     <main class="main-content">
 
 
-      <!-- =================================================
-           HEADER
-           ================================================= -->
+      <!-- HEADER -->
 
       <header class="top-header">
-
 
         <button
           class="back-button"
@@ -346,7 +110,9 @@
         </h2>
 
 
-        <div class="summary-item summary-item-nominale">
+        <div
+          class="summary-item summary-item-nominale"
+          style="position:relative; top:-7px;">
 
           <span class="summary-label">
             Valore nominale
@@ -361,7 +127,9 @@
         </div>
 
 
-        <div class="summary-item summary-item-lordo">
+        <div
+          class="summary-item summary-item-lordo"
+          style="position:relative; top:-7px;">
 
           <span class="summary-label">
             Valore rimborso lordo
@@ -395,14 +163,11 @@
         <div class="operations">
 
 
-          <!-- ===============================
-               ACQUISTA BUONO
-               =============================== -->
+          <!-- ACQUISTA BUONO -->
 
           <button
             class="operation-button"
             type="button">
-
 
             <span class="operation-icon">
 
@@ -477,19 +242,15 @@
               Buono
             </span>
 
-
           </button>
 
 
 
-          <!-- ===============================
-               RICHIEDI RIMBORSO
-               =============================== -->
+          <!-- RICHIEDI RIMBORSO -->
 
           <button
             class="operation-button"
             type="button">
-
 
             <span class="operation-icon">
 
@@ -542,7 +303,6 @@
               rimborso
             </span>
 
-
           </button>
 
 
@@ -572,7 +332,6 @@
           <button
             class="filtro filtro-filtra"
             type="button">
-
 
             <svg
               class="filtro-sliders-icon"
@@ -615,9 +374,7 @@
 
             </svg>
 
-
             Filtra
-
 
           </button>
 
@@ -671,17 +428,29 @@
     id="paginaDettaglio"
     style="display:none;">
 
-
     <div class="pagina-dettaglio">
 
+
+      <!-- HEADER DETTAGLIO -->
 
       <header class="detail-header">
 
 
+        <!--
+          IMPORTANTE:
+          questa freccia ora torna direttamente
+          alla pagina principale.
+        -->
+
         <button
           class="detail-back"
           type="button"
-          aria-label="Torna indietro">
+          aria-label="Torna indietro"
+          onclick="
+            document.getElementById('paginaDettaglio').style.display='none';
+            document.getElementById('paginaPrincipale').style.display='block';
+            window.scrollTo(0,0);
+          ">
 
 
           <svg
@@ -711,6 +480,8 @@
 
 
 
+      <!-- CARD DETTAGLIO -->
+
       <main class="detail-main">
 
 
@@ -721,7 +492,6 @@
 
 
             <div class="detail-buono-icon">
-
 
               <svg
                 viewBox="0 0 72 72"
@@ -771,22 +541,18 @@
 
               </svg>
 
-
             </div>
 
 
             <div class="detail-rimborso">
 
-
               <span id="detailRimborso">
                 685,89 €
               </span>
 
-
               <div class="detail-rimborso-label">
                 Valore rimborso netto
               </div>
-
 
             </div>
 
@@ -795,11 +561,12 @@
 
 
 
+          <!-- ACCREDITO -->
+
           <div class="detail-account">
 
 
             <div class="account-icon">
-
 
               <svg
                 viewBox="0 0 44 34"
@@ -836,7 +603,6 @@
 
               </svg>
 
-
             </div>
 
 
@@ -851,6 +617,8 @@
         </section>
 
 
+
+        <!-- DETTAGLI -->
 
         <h2 class="detail-section-title">
           Dettagli
@@ -961,6 +729,8 @@
 
 
 
+      <!-- PULSANTE RIMBORSO -->
+
       <div class="bottom-action">
 
         <button type="button">
@@ -976,11 +746,9 @@
 
 
 
-  <!-- =====================================================
-       SCRIPT
-       ===================================================== -->
+  <!-- SCRIPT -->
 
-  <script src="script.js?v=34"></script>
+  <script src="script.js?v=35"></script>
 
 
 </body>
