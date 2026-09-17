@@ -83,3 +83,33 @@ self.addEventListener("fetch", event => {
   );
 
 });
+/* =====================================================
+   APRI PAGINA RISPARMIO / BUONI
+   ===================================================== */
+
+function apriRisparmio() {
+
+  const paginaHome =
+    document.getElementById("paginaHome");
+
+  const paginaPrincipale =
+    document.getElementById("paginaPrincipale");
+
+  const paginaDettaglio =
+    document.getElementById("paginaDettaglio");
+
+
+  if (paginaHome) {
+    paginaHome.style.display = "none";
+  }
+
+  if (paginaDettaglio) {
+    paginaDettaglio.style.display = "none";
+  }
+
+  if (paginaPrincipale) {
+    paginaPrincipale.style.display = "block";
+  }
+
+  window.scrollTo(0, 0);
+}
