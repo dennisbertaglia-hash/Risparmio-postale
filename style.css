@@ -848,10 +848,11 @@ main {
 }
 
 .data {
-  color: #777;
-  font-size: 12.5px;
+  font-size: 10px;
   line-height: 1.2;
-  font-weight: 400;
+  color: #777;
+  font-weight: 300;
+  white-space: nowrap;
 }
 
 .nome {
@@ -862,12 +863,27 @@ main {
   letter-spacing: -0.1px;
 }
 
-.valore {
-  margin-left: 8px;
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 600;
+.buono-valore {
+  margin-left: auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.buono-valore-label {
+  font-size: 9px;
+  line-height: 1.1;
+  font-weight: 300;
+  color: #777;
   white-space: nowrap;
+  margin-bottom: 3px;
+}
+
+.valore {
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 .operation-button:active,
