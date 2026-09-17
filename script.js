@@ -217,6 +217,93 @@ function aggiornaRiepilogo() {
 
 
 /* =========================================================
+   ICONA BUONO
+   ========================================================= */
+
+function creaIconaBuono() {
+
+  const icona =
+    document.createElement("div");
+
+  /* IMPORTANTE:
+     questa classe corrisponde esattamente al CSS
+  */
+
+  icona.className = "bond-item-icon";
+
+  icona.innerHTML = `
+    <svg
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+
+      <!-- sfondo azzurro -->
+      <circle
+        cx="24"
+        cy="24"
+        r="24"
+        fill="#edf6ff"
+      />
+
+      <!-- banconota -->
+      <rect
+        x="10"
+        y="15"
+        width="28"
+        height="18"
+        rx="2.5"
+        fill="#ffd400"
+      />
+
+      <!-- fascia blu -->
+      <rect
+        x="10"
+        y="15"
+        width="6"
+        height="18"
+        fill="#0759c9"
+      />
+
+      <!-- simbolo euro -->
+      <text
+        x="19"
+        y="28"
+        font-family="Arial, sans-serif"
+        font-size="13"
+        font-weight="700"
+        fill="#0759c9"
+      >€</text>
+
+      <!-- righe della banconota -->
+      <line
+        x1="28"
+        y1="22"
+        x2="34"
+        y2="22"
+        stroke="#ffffff"
+        stroke-width="1.8"
+        stroke-linecap="round"
+      />
+
+      <line
+        x1="28"
+        y1="26"
+        x2="34"
+        y2="26"
+        stroke="#ffffff"
+        stroke-width="1.8"
+        stroke-linecap="round"
+      />
+
+    </svg>
+  `;
+
+  return icona;
+}
+
+
+/* =========================================================
    LISTA BUONI
    ========================================================= */
 
@@ -233,97 +320,38 @@ function generaListaBuoni() {
 
   buoni.forEach(function (buono, indice) {
 
+    /* =====================================================
+       RIGA
+       ===================================================== */
+
     const riga =
       document.createElement("div");
 
-    riga.className = "buono";
+    /*
+      QUESTA È LA CLASSE CHE IL CSS STA ASPETTANDO.
+      Prima era "buono", ed era questo il problema.
+    */
+
+    riga.className = "bond-item";
 
 
     /* =====================================================
-       ICONA PICCOLA DEL BUONO
+       ICONA
        ===================================================== */
 
     const icona =
-      document.createElement("div");
-
-    icona.className = "buono-icon";
-
-    icona.innerHTML = `
-      <svg
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-      >
-
-        <!-- BANCONOTA -->
-
-        <rect
-          x="9"
-          y="14"
-          width="30"
-          height="20"
-          rx="3"
-          fill="#ffd400"
-        />
-
-        <!-- FASCIA BLU -->
-
-        <rect
-          x="9"
-          y="14"
-          width="7"
-          height="20"
-          fill="#0759c9"
-        />
-
-        <!-- EURO -->
-
-        <text
-          x="18"
-          y="28"
-          font-family="Arial, Helvetica, sans-serif"
-          font-size="13"
-          font-weight="600"
-          fill="#0759c9"
-        >€</text>
-
-        <!-- LINEA SUPERIORE -->
-
-        <line
-          x1="27"
-          y1="22"
-          x2="34"
-          y2="22"
-          stroke="#0759c9"
-          stroke-width="1.8"
-          stroke-linecap="round"
-        />
-
-        <!-- LINEA INFERIORE -->
-
-        <line
-          x1="27"
-          y1="27"
-          x2="34"
-          y2="27"
-          stroke="#0759c9"
-          stroke-width="1.8"
-          stroke-linecap="round"
-        />
-
-      </svg>
-    `;
+      creaIconaBuono();
 
 
     /* =====================================================
-       TESTO CENTRALE
+       INFORMAZIONI CENTRALI
        ===================================================== */
 
     const informazioni =
       document.createElement("div");
 
     informazioni.className =
-      "buono-info";
+      "bond-item-info";
 
     informazioni.innerHTML = `
       <div class="data">
@@ -344,10 +372,10 @@ function generaListaBuoni() {
       document.createElement("div");
 
     valore.className =
-      "buono-valore";
+      "bond-item-value";
 
     valore.innerHTML = `
-      <div class="buono-valore-label">
+      <div class="label">
         valore rimborso lordo
       </div>
 
@@ -358,7 +386,7 @@ function generaListaBuoni() {
 
 
     /* =====================================================
-       ASSEMBLA RIGA
+       ASSEMBLA
        ===================================================== */
 
     riga.appendChild(icona);
@@ -371,32 +399,44 @@ function generaListaBuoni() {
        ===================================================== */
 
     riga.addEventListener("click", function () {
+
       apriDettaglio(indice);
+
     });
+
+
+    riga.setAttribute(
+      "role",
+      "button"
+    );
+
+    riga.setAttribute(
+      "tabindex",
+      "0"
+    );
 
 
     /* =====================================================
-       ACCESSIBILITÀ
+       TASTIERA
        ===================================================== */
 
-    riga.setAttribute("role", "button");
+    riga.addEventListener(
+      "keydown",
+      function (event) {
 
-    riga.setAttribute("tabindex", "0");
+        if (
+          event.key === "Enter" ||
+          event.key === " "
+        ) {
 
+          event.preventDefault();
 
-    riga.addEventListener("keydown", function (event) {
+          apriDettaglio(indice);
 
-      if (
-        event.key === "Enter" ||
-        event.key === " "
-      ) {
+        }
 
-        event.preventDefault();
-
-        apriDettaglio(indice);
       }
-
-    });
+    );
 
 
     lista.appendChild(riga);
@@ -420,22 +460,30 @@ function apriDettaglio(indice) {
   }
 
   const dati =
-    calcolaDati(buono.nominale);
+    calcolaDati(
+      buono.nominale
+    );
 
 
   const paginaPrincipale =
-    document.getElementById("paginaPrincipale");
+    document.getElementById(
+      "paginaPrincipale"
+    );
 
   const paginaDettaglio =
-    document.getElementById("paginaDettaglio");
+    document.getElementById(
+      "paginaDettaglio"
+    );
 
 
   if (paginaPrincipale) {
-    paginaPrincipale.style.display = "none";
+    paginaPrincipale.style.display =
+      "none";
   }
 
   if (paginaDettaglio) {
-    paginaDettaglio.style.display = "block";
+    paginaDettaglio.style.display =
+      "block";
   }
 
 
@@ -444,7 +492,9 @@ function apriDettaglio(indice) {
      ===================================================== */
 
   const titolo =
-    document.getElementById("detailTitolo");
+    document.getElementById(
+      "detailTitolo"
+    );
 
   if (titolo) {
     titolo.textContent =
@@ -457,68 +507,105 @@ function apriDettaglio(indice) {
      ===================================================== */
 
   const valoreRimborso =
-    document.getElementById("detailValoreRimborso");
+    document.getElementById(
+      "detailValoreRimborso"
+    );
 
   if (valoreRimborso) {
+
+    /*
+      Manteniamo il valore nominale,
+      come richiesto per la schermata dettaglio.
+    */
+
     valoreRimborso.textContent =
       euro(buono.nominale);
+
   }
 
 
   /* =====================================================
-     DATI PRINCIPALI
+     DATA SOTTOSCRIZIONE
      ===================================================== */
 
   const sottoscritto =
-    document.getElementById("detailSottoscritto");
+    document.getElementById(
+      "detailSottoscritto"
+    );
 
   if (sottoscritto) {
+
     sottoscritto.textContent =
       buono.sottoscritto;
-  }
 
-
-  const scadenza =
-    document.getElementById("detailScadenza");
-
-  if (scadenza) {
-    scadenza.textContent =
-      buono.scadenza;
-  }
-
-
-  const nominale =
-    document.getElementById("detailNominale");
-
-  if (nominale) {
-    nominale.textContent =
-      euro(buono.nominale);
   }
 
 
   /* =====================================================
-     RITENUTA FISCALE INIZIALE
+     SCADENZA
+     ===================================================== */
+
+  const scadenza =
+    document.getElementById(
+      "detailScadenza"
+    );
+
+  if (scadenza) {
+
+    scadenza.textContent =
+      buono.scadenza;
+
+  }
+
+
+  /* =====================================================
+     NOMINALE
+     ===================================================== */
+
+  const nominale =
+    document.getElementById(
+      "detailNominale"
+    );
+
+  if (nominale) {
+
+    nominale.textContent =
+      euro(buono.nominale);
+
+  }
+
+
+  /* =====================================================
+     RITENUTA INIZIALE
      ===================================================== */
 
   const ritenuta =
-    document.getElementById("detailRitenuta");
+    document.getElementById(
+      "detailRitenuta"
+    );
 
   if (ritenuta) {
+
     ritenuta.textContent =
       euro(0);
+
   }
 
 
   /* =====================================================
-     VALORE RIMBORSO NETTO
+     NETTO
      ===================================================== */
 
   const netto =
-    document.getElementById("detailNetto");
+    document.getElementById(
+      "detailNetto"
+    );
 
   if (netto) {
+
     netto.textContent =
       euro(dati.nettoSenzaPremio);
+
   }
 
 
@@ -532,8 +619,10 @@ function apriDettaglio(indice) {
     );
 
   if (lordoSenzaPremio) {
+
     lordoSenzaPremio.textContent =
       euro(dati.lordoSenzaPremio);
+
   }
 
 
@@ -543,8 +632,10 @@ function apriDettaglio(indice) {
     );
 
   if (ritenutaScadenza) {
+
     ritenutaScadenza.textContent =
       euro(dati.ritenutaSenzaPremio);
+
   }
 
 
@@ -554,8 +645,10 @@ function apriDettaglio(indice) {
     );
 
   if (nettoSenzaPremio) {
+
     nettoSenzaPremio.textContent =
       euro(dati.nettoSenzaPremio);
+
   }
 
 
@@ -569,8 +662,10 @@ function apriDettaglio(indice) {
     );
 
   if (premioLordo) {
+
     premioLordo.textContent =
       euro(dati.premioLordo);
+
   }
 
 
@@ -580,8 +675,10 @@ function apriDettaglio(indice) {
     );
 
   if (ritenutaPremio) {
+
     ritenutaPremio.textContent =
       euro(dati.ritenutaPremio);
+
   }
 
 
@@ -591,8 +688,10 @@ function apriDettaglio(indice) {
     );
 
   if (premioNetto) {
+
     premioNetto.textContent =
       euro(dati.premioNetto);
+
   }
 
 
@@ -606,8 +705,10 @@ function apriDettaglio(indice) {
     );
 
   if (lordoConPremio) {
+
     lordoConPremio.textContent =
       euro(dati.lordoConPremio);
+
   }
 
 
@@ -617,8 +718,10 @@ function apriDettaglio(indice) {
     );
 
   if (ritenutaTotale) {
+
     ritenutaTotale.textContent =
       euro(dati.ritenutaTotale);
+
   }
 
 
@@ -628,8 +731,10 @@ function apriDettaglio(indice) {
     );
 
   if (nettoConPremio) {
+
     nettoConPremio.textContent =
       euro(dati.nettoConPremio);
+
   }
 
 
@@ -653,18 +758,29 @@ function apriDettaglio(indice) {
 function tornaAllaLista() {
 
   const paginaPrincipale =
-    document.getElementById("paginaPrincipale");
+    document.getElementById(
+      "paginaPrincipale"
+    );
 
   const paginaDettaglio =
-    document.getElementById("paginaDettaglio");
+    document.getElementById(
+      "paginaDettaglio"
+    );
 
 
   if (paginaDettaglio) {
-    paginaDettaglio.style.display = "none";
+
+    paginaDettaglio.style.display =
+      "none";
+
   }
 
+
   if (paginaPrincipale) {
-    paginaPrincipale.style.display = "block";
+
+    paginaPrincipale.style.display =
+      "block";
+
   }
 
 
@@ -684,7 +800,8 @@ function tornaAllaLista() {
 function operationMessage(messaggio) {
 
   alert(
-    messaggio + "\n\nOperazione simulata."
+    messaggio +
+    "\n\nOperazione simulata."
   );
 
 }
