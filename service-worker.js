@@ -1,4 +1,4 @@
-const CACHE_NAME = "risparmio-postale-v3";
+const CACHE_NAME = "risparmio-postale-v11";
 
 const FILES_TO_CACHE = [
   "./",
@@ -8,17 +8,27 @@ const FILES_TO_CACHE = [
   "./manifest.json"
 ];
 
+
+/* =====================================================
+   INSTALLAZIONE
+   ===================================================== */
+
 self.addEventListener("install", event => {
 
-  self.skipWaiting();
-
   event.waitUntil(
+
     caches.open(CACHE_NAME)
       .then(cache => cache.addAll(FILES_TO_CACHE))
+      .then(() => self.skipWaiting())
+
   );
 
 });
 
+
+/* =====================================================
+   ATTIVAZIONE
+   ===================================================== */
 
 self.addEventListener("activate", event => {
 
@@ -30,8 +40,8 @@ self.addEventListener("activate", event => {
         return Promise.all(
 
           cacheNames
-            .filter(name => name !== CACHE_NAME)
-            .map(name => caches.delete(name))
+            .filter(cacheName => cacheName !== CACHE_NAME)
+            .map(cacheName => caches.delete(cacheName))
 
         );
 
@@ -43,15 +53,33 @@ self.addEventListener("activate", event => {
 });
 
 
+/* =====================================================
+   RICHIESTE
+   ===================================================== */
+
 self.addEventListener("fetch", event => {
 
   event.respondWith(
 
-    caches.match(event.request)
-      .then(cachedResponse => {
+    fetch(event.request)
+      .then(response => {
 
-        return cachedResponse || fetch(event.request);
+        const responseClone = response.clone();
+
+        caches.open(CACHE_NAME)
+          .then(cache => {
+            cache.put(event.request, responseClone);
+          });
+
+        return response;
+
+      })
+      .catch(() => {
+
+        return caches.match(event.request);
 
       })
 
   );
+
+});
