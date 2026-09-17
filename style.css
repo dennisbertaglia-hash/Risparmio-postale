@@ -1373,3 +1373,41 @@ u {
     font-size: 15px;
   }
 }
+/* =========================================================
+   CORREZIONE FINALE SCHERMATA BUONI
+   ========================================================= */
+
+.top-header h1 {
+  font-weight: 300 !important;
+}
+
+
+/* Riquadro azzurro */
+.summary-card {
+  height: 215px !important;
+  margin-top: 55px !important;
+}
+
+
+/* Titolo dentro il riquadro */
+.summary-card h2 {
+  font-weight: 300 !important;
+}
+
+
+/* Numeri nel riquadro */
+.summary-value {
+  font-weight: 300 !important;
+}
+
+
+/* Operazioni */
+.section-title {
+  font-weight: 300 !important;
+}
+
+
+/* Elenco Buoni */
+.your-bonds .section-title {
+  font-weight: 300 !important;
+}
