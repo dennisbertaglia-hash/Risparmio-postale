@@ -169,31 +169,25 @@ a {
 }
 
 .operazione-icon svg {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
 }
 
 .operazione-label {
   font-size: 12px;
-  line-height: 1.1;
   font-weight: 500;
   text-align: center;
+  line-height: 1.15;
 }
 
 .situazione-card {
   width: 100%;
   border-radius: 15px;
-  background: #eef7ff;
-  padding: 22px 21px;
-}
-
-.situazione-card-title {
-  font-size: 17px;
-  font-weight: 700;
+  background: #f5f5f5;
+  padding: 20px 18px;
 }
 
 .situazione-row {
-  margin-top: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -201,76 +195,149 @@ a {
 
 .situazione-label {
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .situazione-value {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
 }
 
+.situazione-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 17px 0;
+}
+
 .mondo-poste {
-  margin-top: 34px;
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mondo-poste::-webkit-scrollbar {
+  display: none;
 }
 
 .mondo-card {
-  width: 100%;
-  min-height: 145px;
+  min-width: 190px;
+  width: 190px;
+  height: 130px;
   border-radius: 15px;
   background: #f5f5f5;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
+}
+
+.mondo-card-content {
+  padding: 17px;
 }
 
 .mondo-card-title {
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .mondo-card-text {
-  max-width: 270px;
-  font-size: 13px;
-  line-height: 1.35;
-  font-weight: 400;
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 1.3;
+  color: #666;
 }
+
+/* =====================================================
+   BOTTOM NAVIGATION
+   ===================================================== */
 
 .bottom-nav {
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 500;
   height: 76px;
-  background: #fff;
-  border-top: 1px solid #e7e7e7;
+  background: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid #e6e6e6;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
-  z-index: 100;
+  padding-top: 10px;
 }
 
 .bottom-nav-item {
+  flex: 1;
   border: 0;
   background: transparent;
   padding: 0;
-  min-width: 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  justify-content: flex-start;
   color: #555;
-  font-size: 10px;
 }
 
 .bottom-nav-item.active {
   color: #0759c9;
-  font-weight: 600;
 }
 
-.bottom-nav-item svg {
+.bottom-nav-icon {
   width: 24px;
   height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-nav-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.bottom-nav-label {
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+/* =====================================================
+   GENERIC HEADER
+   ===================================================== */
+
+.page-header {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.page-header-title {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.page-header-back {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-header-back svg {
+  width: 22px;
+  height: 22px;
 }
 
 /* =====================================================
@@ -283,143 +350,141 @@ a {
 }
 
 .buoni-main {
-  padding: 0 26px 110px;
+  padding: 0 20px 110px;
 }
 
-.buoni-header {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-bottom: 1px solid #eee;
+.buoni-intro {
+  margin-top: 25px;
 }
 
-.buoni-back {
-  border: 0;
-  background: transparent;
-  padding: 0;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buoni-back svg {
-  width: 22px;
-  height: 22px;
-}
-
-.buoni-header-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 17px;
+.buoni-intro h1 {
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.1;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
+
+.buoni-intro p {
+  margin: 8px 0 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+/* =====================================================
+   SUMMARY CARD
+   ===================================================== */
 
 .summary-card {
   width: 100%;
-  background: #eef7ff;
-  border-radius: 15px;
-  padding: 23px 28px 20px;
-  padding-top: 23px;
-  padding-bottom: 20px;
-  margin-top: 24px;
-  min-height: 220px;
+  margin-top: 21px;
+  border-radius: 16px;
+  background: #0759c9;
+  color: #fff;
+  padding: 25px 28px;
 }
 
 .summary-card h2 {
   margin: 0;
-  font-size: 19px;
-  line-height: 1.2;
+  font-size: 20px;
+  line-height: 1.15;
   font-weight: 700;
 }
 
 .summary-item {
-  margin-top: 29px;
+  margin-top: 32px;
 }
 
 .summary-item.second {
-  margin-top: 17px;
+  margin-top: 18px;
 }
 
 .summary-label {
   font-size: 14px;
   line-height: 1.2;
   font-weight: 300;
+  opacity: 0.98;
 }
 
 .summary-value {
-  margin-top: 3px;
-  font-size: 16px;
+  margin-top: 5px;
+  font-size: 18px;
   line-height: 1.15;
   font-weight: 400;
 }
 
-.operations-title {
-  margin-top: 30px;
+/* =====================================================
+   OPERAZIONI BUONI
+   ===================================================== */
+
+.buoni-operazioni {
+  margin-top: 27px;
+}
+
+.buoni-operazioni-title {
+  margin-bottom: 14px;
   font-size: 19px;
   line-height: 1.2;
   font-weight: 700;
 }
 
-.operations {
-  margin-top: 18px;
+.buoni-operazioni-list {
   display: flex;
-  gap: 20px;
+  gap: 13px;
   overflow-x: auto;
   scrollbar-width: none;
-  padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
 }
 
-.operations::-webkit-scrollbar {
+.buoni-operazioni-list::-webkit-scrollbar {
   display: none;
 }
 
-.operation-card {
-  flex: 0 0 auto;
-  width: 96px;
+.buoni-operazione {
+  min-width: 110px;
+  width: 110px;
+  height: 104px;
+  border-radius: 15px;
+  background: #f5f5f5;
+  border: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 9px;
 }
 
-.operation-card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: #eef7ff;
+.buoni-operazione-icon {
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.operation-card-icon svg {
-  width: 27px;
-  height: 27px;
+.buoni-operazione-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
-.operation-card-label {
-  font-size: 11px;
+.buoni-operazione-label {
+  font-size: 11.5px;
   line-height: 1.15;
   font-weight: 500;
   text-align: center;
 }
 
+/* =====================================================
+   FILTRI
+   ===================================================== */
+
 .filtri {
+  margin-top: 29px;
   display: flex;
-  gap: 14px;
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: -26px;
-  margin-right: 0;
-  margin-bottom: 32px;
-  padding-left: 26px;
-  padding-right: 0;
+  gap: 9px;
+  width: 100%;
   overflow-x: auto;
-  overflow-y: hidden;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
 }
@@ -430,16 +495,22 @@ a {
 
 .filtro {
   flex: 0 0 auto;
-  height: 35px;
-  padding: 0 17px;
-  border: 1.5px solid #0759c9;
-  border-radius: 19px;
+  min-height: 39px;
+  padding: 0 15px;
+  border-radius: 20px;
+  border: 1px solid #d7d7d7;
   background: #fff;
   color: #0759c9;
-  font-family: inherit;
-  font-size: 14.5px;
-  font-weight: 600;
-  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.filtro u {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 .filtro-filtra {
@@ -448,12 +519,6 @@ a {
   justify-content: center;
   gap: 5px;
   min-width: 112px;
-}
-
-.filtro-filtra u {
-  display: inline;
-  visibility: visible;
-  opacity: 1;
 }
 
 .filtro-sliders-icon {
@@ -475,90 +540,117 @@ a {
   stroke-width: 2.5;
 }
 
-.freccia-down {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  margin-left: 6px;
-  border-right: 1.5px solid #0759c9;
-  border-bottom: 1.5px solid #0759c9;
-  transform: rotate(45deg) translateY(-2px);
+.prodotto {
+  min-width: 106px;
 }
 
+.periodo {
+  min-width: 142px;
+}
+
+.freccia-down {
+  width: 7px;
+  height: 7px;
+  border-right: 1.5px solid #0759c9;
+  border-bottom: 1.5px solid #0759c9;
+  transform: rotate(45deg);
+  margin-left: 9px;
+  margin-top: -4px;
+}
+
+/* =====================================================
+   LISTA BUONI
+   ===================================================== */
+
 .lista-buoni {
+  margin-top: 25px;
+}
+
+.lista-buoni-title {
+  font-size: 19px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.buoni-list {
   width: 100%;
 }
 
 .buono {
+  width: 100%;
+  min-height: 86px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
   display: flex;
   align-items: center;
-  width: 100%;
-  min-height: 85px;
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
   cursor: pointer;
+}
+
+.buono:first-child {
+  border-top: 0;
 }
 
 .buono-icon {
   flex: 0 0 36px;
   width: 36px;
   height: 36px;
-  border-radius: 50%;
-  background: #eef7ff;
+  margin-right: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
 }
 
 .buono-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 25px;
+  height: 25px;
+  display: block;
 }
 
 .buono-info {
-  flex: 1;
+  flex: 1 1 auto;
   min-width: 0;
-  overflow: hidden;
+  padding-right: 8px;
 }
 
-.data {
-  font-size: 10px;
-  line-height: 1.2;
+.buono-info .data {
   color: #777;
+  font-size: 12.5px;
+  line-height: 1.2;
   font-weight: 300;
-  white-space: nowrap;
+  white-space: normal;
 }
 
-.nome {
+.buono-info .nome {
   margin-top: 4px;
   font-size: 13.5px;
   line-height: 1.15;
   font-weight: 500;
-  letter-spacing: -0.1px;
 }
 
 .buono-valore {
-  margin-left: auto;
-  text-align: right;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex: 0 0 auto;
+  min-width: 112px;
+  margin-left: 4px;
+  text-align: left;
+  align-self: center;
 }
 
 .buono-valore-label {
-  font-size: 9px;
-  line-height: 1.1;
-  font-weight: 300;
   color: #777;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 300;
   white-space: nowrap;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
-.valore {
+.buono-valore .valore {
+  margin-left: 0;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1;
   font-weight: 600;
+  white-space: nowrap;
 }
 
 /* =====================================================
@@ -570,712 +662,129 @@ a {
   background: #fff;
 }
 
-.dettaglio-header {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-.dettaglio-back {
-  border: 0;
-  background: transparent;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-}
-
-.dettaglio-back svg {
-  width: 23px;
-  height: 23px;
-}
-
-.dettaglio-header-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 17px;
-  font-weight: 700;
-}
-
 .dettaglio-main {
-  padding: 0 26px 80px;
+  padding: 0 20px 110px;
 }
 
 .dettaglio-hero {
-  padding-top: 30px;
+  padding-top: 28px;
 }
 
-.dettaglio-tipo {
+.dettaglio-hero-label {
+  color: #666;
   font-size: 13px;
+  font-weight: 400;
   line-height: 1.2;
-  color: #777;
-  font-weight: 300;
 }
 
-.dettaglio-valore {
-  margin-top: 8px;
-  font-size: 36px;
+.dettaglio-hero-value {
+  margin-top: 7px;
+  font-size: 37px;
   line-height: 1;
   font-weight: 700;
   letter-spacing: -1px;
 }
 
-.dettaglio-valore-label {
-  margin-top: 7px;
-  font-size: 12px;
-  line-height: 1.2;
-  color: #777;
-  font-weight: 300;
-}
-
-.dettaglio-sezione {
-  margin-top: 35px;
-}
-
-.dettaglio-sezione-title {
-  font-size: 19px;
-  line-height: 1.2;
-  font-weight: 700;
-}
-
-.dettaglio-riga {
-  min-height: 53px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #eee;
-}
-
-.dettaglio-riga-label {
-  font-size: 13px;
-  line-height: 1.2;
-  font-weight: 300;
-}
-
-.dettaglio-riga-value {
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 500;
-  text-align: right;
-}
-
-.dettaglio-box {
-  margin-top: 20px;
-  padding: 19px;
-  border-radius: 14px;
-  background: #f5f5f5;
-}
-
-.dettaglio-box-title {
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.dettaglio-box-text {
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-.dettaglio-button {
-  width: 100%;
-  height: 48px;
-  margin-top: 25px;
-  border: 0;
-  border-radius: 24px;
-  background: #0759c9;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.dettaglio-link {
-  display: block;
-  margin-top: 18px;
-  color: #0759c9;
-  font-size: 13px;
-  text-align: center;
-  text-decoration: underline;
-}
-
-/* =====================================================
-   P2P / ICONS
-   ===================================================== */
-
-.p2p-icon {
-  width: 100px;
-  height: 100px;
-  display: block;
-}
-
-.p2p-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.bonifico-sepa-icon {
-  width: 54px;
-  height: 54px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bonifico-sepa-icon svg {
-  transform: none !important;
-  transform-origin: center center !important;
-}
-
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
-
-@media (max-width: 600px) {
-
-  .top-header {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .main-home {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .buoni-main {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .dettaglio-main {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .summary-card {
-    padding: 23px 28px 20px;
-  }
-
-  .summary-card h2 {
-    font-size: 19px;
-  }
-
-  .summary-label {
-    font-size: 14px;
-  }
-
-  .summary-value {
-    font-size: 16px;
-  }
-
-  .summary-item {
-    margin-top: 29px;
-  }
-
-  .summary-item.second {
-    margin-top: 17px;
-  }
-
-  .filtri {
-    margin-left: -22px;
-    padding-left: 22px;
-  }
-
-  .buono-valore-label {
-    font-size: 11.5px;
-  }
-
-  .buono-valore .valore {
-    font-size: 16px;
-  }
-}
-@media (max-width: 390px) {
-
-  .top-header {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .main-home {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .buoni-main {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  .dettaglio-main {
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-
-  /* BUONI */
-
-  .summary-card {
-    padding: 23px 28px 20px;
-    border-radius: 15px;
-    min-height: 0;
-  }
-
-  .summary-card h2 {
-    font-size: 19px;
-  }
-
-  .summary-label {
-    font-size: 14px;
-    font-weight: 300;
-  }
-
-  .summary-value {
-    margin-top: 4px;
-    font-size: 16px;
-    line-height: 1.15;
-    font-weight: 400;
-  }
-
-  .summary-item {
-    margin-top: 29px;
-  }
-
-  .summary-item.second {
-    margin-top: 17px;
-  }
-
-  .operations {
-    gap: 24px;
-  }
-
-  .filtri {
-    gap: 10px;
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: -22px;
-    margin-right: 0;
-    padding-left: 22px;
-    padding-right: 0;
-  }
-
-  .filtro {
-    padding-left: 13px;
-    padding-right: 13px;
-    font-size: 13px;
-  }
-
-  .periodo {
-    padding-left: 17px;
-    padding-right: 17px;
-  }
-
-  .filtro-filtra {
-    min-width: 106px;
-    gap: 4px;
-  }
-
-  .filtro-sliders-icon {
-    width: 18px;
-    height: 18px;
-    flex-basis: 18px;
-  }
-
-  .buono {
-    min-height: 86px;
-    padding: 12px 0;
-  }
-
-  .buono-icon {
-    flex: 0 0 36px;
-    width: 36px;
-    height: 36px;
-    margin-right: 10px;
-  }
-
-  .buono-icon svg {
-    width: 25px;
-    height: 25px;
-  }
-
-  .buono-info {
-    padding-right: 5px;
-  }
-
-  .buono-info .data {
-    font-size: 12px;
-    line-height: 1.2;
-    white-space: normal;
-  }
-
-  .buono-info .nome {
-    margin-top: 4px;
-    font-size: 13px;
-  }
-
-  .buono-valore {
-    min-width: 100px;
-    margin-left: 3px;
-  }
-
-  .buono-valore-label {
-    font-size: 11px;
-    line-height: 1.2;
-    margin-bottom: 4px;
-  }
-
-  .buono-valore .valore {
-    font-size: 15.5px;
-  }
-
-  /* DETTAGLIO */
-
-  .dettaglio-header {
-    height: 60px;
-  }
-
-  .dettaglio-main {
-    padding-bottom: 70px;
-  }
-
-  .dettaglio-hero {
-    padding-top: 27px;
-  }
-
-  .dettaglio-tipo {
-    font-size: 12px;
-  }
-
-  .dettaglio-valore {
-    font-size: 34px;
-  }
-
-  .dettaglio-valore-label {
-    font-size: 11px;
-  }
-
-  .dettaglio-sezione {
-    margin-top: 31px;
-  }
-
-  .dettaglio-sezione-title {
-    font-size: 18px;
-  }
-
-  .dettaglio-riga {
-    min-height: 50px;
-  }
-
-  .dettaglio-riga-label {
-    font-size: 12px;
-  }
-
-  .dettaglio-riga-value {
-    font-size: 13px;
-  }
-
-  .dettaglio-box {
-    padding: 17px;
-  }
-
-  .dettaglio-box-title {
-    font-size: 14px;
-  }
-
-  .dettaglio-box-text {
-    font-size: 11.5px;
-  }
-
-  .dettaglio-button {
-    height: 46px;
-    font-size: 14px;
-  }
-
-}
-
-/* =====================================================
-   HOME - ELEMENTI INTERNI
-   ===================================================== */
-
-.home-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.home-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.home-section {
-  width: 100%;
-}
-
-.home-section + .home-section {
-  margin-top: 30px;
-}
-
-.home-card {
-  width: 100%;
-  background: #f5f5f5;
-  border-radius: 15px;
-}
-
-.home-card-white {
-  background: #fff;
-}
-
-.home-small-label {
-  font-size: 11px;
-  color: #777;
-  font-weight: 300;
-}
-
-.home-small-value {
-  font-size: 14px;
-  font-weight: 500;
-}
-
-/* =====================================================
-   OPERAZIONI HOME
-   ===================================================== */
-
-.operazioni-home {
-  width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.operazioni-home::-webkit-scrollbar {
-  display: none;
-}
-
-.operazioni-home-inner {
-  display: flex;
-  gap: 15px;
-  width: max-content;
-}
-
-.operazione-home-card {
-  width: 105px;
-  min-width: 105px;
-  height: 108px;
-  border-radius: 15px;
-  background: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.operazione-home-card svg {
-  width: 29px;
-  height: 29px;
-}
-
-.operazione-home-card span {
+.dettaglio-hero-subtitle {
   margin-top: 9px;
-  font-size: 11.5px;
-  font-weight: 500;
-  text-align: center;
+  font-size: 13px;
+  line-height: 1.25;
+  color: #666;
 }
 
-/* =====================================================
-   SITUAZIONE FINANZIARIA
-   ===================================================== */
-
-.situazione-finanziaria {
-  width: 100%;
-}
-
-.situazione-finanziaria-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.situazione-finanziaria-title {
-  font-size: 19px;
-  font-weight: 700;
-}
-
-.situazione-finanziaria-link {
-  color: #0759c9;
-  font-size: 12px;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.situazione-finanziaria-card {
-  margin-top: 15px;
-  width: 100%;
-  border-radius: 15px;
-  background: #eef7ff;
-  padding: 21px 20px;
-}
-
-.situazione-finanziaria-card-title {
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.situazione-finanziaria-total {
-  margin-top: 7px;
-  font-size: 27px;
-  line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -0.6px;
-}
-
-.situazione-finanziaria-detail {
-  margin-top: 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.situazione-finanziaria-detail-label {
-  font-size: 12px;
-  color: #777;
-  font-weight: 300;
-}
-
-.situazione-finanziaria-detail-value {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-/* =====================================================
-   MONDO POSTE
-   ===================================================== */
-
-.mondo-poste-section {
+.dettaglio-section {
   margin-top: 31px;
 }
 
-.mondo-poste-section-title {
+.dettaglio-section-title {
+  margin: 0 0 15px;
   font-size: 19px;
   line-height: 1.2;
   font-weight: 700;
-  margin-bottom: 15px;
 }
 
-.mondo-poste-slider {
-  width: 100vw;
-  margin-left: -22px;
-  padding-left: 22px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-}
-
-.mondo-poste-slider::-webkit-scrollbar {
-  display: none;
-}
-
-.mondo-poste-slider-inner {
-  display: flex;
-  gap: 15px;
-  width: max-content;
-  padding-right: 22px;
-}
-
-.mondo-poste-item {
-  width: 245px;
-  min-width: 245px;
-  height: 145px;
+.dettaglio-card {
+  width: 100%;
   border-radius: 15px;
   background: #f5f5f5;
   padding: 18px;
 }
 
-.mondo-poste-item-title {
-  font-size: 15px;
-  line-height: 1.2;
-  font-weight: 700;
+.dettaglio-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
 }
 
-.mondo-poste-item-text {
-  margin-top: 10px;
-  font-size: 12px;
-  line-height: 1.35;
+.dettaglio-row + .dettaglio-row {
+  margin-top: 18px;
+}
+
+.dettaglio-row-label {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.25;
   font-weight: 400;
 }
 
-/* =====================================================
-   HEADER ICONS
-   ===================================================== */
-
-.header-icon-button {
-  width: 34px;
-  height: 34px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.dettaglio-row-value {
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 500;
+  text-align: right;
 }
 
-.header-icon-button svg {
-  width: 22px;
-  height: 22px;
+.dettaglio-divider {
+  height: 1px;
+  background: #ddd;
+  margin: 18px 0;
 }
 
-/* =====================================================
-   GENERIC SVG
-   ===================================================== */
-
-svg {
-  overflow: visible;
+.dettaglio-note {
+  margin-top: 12px;
+  color: #777;
+  font-size: 11.5px;
+  line-height: 1.4;
 }
 
-svg path,
-svg line,
-svg polyline,
-svg polygon,
-svg circle,
-svg rect {
-  vector-effect: non-scaling-stroke;
-}
-
-/* =====================================================
-   LINK E BUTTON
-   ===================================================== */
-
-.link-blue {
-  color: #0759c9;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.primary-button {
-  border: 0;
+.dettaglio-blue-card {
+  width: 100%;
+  border-radius: 15px;
   background: #0759c9;
   color: #fff;
-  border-radius: 24px;
-  font-family: inherit;
-  cursor: pointer;
+  padding: 20px 18px;
 }
 
-.secondary-button {
-  border: 1.5px solid #0759c9;
+.dettaglio-blue-card .dettaglio-row-label {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.dettaglio-blue-card .dettaglio-row-value {
+  color: #fff;
+}
+
+.dettaglio-actions {
+  margin-top: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.dettaglio-action-button {
+  width: 100%;
+  height: 49px;
+  border-radius: 25px;
+  border: 1px solid #0759c9;
   background: #fff;
   color: #0759c9;
-  border-radius: 24px;
-  font-family: inherit;
-  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.dettaglio-action-button.primary {
+  background: #0759c9;
+  color: #fff;
 }
 
 /* =====================================================
@@ -1287,175 +796,115 @@ svg rect {
   background: #fff;
 }
 
-.p2p-header {
-  height: 64px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-bottom: 1px solid #eee;
+.p2p-main {
+  padding: 0 20px 110px;
 }
 
-.p2p-main {
-  padding: 0 26px 90px;
+.p2p-content {
+  padding-top: 25px;
 }
 
 .p2p-title {
-  margin-top: 30px;
+  margin: 0;
   font-size: 25px;
   line-height: 1.1;
   font-weight: 700;
 }
 
 .p2p-subtitle {
-  margin-top: 9px;
+  margin-top: 8px;
+  color: #666;
   font-size: 13px;
-  line-height: 1.35;
-  color: #777;
-  font-weight: 300;
+  line-height: 1.3;
 }
 
 .p2p-card {
-  margin-top: 24px;
-  width: 100%;
-  border-radius: 15px;
-  background: #f5f5f5;
-  padding: 22px;
-}
-
-.p2p-card-title {
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.p2p-card-text {
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-.p2p-form {
   margin-top: 25px;
+  border-radius: 16px;
+  background: #f5f5f5;
+  padding: 20px;
 }
 
 .p2p-field {
+  margin-bottom: 17px;
+}
+
+.p2p-field:last-child {
+  margin-bottom: 0;
+}
+
+.p2p-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.p2p-field input {
   width: 100%;
-  min-height: 51px;
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  height: 47px;
+  border: 1px solid #ddd;
+  border-radius: 11px;
+  background: #fff;
+  padding: 0 13px;
+  font-size: 14px;
+  outline: none;
 }
 
-.p2p-field-label {
-  font-size: 10px;
-  color: #777;
-  font-weight: 300;
-}
-
-.p2p-field-value {
-  margin-top: 4px;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.p2p-actions {
-  margin-top: 26px;
-  display: flex;
-  gap: 12px;
-}
-
-.p2p-actions button {
-  flex: 1;
-  height: 46px;
+.p2p-button {
+  width: 100%;
+  height: 49px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 25px;
+  background: #0759c9;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
 }
 
-/* =====================================================
-   P2P ARROWS
-   ===================================================== */
+.p2p-arrow-top,
+.p2p-arrow-bottom {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .p2p-arrow-top {
-  width: 100px;
-  height: 100px;
+  margin-bottom: 4px;
 }
 
 .p2p-arrow-bottom {
-  width: 100px;
-  height: 100px;
+  margin-top: 4px;
 }
 
 .p2p-arrow-top svg,
 .p2p-arrow-bottom svg {
-  width: 100%;
-  height: 100%;
-}
-
-.p2p-arrow-top path,
-.p2p-arrow-bottom path {
-  fill: none;
-  stroke: #111;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  width: 100px;
+  height: 50px;
 }
 
 /* =====================================================
    BONIFICO SEPA
    ===================================================== */
 
-.bonifico-sepa {
-  width: 100%;
-  margin-top: 25px;
-}
-
-.bonifico-sepa-card {
-  width: 100%;
-  min-height: 100px;
-  border-radius: 15px;
-  background: #f5f5f5;
-  padding: 18px;
-  display: flex;
-  align-items: center;
-}
-
 .bonifico-sepa-icon {
-  width: 54px;
-  height: 54px;
-  flex: 0 0 54px;
-  margin-right: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .bonifico-sepa-icon svg {
-  width: 100%;
-  height: 100%;
+  width: 32px;
+  height: 32px;
   transform: none !important;
   transform-origin: center center !important;
 }
 
-.bonifico-sepa-content {
-  min-width: 0;
-}
-
-.bonifico-sepa-title {
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.bonifico-sepa-text {
-  margin-top: 5px;
-  font-size: 11.5px;
-  line-height: 1.3;
-  color: #777;
-  font-weight: 300;
-}
-
 /* =====================================================
-   PAGINA MOVIMENTI
+   MOVIMENTI
    ===================================================== */
 
 .movimenti-screen {
@@ -1464,96 +913,83 @@ svg rect {
 }
 
 .movimenti-main {
-  padding: 0 26px 90px;
+  padding: 0 20px 110px;
 }
 
 .movimenti-title {
-  margin-top: 27px;
+  padding-top: 25px;
+  margin: 0;
   font-size: 25px;
   line-height: 1.1;
   font-weight: 700;
 }
 
-.movimenti-filter {
-  margin-top: 20px;
+.movimenti-filters {
+  margin-top: 22px;
   display: flex;
-  gap: 10px;
+  gap: 9px;
   overflow-x: auto;
   scrollbar-width: none;
 }
 
-.movimenti-filter::-webkit-scrollbar {
+.movimenti-filters::-webkit-scrollbar {
   display: none;
 }
 
-.movimenti-filter button {
-  flex: 0 0 auto;
-  height: 34px;
-  padding: 0 15px;
-  border: 1.5px solid #0759c9;
-  border-radius: 18px;
-  background: #fff;
-  color: #0759c9;
-  font-size: 13px;
-  font-weight: 600;
+.movimenti-list {
+  margin-top: 25px;
 }
 
-.movimento-row {
-  min-height: 72px;
-  border-bottom: 1px solid #eee;
+.movimento {
+  min-height: 67px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e5e5;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.movimento-left {
-  display: flex;
-  align-items: center;
-  min-width: 0;
 }
 
 .movimento-icon {
-  width: 35px;
-  height: 35px;
-  flex: 0 0 35px;
+  width: 38px;
+  height: 38px;
+  margin-right: 12px;
   border-radius: 50%;
-  background: #f5f5f5;
+  background: #f3f3f3;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 11px;
 }
 
 .movimento-icon svg {
-  width: 21px;
-  height: 21px;
+  width: 22px;
+  height: 22px;
 }
 
 .movimento-info {
+  flex: 1;
   min-width: 0;
 }
 
 .movimento-title {
   font-size: 13px;
   font-weight: 500;
+  line-height: 1.2;
 }
 
 .movimento-date {
-  margin-top: 3px;
-  font-size: 10px;
+  margin-top: 4px;
+  font-size: 11.5px;
   color: #777;
   font-weight: 300;
 }
 
-.movimento-amount {
-  margin-left: 10px;
+.movimento-value {
   font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
 }
 
 /* =====================================================
-   PAGINA ASSISTENZA
+   ASSISTENZA
    ===================================================== */
 
 .assistenza-screen {
@@ -1562,59 +998,39 @@ svg rect {
 }
 
 .assistenza-main {
-  padding: 0 26px 100px;
+  padding: 0 20px 110px;
 }
 
 .assistenza-title {
-  margin-top: 28px;
+  padding-top: 25px;
+  margin: 0;
   font-size: 25px;
+  line-height: 1.1;
   font-weight: 700;
 }
 
-.assistenza-search {
-  margin-top: 20px;
-  width: 100%;
-  height: 46px;
-  border-radius: 23px;
-  background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  padding: 0 17px;
-}
-
-.assistenza-search svg {
-  width: 20px;
-  height: 20px;
-  margin-right: 9px;
-}
-
-.assistenza-search span {
-  font-size: 13px;
-  color: #777;
-}
-
 .assistenza-card {
-  margin-top: 15px;
+  margin-top: 25px;
   width: 100%;
-  min-height: 80px;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-radius: 15px;
+  background: #f5f5f5;
+  padding: 20px;
 }
 
 .assistenza-card-title {
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 17px;
+  font-weight: 600;
 }
 
-.assistenza-card-arrow {
-  width: 20px;
-  height: 20px;
+.assistenza-card-text {
+  margin-top: 8px;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 /* =====================================================
-   PAGINA CERCA
+   CERCA
    ===================================================== */
 
 .cerca-screen {
@@ -1623,50 +1039,44 @@ svg rect {
 }
 
 .cerca-main {
-  padding: 0 26px 90px;
+  padding: 0 20px 110px;
 }
 
 .cerca-title {
-  margin-top: 28px;
+  padding-top: 25px;
+  margin: 0;
   font-size: 25px;
+  line-height: 1.1;
   font-weight: 700;
 }
 
-.cerca-input {
+.cerca-box {
+  margin-top: 23px;
   width: 100%;
   height: 48px;
-  margin-top: 20px;
   border: 1px solid #ddd;
-  border-radius: 24px;
-  padding: 0 17px;
-  font-family: inherit;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+}
+
+.cerca-box svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 9px;
+}
+
+.cerca-box input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
   font-size: 14px;
-  outline: none;
 }
 
-.cerca-input:focus {
-  border-color: #0759c9;
-}
-
-.cerca-result {
-  padding: 17px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.cerca-result-title {
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.cerca-result-text {
-  margin-top: 4px;
-  font-size: 11.5px;
-  line-height: 1.3;
-  color: #777;
-  font-weight: 300;
-}
 /* =====================================================
-   PAGINA PROFILO
+   PROFILO
    ===================================================== */
 
 .profilo-screen {
@@ -1675,61 +1085,48 @@ svg rect {
 }
 
 .profilo-main {
-  padding: 0 26px 100px;
+  padding: 0 20px 110px;
 }
 
 .profilo-title {
-  margin-top: 28px;
+  padding-top: 25px;
+  margin: 0;
   font-size: 25px;
   line-height: 1.1;
   font-weight: 700;
 }
 
 .profilo-card {
-  margin-top: 22px;
-  width: 100%;
+  margin-top: 24px;
+  padding: 20px;
   border-radius: 15px;
   background: #f5f5f5;
-  padding: 20px;
-}
-
-.profilo-name {
-  font-size: 17px;
-  font-weight: 700;
-}
-
-.profilo-detail {
-  margin-top: 6px;
-  font-size: 12px;
-  color: #777;
-  font-weight: 300;
 }
 
 .profilo-row {
-  min-height: 58px;
-  border-bottom: 1px solid #eee;
+  min-height: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid #ddd;
 }
 
 .profilo-row:last-child {
   border-bottom: 0;
 }
 
-.profilo-row-title {
+.profilo-row-label {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.profilo-row-value {
   font-size: 13px;
   font-weight: 500;
 }
 
-.profilo-row-value {
-  font-size: 12px;
-  color: #777;
-  font-weight: 300;
-}
-
 /* =====================================================
-   PAGINA IMPOSTAZIONI
+   IMPOSTAZIONI
    ===================================================== */
 
 .impostazioni-screen {
@@ -1738,42 +1135,37 @@ svg rect {
 }
 
 .impostazioni-main {
-  padding: 0 26px 100px;
+  padding: 0 20px 110px;
 }
 
 .impostazioni-title {
-  margin-top: 28px;
+  padding-top: 25px;
+  margin: 0;
   font-size: 25px;
+  line-height: 1.1;
   font-weight: 700;
 }
 
-.impostazioni-section {
-  margin-top: 28px;
+.impostazioni-list {
+  margin-top: 24px;
+  border-top: 1px solid #e5e5e5;
 }
 
-.impostazioni-section-title {
-  margin-bottom: 7px;
-  font-size: 12px;
-  color: #777;
-  font-weight: 400;
-}
-
-.impostazioni-row {
-  min-height: 57px;
-  border-bottom: 1px solid #eee;
+.impostazione {
+  min-height: 53px;
+  border-bottom: 1px solid #e5e5e5;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.impostazioni-row span {
   font-size: 13px;
-  font-weight: 500;
 }
 
-.impostazioni-row svg {
-  width: 18px;
-  height: 18px;
+.impostazione-arrow {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid #777;
+  border-top: 1.5px solid #777;
+  transform: rotate(45deg);
 }
 
 /* =====================================================
@@ -1783,11 +1175,11 @@ svg rect {
 .modal-overlay {
   position: fixed;
   inset: 0;
+  z-index: 700;
   background: rgba(0, 0, 0, 0.35);
   display: none;
   align-items: flex-end;
   justify-content: center;
-  z-index: 500;
 }
 
 .modal-overlay.active {
@@ -1796,20 +1188,20 @@ svg rect {
 
 .modal {
   width: 100%;
-  max-width: 520px;
-  max-height: 85vh;
+  max-width: 600px;
+  max-height: 88vh;
   overflow-y: auto;
   background: #fff;
   border-radius: 22px 22px 0 0;
-  padding: 24px 22px 30px;
+  padding: 24px 20px calc(25px + env(safe-area-inset-bottom));
 }
 
 .modal-handle {
-  width: 38px;
+  width: 40px;
   height: 4px;
   border-radius: 3px;
-  background: #ccc;
-  margin: 0 auto 22px;
+  background: #d5d5d5;
+  margin: -8px auto 21px;
 }
 
 .modal-title {
@@ -1818,10 +1210,10 @@ svg rect {
 }
 
 .modal-text {
-  margin-top: 9px;
+  margin-top: 10px;
+  color: #555;
   font-size: 13px;
   line-height: 1.4;
-  color: #555;
 }
 
 .modal-actions {
@@ -2116,1015 +1508,4 @@ input:focus-visible {
   .buono-valore .valore {
     font-size: 15.5px !important;
   }
-}
-/* =====================================================
-   RECUPERO HOME MYPOSTE
-   NON TOCCARE BUONI / DETTAGLIO
-   ===================================================== */
-
-#paginaHome {
-  min-height: 100vh;
-  background: #fff;
-  padding-bottom: 80px;
-}
-
-#paginaHome .home-header {
-  position: relative !important;
-  height: 258px !important;
-  background: #ffe500 !important;
-  border-bottom-right-radius: 32px !important;
-  padding: 25px 22px 0 !important;
-  box-shadow: 0 5px 12px rgba(0,0,0,.10);
-  z-index: 10;
-}
-
-#paginaHome .home-saluto {
-  position: absolute !important;
-  left: 22px !important;
-  top: 67px !important;
-}
-
-#paginaHome .home-ciao {
-  font-size: 15px !important;
-  line-height: 1 !important;
-  font-weight: 400 !important;
-}
-
-#paginaHome .home-nome {
-  margin-top: 4px !important;
-  font-size: 20px !important;
-  line-height: 1 !important;
-  font-weight: 700 !important;
-}
-
-#paginaHome .home-header-icons {
-  position: absolute !important;
-  top: 54px !important;
-  right: 21px !important;
-  display: flex !important;
-  gap: 17px !important;
-}
-
-#paginaHome .home-header-item {
-  text-align: center !important;
-}
-
-#paginaHome .home-round-icon {
-  width: 44px !important;
-  height: 44px !important;
-  border-radius: 50% !important;
-  background: #fffde9 !important;
-  border: 1px solid #222 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-#paginaHome .home-round-icon svg {
-  width: 29px !important;
-  height: 29px !important;
-}
-
-#paginaHome .home-header-label {
-  margin-top: 7px !important;
-  font-size: 14px !important;
-  line-height: 1 !important;
-  font-weight: 400 !important;
-  white-space: nowrap !important;
-}
-
-#paginaHome .home-main {
-  padding: 0 22px 30px !important;
-}
-
-#paginaHome .numero-box {
-  min-height: 191px !important;
-  margin: 0 -22px !important;
-  padding: 27px 25px 20px !important;
-  background: #f1f7fd !important;
-  display: flex !important;
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-#paginaHome .numero-text {
-  width: 63% !important;
-  position: relative !important;
-  z-index: 2 !important;
-}
-
-#paginaHome .numero-title {
-  color: #666 !important;
-  font-size: 16px !important;
-  line-height: 1.1 !important;
-  font-weight: 600 !important;
-  margin-bottom: 6px !important;
-}
-
-#paginaHome .numero-description {
-  font-size: 14.5px !important;
-  line-height: 1.29 !important;
-  font-weight: 400 !important;
-}
-
-#paginaHome .numero-illustration {
-  position: absolute !important;
-  right: 9px !important;
-  bottom: 24px !important;
-  width: 130px !important;
-  height: 110px !important;
-}
-
-#paginaHome .numero-illustration svg {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-#paginaHome .home-section {
-  margin-top: 37px !important;
-}
-
-#paginaHome .home-section-title-row {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center !important;
-}
-
-#paginaHome .home-section h2,
-#paginaHome .mondo-poste h2 {
-  margin: 0 !important;
-  font-size: 18.5px !important;
-  line-height: 1.1 !important;
-  font-weight: 700 !important;
-  letter-spacing: -.3px !important;
-}
-
-#paginaHome .home-carousel-arrows {
-  display: flex !important;
-  gap: 15px !important;
-}
-
-#paginaHome .home-arrow {
-  width: 28px !important;
-  height: 28px !important;
-  border-radius: 50% !important;
-  background: #fff !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 18px !important;
-  line-height: 1 !important;
-}
-
-#paginaHome .home-arrow.grey {
-  border: 1.5px solid #777 !important;
-  color: #777 !important;
-}
-
-#paginaHome .home-arrow.blue {
-  border: 1.5px solid #0755c7 !important;
-  color: #0755c7 !important;
-}
-
-#paginaHome .home-operations-scroll {
-  display: flex !important;
-  gap: 27px !important;
-  margin-top: 27px !important;
-  margin-left: 0 !important;
-  margin-right: -22px !important;
-  overflow: hidden !important;
-}
-
-#paginaHome .home-operation {
-  flex: 0 0 108px !important;
-  text-align: center !important;
-}
-
-#paginaHome .home-operation-circle {
-  width: 85px !important;
-  height: 85px !important;
-  margin: 0 auto !important;
-  border-radius: 50% !important;
-  background: #f1f7fd !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-#paginaHome .home-operation-circle svg {
-  width: 56px !important;
-  height: 56px !important;
-  display: block !important;
-}
-
-#paginaHome .home-operation-label {
-  margin-top: 18px !important;
-  font-size: 13.5px !important;
-  line-height: 1.15 !important;
-  font-weight: 400 !important;
-}
-
-#paginaHome .p2p-icon {
-  width: 46px !important;
-  height: 46px !important;
-  border-radius: 50% !important;
-  background: #f1d900 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 16px !important;
-  font-weight: 500 !important;
-}
-
-#paginaHome .home-more-icon {
-  width: 46px !important;
-  height: 46px !important;
-  border-radius: 50% !important;
-  background: #fff !important;
-  border: 1.5px solid #0755c7 !important;
-  color: #0755c7 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 27px !important;
-  font-weight: 300 !important;
-}
-
-#paginaHome .situazione {
-  margin-top: 38px !important;
-}
-
-#paginaHome .patrimonio-card {
-  position: relative !important;
-  min-height: 123px !important;
-  margin-top: 31px !important;
-  border-radius: 16px !important;
-  background: #fff !important;
-  box-shadow: 0 4px 13px rgba(0,0,0,.12) !important;
-  display: flex !important;
-  align-items: center !important;
-  padding: 13px 15px !important;
-}
-
-#paginaHome .patrimonio-image {
-  width: 108px !important;
-  height: 83px !important;
-  flex: 0 0 108px !important;
-}
-
-#paginaHome .patrimonio-image svg {
-  width: 100% !important;
-  height: 100% !important;
-}
-
-#paginaHome .patrimonio-text {
-  margin-left: 14px !important;
-  padding-right: 25px !important;
-}
-
-#paginaHome .patrimonio-title {
-  font-size: 17px !important;
-  line-height: 1.1 !important;
-  font-weight: 700 !important;
-}
-
-#paginaHome .patrimonio-description {
-  margin-top: 6px !important;
-  font-size: 14px !important;
-  line-height: 1.25 !important;
-  font-weight: 400 !important;
-}
-
-#paginaHome .patrimonio-arrow {
-  position: absolute !important;
-  right: 14px !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  width: 28px !important;
-  height: 28px !important;
-  border-radius: 50% !important;
-  background: #e6e6e6 !important;
-  color: #0755c7 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-size: 25px !important;
-  line-height: 1 !important;
-}
-
-#paginaHome .mondo-poste {
-  margin-top: 34px !important;
-}
-
-#paginaHome .mondo-title-row {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-}
-
-#paginaHome .nascondi-saldo {
-  background: #e5e5e7 !important;
-  color: #0755c7 !important;
-  border-radius: 22px !important;
-  height: 30px !important;
-  padding: 0 13px !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 7px !important;
-  font-size: 12.5px !important;
-  font-weight: 600 !important;
-  white-space: nowrap !important;
-}
-
-#paginaHome .saldo-eye {
-  position: relative !important;
-  display: inline-block !important;
-  width: 20px !important;
-  height: 15px !important;
-  flex: 0 0 20px !important;
-  margin: 0 !important;
-  font-size: 0 !important;
-  line-height: 0 !important;
-}
-
-#paginaHome .mondo-grid {
-  margin-top: 23px !important;
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 10px !important;
-}
-
-#paginaHome .poste-card {
-  border: 0 !important;
-  padding: 0 !important;
-  width: 100% !important;
-  min-height: 114px !important;
-  border-radius: 15px !important;
-  background: #f0de00 !important;
-  overflow: hidden !important;
-  text-align: left !important;
-  font-family: inherit !important;
-  color: #111 !important;
-}
-
-#paginaHome .poste-card-title {
-  padding: 7px 14px 5px !important;
-  font-size: 14.5px !important;
-  line-height: 1 !important;
-  font-weight: 700 !important;
-}
-
-#paginaHome .poste-card-content {
-  min-height: 85px !important;
-  background: #fff4a1 !important;
-  border-radius: 14px !important;
-  padding: 11px 14px !important;
-}
-
-#paginaHome .poste-number {
-  font-size: 21.5px !important;
-  line-height: 1 !important;
-  font-weight: 500 !important;
-}
-
-#paginaHome .poste-number span {
-  font-size: 12.5px !important;
-  font-weight: 500 !important;
-}
-
-#paginaHome .poste-description {
-  margin-top: 5px !important;
-  font-size: 12px !important;
-  line-height: 1.2 !important;
-  font-weight: 400 !important;
-}
-
-#paginaHome .risparmio-card {
-  grid-column: 1 / 3 !important;
-  min-height: 118px !important;
-  cursor: pointer !important;
-}
-
-#paginaHome .risparmio-card .poste-card-content {
-  min-height: 89px !important;
-}
-
-#paginaHome .mondo-banner {
-  margin-top: 9px !important;
-  height: 123px !important;
-  border-radius: 13px !important;
-  background: #f4dc00 !important;
-  overflow: hidden !important;
-  position: relative !important;
-}
-
-#paginaHome .banner-text {
-  position: absolute !important;
-  left: 14px !important;
-  top: 21px !important;
-  font-size: 15px !important;
-  line-height: 1.18 !important;
-  font-weight: 700 !important;
-}
-
-#paginaHome .banner-link {
-  margin-top: 13px !important;
-  color: #0755c7 !important;
-  font-size: 13.5px !important;
-}
-
-#paginaHome .home-bottom-nav {
-  position: fixed !important;
-  left: 22px !important;
-  right: 22px !important;
-  bottom: 13px !important;
-  height: 68px !important;
-  background: rgba(255,255,255,.96) !important;
-  border: 1px solid #222 !important;
-  border-radius: 36px !important;
-  box-shadow: 0 6px 18px rgba(0,0,0,.12) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-around !important;
-  z-index: 100 !important;
-}
-
-#paginaHome .nav-item {
-  width: 20% !important;
-  height: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 2px !important;
-  font-size: 10.5px !important;
-  line-height: 1 !important;
-  font-weight: 400 !important;
-}
-
-#paginaHome .nav-item svg {
-  width: 28px !important;
-  height: 28px !important;
-}
-
-#paginaHome .nav-item.active {
-  color: #0755c7 !important;
-  font-weight: 600 !important;
-}
-
-
-/* =====================================================
-   HOME IPHONE
-   ===================================================== */
-
-@media (max-width: 600px) {
-
-  #paginaHome .home-header {
-    height: 150px !important;
-    padding: 20px 20px 0 !important;
-    border-bottom-right-radius: 30px !important;
-  }
-
-  #paginaHome .home-saluto {
-    left: 25px !important;
-    top: 76px !important;
-  }
-
-  #paginaHome .home-nome {
-    font-size: 21px !important;
-  }
-
-  #paginaHome .home-header-icons {
-    top: 57px !important;
-    right: 20px !important;
-    gap: 13px !important;
-  }
-
-  #paginaHome .home-header-item {
-    width: 54px !important;
-    flex: 0 0 54px !important;
-  }
-
-  #paginaHome .home-round-icon {
-    width: 54px !important;
-    height: 54px !important;
-  }
-
-  #paginaHome .home-round-icon svg {
-    width: 34px !important;
-    height: 34px !important;
-  }
-
-  #paginaHome .home-header-label {
-    margin-top: 7px !important;
-    font-size: 12px !important;
-  }
-
-  #paginaHome .home-main {
-    padding-left: 22px !important;
-    padding-right: 22px !important;
-    padding-bottom: 80px !important;
-  }
-
-  #paginaHome .numero-box {
-    min-height: 190px !important;
-    margin-left: -22px !important;
-    margin-right: -22px !important;
-    padding: 27px 25px 25px !important;
-  }
-
-  #paginaHome .numero-text {
-    width: 66% !important;
-  }
-
-  #paginaHome .numero-title {
-    font-size: 18px !important;
-  }
-
-  #paginaHome .numero-description {
-    font-size: 16px !important;
-    line-height: 1.25 !important;
-  }
-
-  #paginaHome .numero-illustration {
-    right: 8px !important;
-    bottom: 24px !important;
-    width: 130px !important;
-    height: 110px !important;
-  }
-
-  #paginaHome .home-section {
-    margin-top: 38px !important;
-  }
-
-  #paginaHome .home-section h2,
-  #paginaHome .mondo-poste h2 {
-    font-size: 21px !important;
-  }
-
-  #paginaHome .home-carousel-arrows {
-    gap: 10px !important;
-  }
-
-  #paginaHome .home-arrow {
-    width: 32px !important;
-    height: 32px !important;
-    font-size: 21px !important;
-  }
-
-  #paginaHome .home-operations-scroll {
-    gap: 22px !important;
-    margin-top: 28px !important;
-  }
-
-  #paginaHome .home-operation {
-    flex: 0 0 115px !important;
-  }
-
-  #paginaHome .home-operation-circle {
-    width: 90px !important;
-    height: 90px !important;
-  }
-
-  #paginaHome .home-operation-circle svg {
-    width: 60px !important;
-    height: 60px !important;
-  }
-
-  #paginaHome .home-operation-label {
-    margin-top: 17px !important;
-    font-size: 14px !important;
-  }
-
-  #paginaHome .patrimonio-card {
-    min-height: 125px !important;
-    margin-top: 32px !important;
-    border-radius: 18px !important;
-    padding: 14px 16px !important;
-  }
-
-  #paginaHome .patrimonio-image {
-    width: 90px !important;
-    height: 80px !important;
-    flex: 0 0 90px !important;
-  }
-
-  #paginaHome .patrimonio-text {
-    margin-left: 10px !important;
-    padding-right: 28px !important;
-  }
-
-  #paginaHome .patrimonio-title {
-    font-size: 18px !important;
-  }
-
-  #paginaHome .patrimonio-description {
-    font-size: 14px !important;
-  }
-
-  #paginaHome .mondo-poste {
-    margin-top: 38px !important;
-  }
-
-  #paginaHome .mondo-grid {
-    margin-top: 24px !important;
-  }
-
-  #paginaHome .poste-card {
-    min-height: 130px !important;
-    border-radius: 17px !important;
-  }
-
-  #paginaHome .poste-card-title {
-    padding: 9px 14px 7px !important;
-    font-size: 16px !important;
-  }
-
-  #paginaHome .poste-card-content {
-    min-height: 96px !important;
-    border-radius: 17px !important;
-    padding: 13px 14px !important;
-  }
-
-  #paginaHome .poste-number {
-    font-size: 25px !important;
-  }
-
-  #paginaHome .poste-description {
-    font-size: 14px !important;
-  }
-
-  #paginaHome .risparmio-card {
-    min-height: 135px !important;
-  }
-
-  #paginaHome .risparmio-card .poste-card-content {
-    min-height: 100px !important;
-  }
-
-  #paginaHome .mondo-banner {
-    height: 135px !important;
-    border-radius: 15px !important;
-  }
-
-  #paginaHome .banner-text {
-    left: 15px !important;
-    top: 22px !important;
-    font-size: 17px !important;
-  }
-
-  #paginaHome .banner-link {
-    font-size: 16px !important;
-  }
-
-  #paginaHome .home-bottom-nav {
-    left: 18px !important;
-    right: 18px !important;
-    bottom: 14px !important;
-    height: 66px !important;
-    border-radius: 34px !important;
-  }
-
-  #paginaHome .nav-item {
-    font-size: 11px !important;
-  }
-
-  #paginaHome .nav-item svg {
-    width: 28px !important;
-    height: 28px !important;
-  }
-}
-
-
-/* =====================================================
-   HOME IPHONE MOLTO PICCOLO
-   ===================================================== */
-
-@media (max-width: 390px) {
-
-  #paginaHome .home-header {
-    height: 145px !important;
-  }
-
-  #paginaHome .home-header-icons {
-    right: 12px !important;
-    gap: 9px !important;
-  }
-
-  #paginaHome .home-header-item {
-    width: 51px !important;
-    flex-basis: 51px !important;
-  }
-
-  #paginaHome .home-round-icon {
-    width: 51px !important;
-    height: 51px !important;
-  }
-
-  #paginaHome .home-round-icon svg {
-    width: 32px !important;
-    height: 32px !important;
-  }
-
-  #paginaHome .home-header-label {
-    font-size: 11px !important;
-  }
-
-  #paginaHome .home-saluto {
-    left: 22px !important;
-    top: 75px !important;
-  }
-
-  #paginaHome .home-ciao {
-    font-size: 14px !important;
-  }
-
-  #paginaHome .home-nome {
-    font-size: 20px !important;
-  }
-
-  #paginaHome .numero-box {
-    min-height: 180px !important;
-  }
-
-  #paginaHome .numero-title {
-    font-size: 17px !important;
-  }
-
-  #paginaHome .numero-description {
-    font-size: 15px !important;
-  }
-
-  #paginaHome .numero-illustration {
-    width: 120px !important;
-    height: 100px !important;
-  }
-
-  #paginaHome .home-section h2,
-  #paginaHome .mondo-poste h2 {
-    font-size: 20px !important;
-  }
-
-  #paginaHome .home-operation {
-    flex-basis: 108px !important;
-  }
-
-  #paginaHome .home-operation-circle {
-    width: 84px !important;
-    height: 84px !important;
-  }
-
-  #paginaHome .home-operation-label {
-    font-size: 13px !important;
-  }
-
-  #paginaHome .patrimonio-card {
-    min-height: 115px !important;
-  }
-
-  #paginaHome .patrimonio-image {
-    width: 78px !important;
-    flex-basis: 78px !important;
-  }
-
-  #paginaHome .patrimonio-title {
-    font-size: 17px !important;
-  }
-
-  #paginaHome .patrimonio-description {
-    font-size: 13px !important;
-  }
-
-  #paginaHome .poste-card {
-    min-height: 125px !important;
-  }
-
-  #paginaHome .poste-card-title {
-    font-size: 15px !important;
-  }
-
-  #paginaHome .poste-card-content {
-    min-height: 91px !important;
-    padding: 12px !important;
-  }
-
-  #paginaHome .poste-number {
-    font-size: 23px !important;
-  }
-
-  #paginaHome .poste-description {
-    font-size: 13px !important;
-  }
-
-  #paginaHome .risparmio-card {
-    min-height: 130px !important;
-  }
-
-  #paginaHome .home-bottom-nav {
-    left: 15px !important;
-    right: 15px !important;
-    height: 63px !important;
-  }
-
-  #paginaHome .nav-item {
-    font-size: 10px !important;
-  }
-
-  #paginaHome .nav-item svg {
-    width: 27px !important;
-    height: 27px !important;
-  }
-}
-/* =====================================================
-   FIX PAGINA DETTAGLIO BUONO
-   ===================================================== */
-
-.pagina-dettaglio {
-  display: none;
-  min-height: 100vh;
-  background: #fff;
-}
-
-.pagina-dettaglio.active {
-  display: block;
-}
-
-.detail-header {
-  position: relative;
-  height: 125px;
-  padding: 18px 26px 0;
-  display: flex;
-  align-items: flex-start;
-}
-
-.detail-back {
-  flex: 0 0 auto;
-  width: 48px;
-  height: 48px;
-  padding: 0;
-  border: 1.5px solid #222;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.detail-back svg {
-  width: 27px;
-  height: 27px;
-}
-
-.detail-header h1 {
-  position: absolute;
-  left: 109px;
-  right: 18px;
-  top: 32px;
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -0.35px;
-}
-
-.detail-main {
-  padding: 0 26px 150px;
-}
-
-.detail-card {
-  position: relative;
-  width: 100%;
-  background: #eef7ff;
-  border-radius: 15px;
-  overflow: visible;
-  margin-top: 0;
-}
-
-.detail-card-top {
-  min-height: 143px;
-  padding-top: 73px;
-  text-align: center;
-  position: relative;
-}
-
-.detail-buono-icon {
-  position: absolute;
-  width: 85px;
-  height: 85px;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -30px;
-}
-
-.detail-buono-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.detail-rimborso {
-  font-size: 33px;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: -1px;
-}
-
-.detail-rimborso-label {
-  margin-top: 10px;
-  font-size: 15.5px;
-  line-height: 1.2;
-  font-weight: 400;
-}
-
-.detail-account {
-  min-height: 65px;
-  border-top: 2.5px solid #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 11px;
-  padding: 10px;
-}
-
-.account-icon {
-  width: 40px;
-  height: 30px;
-  flex: 0 0 40px;
-}
-
-.account-icon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.account-text {
-  font-size: 15.5px;
-  line-height: 1.25;
-  font-weight: 400;
-}
-
-.detail-section-title {
-  margin: 38px 0 23px;
-  font-size: 20px;
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -0.35px;
-}
-
-.detail-field {
-  margin-bottom: 34px;
-}
-
-.detail-label {
-  color: #707070;
-  font-size: 15.5px;
-  line-height: 1.35;
-  font-weight: 400;
-}
-
-.detail-value {
-  margin-top: 6px;
-  color: #111;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 400;
-}
-
-.detail-divider {
-  height: 6px;
-  background: #f5f5f5;
-  margin: 23px -26px 20px;
-}
-
-.last-detail-field {
-  margin-bottom: 10px;
-}
-
-.bottom-action {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 108px;
-  background: rgba(255, 255, 255, 0.98);
-  border-top: 1px solid #eee;
-  padding: 18px 26px;
-  z-index: 100;
-}
-
-.bottom-action button {
-  width: 100%;
-  height: 53px;
-  border: 0;
-  border-radius: 28px;
-  background: #0755c7;
-  color: #fff;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.bottom-action button:active {
-  opacity: 0.75;
 }
