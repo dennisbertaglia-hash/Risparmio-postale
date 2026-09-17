@@ -1213,3 +1213,265 @@ u {
     font-size: 13px;
   }
 }
+/* =========================================================
+   MODIFICA DEFINITIVA PAGINA BUONI
+   ========================================================= */
+
+/* TITOLO BUONI */
+.top-header h1 {
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.1 !important;
+  margin: 12px 0 3px !important;
+}
+
+
+/* RIQUADRO AZZURRO */
+.summary-card {
+  margin-top: 28px !important;
+
+  min-height: 0 !important;
+
+  padding-top: 31px !important;
+  padding-bottom: 14px !important;
+}
+
+
+/* 20 BUONI */
+.summary-card h2 {
+  margin-top: 4px !important;
+  margin-bottom: 0 !important;
+
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+
+  font-weight: 500 !important;
+}
+
+
+/* PRIMO BLOCCO */
+.summary-item {
+  margin-top: 51px !important;
+}
+
+
+/* SECONDO BLOCCO */
+.summary-item.second {
+  margin-top: 27px !important;
+}
+
+
+/* ETICHETTE */
+.summary-label {
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+
+  font-weight: 300 !important;
+}
+
+
+/* NUMERI */
+.summary-value {
+  margin-top: 4px !important;
+
+  font-size: 18px !important;
+  line-height: 1.15 !important;
+
+  font-weight: 400 !important;
+}
+
+
+/* OPERAZIONI */
+.section-title {
+  margin-top: 24px !important;
+
+  font-size: 20px !important;
+  line-height: 1.15 !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: -0.3px !important;
+}
+
+
+/* ELENCO BUONI
+   Nel tuo HTML è:
+   <h2 class="section-title your-bonds">
+*/
+.section-title.your-bonds {
+  margin-top: 29px !important;
+
+  font-size: 20px !important;
+  line-height: 1.15 !important;
+
+  font-weight: 500 !important;
+}
+
+
+/* FILTRI PIÙ SCHIACCIATI */
+.filtro {
+  height: 32px !important;
+
+  border-width: 1.5px !important;
+  border-radius: 17px !important;
+
+  font-size: 14px !important;
+}
+
+
+/* FILTRA */
+.filtro-filtra {
+  min-width: 106px !important;
+
+  height: 32px !important;
+}
+
+
+/* PRODOTTI */
+.filtro.prodotto {
+  height: 32px !important;
+}
+
+
+/* PERIODO */
+.filtro.periodo {
+  height: 32px !important;
+}
+
+
+/* ? NERO */
+.question {
+  color: #111111 !important;
+  border-color: #111111 !important;
+}
+
+
+/* LISTA BUONI */
+.buono {
+  min-height: 86px !important;
+  padding: 12px 0 !important;
+}
+
+
+/* ICONA BUONO */
+.buono-icon {
+  width: 36px !important;
+  height: 36px !important;
+
+  flex: 0 0 36px !important;
+}
+
+
+/* TESTO DATA */
+.buono-info .data {
+  font-size: 12.5px !important;
+  font-weight: 300 !important;
+}
+
+
+/* NOME BUONO */
+.buono-info .nome {
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+}
+
+
+/* VALORE */
+.buono-valore-label {
+  font-size: 11px !important;
+  font-weight: 300 !important;
+}
+
+
+.buono-valore .valore {
+  font-size: 15.5px !important;
+  font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   BLOCCO MOBILE
+   QUESTO È IMPORTANTE PER IPHONE:
+   sovrascrive le vecchie regole @media
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .top-header h1 {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    margin: 12px 0 3px !important;
+  }
+
+
+  .summary-card {
+    margin-top: 28px !important;
+
+    padding-top: 31px !important;
+    padding-bottom: 14px !important;
+  }
+
+
+  .summary-card h2 {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+
+    margin-top: 4px !important;
+    margin-bottom: 0 !important;
+  }
+
+
+  .summary-item {
+    margin-top: 51px !important;
+  }
+
+
+  .summary-item.second {
+    margin-top: 27px !important;
+  }
+
+
+  .summary-label {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+  }
+
+
+  .summary-value {
+    font-size: 18px !important;
+    font-weight: 400 !important;
+  }
+
+
+  .section-title {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+
+
+  .section-title.your-bonds {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+
+
+  .filtro {
+    height: 32px !important;
+    border-radius: 17px !important;
+    font-size: 14px !important;
+  }
+
+
+  .filtro-filtra,
+  .filtro.prodotto,
+  .filtro.periodo {
+    height: 32px !important;
+  }
+
+
+  .question {
+    color: #111111 !important;
+    border-color: #111111 !important;
+  }
+
+}
