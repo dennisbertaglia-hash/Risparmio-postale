@@ -1475,3 +1475,16 @@ u {
   }
 
 }
+/* SPOSTA SOLO I CONTENUTI DEL RIQUADRO AZZURRO */
+.summary-item {
+  transform: translateY(-7px) !important;
+}
+
+.summary-item.second {
+  transform: translateY(-7px) !important;
+}
+
+/* 20 BUONI RESTA FERMO */
+.summary-card h2 {
+  transform: none !important;
+}
