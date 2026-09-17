@@ -102,7 +102,6 @@ const buoni = [
 ];
 
 
-
 /* =====================================================
    FORMATTAZIONE EURO
    ===================================================== */
@@ -113,7 +112,6 @@ function euro(numero) {
     maximumFractionDigits: 2
   }) + " €";
 }
-
 
 
 /* =====================================================
@@ -164,7 +162,6 @@ function calcolaDati(nominale) {
 }
 
 
-
 /* =====================================================
    TOTALE BUONI
    ===================================================== */
@@ -173,7 +170,6 @@ const totaleBuoni = buoni.reduce(
   (totale, buono) => totale + buono.nominale,
   0
 );
-
 
 
 /* =====================================================
@@ -203,7 +199,6 @@ if (valoreRimborsoLordo) {
 }
 
 
-
 /* =====================================================
    CREAZIONE ELENCO BUONI
    ===================================================== */
@@ -230,52 +225,53 @@ if (contenitoreBuoni) {
       <div class="buono-icon">
 
         <svg
-  width="28"
-  height="28"
-  viewBox="0 0 28 28"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
 
-  <rect
-    x="4"
-    y="4"
-    width="20"
-    height="20"
-    rx="3"
-    stroke="#0757B8"
-    stroke-width="1.6"
-  />
+          <rect
+            x="4"
+            y="4"
+            width="20"
+            height="20"
+            rx="3"
+            stroke="#0757B8"
+            stroke-width="1.6"
+          />
 
-  <path
-    d="M9 10H19"
-    stroke="#0757B8"
-    stroke-width="1.6"
-    stroke-linecap="round"
-  />
+          <path
+            d="M9 10H19"
+            stroke="#0757B8"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
 
-  <path
-    d="M9 14H19"
-    stroke="#0757B8"
-    stroke-width="1.6"
-    stroke-linecap="round"
-  />
+          <path
+            d="M9 14H19"
+            stroke="#0757B8"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
 
-  <path
-    d="M9 18H15"
-    stroke="#0757B8"
-    stroke-width="1.6"
-    stroke-linecap="round"
-  />
+          <path
+            d="M9 18H15"
+            stroke="#0757B8"
+            stroke-width="1.6"
+            stroke-linecap="round"
+          />
 
-</svg>
+        </svg>
+
       </div>
 
 
       <div class="buono-info">
 
         <div class="data">
-         scade il ${buono.scadenza}
+          scade il ${buono.scadenza}
         </div>
 
         <div class="nome">
@@ -286,14 +282,14 @@ if (contenitoreBuoni) {
 
 
       <div class="buono-valore">
-     
-        <div class="buono-valore-label">
-         valore rimborso lordo
-       </div>
 
-        <div class="valore">       
-         ${euro(buono.nominale)}
-      </div>
+        <div class="buono-valore-label">
+          valore rimborso lordo
+        </div>
+
+        <div class="valore">
+          ${euro(buono.nominale)}
+        </div>
 
       </div>
 
@@ -305,7 +301,6 @@ if (contenitoreBuoni) {
   });
 
 }
-
 
 
 /* =====================================================
@@ -340,7 +335,6 @@ function apriRisparmio() {
 }
 
 
-
 /* =====================================================
    TORNA ALLA HOME
    ===================================================== */
@@ -371,7 +365,6 @@ function tornaAllaHome() {
 
   window.scrollTo(0, 0);
 }
-
 
 
 /* =====================================================
@@ -414,7 +407,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* TITOLO */
 
   const detailTitolo =
@@ -424,7 +416,6 @@ function apriDettaglio(indice) {
     detailTitolo.textContent =
       "Buono 3×4 con premio";
   }
-
 
 
   /* =================================================
@@ -452,7 +443,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* SOTTOSCRITTO */
 
   const detailSottoscritto =
@@ -462,7 +452,6 @@ function apriDettaglio(indice) {
     detailSottoscritto.textContent =
       buono.sottoscritto;
   }
-
 
 
   /* SCADENZA */
@@ -476,7 +465,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* VALORE NOMINALE */
 
   const detailNominale =
@@ -488,7 +476,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* VALORE NETTO */
 
   const detailNetto =
@@ -498,7 +485,6 @@ function apriDettaglio(indice) {
     detailNetto.textContent =
       euro(buono.nominale);
   }
-
 
 
   /* LORDO SENZA PREMIO */
@@ -514,7 +500,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* RITENUTA A SCADENZA */
 
   const detailRitenutaScadenza =
@@ -526,7 +511,6 @@ function apriDettaglio(indice) {
     detailRitenutaScadenza.textContent =
       euro(dati.ritenutaSenzaPremio);
   }
-
 
 
   /* NETTO SENZA PREMIO */
@@ -542,7 +526,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* PREMIO LORDO */
 
   const detailPremioLordo =
@@ -554,7 +537,6 @@ function apriDettaglio(indice) {
     detailPremioLordo.textContent =
       euro(dati.premioLordo);
   }
-
 
 
   /* RITENUTA PREMIO */
@@ -570,7 +552,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* PREMIO NETTO */
 
   const detailPremioNetto =
@@ -582,7 +563,6 @@ function apriDettaglio(indice) {
     detailPremioNetto.textContent =
       euro(dati.premioNetto);
   }
-
 
 
   /* LORDO CON PREMIO */
@@ -598,7 +578,6 @@ function apriDettaglio(indice) {
   }
 
 
-
   /* RITENUTA TOTALE */
 
   const detailRitenutaTotale =
@@ -610,7 +589,6 @@ function apriDettaglio(indice) {
     detailRitenutaTotale.textContent =
       euro(dati.ritenutaTotale);
   }
-
 
 
   /* NETTO CON PREMIO */
@@ -628,7 +606,6 @@ function apriDettaglio(indice) {
 
   window.scrollTo(0, 0);
 }
-
 
 
 /* =====================================================
@@ -654,7 +631,6 @@ function tornaAllaLista() {
 
   window.scrollTo(0, 0);
 }
-
 
 
 /* =====================================================
