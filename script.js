@@ -234,23 +234,19 @@ function generaListaBuoni() {
   buoni.forEach(function (buono, indice) {
 
     const riga =
-      document.createElement("button");
+      document.createElement("div");
 
-    riga.type = "button";
-
-    riga.className =
-      "bond-item-button";
+    riga.className = "buono";
 
 
     /* =====================================================
-       ICONA
+       ICONA PICCOLA DEL BUONO
        ===================================================== */
 
     const icona =
-      document.createElement("span");
+      document.createElement("div");
 
-    icona.className =
-      "bond-item-icon";
+    icona.className = "buono-icon";
 
     icona.innerHTML = `
       <svg
@@ -259,47 +255,60 @@ function generaListaBuoni() {
         aria-hidden="true"
       >
 
+        <!-- BANCONOTA -->
+
         <rect
-          x="7"
-          y="12"
-          width="34"
-          height="24"
+          x="9"
+          y="14"
+          width="30"
+          height="20"
           rx="3"
           fill="#ffd400"
         />
 
+        <!-- FASCIA BLU -->
+
         <rect
-          x="7"
-          y="12"
+          x="9"
+          y="14"
           width="7"
-          height="24"
-          fill="#1766d1"
+          height="20"
+          fill="#0759c9"
         />
+
+        <!-- EURO -->
 
         <text
-          x="17"
-          y="29"
-          font-size="14"
-          font-weight="700"
-          fill="#1766d1"
+          x="18"
+          y="28"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="13"
+          font-weight="600"
+          fill="#0759c9"
         >€</text>
 
-        <rect
-          x="25"
-          y="26"
-          width="11"
-          height="2"
-          rx="1"
-          fill="#ffffff"
+        <!-- LINEA SUPERIORE -->
+
+        <line
+          x1="27"
+          y1="22"
+          x2="34"
+          y2="22"
+          stroke="#0759c9"
+          stroke-width="1.8"
+          stroke-linecap="round"
         />
 
-        <rect
-          x="27"
-          y="30"
-          width="9"
-          height="2"
-          rx="1"
-          fill="#ffffff"
+        <!-- LINEA INFERIORE -->
+
+        <line
+          x1="27"
+          y1="27"
+          x2="34"
+          y2="27"
+          stroke="#0759c9"
+          stroke-width="1.8"
+          stroke-linecap="round"
         />
 
       </svg>
@@ -307,49 +316,49 @@ function generaListaBuoni() {
 
 
     /* =====================================================
-       INFORMAZIONI
+       TESTO CENTRALE
        ===================================================== */
 
     const informazioni =
-      document.createElement("span");
+      document.createElement("div");
 
     informazioni.className =
-      "bond-item-info";
+      "buono-info";
 
     informazioni.innerHTML = `
-      <span class="data">
+      <div class="data">
         scade il ${buono.scadenza}
-      </span>
+      </div>
 
-      <span class="nome">
+      <div class="nome">
         Buono 3×4 con premio
-      </span>
+      </div>
     `;
 
 
     /* =====================================================
-       VALORE
+       VALORE A DESTRA
        ===================================================== */
 
     const valore =
-      document.createElement("span");
+      document.createElement("div");
 
     valore.className =
-      "bond-item-value";
+      "buono-valore";
 
     valore.innerHTML = `
-      <span class="label">
+      <div class="buono-valore-label">
         valore rimborso lordo
-      </span>
+      </div>
 
-      <span class="valore">
+      <div class="valore">
         ${euro(buono.nominale)}
-      </span>
+      </div>
     `;
 
 
     /* =====================================================
-       ASSEMBLA
+       ASSEMBLA RIGA
        ===================================================== */
 
     riga.appendChild(icona);
@@ -362,8 +371,30 @@ function generaListaBuoni() {
        ===================================================== */
 
     riga.addEventListener("click", function () {
-
       apriDettaglio(indice);
+    });
+
+
+    /* =====================================================
+       ACCESSIBILITÀ
+       ===================================================== */
+
+    riga.setAttribute("role", "button");
+
+    riga.setAttribute("tabindex", "0");
+
+
+    riga.addEventListener("keydown", function (event) {
+
+      if (
+        event.key === "Enter" ||
+        event.key === " "
+      ) {
+
+        event.preventDefault();
+
+        apriDettaglio(indice);
+      }
 
     });
 
@@ -466,7 +497,7 @@ function apriDettaglio(indice) {
 
 
   /* =====================================================
-     RITENUTA FISCALE
+     RITENUTA FISCALE INIZIALE
      ===================================================== */
 
   const ritenuta =
@@ -479,7 +510,7 @@ function apriDettaglio(indice) {
 
 
   /* =====================================================
-     VALORE NETTO
+     VALORE RIMBORSO NETTO
      ===================================================== */
 
   const netto =
