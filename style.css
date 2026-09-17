@@ -793,6 +793,39 @@ main {
   white-space: nowrap;
 }
 
+.filtro-filtra {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 112px;
+}
+
+.filtro-filtra u {
+  display: inline;
+  visibility: visible;
+  opacity: 1;
+}
+
+.filtro-sliders-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+}
+
+.filtro-sliders-icon line {
+  stroke: #0759c9;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.filtro-sliders-icon line:nth-of-type(4),
+.filtro-sliders-icon line:nth-of-type(5),
+.filtro-sliders-icon line:nth-of-type(6) {
+  stroke-width: 2.5;
+}
+
 .filtro.prodotto {
   display: flex;
   align-items: center;
