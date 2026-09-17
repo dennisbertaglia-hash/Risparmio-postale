@@ -1442,3 +1442,291 @@ button,
     white-space: nowrap !important;
   }
 }
+/* =====================================================
+   PAGINA BUONI - IPHONE 16
+   CORREZIONE DEFINITIVA LAYOUT
+   ===================================================== */
+
+@media screen and (max-width: 430px) {
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
+  }
+
+  #paginaPrincipale {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* =========================
+     HEADER
+     ========================= */
+
+  .top-header {
+    width: 100% !important;
+    height: 145px !important;
+    min-height: 145px !important;
+    padding: 28px 26px 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    display: block !important;
+  }
+
+  .back-button {
+    position: absolute !important;
+    left: 27px !important;
+    top: 58px !important;
+    width: 51px !important;
+    height: 51px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 1.5px solid #222 !important;
+    border-radius: 50% !important;
+    background: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .back-button svg {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .top-header h1 {
+    position: absolute !important;
+    left: 27px !important;
+    top: 127px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    font-weight: 700 !important;
+  }
+
+  .top-icons {
+    position: absolute !important;
+    top: 68px !important;
+    right: 27px !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+    border: none !important;
+    background: transparent !important;
+  }
+
+  /* =========================
+     CONTENUTO
+     ========================= */
+
+  #paginaPrincipale main {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 27px 40px !important;
+    margin: 0 !important;
+  }
+
+  /* =========================
+     CARD RIEPILOGO
+     ========================= */
+
+  .summary-card {
+    width: 100% !important;
+    height: 235px !important;
+    min-height: 235px !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    padding: 27px 28px !important;
+    border-radius: 15px !important;
+    background: #eef7ff !important;
+    overflow: hidden !important;
+  }
+
+  .summary-card h2 {
+    margin: 0 !important;
+    font-size: 20px !important;
+    line-height: 1.1 !important;
+    font-weight: 700 !important;
+  }
+
+  .summary-item {
+    margin: 26px 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .summary-item.second {
+    margin-top: 20px !important;
+  }
+
+  .summary-label {
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+    font-weight: 300 !important;
+  }
+
+  .summary-value {
+    margin: 5px 0 0 !important;
+    font-size: 17px !important;
+    line-height: 1.15 !important;
+    font-weight: 500 !important;
+  }
+
+  /* =========================
+     OPERAZIONI
+     ========================= */
+
+  .section-title {
+    margin: 31px 0 20px !important;
+    font-size: 25px !important;
+    line-height: 1.1 !important;
+    font-weight: 700 !important;
+  }
+
+  .operations {
+    width: 100% !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 38px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .operation-button {
+    width: 88px !important;
+    min-width: 88px !important;
+  }
+
+  .operation-icon {
+    width: 88px !important;
+    height: 88px !important;
+  }
+
+  .operation-button span {
+    margin-top: 11px !important;
+    font-size: 14px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* =========================
+     ELENCO BUONI
+     ========================= */
+
+  .your-bonds {
+    margin-top: 34px !important;
+    margin-bottom: 19px !important;
+    font-size: 25px !important;
+    line-height: 1.1 !important;
+  }
+
+  /* =========================
+     FILTRI
+     ========================= */
+
+  .filtri {
+    width: calc(100% + 54px) !important;
+    margin-left: -27px !important;
+    padding-left: 27px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    gap: 13px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scrollbar-width: none !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .filtri::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .filtro {
+    flex: 0 0 auto !important;
+    height: 37px !important;
+    padding: 0 17px !important;
+    border: 1.5px solid #0759c9 !important;
+    border-radius: 20px !important;
+    background: white !important;
+    color: #0759c9 !important;
+    font-size: 14px !important;
+    white-space: nowrap !important;
+  }
+
+  /* =========================
+     RIGHE BUONI
+     ========================= */
+
+  .buono {
+    width: 100% !important;
+    min-height: 83px !important;
+    display: flex !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    padding: 12px 0 !important;
+    border-bottom: 1px solid #e9e9e9 !important;
+  }
+
+  .buono-icon {
+    flex: 0 0 36px !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin-right: 12px !important;
+  }
+
+  .buono-info {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .buono-info .data {
+    font-size: 12px !important;
+    line-height: 1.2 !important;
+    font-weight: 300 !important;
+    color: #777 !important;
+    white-space: nowrap !important;
+  }
+
+  .buono-info .nome {
+    margin-top: 4px !important;
+    font-size: 14px !important;
+    line-height: 1.15 !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+  }
+
+  .buono-valore {
+    flex: 0 0 108px !important;
+    width: 108px !important;
+    margin-left: 5px !important;
+    text-align: left !important;
+  }
+
+  .buono-valore-label {
+    margin-bottom: 4px !important;
+    font-size: 11px !important;
+    line-height: 1.15 !important;
+    font-weight: 300 !important;
+    color: #777 !important;
+    white-space: nowrap !important;
+  }
+
+  .buono-valore .valore {
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
+  }
+}
