@@ -8,7 +8,6 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
-
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -17,10 +16,8 @@ body {
     "Helvetica Neue",
     Arial,
     sans-serif;
-
   background: #ffffff;
   color: #111111;
-
   -webkit-font-smoothing: antialiased;
 }
 
@@ -60,19 +57,13 @@ u {
 
 .top-header {
   position: relative;
-
   width: 100%;
   height: 132px;
-
   background: #ffffff;
 }
 
-
-/* FRECCIA */
-
 .top-header .back-button {
   position: absolute;
-
   left: 18px;
   top: 32px;
 
@@ -80,7 +71,6 @@ u {
   height: 48px;
 
   padding: 0;
-
   border: 1.5px solid #111111;
   border-radius: 50%;
 
@@ -101,27 +91,20 @@ u {
   border-bottom: 4px solid #111111;
 
   transform: rotate(45deg);
-
   margin-left: 4px;
 }
 
-
-/* TITOLO */
-
 .top-header h1 {
   position: absolute;
-
   left: 18px;
-  bottom: 5px;
+  bottom: 7px;
 
   margin: 0;
 
-  font-size: 30px;
+  font-size: 26px;
   line-height: 1;
-
   font-weight: 500;
-
-  letter-spacing: -0.7px;
+  letter-spacing: -0.5px;
 }
 
 
@@ -131,7 +114,6 @@ u {
 
 .top-icons {
   position: absolute;
-
   right: 18px;
   top: 35px;
 
@@ -148,16 +130,16 @@ u {
   align-items: center;
   justify-content: center;
 
-  gap: 7px;
+  gap: 8px;
 }
 
 .eye-button {
-  width: 33px;
-  height: 33px;
+  width: 34px;
+  height: 34px;
 
   padding: 0;
-
   border: 0;
+
   background: transparent;
 
   display: flex;
@@ -166,15 +148,14 @@ u {
 }
 
 .eye-icon {
-  width: 27px;
-  height: 27px;
-
+  width: 28px;
+  height: 28px;
   display: block;
 }
 
 .question-button {
-  width: 33px;
-  height: 33px;
+  width: 34px;
+  height: 34px;
 
   padding: 0;
 
@@ -187,76 +168,58 @@ u {
   align-items: center;
   justify-content: center;
 
-  color: #0759c9;
-
   font-size: 20px;
   line-height: 1;
-
   font-weight: 500;
+
+  color: #0759c9;
 }
 
 
 /* =========================================================
-   RIQUADRO AZZURRO
+   RIEPILOGO
    ========================================================= */
 
 .summary-card {
   width: 100%;
-
-  height: 205px;
+  height: 184px;
 
   margin: 0;
-
-  padding: 34px 22px 20px;
+  padding: 20px 22px;
 
   background: #edf6ff;
-
   border-radius: 24px;
 }
 
-
-/* 20 BUONI */
-
 .summary-card h2 {
-  margin: 0 0 29px;
+  margin: 0 0 17px;
 
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.1;
-
   font-weight: 500;
-
-  letter-spacing: -0.35px;
+  letter-spacing: -0.3px;
 }
 
-
-/* BLOCCO */
-
 .summary-item {
-  margin: 0 0 19px;
+  margin: 0 0 10px;
 }
 
 .summary-item.second {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
-
-
-/* ETICHETTE */
 
 .summary-label {
   display: block;
 
-  margin: 0 0 4px;
+  margin: 0 0 2px;
 
   font-size: 15px;
   line-height: 1.2;
-
   font-weight: 300;
 
   color: #111111;
 }
-
-
-/* NUMERI */
 
 .summary-value {
   display: block;
@@ -265,9 +228,7 @@ u {
 
   font-size: 20px;
   line-height: 1.1;
-
-  font-weight: 400;
-
+  font-weight: 500;
   letter-spacing: -0.2px;
 }
 
@@ -281,14 +242,12 @@ u {
 }
 
 .section-title {
-  margin: 30px 0 0;
+  margin: 29px 0 0;
 
-  font-size: 25px;
+  font-size: 22px;
   line-height: 1.1;
-
   font-weight: 500;
-
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 }
 
 .operations {
@@ -298,7 +257,6 @@ u {
   gap: 31px;
 
   margin-top: 18px;
-
   padding-left: 2px;
 }
 
@@ -335,8 +293,8 @@ u {
 }
 
 .operation-icon svg {
-  width: 72px;
-  height: 72px;
+  width: 64px;
+  height: 64px;
 
   display: block;
 }
@@ -346,13 +304,12 @@ u {
 
   font-size: 14px;
   line-height: 1.15;
-
   font-weight: 400;
 }
 
 
 /* =========================================================
-   ELENCO
+   ELENCO BUONI
    ========================================================= */
 
 .your-bonds {
@@ -360,7 +317,12 @@ u {
 }
 
 .elenco-title {
-  margin-top: 0;
+  margin: 0;
+
+  font-size: 22px;
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.4px;
 }
 
 
@@ -409,7 +371,6 @@ u {
 
   font-size: 13px;
   line-height: 1;
-
   font-weight: 600;
 
   white-space: nowrap;
@@ -436,13 +397,11 @@ u {
 .filtro-sliders-icon line {
   stroke: #0759c9;
   stroke-width: 1.7;
-
   stroke-linecap: round;
 }
 
 .filtro-sliders-icon circle {
   fill: #ffffff;
-
   stroke: #0759c9;
   stroke-width: 1.8;
 }
@@ -472,41 +431,35 @@ u {
 
 
 /* =========================================================
-   LISTA BUONI
+   LISTA DEI BUONI
    ========================================================= */
-
-/*
-   IMPORTANTE:
-   queste sono le classi realmente create
-   dal tuo script.js.
-*/
 
 #listaBuoni {
   width: 100%;
-
   margin-top: 5px;
 }
 
 
-/* SINGOLO BUONO */
+/*
+   IMPORTANTE:
+   Il JavaScript crea direttamente .bond-item.
+   Quindi la griglia viene applicata a .bond-item,
+   non a .bond-item-button.
+*/
 
-#listaBuoni .buono {
+.bond-item {
   width: 100%;
 
-  min-height: 70px;
+  min-height: 68px;
 
   margin: 0;
-
   padding: 9px 0;
 
   background: #ffffff;
 
   display: grid;
 
-  grid-template-columns:
-    50px
-    minmax(0, 1fr)
-    112px;
+  grid-template-columns: 50px minmax(0, 1fr) 112px;
 
   column-gap: 8px;
 
@@ -516,9 +469,11 @@ u {
 }
 
 
-/* ICONA */
+/* =========================================================
+   ICONA DEL BUONO
+   ========================================================= */
 
-#listaBuoni .buono-icon {
+.bond-item-icon {
   width: 50px;
   height: 50px;
 
@@ -533,54 +488,57 @@ u {
   overflow: hidden;
 }
 
-#listaBuoni .buono-icon svg {
-  width: 42px;
-  height: 42px;
+.bond-item-icon svg {
+  width: 38px;
+  height: 38px;
+
+  max-width: 38px;
+  max-height: 38px;
 
   display: block;
 }
 
 
-/* TESTO */
+/* =========================================================
+   TESTI DEL BUONO
+   ========================================================= */
 
-#listaBuoni .buono-info {
+.bond-item-info {
   min-width: 0;
 }
 
-#listaBuoni .buono-info .data {
+.bond-item-info .data {
   margin: 0 0 3px;
 
   color: #777777;
 
   font-size: 12px;
   line-height: 1.2;
-
   font-weight: 300;
-
-  white-space: normal;
 }
 
-#listaBuoni .buono-info .nome {
+.bond-item-info .nome {
   margin: 0;
 
   color: #111111;
 
   font-size: 15px;
   line-height: 1.2;
-
   font-weight: 500;
 }
 
 
-/* VALORE A DESTRA */
+/* =========================================================
+   VALORE RIMBORSO
+   ========================================================= */
 
-#listaBuoni .buono-valore {
+.bond-item-value {
   min-width: 0;
 
   text-align: right;
 }
 
-#listaBuoni .buono-valore-label {
+.bond-item-value .label {
   display: block;
 
   margin: 0 0 3px;
@@ -589,20 +547,18 @@ u {
 
   font-size: 10px;
   line-height: 1.1;
-
   font-weight: 300;
 
   white-space: nowrap;
 }
 
-#listaBuoni .buono-valore .valore {
+.bond-item-value .valore {
   display: block;
 
   color: #111111;
 
   font-size: 15px;
   line-height: 1.1;
-
   font-weight: 500;
 
   white-space: nowrap;
@@ -629,7 +585,9 @@ u {
 }
 
 
-/* HEADER DETTAGLIO */
+/* =========================================================
+   HEADER DETTAGLIO
+   ========================================================= */
 
 .detail-header {
   position: relative;
@@ -676,9 +634,7 @@ u {
 
   font-size: 23px;
   line-height: 1.05;
-
-  font-weight: 500;
-
+  font-weight: 600;
   letter-spacing: -0.4px;
 
   white-space: nowrap;
@@ -686,7 +642,7 @@ u {
 
 
 /* =========================================================
-   DETTAGLIO
+   CARD DETTAGLIO
    ========================================================= */
 
 .detail-main {
@@ -732,6 +688,9 @@ u {
   width: 82px;
   height: 82px;
 
+  max-width: 82px;
+  max-height: 82px;
+
   display: block;
 }
 
@@ -746,13 +705,12 @@ u {
   text-align: center;
 }
 
-.detail-rimborso span:first-child {
+.detail-rimborso span {
   display: block;
 
   font-size: 29px;
   line-height: 1;
-
-  font-weight: 500;
+  font-weight: 600;
 
   letter-spacing: -0.7px;
 }
@@ -769,12 +727,13 @@ u {
 
   font-size: 14px;
   line-height: 1.1;
-
   font-weight: 300;
 }
 
 
-/* CONTO */
+/* =========================================================
+   CONTO
+   ========================================================= */
 
 .detail-account {
   min-height: 68px;
@@ -802,25 +761,28 @@ u {
 .account-icon svg {
   width: 44px;
   height: 34px;
+
+  max-width: 44px;
+  max-height: 34px;
 }
 
 .account-text {
   font-size: 14px;
   line-height: 1.2;
-
   font-weight: 300;
 }
 
 
-/* RIEPILOGO */
+/* =========================================================
+   DATI DETTAGLIO
+   ========================================================= */
 
 .detail-section-title {
   margin: 28px 0 22px;
 
   font-size: 24px;
   line-height: 1.1;
-
-  font-weight: 500;
+  font-weight: 600;
 
   letter-spacing: -0.4px;
 }
@@ -838,7 +800,6 @@ u {
 
   font-size: 14px;
   line-height: 1.2;
-
   font-weight: 300;
 }
 
@@ -849,7 +810,6 @@ u {
 
   font-size: 16px;
   line-height: 1.25;
-
   font-weight: 400;
 }
 
@@ -899,7 +859,6 @@ u {
 
   font-size: 18px;
   line-height: 1;
-
   font-weight: 500;
 
   text-decoration: underline;
@@ -908,134 +867,73 @@ u {
 
 
 /* =========================================================
-   IPHONE
-   ========================================================= */
-
-@media (max-width: 430px) {
-
-  .main-content {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .top-header {
-    height: 132px;
-  }
-
-  .top-header h1 {
-    font-size: 30px;
-    font-weight: 500;
-  }
-
-  .summary-card {
-    height: 205px;
-
-    padding: 34px 22px 20px;
-
-    border-radius: 24px;
-  }
-
-  .summary-card h2 {
-    font-size: 20px;
-    font-weight: 500;
-
-    margin-bottom: 29px;
-  }
-
-  .summary-label {
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .summary-value {
-    font-size: 20px;
-    font-weight: 400;
-  }
-
-  .section-title {
-    font-size: 25px;
-    font-weight: 500;
-  }
-
-  .operation-icon {
-    width: 72px;
-    height: 72px;
-  }
-
-  .operation-icon svg {
-    width: 72px;
-    height: 72px;
-  }
-
-  .operation-button > span:last-child {
-    font-size: 14px;
-    font-weight: 400;
-  }
-
-  #listaBuoni .buono {
-    grid-template-columns:
-      50px
-      minmax(0, 1fr)
-      112px;
-
-    column-gap: 8px;
-  }
-
-  #listaBuoni .buono-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  #listaBuoni .buono-icon svg {
-    width: 42px;
-    height: 42px;
-  }
-
-  #listaBuoni .buono-info .data {
-    font-size: 12px;
-  }
-
-  #listaBuoni .buono-info .nome {
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  #listaBuoni .buono-valore-label {
-    font-size: 10px;
-  }
-
-  #listaBuoni .buono-valore .valore {
-    font-size: 15px;
-    font-weight: 500;
-  }
-
-  #paginaDettaglio {
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-bottom: 105px;
-  }
-}
-
-
-/* =========================================================
-   IPHONE STRETTO
+   IPHONE PICCOLI
    ========================================================= */
 
 @media (max-width: 390px) {
 
+  .main-content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .top-header {
+    height: 128px;
+  }
+
+  .top-header .back-button {
+    left: 16px;
+    top: 30px;
+
+    width: 46px;
+    height: 46px;
+  }
+
   .top-header h1 {
-    font-size: 29px;
+    left: 16px;
+    bottom: 7px;
+
+    font-size: 25px;
+  }
+
+  .top-icons {
+    right: 16px;
+    top: 33px;
+
+    height: 48px;
+
+    padding: 4px 7px;
+
+    gap: 6px;
+  }
+
+  .eye-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .eye-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .question-button {
+    width: 32px;
+    height: 32px;
+
+    font-size: 19px;
   }
 
   .summary-card {
-    height: 202px;
+    height: 180px;
 
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 19px 20px;
+
+    border-radius: 23px;
   }
 
   .summary-card h2 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .summary-label {
@@ -1047,27 +945,27 @@ u {
   }
 
   .section-title {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .operations {
-    gap: 25px;
+    gap: 24px;
   }
 
   .operation-button {
-    width: 102px;
-    min-width: 102px;
-    flex-basis: 102px;
+    width: 100px;
+    min-width: 100px;
+    flex-basis: 100px;
   }
 
   .operation-icon {
-    width: 70px;
-    height: 70px;
+    width: 68px;
+    height: 68px;
   }
 
   .operation-icon svg {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
 
   .operation-button > span:last-child {
@@ -1075,300 +973,195 @@ u {
   }
 
   .your-bonds {
-    margin-top: 31px;
+    margin-top: 30px;
+  }
+
+  .elenco-title {
+    font-size: 21px;
   }
 
   .filtro {
-    height: 39px;
-    font-size: 12.5px;
+    height: 38px;
+
+    font-size: 12px;
   }
 
   .filtro-filtra {
-    width: 75px;
-    min-width: 75px;
+    width: 74px;
+    min-width: 74px;
   }
 
   .filtro.prodotto {
-    width: 103px;
-    min-width: 103px;
+    width: 101px;
+    min-width: 101px;
   }
 
   .filtro.periodo {
-    width: 157px;
-    min-width: 157px;
+    width: 154px;
+    min-width: 154px;
   }
 
-  #listaBuoni .buono {
-    grid-template-columns:
-      46px
-      minmax(0, 1fr)
-      105px;
+  .bond-item {
+    grid-template-columns: 46px minmax(0, 1fr) 106px;
 
-    column-gap: 8px;
+    column-gap: 7px;
+
+    min-height: 64px;
+
+    padding: 8px 0;
   }
 
-  #listaBuoni .buono-icon {
+  .bond-item-icon {
     width: 46px;
     height: 46px;
   }
 
-  #listaBuoni .buono-icon svg {
-    width: 38px;
-    height: 38px;
+  .bond-item-icon svg {
+    width: 35px;
+    height: 35px;
   }
 
-  #listaBuoni .buono-info .data {
+  .bond-item-info .data {
     font-size: 11px;
   }
 
-  #listaBuoni .buono-info .nome {
+  .bond-item-info .nome {
     font-size: 14px;
   }
 
-  #listaBuoni .buono-valore-label {
+  .bond-item-value .label {
     font-size: 9px;
   }
 
-  #listaBuoni .buono-valore .valore {
+  .bond-item-value .valore {
     font-size: 14px;
   }
 
+  #paginaDettaglio {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .detail-header {
+    height: 128px;
+  }
+
+  .detail-back {
+    top: 30px;
+
+    width: 46px;
+    height: 46px;
+  }
+
   .detail-header h1 {
+    bottom: 7px;
     font-size: 22px;
   }
 
+  .detail-card {
+    border-radius: 23px;
+  }
+
   .detail-card-top {
-    height: 225px;
+    height: 220px;
   }
 
   .detail-buono-icon {
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
   }
 
   .detail-buono-icon svg {
-    width: 80px;
-    height: 80px;
+    width: 78px;
+    height: 78px;
   }
 
-  .detail-rimborso span:first-child {
-    font-size: 28px;
+  .detail-rimborso span {
+    font-size: 27px;
   }
 
   .detail-section-title {
     font-size: 23px;
   }
+}
 
-  .detail-label {
+
+/* =========================================================
+   IPHONE MOLTO STRETTI
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .top-header h1 {
+    font-size: 24px;
+  }
+
+  .summary-card {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .summary-card h2 {
+    font-size: 17px;
+  }
+
+  .summary-value {
+    font-size: 18px;
+  }
+
+  .operations {
+    gap: 18px;
+  }
+
+  .operation-button {
+    width: 94px;
+    min-width: 94px;
+    flex-basis: 94px;
+  }
+
+  .operation-icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .operation-icon svg {
+    width: 56px;
+    height: 56px;
+  }
+
+  .elenco-title {
+    font-size: 20px;
+  }
+
+  .bond-item {
+    grid-template-columns: 44px minmax(0, 1fr) 100px;
+
+    column-gap: 6px;
+  }
+
+  .bond-item-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .bond-item-icon svg {
+    width: 33px;
+    height: 33px;
+  }
+
+  .bond-item-info .data {
+    font-size: 10px;
+  }
+
+  .bond-item-info .nome {
     font-size: 13px;
   }
 
-  .detail-value {
-    font-size: 15px;
-  }
-}
-/* =========================================================
-   CORREZIONE DEFINITIVA LISTA BUONI
-   ========================================================= */
-
-.buono {
-  width: 100%;
-  margin: 0;
-  padding: 9px 0;
-
-  display: grid;
-  grid-template-columns: 50px minmax(0, 1fr) 112px;
-  column-gap: 8px;
-  align-items: center;
-
-  background: #ffffff;
-  cursor: pointer;
-}
-
-
-/* PALLINO DEL BUONO */
-
-.buono-icon {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-
-  background: #edf6ff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-
-/* SIMBOLO DEL BUONO */
-.buono-icon svg {
-  width: 38px !important;
-  height: 38px !important;
-
-  max-width: 38px !important;
-  max-height: 38px !important;
-
-  display: block;
-}
-
-
-/* TESTO CENTRALE */
-
-.buono-info {
-  min-width: 0;
-}
-
-.buono-info .data {
-  margin: 0 0 3px;
-
-  color: #777777;
-
-  font-size: 12px;
-  line-height: 1.2;
-
-  font-weight: 300;
-}
-
-.buono-info .nome {
-  margin: 0;
-
-  color: #111111;
-
-  font-size: 15px;
-  line-height: 1.2;
-
-  font-weight: 500;
-}
-
-
-/* IMPORTO A DESTRA */
-
-.buono-valore {
-  min-width: 0;
-
-  text-align: right;
-}
-
-.buono-valore-label {
-  display: block;
-
-  margin: 0 0 3px;
-
-  color: #777777;
-
-  font-size: 10px;
-  line-height: 1.1;
-
-  font-weight: 300;
-
-  white-space: nowrap;
-}
-
-.buono-valore .valore {
-  display: block;
-
-  color: #111111;
-
-  font-size: 15px;
-  line-height: 1.1;
-
-  font-weight: 600;
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   RIQUADRO AZZURRO
-   ========================================================= */
-
-.summary-card h2 {
-  font-weight: 500 !important;
-}
-
-.summary-label {
-  font-weight: 300 !important;
-}
-
-.summary-value {
-  font-weight: 500 !important;
-}
-
-
-/* =========================================================
-   OPERAZIONI
-   ========================================================= */
-
-.section-title {
-  font-weight: 400 !important;
-}
-
-
-/* CENTRATURA ICONA ACQUISTA BUONO */
-
-.operation-icon {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.operation-icon svg {
-  width: 62px !important;
-  height: 62px !important;
-
-  display: block !important;
-
-  transform: translate(2px, 0) !important;
-}
-
-
-/* =========================================================
-   ELENCO BUONI
-   ========================================================= */
-
-.your-bonds .section-title {
-  font-weight: 400 !important;
-}
-
-
-/* =========================================================
-   SCHERMI IPHONE STRETTI
-   ========================================================= */
-
-@media (max-width: 390px) {
-
-  .buono {
-    grid-template-columns: 46px minmax(0, 1fr) 105px;
-    column-gap: 8px;
+  .bond-item-value .label {
+    font-size: 8.5px;
   }
 
-  .buono-icon {
-    width: 46px;
-    height: 46px;
-  }
-
-  .buono-icon svg {
-    width: 35px !important;
-    height: 35px !important;
-  }
-
-  .buono-info .data {
-    font-size: 11px;
-  }
-
-  .buono-info .nome {
-    font-size: 14px;
-  }
-
-  .buono-valore-label {
-    font-size: 9px;
-  }
-
-  .buono-valore .valore {
-    font-size: 14px;
+  .bond-item-value .valore {
+    font-size: 13px;
   }
 }
