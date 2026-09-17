@@ -6,7 +6,7 @@
 
   <title>Buoni</title>
 
-  <link rel="stylesheet" href="style.css?v=30">
+  <link rel="stylesheet" href="style.css?v=31">
 </head>
 
 <body>
@@ -47,7 +47,7 @@
                 d="M3 16s4.5-7 13-7 13 7 13 7-4.5 7-13 7S3 16 3 16Z"
                 fill="none"
                 stroke="#111111"
-                stroke-width="2.2"
+                stroke-width="2.1"
                 stroke-linecap="round"
                 stroke-linejoin="round"/>
 
@@ -57,7 +57,7 @@
                 r="4"
                 fill="none"
                 stroke="#111111"
-                stroke-width="2.2"/>
+                stroke-width="2.1"/>
 
               <line
                 x1="4"
@@ -65,11 +65,13 @@
                 x2="28"
                 y2="28"
                 stroke="#111111"
-                stroke-width="2.4"
+                stroke-width="2.2"
                 stroke-linecap="round"/>
+
             </svg>
 
           </button>
+
 
           <button
             class="question-button"
@@ -89,7 +91,9 @@
 
       <section class="summary-card">
 
-        <h2 id="totaleBuoni">20 Buoni</h2>
+        <h2 id="totaleBuoni">
+          20 Buoni
+        </h2>
 
         <div class="summary-item">
 
@@ -104,6 +108,7 @@
           </span>
 
         </div>
+
 
         <div class="summary-item second">
 
@@ -132,10 +137,13 @@
           Operazioni
         </h2>
 
+
         <div class="operations">
 
 
-          <!-- ACQUISTA BUONO -->
+          <!-- =================================================
+               ACQUISTA BUONO
+               ================================================= -->
 
           <button
             class="operation-button"
@@ -145,94 +153,102 @@
             <span class="operation-icon">
 
               <svg
-                viewBox="0 0 100 100"
+                viewBox="0 0 72 72"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true">
 
                 <!-- banconota posteriore -->
-                <rect
-                  x="24"
-                  y="27"
-                  width="51"
-                  height="30"
-                  rx="4"
-                  transform="rotate(-8 24 27)"
-                  fill="#f4c900"/>
 
-                <!-- fascia blu -->
                 <rect
-                  x="29"
-                  y="27"
-                  width="8"
-                  height="30"
+                  x="18"
+                  y="19"
+                  width="34"
+                  height="20"
+                  rx="3"
+                  transform="rotate(-8 18 19)"
+                  fill="#f5ca00"/>
+
+                <rect
+                  x="22"
+                  y="18"
+                  width="6"
+                  height="20"
                   rx="1"
-                  transform="rotate(-8 29 27)"
+                  transform="rotate(-8 22 18)"
                   fill="#0759c9"/>
+
 
                 <!-- banconota principale -->
+
                 <rect
-                  x="27"
-                  y="35"
-                  width="53"
-                  height="30"
-                  rx="4"
-                  transform="rotate(-4 27 35)"
+                  x="20"
+                  y="27"
+                  width="35"
+                  height="20"
+                  rx="3"
+                  transform="rotate(-4 20 27)"
                   fill="#ffd500"/>
 
-                <!-- fascia blu -->
                 <rect
-                  x="31"
-                  y="35"
-                  width="7"
-                  height="30"
-                  transform="rotate(-4 31 35)"
+                  x="23"
+                  y="27"
+                  width="6"
+                  height="20"
+                  transform="rotate(-4 23 27)"
                   fill="#0759c9"/>
 
+
                 <!-- righe -->
-                <rect
-                  x="49"
-                  y="47"
-                  width="21"
-                  height="3"
-                  rx="1.5"
-                  transform="rotate(-4 49 47)"
-                  fill="#ffffff"/>
 
-                <rect
-                  x="49"
-                  y="54"
-                  width="15"
-                  height="3"
-                  rx="1.5"
-                  transform="rotate(-4 49 54)"
-                  fill="#ffffff"/>
+                <line
+                  x1="37"
+                  y1="35"
+                  x2="49"
+                  y2="34"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"/>
 
-                <!-- + verde -->
+                <line
+                  x1="37"
+                  y1="40"
+                  x2="46"
+                  y2="39"
+                  stroke="#ffffff"
+                  stroke-width="2"
+                  stroke-linecap="round"/>
+
+
+                <!-- simbolo + -->
+
                 <circle
-                  cx="72"
-                  cy="69"
-                  r="14"
+                  cx="52"
+                  cy="49"
+                  r="9"
                   fill="#45c96b"/>
 
-                <rect
-                  x="64"
-                  y="67"
-                  width="16"
-                  height="4"
-                  rx="2"
-                  fill="#ffffff"/>
+                <line
+                  x1="47"
+                  y1="49"
+                  x2="57"
+                  y2="49"
+                  stroke="#ffffff"
+                  stroke-width="2.5"
+                  stroke-linecap="round"/>
 
-                <rect
-                  x="70"
-                  y="61"
-                  width="4"
-                  height="16"
-                  rx="2"
-                  fill="#ffffff"/>
+                <line
+                  x1="52"
+                  y1="44"
+                  x2="52"
+                  y2="54"
+                  stroke="#ffffff"
+                  stroke-width="2.5"
+                  stroke-linecap="round"/>
 
               </svg>
 
             </span>
+
 
             <span>
               Acquista<br>
@@ -242,7 +258,9 @@
           </button>
 
 
-          <!-- RICHIEDI RIMBORSO -->
+          <!-- =================================================
+               RICHIEDI RIMBORSO
+               ================================================= -->
 
           <button
             class="operation-button"
@@ -252,76 +270,95 @@
             <span class="operation-icon">
 
               <svg
-                viewBox="0 0 100 100"
+                viewBox="0 0 72 72"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true">
 
+
                 <!-- monete -->
+
                 <circle
-                  cx="48"
-                  cy="29"
-                  r="10"
+                  cx="31"
+                  cy="22"
+                  r="7"
                   fill="#ffd500"/>
 
                 <circle
-                  cx="61"
-                  cy="29"
-                  r="10"
-                  fill="#ffd500"/>
+                  cx="41"
+                  cy="22"
+                  r="7"
+                  fill="#f5ca00"/>
+
 
                 <!-- portafoglio -->
+
                 <path
-                  d="M37 43
-                     C37 39 40 36 44 36
-                     H68
-                     C73 36 77 40 77 45
-                     V65
-                     C77 69 73 72 69 72
-                     H43
-                     C39 72 36 69 36 65
-                     V45
-                     C36 44 36 43 37 43Z"
+                  d="
+                    M25 32
+                    C25 29 27 27 30 27
+                    H49
+                    C53 27 56 30 56 34
+                    V51
+                    C56 54 53 57 50 57
+                    H29
+                    C26 57 23 54 23 51
+                    V35
+                    C23 34 24 33 25 32
+                  "
                   fill="#f2c900"/>
 
-                <!-- parte verde portafoglio -->
+
+                <!-- parte superiore verde -->
+
                 <path
-                  d="M44 39
-                     H69
-                     C73 39 76 42 76 46
-                     V51
-                     H51
-                     C47 51 44 48 44 44Z"
+                  d="
+                    M30 29
+                    H50
+                    C53 29 55 31 55 34
+                    V38
+                    H35
+                    C32 38 30 36 30 33
+                    Z
+                  "
                   fill="#45c96b"/>
 
-                <!-- chiusura blu -->
+
+                <!-- chiusura -->
+
                 <rect
-                  x="67"
-                  y="51"
-                  width="17"
-                  height="13"
-                  rx="5"
+                  x="47"
+                  y="38"
+                  width="15"
+                  height="11"
+                  rx="4"
                   fill="#0759c9"/>
 
                 <circle
-                  cx="76"
-                  cy="57.5"
-                  r="2.5"
+                  cx="55"
+                  cy="43.5"
+                  r="2"
                   fill="#ffffff"/>
 
-                <!-- freccia verde -->
+
+                <!-- freccia -->
+
                 <path
-                  d="M30 76
-                     V58
-                     H24
-                     L39 43
-                     L54 58
-                     H48
-                     V76Z"
+                  d="
+                    M22 60
+                    V46
+                    H17
+                    L28 35
+                    L39 46
+                    H34
+                    V60
+                    Z
+                  "
                   fill="#45c96b"/>
 
               </svg>
 
             </span>
+
 
             <span>
               Richiedi<br>
@@ -336,7 +373,7 @@
 
 
       <!-- =================================================
-           ELENCO
+           ELENCO BUONI
            ================================================= -->
 
       <section class="your-bonds">
@@ -346,7 +383,9 @@
         </h2>
 
 
-        <!-- FILTRI -->
+        <!-- =================================================
+             FILTRI
+             ================================================= -->
 
         <div class="filtri">
 
@@ -395,7 +434,9 @@
 
             </svg>
 
-            <span>Filtra</span>
+            <span>
+              Filtra
+            </span>
 
           </button>
 
@@ -404,7 +445,9 @@
             class="filtro prodotto"
             type="button">
 
-            <span>Prodotti</span>
+            <span>
+              Prodotti
+            </span>
 
             <span class="freccia-down"></span>
 
@@ -415,14 +458,18 @@
             class="filtro periodo"
             type="button">
 
-            <span>Periodo di scadenza</span>
+            <span>
+              Periodo di scadenza
+            </span>
 
           </button>
 
         </div>
 
 
-        <!-- LISTA GENERATA DALLO SCRIPT -->
+        <!-- =================================================
+             LISTA
+             ================================================= -->
 
         <div id="listaBuoni"></div>
 
@@ -467,12 +514,17 @@
 
       </button>
 
+
       <h1 id="detailTitolo">
         Buono 3×4 con premio
       </h1>
 
     </header>
 
+
+    <!-- =================================================
+         DETTAGLIO
+         ================================================= -->
 
     <section class="detail-main">
 
@@ -507,7 +559,9 @@
                 y="56"
                 font-size="28"
                 font-weight="600"
-                fill="#0759c9">€</text>
+                fill="#0759c9">
+                €
+              </text>
 
               <line
                 x1="58"
@@ -547,6 +601,10 @@
         </div>
 
 
+        <!-- =================================================
+             CONTO
+             ================================================= -->
+
         <div class="detail-account">
 
           <div class="account-icon">
@@ -571,7 +629,9 @@
                 y="23"
                 font-size="13"
                 font-weight="600"
-                fill="#0759c9">€</text>
+                fill="#0759c9">
+                €
+              </text>
 
               <line
                 x1="22"
@@ -605,7 +665,7 @@
 
 
       <!-- =================================================
-           RIEPILOGO DETTAGLIO
+           RIEPILOGO
            ================================================= -->
 
       <h2 class="detail-section-title">
@@ -834,6 +894,10 @@
     </section>
 
 
+    <!-- =================================================
+         PULSANTE CHIUDI
+         ================================================= -->
+
     <div class="bottom-action">
 
       <button
@@ -847,7 +911,7 @@
   </main>
 
 
-  <script src="script.js?v=30"></script>
+  <script src="script.js?v=31"></script>
 
 </body>
 </html>
