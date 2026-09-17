@@ -2,14 +2,11 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <title>Buoni</title>
 
-  <link rel="stylesheet" href="style.css?v=22">
+  <link rel="stylesheet" href="style.css?v=30">
 </head>
 
 <body>
@@ -18,84 +15,73 @@
        PAGINA PRINCIPALE
        ===================================================== -->
 
-  <div id="paginaPrincipale">
+  <main id="paginaPrincipale">
 
-    <header class="top-header">
+    <div class="main-content">
 
-      <!-- FRECCIA INDIETRO -->
-      <button
-        class="back-button"
-        type="button"
-        aria-label="Indietro"
-      ></button>
-
-
-      <!-- TITOLO -->
-      <h1>Buoni</h1>
-
-
-      <!-- OCCHIO + ? -->
-      <div class="top-icons">
+      <!-- HEADER -->
+      <header class="top-header">
 
         <button
-          class="eye-button"
+          class="back-button"
           type="button"
-          aria-label="Nascondi valori"
-        >
-          <svg
-            class="eye-icon"
-            viewBox="0 0 40 40"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path
-              d="M4 20
-                 C8 13 14 9 20 9
-                 C26 9 32 13 36 20
-                 C32 27 26 31 20 31
-                 C14 31 8 27 4 20Z"
-              fill="none"
-              stroke="#111111"
-              stroke-width="2.7"
-              stroke-linejoin="round"
-            />
-
-            <circle
-              cx="20"
-              cy="20"
-              r="6"
-              fill="none"
-              stroke="#111111"
-              stroke-width="2.7"
-            />
-
-            <line
-              x1="6"
-              y1="6"
-              x2="34"
-              y2="34"
-              stroke="#111111"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-          </svg>
+          aria-label="Indietro">
         </button>
 
+        <h1>Buoni</h1>
 
-        <button
-          class="question-button"
-          type="button"
-          aria-label="Informazioni"
-        >
-          ?
-        </button>
+        <div class="top-icons">
 
-      </div>
+          <button
+            class="eye-button"
+            type="button"
+            aria-label="Nascondi valori">
 
-    </header>
+            <svg
+              class="eye-icon"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
 
+              <path
+                d="M3 16s4.5-7 13-7 13 7 13 7-4.5 7-13 7S3 16 3 16Z"
+                fill="none"
+                stroke="#111111"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"/>
 
-    <main class="main-content">
+              <circle
+                cx="16"
+                cy="16"
+                r="4"
+                fill="none"
+                stroke="#111111"
+                stroke-width="2.2"/>
+
+              <line
+                x1="4"
+                y1="4"
+                x2="28"
+                y2="28"
+                stroke="#111111"
+                stroke-width="2.4"
+                stroke-linecap="round"/>
+            </svg>
+
+          </button>
+
+          <button
+            class="question-button"
+            type="button"
+            aria-label="Aiuto">
+            ?
+          </button>
+
+        </div>
+
+      </header>
+
 
       <!-- =================================================
            RIEPILOGO
@@ -103,10 +89,7 @@
 
       <section class="summary-card">
 
-        <h2 id="totaleBuoni">
-          20 Buoni
-        </h2>
-
+        <h2 id="totaleBuoni">20 Buoni</h2>
 
         <div class="summary-item">
 
@@ -116,13 +99,11 @@
 
           <span
             class="summary-value"
-            id="valoreNominale"
-          >
+            id="valoreNominale">
             17.000,00 €
           </span>
 
         </div>
-
 
         <div class="summary-item second">
 
@@ -132,8 +113,7 @@
 
           <span
             class="summary-value"
-            id="valoreRimborsoLordo"
-          >
+            id="valoreRimborsoLordo">
             17.000,00 €
           </span>
 
@@ -152,7 +132,6 @@
           Operazioni
         </h2>
 
-
         <div class="operations">
 
 
@@ -161,106 +140,95 @@
           <button
             class="operation-button"
             type="button"
-            onclick="operationMessage('Acquista Buono')"
-          >
+            onclick="operationMessage('Acquista Buono')">
 
             <span class="operation-icon">
 
               <svg
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-
-                <!-- sfondo -->
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="50"
-                  fill="#edf6ff"
-                />
+                aria-hidden="true">
 
                 <!-- banconota posteriore -->
                 <rect
-                  x="27"
-                  y="28"
-                  width="47"
-                  height="31"
+                  x="24"
+                  y="27"
+                  width="51"
+                  height="30"
                   rx="4"
-                  fill="#f1c900"
-                  transform="rotate(-7 27 28)"
-                />
-
-                <!-- banconota principale -->
-                <rect
-                  x="20"
-                  y="36"
-                  width="54"
-                  height="31"
-                  rx="4"
-                  fill="#ffd400"
-                  transform="rotate(-7 20 36)"
-                />
+                  transform="rotate(-8 24 27)"
+                  fill="#f4c900"/>
 
                 <!-- fascia blu -->
                 <rect
-                  x="25"
-                  y="34"
+                  x="29"
+                  y="27"
                   width="8"
-                  height="33"
+                  height="30"
                   rx="1"
-                  fill="#1766d1"
-                  transform="rotate(-7 25 34)"
-                />
+                  transform="rotate(-8 29 27)"
+                  fill="#0759c9"/>
 
-                <!-- righe bianche -->
-                <line
-                  x1="43"
-                  y1="49"
-                  x2="64"
-                  y2="46"
-                  stroke="#ffffff"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
+                <!-- banconota principale -->
+                <rect
+                  x="27"
+                  y="35"
+                  width="53"
+                  height="30"
+                  rx="4"
+                  transform="rotate(-4 27 35)"
+                  fill="#ffd500"/>
 
-                <line
-                  x1="44"
-                  y1="56"
-                  x2="61"
-                  y2="53.5"
-                  stroke="#ffffff"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
+                <!-- fascia blu -->
+                <rect
+                  x="31"
+                  y="35"
+                  width="7"
+                  height="30"
+                  transform="rotate(-4 31 35)"
+                  fill="#0759c9"/>
+
+                <!-- righe -->
+                <rect
+                  x="49"
+                  y="47"
+                  width="21"
+                  height="3"
+                  rx="1.5"
+                  transform="rotate(-4 49 47)"
+                  fill="#ffffff"/>
+
+                <rect
+                  x="49"
+                  y="54"
+                  width="15"
+                  height="3"
+                  rx="1.5"
+                  transform="rotate(-4 49 54)"
+                  fill="#ffffff"/>
 
                 <!-- + verde -->
                 <circle
-                  cx="74"
-                  cy="73"
-                  r="13"
-                  fill="#45c66a"
-                />
+                  cx="72"
+                  cy="69"
+                  r="14"
+                  fill="#45c96b"/>
 
-                <line
-                  x1="74"
-                  y1="66"
-                  x2="74"
-                  y2="80"
-                  stroke="#ffffff"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
+                <rect
+                  x="64"
+                  y="67"
+                  width="16"
+                  height="4"
+                  rx="2"
+                  fill="#ffffff"/>
 
-                <line
-                  x1="67"
-                  y1="73"
-                  x2="81"
-                  y2="73"
-                  stroke="#ffffff"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
+                <rect
+                  x="70"
+                  y="61"
+                  width="4"
+                  height="16"
+                  rx="2"
+                  fill="#ffffff"/>
 
               </svg>
 
@@ -279,107 +247,77 @@
           <button
             class="operation-button"
             type="button"
-            onclick="operationMessage('Richiedi rimborso')"
-          >
+            onclick="operationMessage('Richiedi rimborso')">
 
             <span class="operation-icon">
 
               <svg
                 viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-
-                <!-- sfondo -->
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="50"
-                  fill="#edf6ff"
-                />
+                aria-hidden="true">
 
                 <!-- monete -->
                 <circle
-                  cx="45"
-                  cy="30"
-                  r="9"
-                  fill="#ffd400"
-                />
+                  cx="48"
+                  cy="29"
+                  r="10"
+                  fill="#ffd500"/>
 
                 <circle
-                  cx="58"
-                  cy="30"
-                  r="9"
-                  fill="#ffd400"
-                />
-
-                <circle
-                  cx="52"
-                  cy="24"
-                  r="7"
-                  fill="#ffd400"
-                />
+                  cx="61"
+                  cy="29"
+                  r="10"
+                  fill="#ffd500"/>
 
                 <!-- portafoglio -->
                 <path
-                  d="
-                    M29 44
-                    C29 39 32 36 37 36
-                    H66
-                    C71 36 74 39 74 44
-                    V64
-                    C74 68 71 71 66 71
-                    H37
-                    C32 71 29 68 29 64
-                    Z
-                  "
-                  fill="#ffd400"
-                />
+                  d="M37 43
+                     C37 39 40 36 44 36
+                     H68
+                     C73 36 77 40 77 45
+                     V65
+                     C77 69 73 72 69 72
+                     H43
+                     C39 72 36 69 36 65
+                     V45
+                     C36 44 36 43 37 43Z"
+                  fill="#f2c900"/>
 
-                <!-- parte superiore -->
+                <!-- parte verde portafoglio -->
                 <path
-                  d="
-                    M35 38
-                    H65
-                    C69 38 72 41 72 45
-                    H41
-                    C37 45 35 42 35 38
-                    Z
-                  "
-                  fill="#f2d000"
-                />
+                  d="M44 39
+                     H69
+                     C73 39 76 42 76 46
+                     V51
+                     H51
+                     C47 51 44 48 44 44Z"
+                  fill="#45c96b"/>
 
                 <!-- chiusura blu -->
                 <rect
-                  x="61"
-                  y="49"
-                  width="14"
-                  height="10"
-                  rx="3"
-                  fill="#1766d1"
-                />
+                  x="67"
+                  y="51"
+                  width="17"
+                  height="13"
+                  rx="5"
+                  fill="#0759c9"/>
 
                 <circle
-                  cx="69"
-                  cy="54"
-                  r="2"
-                  fill="#ffffff"
-                />
+                  cx="76"
+                  cy="57.5"
+                  r="2.5"
+                  fill="#ffffff"/>
 
                 <!-- freccia verde -->
                 <path
-                  d="
-                    M17 71
-                    L33 53
-                    L49 71
-                    H41
-                    V83
-                    H25
-                    V71
-                    Z
-                  "
-                  fill="#45c66a"
-                />
+                  d="M30 76
+                     V58
+                     H24
+                     L39 43
+                     L54 58
+                     H48
+                     V76Z"
+                  fill="#45c96b"/>
 
               </svg>
 
@@ -398,12 +336,12 @@
 
 
       <!-- =================================================
-           ELENCO BUONI
+           ELENCO
            ================================================= -->
 
       <section class="your-bonds">
 
-        <h2 class="section-title">
+        <h2 class="section-title elenco-title">
           Elenco Buoni
         </h2>
 
@@ -414,54 +352,46 @@
 
           <button
             class="filtro filtro-filtra"
-            type="button"
-          >
+            type="button">
 
             <svg
               class="filtro-sliders-icon"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
+              aria-hidden="true">
 
               <line
                 x1="3"
                 y1="6"
                 x2="21"
-                y2="6"
-              />
+                y2="6"/>
 
               <circle
-                cx="9"
+                cx="8"
                 cy="6"
-                r="2"
-              />
+                r="2.2"/>
 
               <line
                 x1="3"
                 y1="12"
                 x2="21"
-                y2="12"
-              />
+                y2="12"/>
 
               <circle
                 cx="15"
                 cy="12"
-                r="2"
-              />
+                r="2.2"/>
 
               <line
                 x1="3"
                 y1="18"
                 x2="21"
-                y2="18"
-              />
+                y2="18"/>
 
               <circle
-                cx="8"
+                cx="10"
                 cy="18"
-                r="2"
-              />
+                r="2.2"/>
 
             </svg>
 
@@ -472,44 +402,45 @@
 
           <button
             class="filtro prodotto"
-            type="button"
-          >
+            type="button">
+
             <span>Prodotti</span>
+
             <span class="freccia-down"></span>
+
           </button>
 
 
           <button
             class="filtro periodo"
-            type="button"
-          >
+            type="button">
+
             <span>Periodo di scadenza</span>
+
           </button>
 
         </div>
 
 
-        <!-- LISTA GENERATA DAL JS -->
+        <!-- LISTA GENERATA DALLO SCRIPT -->
 
         <div id="listaBuoni"></div>
 
       </section>
 
-    </main>
+    </div>
 
-  </div>
-
+  </main>
 
 
   <!-- =====================================================
        PAGINA DETTAGLIO
        ===================================================== -->
 
-  <div
+  <main
     id="paginaDettaglio"
     class="pagina-dettaglio"
-    style="display: none;"
-  >
+    style="display:none;">
 
     <header class="detail-header">
 
@@ -517,28 +448,24 @@
         class="detail-back"
         type="button"
         onclick="tornaAllaLista()"
-        aria-label="Torna ai Buoni"
-      >
+        aria-label="Torna indietro">
 
         <svg
-          viewBox="0 0 40 40"
+          viewBox="0 0 32 32"
           xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
+          aria-hidden="true">
 
           <path
-            d="M24 8 L12 20 L24 32"
+            d="M20 6 L10 16 L20 26"
             fill="none"
             stroke="#111111"
-            stroke-width="3.5"
+            stroke-width="3"
             stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+            stroke-linejoin="round"/>
 
         </svg>
 
       </button>
-
 
       <h1 id="detailTitolo">
         Buono 3×4 con premio
@@ -547,12 +474,9 @@
     </header>
 
 
-    <main class="detail-main">
+    <section class="detail-main">
 
-      <section class="detail-card">
-
-
-        <!-- PARTE AZZURRA -->
+      <div class="detail-card">
 
         <div class="detail-card-top">
 
@@ -561,63 +485,47 @@
             <svg
               viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
-
-              <circle
-                cx="50"
-                cy="50"
-                r="50"
-                fill="#edf6ff"
-              />
+              aria-hidden="true">
 
               <rect
-                x="23"
-                y="31"
-                width="54"
-                height="38"
-                rx="6"
-                fill="#ffd400"
-              />
+                x="16"
+                y="29"
+                width="68"
+                height="42"
+                rx="7"
+                fill="#ffd500"/>
 
               <rect
-                x="23"
-                y="31"
+                x="22"
+                y="29"
                 width="10"
-                height="38"
-                fill="#1766d1"
-              />
+                height="42"
+                fill="#0759c9"/>
 
               <text
-                x="39"
+                x="42"
                 y="56"
-                font-size="22"
-                font-family="Arial, sans-serif"
+                font-size="28"
                 font-weight="600"
-                fill="#1766d1"
-              >
-                €
-              </text>
+                fill="#0759c9">€</text>
 
               <line
-                x1="52"
+                x1="58"
                 y1="48"
-                x2="68"
+                x2="75"
                 y2="48"
                 stroke="#ffffff"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
+                stroke-width="4"
+                stroke-linecap="round"/>
 
               <line
-                x1="52"
-                y1="57"
-                x2="64"
-                y2="57"
+                x1="58"
+                y1="58"
+                x2="71"
+                y2="58"
                 stroke="#ffffff"
-                stroke-width="3"
-                stroke-linecap="round"
-              />
+                stroke-width="4"
+                stroke-linecap="round"/>
 
             </svg>
 
@@ -630,324 +538,316 @@
               500,00 €
             </span>
 
-            <div class="detail-rimborso-label">
+            <span class="detail-rimborso-label">
               valore nominale
-            </div>
+            </span>
 
           </div>
 
         </div>
 
-
-        <!-- CONTO -->
 
         <div class="detail-account">
 
           <div class="account-icon">
 
             <svg
-              viewBox="0 0 50 40"
+              viewBox="0 0 44 34"
               xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
-            >
+              aria-hidden="true">
 
               <rect
                 x="4"
-                y="8"
-                width="42"
-                height="27"
-                rx="5"
-                fill="#ffffff"
-              />
-
-              <rect
-                x="8"
-                y="13"
-                width="34"
-                height="17"
-                rx="3"
+                y="7"
+                width="36"
+                height="22"
+                rx="4"
                 fill="none"
                 stroke="#0759c9"
-                stroke-width="2"
-              />
+                stroke-width="2"/>
 
-              <circle
-                cx="16"
-                cy="21.5"
-                r="4"
-                fill="#0759c9"
-              />
-
-              <line
-                x1="24"
-                y1="19"
-                x2="37"
-                y2="19"
-                stroke="#0759c9"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
+              <text
+                x="9"
+                y="23"
+                font-size="13"
+                font-weight="600"
+                fill="#0759c9">€</text>
 
               <line
-                x1="24"
-                y1="24"
+                x1="22"
+                y1="15"
                 x2="34"
-                y2="24"
+                y2="15"
                 stroke="#0759c9"
                 stroke-width="2"
-                stroke-linecap="round"
-              />
+                stroke-linecap="round"/>
+
+              <line
+                x1="22"
+                y1="21"
+                x2="31"
+                y2="21"
+                stroke="#0759c9"
+                stroke-width="2"
+                stroke-linecap="round"/>
 
             </svg>
 
           </div>
 
           <div class="account-text">
-            Accredito sul conto di regolamento
+            Accredito sul conto associato
           </div>
 
         </div>
 
-      </section>
+      </div>
 
 
       <!-- =================================================
-           RIEPILOGO DATI
+           RIEPILOGO DETTAGLIO
            ================================================= -->
 
-      <section class="detail-summary">
+      <h2 class="detail-section-title">
+        Riepilogo
+      </h2>
 
-        <h2 class="detail-section-title">
-          Riepilogo
-        </h2>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Data sottoscrizione
+        </span>
 
-          <span class="detail-label">
-            Data di sottoscrizione
-          </span>
+        <span
+          class="detail-value"
+          id="detailSottoscritto">
+          16 Settembre 2026
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailSottoscritto"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Data scadenza
+        </span>
 
-          <span class="detail-label">
-            Data di scadenza
-          </span>
+        <span
+          class="detail-value"
+          id="detailScadenza">
+          16 Settembre 2038
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailScadenza"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Valore nominale
+        </span>
 
-          <span class="detail-label">
-            Valore nominale
-          </span>
+        <span
+          class="detail-value"
+          id="detailNominale">
+          500,00 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailNominale"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Ritenuta fiscale iniziale
+        </span>
 
-          <span class="detail-label">
-            Ritenuta fiscale
-          </span>
+        <span
+          class="detail-value"
+          id="detailRitenuta">
+          0,00 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailRitenuta"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field last-detail-field">
 
-        <div class="detail-field last-detail-field">
+        <span class="detail-label">
+          Valore rimborso netto
+        </span>
 
-          <span class="detail-label">
-            Valore rimborso netto
-          </span>
+        <span
+          class="detail-value"
+          id="detailNetto">
+          650,89 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailNetto"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-divider"></div>
 
-        <div class="detail-divider"></div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Valore rimborso lordo senza premio
+        </span>
 
-          <span class="detail-label">
-            Valore rimborso lordo senza premio
-          </span>
+        <span
+          class="detail-value"
+          id="detailLordoSenzaPremio">
+          672,44 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailLordoSenzaPremio"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Ritenuta fiscale a scadenza
+        </span>
 
-          <span class="detail-label">
-            Ritenuta alla scadenza
-          </span>
+        <span
+          class="detail-value"
+          id="detailRitenutaScadenza">
+          21,56 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailRitenutaScadenza"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Valore rimborso netto senza premio
+        </span>
 
-          <span class="detail-label">
-            Valore rimborso netto senza premio
-          </span>
+        <span
+          class="detail-value"
+          id="detailNettoSenzaPremio">
+          650,89 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailNettoSenzaPremio"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-divider"></div>
 
-        <div class="detail-divider"></div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Premio lordo
+        </span>
 
-          <span class="detail-label">
-            Premio lordo
-          </span>
+        <span
+          class="detail-value"
+          id="detailPremioLordo">
+          40,00 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailPremioLordo"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Ritenuta fiscale sul premio
+        </span>
 
-          <span class="detail-label">
-            Ritenuta sul premio
-          </span>
+        <span
+          class="detail-value"
+          id="detailRitenutaPremio">
+          5,00 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailRitenutaPremio"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Premio netto
+        </span>
 
-          <span class="detail-label">
-            Premio netto
-          </span>
+        <span
+          class="detail-value"
+          id="detailPremioNetto">
+          35,00 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailPremioNetto"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-divider"></div>
 
-        <div class="detail-divider"></div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Valore rimborso lordo con premio
+        </span>
 
-          <span class="detail-label">
-            Valore rimborso lordo con premio
-          </span>
+        <span
+          class="detail-value"
+          id="detailLordoConPremio">
+          712,44 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailLordoConPremio"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field">
 
-        <div class="detail-field">
+        <span class="detail-label">
+          Ritenuta fiscale totale
+        </span>
 
-          <span class="detail-label">
-            Ritenuta totale
-          </span>
+        <span
+          class="detail-value"
+          id="detailRitenutaTotale">
+          26,56 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailRitenutaTotale"
-          ></span>
+      </div>
 
-        </div>
 
+      <div class="detail-field last-detail-field">
 
-        <div class="detail-field last-detail-field">
+        <span class="detail-label">
+          Valore rimborso netto con premio
+        </span>
 
-          <span class="detail-label">
-            Valore rimborso netto con premio
-          </span>
+        <span
+          class="detail-value"
+          id="detailNettoConPremio">
+          685,89 €
+        </span>
 
-          <span
-            class="detail-value"
-            id="detailNettoConPremio"
-          ></span>
+      </div>
 
-        </div>
+    </section>
 
-      </section>
-
-    </main>
-
-
-    <!-- PULSANTE FISSO -->
 
     <div class="bottom-action">
 
       <button
         type="button"
-        onclick="operationMessage('Richiedi rimborso')"
-      >
-        Richiedi rimborso
+        onclick="tornaAllaLista()">
+        Chiudi
       </button>
 
     </div>
 
-  </div>
+  </main>
 
 
-  <script src="script.js?v=21"></script>
+  <script src="script.js?v=30"></script>
 
 </body>
 </html>
