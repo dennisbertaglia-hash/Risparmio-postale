@@ -17,7 +17,7 @@
 <body>
 
   <!-- =========================
-       PAGINA PRINCIPALE
+       PAGINA ELENCO BUONI
        ========================= -->
 
   <div id="paginaPrincipale">
@@ -30,7 +30,7 @@
         onclick="tornaAllaLista()"
         aria-label="Indietro"
       >
-        <svg viewBox="0 0 40 40">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
           <path
             d="M25 7 L12 20 L25 33"
             fill="none"
@@ -50,6 +50,7 @@
           class="eye-icon"
           viewBox="0 0 50 50"
           xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
           <path
             d="M5 25 C11 14 18 9 25 9 C32 9 39 14 45 25 C39 36 32 41 25 41 C18 41 11 36 5 25Z"
@@ -93,7 +94,9 @@
 
       <section class="summary-card">
 
-        <h2 id="totaleBuoni">20 Buoni</h2>
+        <h2 id="totaleBuoni">
+          20 Buoni
+        </h2>
 
         <div class="summary-item">
 
@@ -149,6 +152,7 @@
             <svg
               viewBox="0 0 170 170"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
 
               <circle
@@ -199,7 +203,7 @@
               <text
                 x="48"
                 y="102"
-                font-family="Arial"
+                font-family="Arial, sans-serif"
                 font-size="26"
                 font-weight="700"
                 fill="#1261b9"
@@ -271,6 +275,7 @@
             <svg
               viewBox="0 0 170 170"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
 
               <circle
@@ -376,6 +381,7 @@
             class="filtro-sliders-icon"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
 
             <line x1="4" y1="6" x2="20" y2="6"/>
@@ -417,6 +423,11 @@
       </div>
 
 
+      <!--
+        Il JavaScript inserisce qui
+        tutti i 20 Buoni cliccabili.
+      -->
+
       <section id="listaBuoni"></section>
 
     </main>
@@ -425,7 +436,7 @@
 
 
   <!-- =========================
-       PAGINA DETTAGLIO
+       PAGINA DETTAGLIO BUONO
        ========================= -->
 
   <div
@@ -443,7 +454,7 @@
         aria-label="Indietro"
       >
 
-        <svg viewBox="0 0 40 40">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
           <path
             d="M25 7 L12 20 L25 33"
             fill="none"
@@ -474,6 +485,7 @@
             <svg
               viewBox="0 0 170 170"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
 
               <circle
@@ -524,7 +536,7 @@
               <text
                 x="48"
                 y="102"
-                font-family="Arial"
+                font-family="Arial, sans-serif"
                 font-size="26"
                 font-weight="700"
                 fill="#1261b9"
@@ -554,9 +566,11 @@
 
 
           <div class="detail-rimborso">
+
             <span id="detailValoreRimborso">
               500,00 €
             </span>
+
           </div>
 
 
@@ -571,7 +585,11 @@
 
           <div class="account-icon">
 
-            <svg viewBox="0 0 80 60">
+            <svg
+              viewBox="0 0 80 60"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
 
               <rect
                 x="15"
@@ -621,6 +639,10 @@
 
       </section>
 
+
+      <!-- =========================
+           RIEPILOGO DATI
+           ========================= -->
 
       <h2 class="detail-section-title">
         Riepilogo dei dati
@@ -864,6 +886,10 @@
 
     </main>
 
+
+    <!-- =========================
+         PULSANTE FISSO
+         ========================= -->
 
     <div class="bottom-action">
 
