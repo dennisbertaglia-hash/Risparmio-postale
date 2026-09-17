@@ -664,9 +664,11 @@ main {
   width: 100%;
   background: #eef7ff;
   border-radius: 15px;
-  padding: 31px 34px 32px;
+  padding: 23px 28px 20px;
+  padding-top: 23px;
+  padding-bottom: 20px;
   margin-top: 24px;
-  min-height: 235px;
+  min-height: 220px;
 }
 
 .summary-card h2 {
@@ -677,23 +679,23 @@ main {
 }
 
 .summary-item {
-  margin-top: 44px;
+  margin-top: 29px;
 }
 
 .summary-item.second {
-  margin-top: 26px;
+  margin-top: 17px;
 }
 
 .summary-label {
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.2;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .summary-value {
-  margin-top: 4px;
-  font-size: 19.5px;
-  line-height: 1.2;
+  margin-top: 3px;
+  font-size: 16px;
+  line-height: 1.15;
   font-weight: 400;
 }
 
