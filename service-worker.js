@@ -1,4 +1,4 @@
-const CACHE_NAME = "risparmio-postale-v11";
+const CACHE_NAME = "risparmio-postale-v12";
 
 const FILES_TO_CACHE = [
   "./",
@@ -9,9 +9,9 @@ const FILES_TO_CACHE = [
 ];
 
 
-/* =====================================================
+/* =========================================================
    INSTALLAZIONE
-   ===================================================== */
+   ========================================================= */
 
 self.addEventListener("install", event => {
 
@@ -26,9 +26,9 @@ self.addEventListener("install", event => {
 });
 
 
-/* =====================================================
+/* =========================================================
    ATTIVAZIONE
-   ===================================================== */
+   ========================================================= */
 
 self.addEventListener("activate", event => {
 
@@ -40,8 +40,8 @@ self.addEventListener("activate", event => {
         return Promise.all(
 
           cacheNames
-            .filter(cacheName => cacheName !== CACHE_NAME)
-            .map(cacheName => caches.delete(cacheName))
+            .filter(name => name !== CACHE_NAME)
+            .map(name => caches.delete(name))
 
         );
 
@@ -53,63 +53,53 @@ self.addEventListener("activate", event => {
 });
 
 
-/* =====================================================
+/* =========================================================
    RICHIESTE
-   ===================================================== */
+   ========================================================= */
 
 self.addEventListener("fetch", event => {
+
+  /*
+     Per i file dell'app proviamo sempre a prendere
+     la versione aggiornata dalla rete.
+  */
 
   event.respondWith(
 
     fetch(event.request)
       .then(response => {
 
-        const responseClone = response.clone();
+        if (
+          response &&
+          response.status === 200 &&
+          response.type !== "opaque"
+        ) {
 
-        caches.open(CACHE_NAME)
-          .then(cache => {
-            cache.put(event.request, responseClone);
-          });
+          const copia = response.clone();
+
+          caches.open(CACHE_NAME)
+            .then(cache => {
+
+              cache.put(
+                event.request,
+                copia
+              );
+
+            });
+
+        }
 
         return response;
 
       })
       .catch(() => {
 
-        return caches.match(event.request);
+        return caches.match(
+          event.request
+        );
 
       })
 
   );
 
 });
-/* =====================================================
-   APRI PAGINA RISPARMIO / BUONI
-   ===================================================== */
-
-function apriRisparmio() {
-
-  const paginaHome =
-    document.getElementById("paginaHome");
-
-  const paginaPrincipale =
-    document.getElementById("paginaPrincipale");
-
-  const paginaDettaglio =
-    document.getElementById("paginaDettaglio");
-
-
-  if (paginaHome) {
-    paginaHome.style.display = "none";
-  }
-
-  if (paginaDettaglio) {
-    paginaDettaglio.style.display = "none";
-  }
-
-  if (paginaPrincipale) {
-    paginaPrincipale.style.display = "block";
-  }
-
-  window.scrollTo(0, 0);
-}
