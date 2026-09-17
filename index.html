@@ -2,7 +2,6 @@
 <html lang="it">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -13,20 +12,15 @@
   <title>Buoni</title>
 
   <link rel="stylesheet" href="style.css?v=10">
-
 </head>
-
 
 <body>
 
-
-  <!-- =====================================================
-       PAGINA BUONI
-       ===================================================== -->
+  <!-- =========================
+       PAGINA PRINCIPALE
+       ========================= -->
 
   <div id="paginaPrincipale">
-
-    <!-- HEADER -->
 
     <header class="top-header">
 
@@ -36,12 +30,7 @@
         onclick="tornaAllaLista()"
         aria-label="Indietro"
       >
-
-        <svg
-          viewBox="0 0 40 40"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-
+        <svg viewBox="0 0 40 40">
           <path
             d="M25 7 L12 20 L25 33"
             fill="none"
@@ -50,14 +39,10 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           />
-
         </svg>
-
       </button>
 
-
       <h1>Buoni</h1>
-
 
       <div class="top-icons">
 
@@ -65,17 +50,9 @@
           class="eye-icon"
           viewBox="0 0 50 50"
           xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
         >
-
           <path
-            d="
-              M5 25
-              C11 14 18 9 25 9
-              C32 9 39 14 45 25
-              C39 36 32 41 25 41
-              C18 41 11 36 5 25Z
-            "
+            d="M5 25 C11 14 18 9 25 9 C32 9 39 14 45 25 C39 36 32 41 25 41 C18 41 11 36 5 25Z"
             fill="none"
             stroke="#111"
             stroke-width="3.5"
@@ -99,9 +76,7 @@
             stroke-width="4"
             stroke-linecap="round"
           />
-
         </svg>
-
 
         <span class="question">?</span>
 
@@ -110,22 +85,15 @@
     </header>
 
 
-
-    <!-- CONTENUTO BUONI -->
-
     <main>
 
-
-      <!-- =================================================
+      <!-- =========================
            RIEPILOGO
-           ================================================= -->
+           ========================= -->
 
       <section class="summary-card">
 
-        <h2 id="totaleBuoni">
-          20 Buoni
-        </h2>
-
+        <h2 id="totaleBuoni">20 Buoni</h2>
 
         <div class="summary-item">
 
@@ -141,7 +109,6 @@
           </div>
 
         </div>
-
 
         <div class="summary-item second">
 
@@ -161,20 +128,15 @@
       </section>
 
 
-
-      <!-- =================================================
+      <!-- =========================
            OPERAZIONI
-           ================================================= -->
+           ========================= -->
 
       <h2 class="section-title">
         Operazioni
       </h2>
 
-
       <section class="operations">
-
-
-        <!-- ACQUISTA -->
 
         <button
           class="operation-button"
@@ -217,7 +179,6 @@
 
               </g>
 
-
               <rect
                 x="39"
                 y="69"
@@ -244,7 +205,6 @@
                 fill="#1261b9"
               >€</text>
 
-
               <rect
                 x="80"
                 y="89"
@@ -262,7 +222,6 @@
                 rx="1"
                 fill="#fff"
               />
-
 
               <circle
                 cx="121"
@@ -300,9 +259,6 @@
 
         </button>
 
-
-
-        <!-- RIMBORSO -->
 
         <button
           class="operation-button"
@@ -361,32 +317,12 @@
               />
 
               <path
-                d="
-                  M45 72
-                  H106
-                  C113 72 118 77 118 84
-                  V103
-                  C118 110 113 114 106 114
-                  H46
-                  C39 114 35 110 35 103
-                  V83
-                  C35 76 39 72 45 72
-                  Z
-                "
+                d="M45 72 H106 C113 72 118 77 118 84 V103 C118 110 113 114 106 114 H46 C39 114 35 110 35 103 V83 C35 76 39 72 45 72Z"
                 fill="#f4d000"
               />
 
               <path
-                d="
-                  M35 125
-                  V96
-                  H25
-                  L41 79
-                  L57 96
-                  H47
-                  V125
-                  Z
-                "
+                d="M35 125 V96 H25 L41 79 L57 96 H47 V125Z"
                 fill="#3eb969"
               />
 
@@ -417,24 +353,19 @@
 
         </button>
 
-
       </section>
 
 
-
-      <!-- =================================================
+      <!-- =========================
            ELENCO
-           ================================================= -->
+           ========================= -->
 
       <h2 class="section-title your-bonds">
         Elenco Buoni
       </h2>
 
 
-      <!-- FILTRI -->
-
       <div class="filtri">
-
 
         <button
           class="filtro filtro-filtra"
@@ -445,7 +376,6 @@
             class="filtro-sliders-icon"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
           >
 
             <line x1="4" y1="6" x2="20" y2="6"/>
@@ -463,20 +393,16 @@
         </button>
 
 
-
         <button
           class="filtro prodotto"
           type="button"
         >
 
-          <u>
-            Prodotti
-          </u>
+          <u>Prodotti</u>
 
           <span class="freccia-down"></span>
 
         </button>
-
 
 
         <button
@@ -484,36 +410,29 @@
           type="button"
         >
 
-          <u>
-            Periodo di scadenza
-          </u>
+          <u>Periodo di scadenza</u>
 
         </button>
-
 
       </div>
 
 
-
       <section id="listaBuoni"></section>
-
 
     </main>
 
   </div>
 
 
-
-  <!-- =====================================================
-       PAGINA DETTAGLIO BUONO
-       ===================================================== -->
+  <!-- =========================
+       PAGINA DETTAGLIO
+       ========================= -->
 
   <div
     id="paginaDettaglio"
     class="pagina-dettaglio"
     style="display:none;"
   >
-
 
     <header class="detail-header">
 
@@ -525,7 +444,6 @@
       >
 
         <svg viewBox="0 0 40 40">
-
           <path
             d="M25 7 L12 20 L25 33"
             fill="none"
@@ -534,11 +452,9 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           />
-
         </svg>
 
       </button>
-
 
       <h1 id="detailTitolo">
         Buono 3×4 con premio
@@ -547,9 +463,7 @@
     </header>
 
 
-
     <main class="detail-main">
-
 
       <section class="detail-card">
 
@@ -590,7 +504,6 @@
 
               </g>
 
-
               <rect
                 x="39"
                 y="69"
@@ -617,7 +530,6 @@
                 fill="#1261b9"
               >€</text>
 
-
               <rect
                 x="80"
                 y="89"
@@ -642,11 +554,9 @@
 
 
           <div class="detail-rimborso">
-
             <span id="detailValoreRimborso">
               500,00 €
             </span>
-
           </div>
 
 
@@ -655,7 +565,6 @@
           </div>
 
         </div>
-
 
 
         <div class="detail-account">
@@ -703,12 +612,9 @@
 
           </div>
 
-
           <div class="account-text">
-
             Regolato su Conto<br>
             001062627284
-
           </div>
 
         </div>
@@ -716,11 +622,9 @@
       </section>
 
 
-
       <h2 class="detail-section-title">
         Riepilogo dei dati
       </h2>
-
 
 
       <div class="detail-field">
@@ -739,7 +643,6 @@
       </div>
 
 
-
       <div class="detail-field">
 
         <div class="detail-label">
@@ -754,7 +657,6 @@
         </div>
 
       </div>
-
 
 
       <div class="detail-field">
@@ -773,7 +675,6 @@
       </div>
 
 
-
       <div class="detail-field">
 
         <div class="detail-label">
@@ -790,9 +691,7 @@
       </div>
 
 
-
       <div class="detail-divider"></div>
-
 
 
       <div class="detail-field">
@@ -811,9 +710,7 @@
       </div>
 
 
-
       <div class="detail-divider"></div>
-
 
 
       <div class="detail-field">
@@ -832,7 +729,6 @@
       </div>
 
 
-
       <div class="detail-field">
 
         <div class="detail-label">
@@ -847,7 +743,6 @@
         </div>
 
       </div>
-
 
 
       <div class="detail-field">
@@ -866,9 +761,7 @@
       </div>
 
 
-
       <div class="detail-divider"></div>
-
 
 
       <div class="detail-field">
@@ -887,7 +780,6 @@
       </div>
 
 
-
       <div class="detail-field">
 
         <div class="detail-label">
@@ -902,7 +794,6 @@
         </div>
 
       </div>
-
 
 
       <div class="detail-field">
@@ -921,9 +812,7 @@
       </div>
 
 
-
       <div class="detail-divider"></div>
-
 
 
       <div class="detail-field">
@@ -942,7 +831,6 @@
       </div>
 
 
-
       <div class="detail-field">
 
         <div class="detail-label">
@@ -957,7 +845,6 @@
         </div>
 
       </div>
-
 
 
       <div class="detail-field last-detail-field">
@@ -975,9 +862,7 @@
 
       </div>
 
-
     </main>
-
 
 
     <div class="bottom-action">
@@ -986,23 +871,15 @@
         type="button"
         onclick="operationMessage('Richiedi rimborso')"
       >
-
-        <u>
-          Richiedi rimborso
-        </u>
-
+        <u>Richiedi rimborso</u>
       </button>
 
     </div>
 
-
   </div>
-
 
 
   <script src="script.js?v=9"></script>
 
-
 </body>
-
 </html>
