@@ -4,7 +4,7 @@
 
 
 /* =========================================================
-   20 BUONI
+   DATI DEI 20 BUONI
    ========================================================= */
 
 const buoni = [
@@ -116,10 +116,12 @@ const buoni = [
    ========================================================= */
 
 function euro(valore) {
+
   return Number(valore).toLocaleString("it-IT", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }) + " €";
+
 }
 
 
@@ -167,11 +169,13 @@ function calcolaDati(nominale) {
     ritenutaTotale,
     nettoConPremio
   };
+
 }
 
 
 /* =========================================================
-   ICONA BUONO - MODELLO
+   ICONA BUONO
+   MODELLO BLU
    ========================================================= */
 
 function iconaBuonoSVG() {
@@ -222,6 +226,7 @@ function iconaBuonoSVG() {
 
     </svg>
   `;
+
 }
 
 
@@ -271,7 +276,7 @@ function iconaAcquistaSVG() {
         fill="#0759C9"/>
 
 
-      <!-- RIGHE -->
+      <!-- RIGHE BIANCHE -->
 
       <rect
         x="32"
@@ -290,7 +295,7 @@ function iconaAcquistaSVG() {
         fill="#FFFFFF"/>
 
 
-      <!-- PLUS -->
+      <!-- PLUS VERDE -->
 
       <circle
         cx="56"
@@ -306,6 +311,7 @@ function iconaAcquistaSVG() {
 
     </svg>
   `;
+
 }
 
 
@@ -374,30 +380,31 @@ function iconaRimborsoSVG() {
 
     </svg>
   `;
+
 }
 
 
 /* =========================================================
-   SOSTITUISCE LE ICONE OPERAZIONI
+   IMPOSTA LE ICONE OPERAZIONI
    ========================================================= */
 
 function aggiornaIconeOperazioni() {
 
-  const operazioni =
+  const contenitori =
     document.querySelectorAll(
-      ".operation-button .operation-icon svg"
+      ".operation-button .operation-icon"
     );
 
-  if (operazioni.length >= 1) {
+  if (contenitori.length >= 1) {
 
-    operazioni[0].outerHTML =
+    contenitori[0].innerHTML =
       iconaAcquistaSVG();
 
   }
 
-  if (operazioni.length >= 2) {
+  if (contenitori.length >= 2) {
 
-    operazioni[1].outerHTML =
+    contenitori[1].innerHTML =
       iconaRimborsoSVG();
 
   }
@@ -412,21 +419,28 @@ function aggiornaIconeOperazioni() {
 function aggiornaRiepilogo() {
 
   const totale =
-    buoni.reduce(function (somma, buono) {
-
-      return somma + buono.nominale;
-
-    }, 0);
+    buoni.reduce(
+      function (somma, buono) {
+        return somma + buono.nominale;
+      },
+      0
+    );
 
 
   const totaleBuoni =
-    document.getElementById("totaleBuoni");
+    document.getElementById(
+      "totaleBuoni"
+    );
 
   const valoreNominale =
-    document.getElementById("valoreNominale");
+    document.getElementById(
+      "valoreNominale"
+    );
 
   const valoreRimborsoLordo =
-    document.getElementById("valoreRimborsoLordo");
+    document.getElementById(
+      "valoreRimborsoLordo"
+    );
 
 
   if (totaleBuoni) {
@@ -476,7 +490,7 @@ function creaIconaBuono() {
 
 
 /* =========================================================
-   GENERA LISTA
+   GENERA LISTA BUONI
    ========================================================= */
 
 function generaListaBuoni() {
@@ -490,7 +504,7 @@ function generaListaBuoni() {
   if (!lista) {
 
     console.error(
-      "ERRORE: elemento #listaBuoni non trovato."
+      "Elemento #listaBuoni non trovato."
     );
 
     return;
@@ -501,132 +515,115 @@ function generaListaBuoni() {
   lista.innerHTML = "";
 
 
-  buoni.forEach(function (buono, indice) {
+  buoni.forEach(
+    function (buono, indice) {
+
+      const riga =
+        document.createElement("div");
+
+      riga.className =
+        "bond-item";
+
+      riga.setAttribute(
+        "role",
+        "button"
+      );
+
+      riga.setAttribute(
+        "tabindex",
+        "0"
+      );
 
 
-    const riga =
-      document.createElement("div");
+      /* ICONA */
+
+      const icona =
+        creaIconaBuono();
 
 
-    riga.className =
-      "bond-item";
+      /* INFORMAZIONI */
+
+      const informazioni =
+        document.createElement("div");
+
+      informazioni.className =
+        "bond-item-info";
+
+      informazioni.innerHTML = `
+        <div class="data">
+          scade il ${buono.scadenza}
+        </div>
+
+        <div class="nome">
+          Buono 3×4 con premio
+        </div>
+      `;
 
 
-    riga.setAttribute(
-      "role",
-      "button"
-    );
+      /* VALORE */
+
+      const valore =
+        document.createElement("div");
+
+      valore.className =
+        "bond-item-value";
+
+      valore.innerHTML = `
+        <div class="label">
+          valore rimborso lordo
+        </div>
+
+        <div class="valore">
+          ${euro(buono.nominale)}
+        </div>
+      `;
 
 
-    riga.setAttribute(
-      "tabindex",
-      "0"
-    );
+      /* ASSEMBLA */
+
+      riga.appendChild(icona);
+
+      riga.appendChild(informazioni);
+
+      riga.appendChild(valore);
 
 
-    /* ICONA */
+      /* CLICK */
 
-    const icona =
-      creaIconaBuono();
-
-
-    /* INFORMAZIONI */
-
-    const informazioni =
-      document.createElement("div");
-
-
-    informazioni.className =
-      "bond-item-info";
-
-
-    informazioni.innerHTML = `
-
-      <div class="data">
-        scade il ${buono.scadenza}
-      </div>
-
-      <div class="nome">
-        Buono 3×4 con premio
-      </div>
-
-    `;
-
-
-    /* VALORE */
-
-    const valore =
-      document.createElement("div");
-
-
-    valore.className =
-      "bond-item-value";
-
-
-    valore.innerHTML = `
-
-      <div class="label">
-        valore rimborso lordo
-      </div>
-
-      <div class="valore">
-        ${euro(buono.nominale)}
-      </div>
-
-    `;
-
-
-    /* ASSEMBLA */
-
-    riga.appendChild(icona);
-
-    riga.appendChild(informazioni);
-
-    riga.appendChild(valore);
-
-
-    /* CLICK */
-
-    riga.addEventListener(
-      "click",
-      function () {
-
-        apriDettaglio(indice);
-
-      }
-    );
-
-
-    /* TASTIERA */
-
-    riga.addEventListener(
-      "keydown",
-      function (event) {
-
-        if (
-          event.key === "Enter" ||
-          event.key === " "
-        ) {
-
-          event.preventDefault();
+      riga.addEventListener(
+        "click",
+        function () {
 
           apriDettaglio(indice);
 
         }
-
-      }
-    );
+      );
 
 
-    lista.appendChild(riga);
+      /* TASTIERA */
 
-  });
+      riga.addEventListener(
+        "keydown",
+        function (event) {
+
+          if (
+            event.key === "Enter" ||
+            event.key === " "
+          ) {
+
+            event.preventDefault();
+
+            apriDettaglio(indice);
+
+          }
+
+        }
+      );
 
 
-  console.log(
-    "Lista caricata:",
-    buoni.length,
-    "buoni"
+      lista.appendChild(riga);
+
+    }
   );
 
 }
@@ -658,15 +655,20 @@ function apriDettaglio(indice) {
       "paginaPrincipale"
     );
 
-
   const paginaDettaglio =
     document.getElementById(
       "paginaDettaglio"
     );
 
 
-  if (!paginaPrincipale ||
-      !paginaDettaglio) {
+  if (
+    !paginaPrincipale ||
+    !paginaDettaglio
+  ) {
+
+    console.error(
+      "Pagine non trovate."
+    );
 
     return;
 
@@ -675,7 +677,6 @@ function apriDettaglio(indice) {
 
   paginaPrincipale.style.display =
     "none";
-
 
   paginaDettaglio.style.display =
     "block";
@@ -726,7 +727,7 @@ function apriDettaglio(indice) {
   }
 
 
-  /* SOTTOSCRIZIONE */
+  /* DATA SOTTOSCRIZIONE */
 
   const sottoscrizione =
     document.getElementById(
@@ -741,7 +742,7 @@ function apriDettaglio(indice) {
   }
 
 
-  /* SCADENZA */
+  /* DATA SCADENZA */
 
   const scadenza =
     document.getElementById(
@@ -801,7 +802,11 @@ function apriDettaglio(indice) {
   }
 
 
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
 
 }
 
@@ -816,7 +821,6 @@ function tornaAllaLista() {
     document.getElementById(
       "paginaPrincipale"
     );
-
 
   const paginaDettaglio =
     document.getElementById(
@@ -840,7 +844,11 @@ function tornaAllaLista() {
   }
 
 
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "instant"
+  });
 
 }
 
@@ -858,24 +866,34 @@ function collegaFrecciaIndietro() {
 
 
   if (!freccia) {
+
+    console.error(
+      "Freccia dettaglio non trovata."
+    );
+
     return;
+
   }
 
 
-  freccia.onclick =
+  freccia.addEventListener(
+    "click",
     function (event) {
 
       event.preventDefault();
 
+      event.stopPropagation();
+
       tornaAllaLista();
 
-    };
+    }
+  );
 
 }
 
 
 /* =========================================================
-   AVVIO
+   AVVIO APP
    ========================================================= */
 
 function avviaApp() {
@@ -892,7 +910,7 @@ function avviaApp() {
 
 
 /* =========================================================
-   DOM
+   AVVIO DOPO IL CARICAMENTO
    ========================================================= */
 
 if (
