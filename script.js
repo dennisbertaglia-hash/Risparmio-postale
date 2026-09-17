@@ -234,19 +234,23 @@ function generaListaBuoni() {
   buoni.forEach(function (buono, indice) {
 
     const riga =
-      document.createElement("div");
+      document.createElement("button");
 
-    riga.className = "buono";
+    riga.type = "button";
+
+    riga.className =
+      "bond-item-button";
 
 
-    /* =========================
-       ICONA PICCOLA
-       ========================= */
+    /* =====================================================
+       ICONA
+       ===================================================== */
 
     const icona =
-      document.createElement("div");
+      document.createElement("span");
 
-    icona.className = "buono-icon";
+    icona.className =
+      "bond-item-icon";
 
     icona.innerHTML = `
       <svg
@@ -254,127 +258,112 @@ function generaListaBuoni() {
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <circle
-          cx="24"
-          cy="24"
-          r="20"
-          fill="#eef7ff"
+
+        <rect
+          x="7"
+          y="12"
+          width="34"
+          height="24"
+          rx="3"
+          fill="#ffd400"
         />
 
         <rect
-          x="13"
-          y="16"
-          width="22"
-          height="16"
-          rx="3"
-          fill="none"
-          stroke="#0759c9"
-          stroke-width="2"
+          x="7"
+          y="12"
+          width="7"
+          height="24"
+          fill="#1766d1"
         />
 
-        <line
-          x1="18"
-          y1="21"
-          x2="30"
-          y2="21"
-          stroke="#0759c9"
-          stroke-width="2"
-          stroke-linecap="round"
+        <text
+          x="17"
+          y="29"
+          font-size="14"
+          font-weight="700"
+          fill="#1766d1"
+        >€</text>
+
+        <rect
+          x="25"
+          y="26"
+          width="11"
+          height="2"
+          rx="1"
+          fill="#ffffff"
         />
 
-        <line
-          x1="18"
-          y1="26"
-          x2="27"
-          y2="26"
-          stroke="#0759c9"
-          stroke-width="2"
-          stroke-linecap="round"
+        <rect
+          x="27"
+          y="30"
+          width="9"
+          height="2"
+          rx="1"
+          fill="#ffffff"
         />
 
-        <circle
-          cx="18"
-          cy="24"
-          r="1.5"
-          fill="#0759c9"
-        />
       </svg>
     `;
 
 
-    /* =========================
-       TESTO CENTRALE
-       ========================= */
+    /* =====================================================
+       INFORMAZIONI
+       ===================================================== */
 
     const informazioni =
-      document.createElement("div");
+      document.createElement("span");
 
     informazioni.className =
-      "buono-info";
+      "bond-item-info";
 
     informazioni.innerHTML = `
-      <div class="data">
+      <span class="data">
         scade il ${buono.scadenza}
-      </div>
+      </span>
 
-      <div class="nome">
+      <span class="nome">
         Buono 3×4 con premio
-      </div>
+      </span>
     `;
 
 
-    /* =========================
-       VALORE A DESTRA
-       ========================= */
+    /* =====================================================
+       VALORE
+       ===================================================== */
 
     const valore =
-      document.createElement("div");
+      document.createElement("span");
 
     valore.className =
-      "buono-valore";
+      "bond-item-value";
 
     valore.innerHTML = `
-      <div class="buono-valore-label">
+      <span class="label">
         valore rimborso lordo
-      </div>
+      </span>
 
-      <div class="valore">
+      <span class="valore">
         ${euro(buono.nominale)}
-      </div>
+      </span>
     `;
 
 
-    /* =========================
-       ASSEMBLA RIGA
-       ========================= */
+    /* =====================================================
+       ASSEMBLA
+       ===================================================== */
 
     riga.appendChild(icona);
     riga.appendChild(informazioni);
     riga.appendChild(valore);
 
 
-    /* =========================
+    /* =====================================================
        CLICK
-       ========================= */
+       ===================================================== */
 
     riga.addEventListener("click", function () {
+
       apriDettaglio(indice);
-    });
-
-
-    riga.setAttribute("role", "button");
-    riga.setAttribute("tabindex", "0");
-
-
-    riga.addEventListener("keydown", function (event) {
-
-      if (
-        event.key === "Enter" ||
-        event.key === " "
-      ) {
-        event.preventDefault();
-        apriDettaglio(indice);
-      }
 
     });
 
@@ -419,9 +408,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
+  /* =====================================================
      TITOLO
-     ========================= */
+     ===================================================== */
 
   const titolo =
     document.getElementById("detailTitolo");
@@ -432,9 +421,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
+  /* =====================================================
      VALORE GRANDE
-     ========================= */
+     ===================================================== */
 
   const valoreRimborso =
     document.getElementById("detailValoreRimborso");
@@ -445,9 +434,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
+  /* =====================================================
      DATI PRINCIPALI
-     ========================= */
+     ===================================================== */
 
   const sottoscritto =
     document.getElementById("detailSottoscritto");
@@ -476,9 +465,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
-     RITENUTA FISCALE INIZIALE
-     ========================= */
+  /* =====================================================
+     RITENUTA FISCALE
+     ===================================================== */
 
   const ritenuta =
     document.getElementById("detailRitenuta");
@@ -489,9 +478,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
-     VALORE RIMBORSO NETTO
-     ========================= */
+  /* =====================================================
+     VALORE NETTO
+     ===================================================== */
 
   const netto =
     document.getElementById("detailNetto");
@@ -502,9 +491,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
+  /* =====================================================
      SENZA PREMIO
-     ========================= */
+     ===================================================== */
 
   const lordoSenzaPremio =
     document.getElementById(
@@ -539,9 +528,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
+  /* =====================================================
      PREMIO
-     ========================= */
+     ===================================================== */
 
   const premioLordo =
     document.getElementById(
@@ -576,9 +565,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
+  /* =====================================================
      CON PREMIO
-     ========================= */
+     ===================================================== */
 
   const lordoConPremio =
     document.getElementById(
@@ -613,9 +602,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =========================
+  /* =====================================================
      TORNA IN ALTO
-     ========================= */
+     ===================================================== */
 
   window.scrollTo({
     top: 0,
