@@ -230,57 +230,45 @@ if (contenitoreBuoni) {
       <div class="buono-icon">
 
         <svg
-          width="28"
-          height="28"
-          viewBox="0 0 28 28"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+  width="28"
+  height="28"
+  viewBox="0 0 28 28"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
 
-          <rect
-            x="3.5"
-            y="6.5"
-            width="21"
-            height="15"
-            rx="2.5"
-            stroke="#0757B8"
-            stroke-width="1.8"
-          />
+  <rect
+    x="4"
+    y="4"
+    width="20"
+    height="20"
+    rx="3"
+    stroke="#0757B8"
+    stroke-width="1.6"
+  />
 
-          <circle
-            cx="14"
-            cy="14"
-            r="3.2"
-            stroke="#0757B8"
-            stroke-width="1.6"
-          />
+  <path
+    d="M9 10H19"
+    stroke="#0757B8"
+    stroke-width="1.6"
+    stroke-linecap="round"
+  />
 
-          <text
-            x="14"
-            y="17.2"
-            text-anchor="middle"
-            font-family="Arial, sans-serif"
-            font-size="7"
-            font-weight="700"
-            fill="#0757B8"
-          >€</text>
+  <path
+    d="M9 14H19"
+    stroke="#0757B8"
+    stroke-width="1.6"
+    stroke-linecap="round"
+  />
 
-          <path
-            d="M6.5 10H9"
-            stroke="#0757B8"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
+  <path
+    d="M9 18H15"
+    stroke="#0757B8"
+    stroke-width="1.6"
+    stroke-linecap="round"
+  />
 
-          <path
-            d="M19 18H21.5"
-            stroke="#0757B8"
-            stroke-width="1.5"
-            stroke-linecap="round"
-          />
-
-        </svg>
-
+</svg>
       </div>
 
 
