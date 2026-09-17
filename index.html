@@ -16,9 +16,9 @@
 
 <body>
 
-  <!-- =========================
+  <!-- =====================================================
        PAGINA ELENCO BUONI
-       ========================= -->
+       ===================================================== -->
 
   <div id="paginaPrincipale">
 
@@ -30,7 +30,13 @@
         onclick="tornaAllaLista()"
         aria-label="Indietro"
       >
-        <svg viewBox="0 0 40 40" aria-hidden="true">
+        <svg
+          viewBox="0 0 40 40"
+          width="40"
+          height="40"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
           <path
             d="M25 7 L12 20 L25 33"
             fill="none"
@@ -42,16 +48,21 @@
         </svg>
       </button>
 
+
       <h1>Buoni</h1>
+
 
       <div class="top-icons">
 
         <svg
           class="eye-icon"
           viewBox="0 0 50 50"
+          width="50"
+          height="50"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
+
           <path
             d="M5 25 C11 14 18 9 25 9 C32 9 39 14 45 25 C39 36 32 41 25 41 C18 41 11 36 5 25Z"
             fill="none"
@@ -77,7 +88,9 @@
             stroke-width="4"
             stroke-linecap="round"
           />
+
         </svg>
+
 
         <span class="question">?</span>
 
@@ -88,15 +101,16 @@
 
     <main>
 
-      <!-- =========================
+      <!-- =================================================
            RIEPILOGO
-           ========================= -->
+           ================================================= -->
 
       <section class="summary-card">
 
         <h2 id="totaleBuoni">
           20 Buoni
         </h2>
+
 
         <div class="summary-item">
 
@@ -112,6 +126,7 @@
           </div>
 
         </div>
+
 
         <div class="summary-item second">
 
@@ -131,15 +146,18 @@
       </section>
 
 
-      <!-- =========================
+      <!-- =================================================
            OPERAZIONI
-           ========================= -->
+           ================================================= -->
 
       <h2 class="section-title">
         Operazioni
       </h2>
 
+
       <section class="operations">
+
+        <!-- ACQUISTA BUONO -->
 
         <button
           class="operation-button"
@@ -151,6 +169,8 @@
 
             <svg
               viewBox="0 0 170 170"
+              width="170"
+              height="170"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
@@ -183,6 +203,7 @@
 
               </g>
 
+
               <rect
                 x="39"
                 y="69"
@@ -200,6 +221,7 @@
                 fill="#1764c0"
               />
 
+
               <text
                 x="48"
                 y="102"
@@ -208,6 +230,7 @@
                 font-weight="700"
                 fill="#1261b9"
               >€</text>
+
 
               <rect
                 x="80"
@@ -226,6 +249,7 @@
                 rx="1"
                 fill="#fff"
               />
+
 
               <circle
                 cx="121"
@@ -256,6 +280,7 @@
 
           </div>
 
+
           <span>
             Acquista<br>
             Buono
@@ -263,6 +288,8 @@
 
         </button>
 
+
+        <!-- RICHIEDI RIMBORSO -->
 
         <button
           class="operation-button"
@@ -274,6 +301,8 @@
 
             <svg
               viewBox="0 0 170 170"
+              width="170"
+              height="170"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
@@ -284,6 +313,7 @@
                 r="85"
                 fill="#f1f8ff"
               />
+
 
               <circle
                 cx="51"
@@ -303,6 +333,7 @@
                 stroke-width="2"
               />
 
+
               <rect
                 x="38"
                 y="62"
@@ -321,15 +352,18 @@
                 fill="#42b96d"
               />
 
+
               <path
                 d="M45 72 H106 C113 72 118 77 118 84 V103 C118 110 113 114 106 114 H46 C39 114 35 110 35 103 V83 C35 76 39 72 45 72Z"
                 fill="#f4d000"
               />
 
+
               <path
                 d="M35 125 V96 H25 L41 79 L57 96 H47 V125Z"
                 fill="#3eb969"
               />
+
 
               <rect
                 x="96"
@@ -351,6 +385,7 @@
 
           </div>
 
+
           <span>
             Richiedi<br>
             rimborso
@@ -361,14 +396,16 @@
       </section>
 
 
-      <!-- =========================
+      <!-- =================================================
            ELENCO
-           ========================= -->
+           ================================================= -->
 
       <h2 class="section-title your-bonds">
         Elenco Buoni
       </h2>
 
+
+      <!-- FILTRI -->
 
       <div class="filtri">
 
@@ -380,19 +417,57 @@
           <svg
             class="filtro-sliders-icon"
             viewBox="0 0 24 24"
+            width="20"
+            height="20"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
           >
 
-            <line x1="4" y1="6" x2="20" y2="6"/>
-            <line x1="4" y1="12" x2="20" y2="12"/>
-            <line x1="4" y1="18" x2="20" y2="18"/>
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+            />
 
-            <line x1="9" y1="4" x2="9" y2="8"/>
-            <line x1="15" y1="10" x2="15" y2="14"/>
-            <line x1="7" y1="16" x2="7" y2="20"/>
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+            />
+
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+            />
+
+
+            <line
+              x1="9"
+              y1="4"
+              x2="9"
+              y2="8"
+            />
+
+            <line
+              x1="15"
+              y1="10"
+              x2="15"
+              y2="14"
+            />
+
+            <line
+              x1="7"
+              y1="16"
+              x2="7"
+              y2="20"
+            />
 
           </svg>
+
 
           <u>Filtra</u>
 
@@ -435,9 +510,9 @@
   </div>
 
 
-  <!-- =========================
+  <!-- =====================================================
        PAGINA DETTAGLIO BUONO
-       ========================= -->
+       ===================================================== -->
 
   <div
     id="paginaDettaglio"
@@ -454,7 +529,14 @@
         aria-label="Indietro"
       >
 
-        <svg viewBox="0 0 40 40" aria-hidden="true">
+        <svg
+          viewBox="0 0 40 40"
+          width="40"
+          height="40"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+
           <path
             d="M25 7 L12 20 L25 33"
             fill="none"
@@ -463,9 +545,11 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           />
+
         </svg>
 
       </button>
+
 
       <h1 id="detailTitolo">
         Buono 3×4 con premio
@@ -476,6 +560,10 @@
 
     <main class="detail-main">
 
+      <!-- =================================================
+           CARD DETTAGLIO
+           ================================================= -->
+
       <section class="detail-card">
 
         <div class="detail-card-top">
@@ -484,6 +572,8 @@
 
             <svg
               viewBox="0 0 170 170"
+              width="170"
+              height="170"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
@@ -494,6 +584,7 @@
                 r="85"
                 fill="#a9bcf5"
               />
+
 
               <g transform="rotate(-10 85 85)">
 
@@ -516,6 +607,7 @@
 
               </g>
 
+
               <rect
                 x="39"
                 y="69"
@@ -533,6 +625,7 @@
                 fill="#1764c0"
               />
 
+
               <text
                 x="48"
                 y="102"
@@ -541,6 +634,7 @@
                 font-weight="700"
                 fill="#1261b9"
               >€</text>
+
 
               <rect
                 x="80"
@@ -581,12 +675,16 @@
         </div>
 
 
+        <!-- CONTO -->
+
         <div class="detail-account">
 
           <div class="account-icon">
 
             <svg
               viewBox="0 0 80 60"
+              width="80"
+              height="60"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
@@ -630,6 +728,7 @@
 
           </div>
 
+
           <div class="account-text">
             Regolato su Conto<br>
             001062627284
@@ -640,9 +739,9 @@
       </section>
 
 
-      <!-- =========================
+      <!-- =================================================
            RIEPILOGO DATI
-           ========================= -->
+           ================================================= -->
 
       <h2 class="detail-section-title">
         Riepilogo dei dati
@@ -887,9 +986,9 @@
     </main>
 
 
-    <!-- =========================
+    <!-- =================================================
          PULSANTE FISSO
-         ========================= -->
+         ================================================= -->
 
     <div class="bottom-action">
 
@@ -905,7 +1004,11 @@
   </div>
 
 
-  <script src="script.js?v=9"></script>
+  <!-- =====================================================
+       SCRIPT
+       ===================================================== -->
+
+  <script src="script.js?v=10"></script>
 
 </body>
 </html>
