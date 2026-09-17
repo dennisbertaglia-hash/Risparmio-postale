@@ -60,7 +60,7 @@ button:focus {
 .top-header {
   position: relative;
   width: 100%;
-  height: 115px;
+  height: 155px;
   padding: 0 18px;
   margin: 0;
 }
@@ -73,14 +73,14 @@ button:focus {
   width: 48px;
   height: 48px;
 
-  border: 1.5px solid #111;
+  border: 1.5px solid #111111;
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #fff;
+  background: #ffffff;
 }
 
 .back-button svg {
@@ -93,7 +93,7 @@ button:focus {
   position: absolute;
 
   left: 18px;
-  top: 81px;
+  top: 112px;
 
   margin: 0;
 
@@ -126,7 +126,7 @@ button:focus {
   width: 24px;
   height: 24px;
 
-  border: 1.5px solid #111;
+  border: 1.5px solid #111111;
   border-radius: 50%;
 
   display: flex;
@@ -145,11 +145,11 @@ button:focus {
 
 .summary-card {
   width: 100%;
-  height: 143px;
+  height: 235px;
 
   margin: 0;
 
-  padding: 20px 20px;
+  padding: 27px 28px;
 
   border-radius: 22px;
 
@@ -159,9 +159,9 @@ button:focus {
 }
 
 .summary-card h2 {
-  margin: 0 0 21px;
+  margin: 0 0 30px;
 
-  font-size: 22px;
+  font-size: 24px;
   line-height: 1.05;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -173,27 +173,27 @@ button:focus {
 }
 
 .summary-item.second {
-  margin-top: 17px;
+  margin-top: 27px;
 }
 
 .summary-label {
-  margin: 0 0 4px;
+  margin: 0 0 5px;
 
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.2;
   font-weight: 400;
 
-  color: #111;
+  color: #111111;
 }
 
 .summary-value {
   margin: 0;
 
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.1;
   font-weight: 700;
 
-  color: #111;
+  color: #111111;
 }
 
 
@@ -217,15 +217,15 @@ button:focus {
 
   display: flex;
   align-items: flex-start;
-  gap: 42px;
+  gap: 34px;
 
   overflow: visible;
 }
 
 .operation-button {
-  width: 110px;
+  width: 120px;
 
-  flex: 0 0 110px;
+  flex: 0 0 120px;
 
   display: flex;
   flex-direction: column;
@@ -237,10 +237,10 @@ button:focus {
 }
 
 .operation-icon {
-  width: 82px;
-  height: 82px;
+  width: 108px;
+  height: 108px;
 
-  flex: 0 0 82px;
+  flex: 0 0 108px;
 
   display: block;
 
@@ -248,8 +248,8 @@ button:focus {
 }
 
 .operation-icon svg {
-  width: 82px;
-  height: 82px;
+  width: 108px;
+  height: 108px;
 
   display: block;
 
@@ -283,9 +283,9 @@ button:focus {
    ========================================================= */
 
 .filtri {
-  width: calc(100vw - 18px);
+  width: 100%;
 
-  margin-top: 22px;
+  margin-top: 20px;
   margin-left: 0;
 
   display: flex;
@@ -306,7 +306,7 @@ button:focus {
 }
 
 .filtro {
-  height: 43px;
+  height: 48px;
 
   flex: 0 0 auto;
 
@@ -319,7 +319,7 @@ button:focus {
   align-items: center;
   justify-content: center;
 
-  background: #fff;
+  background: #ffffff;
 
   white-space: nowrap;
 
@@ -333,11 +333,17 @@ button:focus {
 }
 
 
-/* FILTRA */
+/* =========================================================
+   FILTRA
+   ========================================================= */
 
 .filtro-filtra {
-  width: 79px;
-  gap: 6px;
+  width: 145px;
+  height: 48px;
+
+  gap: 8px;
+
+  flex: 0 0 145px;
 }
 
 .filtro-sliders-icon {
@@ -361,11 +367,17 @@ button:focus {
 }
 
 
-/* PRODOTTI */
+/* =========================================================
+   PRODOTTI
+   ========================================================= */
 
 .filtro.prodotto {
-  width: 91px;
-  gap: 11px;
+  width: 145px;
+  height: 48px;
+
+  gap: 14px;
+
+  flex: 0 0 145px;
 }
 
 .freccia-down {
@@ -376,14 +388,20 @@ button:focus {
   border-bottom: 2px solid #075dcc;
 
   transform: rotate(45deg);
+
   margin-top: -5px;
 }
 
 
-/* PERIODO */
+/* =========================================================
+   PERIODO
+   ========================================================= */
 
 .filtro.periodo {
-  width: 145px;
+  width: 190px;
+  height: 48px;
+
+  flex: 0 0 190px;
 }
 
 
@@ -394,7 +412,7 @@ button:focus {
 #listaBuoni {
   width: 100%;
 
-  margin-top: 17px;
+  margin-top: 8px;
   padding: 0;
 
   display: block;
@@ -409,7 +427,7 @@ button:focus {
   width: 100%;
 
   margin: 0;
-  padding: 17px 0 16px;
+  padding: 15px 0 14px;
 
   border-bottom: 1px solid #e5e5e5;
 
@@ -421,7 +439,7 @@ button:focus {
 
   display: grid;
 
-  grid-template-columns: 38px minmax(0, 1fr) 112px;
+  grid-template-columns: 42px minmax(0, 1fr) 115px;
 
   column-gap: 10px;
 
@@ -435,11 +453,13 @@ button:focus {
 }
 
 
-/* ICONA */
+/* =========================================================
+   ICONA BUONO
+   ========================================================= */
 
 .bond-item-icon {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
 
   border-radius: 50%;
 
@@ -453,14 +473,16 @@ button:focus {
 }
 
 .bond-item-icon svg {
-  width: 27px;
-  height: 27px;
+  width: 30px;
+  height: 30px;
 
   display: block;
 }
 
 
-/* PARTE CENTRALE */
+/* =========================================================
+   PARTE CENTRALE
+   ========================================================= */
 
 .bond-item-info {
   min-width: 0;
@@ -474,7 +496,7 @@ button:focus {
 .bond-item-date {
   margin: 0 0 4px;
 
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.15;
   font-weight: 300;
 
@@ -490,13 +512,15 @@ button:focus {
   line-height: 1.15;
   font-weight: 700;
 
-  color: #111;
+  color: #111111;
 
   white-space: nowrap;
 }
 
 
-/* PARTE DESTRA */
+/* =========================================================
+   PARTE DESTRA
+   ========================================================= */
 
 .bond-item-value {
   min-width: 0;
@@ -511,7 +535,7 @@ button:focus {
 .bond-item-value-label {
   margin: 0 0 4px;
 
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.1;
   font-weight: 300;
 
@@ -527,7 +551,7 @@ button:focus {
   line-height: 1.1;
   font-weight: 700;
 
-  color: #111;
+  color: #111111;
 
   white-space: nowrap;
 }
@@ -541,7 +565,7 @@ button:focus {
   width: 100%;
   min-height: 100vh;
 
-  background: #fff;
+  background: #ffffff;
 
   padding-bottom: 90px;
 }
@@ -564,12 +588,14 @@ button:focus {
   width: 48px;
   height: 48px;
 
-  border: 1.5px solid #111;
+  border: 1.5px solid #111111;
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  background: #ffffff;
 }
 
 .detail-back svg {
@@ -602,7 +628,9 @@ button:focus {
 }
 
 
-/* CARD DETTAGLIO */
+/* =========================================================
+   CARD DETTAGLIO
+   ========================================================= */
 
 .detail-card {
   width: 100%;
@@ -654,7 +682,7 @@ button:focus {
   line-height: 1.15;
   font-weight: 300;
 
-  color: #777;
+  color: #777777;
 }
 
 .detail-account {
@@ -665,7 +693,7 @@ button:focus {
 
   padding: 16px 20px;
 
-  background: #fff;
+  background: #ffffff;
 }
 
 .account-icon {
@@ -713,7 +741,7 @@ button:focus {
   line-height: 1.25;
   font-weight: 300;
 
-  color: #777;
+  color: #777777;
 }
 
 .detail-value {
@@ -751,7 +779,7 @@ button:focus {
 
   padding: 12px 18px;
 
-  background: rgba(255,255,255,0.96);
+  background: rgba(255, 255, 255, 0.96);
   border-top: 1px solid #eeeeee;
 
   z-index: 50;
@@ -764,7 +792,7 @@ button:focus {
   border-radius: 30px;
 
   background: #075dcc;
-  color: #fff;
+  color: #ffffff;
 
   font-size: 21px;
   font-weight: 700;
@@ -782,77 +810,118 @@ button:focus {
     padding-right: 18px;
   }
 
+
+  /* HEADER */
+
   .top-header {
-    height: 115px;
+    height: 155px;
     padding-left: 18px;
     padding-right: 18px;
   }
 
   .back-button {
     left: 18px;
+    top: 28px;
   }
 
   .top-header h1 {
     left: 18px;
-    top: 81px;
+    top: 112px;
+
     font-size: 42px;
   }
 
   .top-icons {
     right: 18px;
+    top: 28px;
   }
 
+
+  /* RIEPILOGO */
+
   .summary-card {
-    height: 143px;
-    padding: 20px;
+    height: 235px;
+    padding: 27px 28px;
   }
 
   .summary-card h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .summary-label {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .summary-value {
-    font-size: 17px;
+    font-size: 18px;
   }
+
+
+  /* OPERAZIONI */
 
   .section-title {
     font-size: 30px;
   }
 
   .operations {
-    gap: 42px;
+    gap: 34px;
   }
 
   .operation-button {
-    width: 110px;
-    flex-basis: 110px;
+    width: 120px;
+    flex-basis: 120px;
   }
 
   .operation-icon,
   .operation-icon svg {
-    width: 82px;
-    height: 82px;
+    width: 108px;
+    height: 108px;
   }
+
+
+  /* ELENCO */
 
   .your-bonds {
     margin-top: 38px;
   }
 
+
+  /* FILTRI */
+
   .filtri {
-    width: calc(100vw - 18px);
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .filtro-filtra {
+    width: 145px;
+    flex-basis: 145px;
+  }
+
+  .filtro.prodotto {
+    width: 145px;
+    flex-basis: 145px;
+  }
+
+  .filtro.periodo {
+    width: 190px;
+    flex-basis: 190px;
+  }
+
+
+  /* BUONI */
+
+  #listaBuoni {
+    margin-top: 8px;
   }
 
   .bond-item-button {
-    grid-template-columns: 38px minmax(0, 1fr) 112px;
+    grid-template-columns: 42px minmax(0, 1fr) 115px;
     column-gap: 10px;
   }
 
   .bond-item-date {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .bond-item-name {
@@ -860,10 +929,76 @@ button:focus {
   }
 
   .bond-item-value-label {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .bond-item-amount {
     font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   IPHONE MOLTO STRETTO
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  #paginaPrincipale > main {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .top-header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .top-header h1 {
+    left: 15px;
+    font-size: 39px;
+  }
+
+  .top-icons {
+    right: 15px;
+    gap: 18px;
+  }
+
+  .operations {
+    gap: 18px;
+  }
+
+  .operation-button {
+    width: 112px;
+    flex-basis: 112px;
+  }
+
+  .operation-icon,
+  .operation-icon svg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bond-item-button {
+    grid-template-columns: 38px minmax(0, 1fr) 105px;
+    column-gap: 8px;
+  }
+
+  .bond-item-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .bond-item-icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .bond-item-value-label {
+    font-size: 10px;
+  }
+
+  .bond-item-amount {
+    font-size: 16px;
   }
 }
