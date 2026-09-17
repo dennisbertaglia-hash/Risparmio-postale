@@ -18,18 +18,23 @@
        PAGINA PRINCIPALE
        ===================================================== -->
 
-  <main id="paginaPrincipale">
+  <div id="paginaPrincipale">
 
     <header class="top-header">
 
+      <!-- FRECCIA INDIETRO -->
       <button
         class="back-button"
         type="button"
         aria-label="Indietro"
       ></button>
 
+
+      <!-- TITOLO -->
       <h1>Buoni</h1>
 
+
+      <!-- OCCHIO + ? -->
       <div class="top-icons">
 
         <button
@@ -39,39 +44,43 @@
         >
           <svg
             class="eye-icon"
-            viewBox="0 0 32 32"
+            viewBox="0 0 40 40"
             xmlns="http://www.w3.org/2000/svg"
             aria-hidden="true"
           >
             <path
-              d="M3 16s4.5-8 13-8 13 8 13 8-4.5 8-13 8S3 16 3 16Z"
+              d="M4 20
+                 C8 13 14 9 20 9
+                 C26 9 32 13 36 20
+                 C32 27 26 31 20 31
+                 C14 31 8 27 4 20Z"
               fill="none"
               stroke="#111111"
-              stroke-width="2.4"
-              stroke-linecap="round"
+              stroke-width="2.7"
               stroke-linejoin="round"
             />
 
             <circle
-              cx="16"
-              cy="16"
-              r="4"
+              cx="20"
+              cy="20"
+              r="6"
               fill="none"
               stroke="#111111"
-              stroke-width="2.4"
+              stroke-width="2.7"
             />
 
             <line
-              x1="5"
-              y1="5"
-              x2="27"
-              y2="27"
+              x1="6"
+              y1="6"
+              x2="34"
+              y2="34"
               stroke="#111111"
-              stroke-width="2.4"
+              stroke-width="3"
               stroke-linecap="round"
             />
           </svg>
         </button>
+
 
         <button
           class="question-button"
@@ -86,7 +95,7 @@
     </header>
 
 
-    <div class="main-content">
+    <main class="main-content">
 
       <!-- =================================================
            RIEPILOGO
@@ -97,6 +106,7 @@
         <h2 id="totaleBuoni">
           20 Buoni
         </h2>
+
 
         <div class="summary-item">
 
@@ -112,6 +122,7 @@
           </span>
 
         </div>
+
 
         <div class="summary-item second">
 
@@ -141,7 +152,11 @@
           Operazioni
         </h2>
 
+
         <div class="operations">
+
+
+          <!-- ACQUISTA BUONO -->
 
           <button
             class="operation-button"
@@ -152,81 +167,98 @@
             <span class="operation-icon">
 
               <svg
-                viewBox="0 0 72 72"
+                viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
 
+                <!-- sfondo -->
                 <circle
-                  cx="36"
-                  cy="36"
-                  r="36"
+                  cx="50"
+                  cy="50"
+                  r="50"
                   fill="#edf6ff"
                 />
 
+                <!-- banconota posteriore -->
                 <rect
-                  x="19"
-                  y="24"
-                  width="35"
-                  height="24"
-                  rx="3"
+                  x="27"
+                  y="28"
+                  width="47"
+                  height="31"
+                  rx="4"
+                  fill="#f1c900"
+                  transform="rotate(-7 27 28)"
+                />
+
+                <!-- banconota principale -->
+                <rect
+                  x="20"
+                  y="36"
+                  width="54"
+                  height="31"
+                  rx="4"
                   fill="#ffd400"
-                  transform="rotate(-7 19 24)"
+                  transform="rotate(-7 20 36)"
                 />
 
+                <!-- fascia blu -->
                 <rect
-                  x="22"
-                  y="23"
-                  width="7"
-                  height="25"
+                  x="25"
+                  y="34"
+                  width="8"
+                  height="33"
+                  rx="1"
                   fill="#1766d1"
-                  transform="rotate(-7 22 23)"
+                  transform="rotate(-7 25 34)"
                 />
 
+                <!-- righe bianche -->
                 <line
-                  x1="35"
-                  y1="34"
-                  x2="48"
-                  y2="32"
+                  x1="43"
+                  y1="49"
+                  x2="64"
+                  y2="46"
                   stroke="#ffffff"
-                  stroke-width="2.5"
+                  stroke-width="3"
                   stroke-linecap="round"
                 />
 
                 <line
-                  x1="36"
-                  y1="40"
-                  x2="47"
-                  y2="38"
+                  x1="44"
+                  y1="56"
+                  x2="61"
+                  y2="53.5"
                   stroke="#ffffff"
-                  stroke-width="2.5"
+                  stroke-width="3"
                   stroke-linecap="round"
                 />
 
+                <!-- + verde -->
                 <circle
-                  cx="55"
-                  cy="54"
-                  r="11"
+                  cx="74"
+                  cy="73"
+                  r="13"
                   fill="#45c66a"
                 />
 
                 <line
-                  x1="55"
-                  y1="48"
-                  x2="55"
-                  y2="60"
+                  x1="74"
+                  y1="66"
+                  x2="74"
+                  y2="80"
                   stroke="#ffffff"
-                  stroke-width="2.5"
+                  stroke-width="3"
                   stroke-linecap="round"
                 />
 
                 <line
-                  x1="49"
-                  y1="54"
-                  x2="61"
-                  y2="54"
+                  x1="67"
+                  y1="73"
+                  x2="81"
+                  y2="73"
                   stroke="#ffffff"
-                  stroke-width="2.5"
+                  stroke-width="3"
                   stroke-linecap="round"
                 />
 
@@ -242,6 +274,8 @@
           </button>
 
 
+          <!-- RICHIEDI RIMBORSO -->
+
           <button
             class="operation-button"
             type="button"
@@ -251,69 +285,99 @@
             <span class="operation-icon">
 
               <svg
-                viewBox="0 0 72 72"
+                viewBox="0 0 100 100"
                 xmlns="http://www.w3.org/2000/svg"
                 aria-hidden="true"
               >
 
+                <!-- sfondo -->
                 <circle
-                  cx="36"
-                  cy="36"
-                  r="36"
+                  cx="50"
+                  cy="50"
+                  r="50"
                   fill="#edf6ff"
                 />
 
+                <!-- monete -->
                 <circle
-                  cx="32"
-                  cy="25"
+                  cx="45"
+                  cy="30"
+                  r="9"
+                  fill="#ffd400"
+                />
+
+                <circle
+                  cx="58"
+                  cy="30"
+                  r="9"
+                  fill="#ffd400"
+                />
+
+                <circle
+                  cx="52"
+                  cy="24"
                   r="7"
                   fill="#ffd400"
                 />
 
-                <circle
-                  cx="43"
-                  cy="25"
-                  r="7"
+                <!-- portafoglio -->
+                <path
+                  d="
+                    M29 44
+                    C29 39 32 36 37 36
+                    H66
+                    C71 36 74 39 74 44
+                    V64
+                    C74 68 71 71 66 71
+                    H37
+                    C32 71 29 68 29 64
+                    Z
+                  "
                   fill="#ffd400"
                 />
 
-                <rect
-                  x="22"
-                  y="34"
-                  width="32"
-                  height="23"
-                  rx="5"
-                  fill="#ffd400"
+                <!-- parte superiore -->
+                <path
+                  d="
+                    M35 38
+                    H65
+                    C69 38 72 41 72 45
+                    H41
+                    C37 45 35 42 35 38
+                    Z
+                  "
+                  fill="#f2d000"
                 />
 
+                <!-- chiusura blu -->
                 <rect
-                  x="28"
-                  y="39"
-                  width="27"
-                  height="14"
+                  x="61"
+                  y="49"
+                  width="14"
+                  height="10"
                   rx="3"
-                  fill="#f4d400"
-                />
-
-                <rect
-                  x="44"
-                  y="42"
-                  width="9"
-                  height="6"
-                  rx="2"
                   fill="#1766d1"
                 />
 
-                <path
-                  d="M16 57 L28 44 L40 57 Z"
-                  fill="#45c66a"
+                <circle
+                  cx="69"
+                  cy="54"
+                  r="2"
+                  fill="#ffffff"
                 />
 
-                <rect
-                  x="22"
-                  y="51"
-                  width="12"
-                  height="9"
+                <!-- freccia verde -->
+                <path
+                  d="
+                    M17 71
+                    L33 53
+                    L49 71
+                    H41
+                    V83
+                    H25
+                    V71
+                    Z
+                  "
                   fill="#45c66a"
                 />
 
@@ -334,7 +398,7 @@
 
 
       <!-- =================================================
-           ELENCO
+           ELENCO BUONI
            ================================================= -->
 
       <section class="your-bonds">
@@ -343,6 +407,8 @@
           Elenco Buoni
         </h2>
 
+
+        <!-- FILTRI -->
 
         <div class="filtri">
 
@@ -353,53 +419,53 @@
 
             <svg
               class="filtro-sliders-icon"
-              viewBox="0 0 20 20"
+              viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
 
               <line
-                x1="2"
-                y1="5"
-                x2="18"
-                y2="5"
-              />
-
-              <circle
-                cx="7"
-                cy="5"
-                r="2"
-              />
-
-              <line
-                x1="2"
-                y1="10"
-                x2="18"
-                y2="10"
-              />
-
-              <circle
-                cx="13"
-                cy="10"
-                r="2"
-              />
-
-              <line
-                x1="2"
-                y1="15"
-                x2="18"
-                y2="15"
+                x1="3"
+                y1="6"
+                x2="21"
+                y2="6"
               />
 
               <circle
                 cx="9"
-                cy="15"
+                cy="6"
+                r="2"
+              />
+
+              <line
+                x1="3"
+                y1="12"
+                x2="21"
+                y2="12"
+              />
+
+              <circle
+                cx="15"
+                cy="12"
+                r="2"
+              />
+
+              <line
+                x1="3"
+                y1="18"
+                x2="21"
+                y2="18"
+              />
+
+              <circle
+                cx="8"
+                cy="18"
                 r="2"
               />
 
             </svg>
 
-            <u>Filtra</u>
+            <span>Filtra</span>
 
           </button>
 
@@ -408,7 +474,7 @@
             class="filtro prodotto"
             type="button"
           >
-            <u>Prodotti</u>
+            <span>Prodotti</span>
             <span class="freccia-down"></span>
           </button>
 
@@ -417,26 +483,29 @@
             class="filtro periodo"
             type="button"
           >
-            <u>Periodo di scadenza</u>
+            <span>Periodo di scadenza</span>
           </button>
 
         </div>
 
 
+        <!-- LISTA GENERATA DAL JS -->
+
         <div id="listaBuoni"></div>
 
       </section>
 
-    </div>
+    </main>
 
-  </main>
+  </div>
+
 
 
   <!-- =====================================================
        PAGINA DETTAGLIO
        ===================================================== -->
 
-  <main
+  <div
     id="paginaDettaglio"
     class="pagina-dettaglio"
     style="display: none;"
@@ -448,20 +517,20 @@
         class="detail-back"
         type="button"
         onclick="tornaAllaLista()"
-        aria-label="Torna alla lista"
+        aria-label="Torna ai Buoni"
       >
 
         <svg
-          viewBox="0 0 32 32"
+          viewBox="0 0 40 40"
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
 
           <path
-            d="M20 6 L10 16 L20 26"
+            d="M24 8 L12 20 L24 32"
             fill="none"
             stroke="#111111"
-            stroke-width="3"
+            stroke-width="3.5"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
@@ -470,6 +539,7 @@
 
       </button>
 
+
       <h1 id="detailTitolo">
         Buono 3×4 con premio
       </h1>
@@ -477,69 +547,75 @@
     </header>
 
 
-    <div class="detail-main">
+    <main class="detail-main">
 
       <section class="detail-card">
+
+
+        <!-- PARTE AZZURRA -->
 
         <div class="detail-card-top">
 
           <div class="detail-buono-icon">
 
             <svg
-              viewBox="0 0 82 82"
+              viewBox="0 0 100 100"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
 
               <circle
-                cx="41"
-                cy="41"
-                r="41"
+                cx="50"
+                cy="50"
+                r="50"
                 fill="#edf6ff"
               />
 
               <rect
-                x="15"
-                y="25"
-                width="52"
-                height="32"
-                rx="5"
+                x="23"
+                y="31"
+                width="54"
+                height="38"
+                rx="6"
                 fill="#ffd400"
               />
 
               <rect
-                x="15"
-                y="25"
+                x="23"
+                y="31"
                 width="10"
-                height="32"
+                height="38"
                 fill="#1766d1"
               />
 
               <text
-                x="31"
-                y="47"
-                font-size="20"
-                font-weight="700"
+                x="39"
+                y="56"
+                font-size="22"
+                font-family="Arial, sans-serif"
+                font-weight="600"
                 fill="#1766d1"
-              >€</text>
+              >
+                €
+              </text>
 
               <line
-                x1="46"
-                y1="42"
-                x2="60"
-                y2="42"
+                x1="52"
+                y1="48"
+                x2="68"
+                y2="48"
                 stroke="#ffffff"
-                stroke-width="2.5"
+                stroke-width="3"
                 stroke-linecap="round"
               />
 
               <line
-                x1="48"
-                y1="49"
-                x2="60"
-                y2="49"
+                x1="52"
+                y1="57"
+                x2="64"
+                y2="57"
                 stroke="#ffffff"
-                stroke-width="2.5"
+                stroke-width="3"
                 stroke-linecap="round"
               />
 
@@ -554,68 +630,81 @@
               500,00 €
             </span>
 
-            <span class="detail-rimborso-label">
+            <div class="detail-rimborso-label">
               valore nominale
-            </span>
+            </div>
 
           </div>
 
         </div>
 
 
+        <!-- CONTO -->
+
         <div class="detail-account">
 
-          <span class="account-icon">
+          <div class="account-icon">
 
             <svg
-              viewBox="0 0 44 34"
+              viewBox="0 0 50 40"
               xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
 
               <rect
                 x="4"
-                y="7"
-                width="36"
-                height="24"
+                y="8"
+                width="42"
+                height="27"
+                rx="5"
+                fill="#ffffff"
+              />
+
+              <rect
+                x="8"
+                y="13"
+                width="34"
+                height="17"
                 rx="3"
                 fill="none"
                 stroke="#0759c9"
                 stroke-width="2"
               />
 
-              <line
-                x1="4"
-                y1="13"
-                x2="40"
-                y2="13"
-                stroke="#0759c9"
-                stroke-width="2"
-              />
-
               <circle
-                cx="11"
-                cy="20"
-                r="2"
+                cx="16"
+                cy="21.5"
+                r="4"
                 fill="#0759c9"
               />
 
               <line
-                x1="17"
-                y1="20"
-                x2="34"
-                y2="20"
+                x1="24"
+                y1="19"
+                x2="37"
+                y2="19"
                 stroke="#0759c9"
                 stroke-width="2"
+                stroke-linecap="round"
+              />
+
+              <line
+                x1="24"
+                y1="24"
+                x2="34"
+                y2="24"
+                stroke="#0759c9"
+                stroke-width="2"
+                stroke-linecap="round"
               />
 
             </svg>
 
-          </span>
+          </div>
 
-          <span class="account-text">
-            Il rimborso sarà accreditato sul conto associato.
-          </span>
+          <div class="account-text">
+            Accredito sul conto di regolamento
+          </div>
 
         </div>
 
@@ -678,7 +767,7 @@
         <div class="detail-field">
 
           <span class="detail-label">
-            Ritenuta fiscale iniziale
+            Ritenuta fiscale
           </span>
 
           <span
@@ -689,7 +778,7 @@
         </div>
 
 
-        <div class="detail-field">
+        <div class="detail-field last-detail-field">
 
           <span class="detail-label">
             Valore rimborso netto
@@ -709,7 +798,7 @@
         <div class="detail-field">
 
           <span class="detail-label">
-            Rimborso lordo senza premio
+            Valore rimborso lordo senza premio
           </span>
 
           <span
@@ -723,7 +812,7 @@
         <div class="detail-field">
 
           <span class="detail-label">
-            Ritenuta fiscale alla scadenza
+            Ritenuta alla scadenza
           </span>
 
           <span
@@ -737,7 +826,7 @@
         <div class="detail-field">
 
           <span class="detail-label">
-            Rimborso netto senza premio
+            Valore rimborso netto senza premio
           </span>
 
           <span
@@ -799,7 +888,7 @@
         <div class="detail-field">
 
           <span class="detail-label">
-            Rimborso lordo con premio
+            Valore rimborso lordo con premio
           </span>
 
           <span
@@ -813,7 +902,7 @@
         <div class="detail-field">
 
           <span class="detail-label">
-            Ritenuta fiscale totale
+            Ritenuta totale
           </span>
 
           <span
@@ -827,7 +916,7 @@
         <div class="detail-field last-detail-field">
 
           <span class="detail-label">
-            Rimborso netto con premio
+            Valore rimborso netto con premio
           </span>
 
           <span
@@ -839,8 +928,10 @@
 
       </section>
 
-    </div>
+    </main>
 
+
+    <!-- PULSANTE FISSO -->
 
     <div class="bottom-action">
 
@@ -853,7 +944,7 @@
 
     </div>
 
-  </main>
+  </div>
 
 
   <script src="script.js?v=21"></script>
