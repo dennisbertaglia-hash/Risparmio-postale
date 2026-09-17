@@ -1,1027 +1,40 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-  <title>MyPoste</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+  >
 
-  <link rel="stylesheet" href="style.css?v=6">
+  <title>Buoni</title>
+
+  <link rel="stylesheet" href="style.css?v=8">
+
 </head>
+
 
 <body>
 
+
   <!-- =====================================================
-       PAGINA HOME
+       PAGINA BUONI
        ===================================================== -->
 
-  <div id="paginaHome">
+  <div id="paginaPrincipale">
 
-    <!-- HEADER HOME -->
-    <header class="home-header">
+    <!-- HEADER -->
 
-      <div class="home-header-left">
-
-        <div class="home-logo">
-          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-
-            <circle
-              cx="40"
-              cy="40"
-              r="34"
-              fill="#ffd500"
-            />
-
-            <path
-              d="M23 39
-                 C27 28 36 23 47 24
-                 C53 25 57 29 59 34
-                 C61 40 59 47 55 51
-                 C50 57 42 59 35 57
-                 C29 55 24 51 22 46"
-              fill="none"
-              stroke="#0755c7"
-              stroke-width="5"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M38 32
-                 L52 32
-                 L52 45"
-              fill="none"
-              stroke="#0755c7"
-              stroke-width="5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-
-          </svg>
-        </div>
-
-        <div class="home-saluto">
-          Buongiorno
-        </div>
-
-        <div class="home-nome">
-          Dennis
-        </div>
-
-      </div>
-
-      <div class="home-header-right">
-
-        <button class="home-header-icon">
-          <svg viewBox="0 0 50 50">
-
-            <circle
-              cx="25"
-              cy="25"
-              r="18"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.5"
-            />
-
-            <path
-              d="M18 25
-                 L23 30
-                 L33 19"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-
-          </svg>
-        </button>
-
-        <button class="home-header-icon">
-          <svg viewBox="0 0 50 50">
-
-            <circle
-              cx="25"
-              cy="25"
-              r="17"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.5"
-            />
-
-            <circle
-              cx="25"
-              cy="20"
-              r="5"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.5"
-            />
-
-            <path
-              d="M15 35
-                 C16 28 20 25 25 25
-                 C30 25 34 28 35 35"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.5"
-              stroke-linecap="round"
-            />
-
-          </svg>
-        </button>
-
-      </div>
-
-    </header>
-
-
-    <!-- =====================================================
-         MAIN HOME
-         ===================================================== -->
-
-    <main class="home-main">
-
-      <!-- OPERAZIONI -->
-      <section class="home-section">
-
-        <div class="home-section-title-row">
-
-          <h2>
-            Operazioni
-          </h2>
-
-          <div class="home-more-icon">
-            →
-          </div>
-
-        </div>
-
-
-        <div class="home-operations-scroll">
-
-          <button class="home-operation">
-
-            <div class="home-operation-circle">
-
-              <svg viewBox="0 0 100 100">
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="#f1f8ff"
-                />
-
-                <path
-                  d="M32 28
-                     H68
-                     V72
-                     H32
-                     Z"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                />
-
-                <path
-                  d="M39 40
-                     H61
-                     M39 50
-                     H61
-                     M39 60
-                     H55"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              Bollettino
-            </div>
-
-          </button>
-
-
-          <button class="home-operation">
-
-            <div class="home-operation-circle">
-
-              <svg viewBox="0 0 100 100">
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="#f1f8ff"
-                />
-
-                <path
-                  d="M25 32
-                     H75
-                     V68
-                     H25
-                     Z"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                />
-
-                <path
-                  d="M30 40
-                     H70"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                />
-
-                <circle
-                  cx="38"
-                  cy="55"
-                  r="5"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                />
-
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              Bonifico
-            </div>
-
-          </button>
-
-
-          <button
-            class="home-operation"
-            onclick="apriRisparmio()"
-          >
-
-            <div class="home-operation-circle">
-
-              <svg viewBox="0 0 100 100">
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="#f1f8ff"
-                />
-
-                <rect
-                  x="27"
-                  y="34"
-                  width="46"
-                  height="32"
-                  rx="3"
-                  fill="#f4d000"
-                />
-
-                <rect
-                  x="45"
-                  y="34"
-                  width="7"
-                  height="32"
-                  fill="#1764c0"
-                />
-
-                <text
-                  x="32"
-                  y="57"
-                  font-family="Arial"
-                  font-size="20"
-                  font-weight="700"
-                  fill="#1261b9"
-                >€</text>
-
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              Risparmio
-            </div>
-
-          </button>
-
-
-          <button class="home-operation">
-
-            <div class="home-operation-circle">
-
-              <svg viewBox="0 0 100 100">
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="#f1f8ff"
-                />
-
-                <path
-                  d="M27 35
-                     H73
-                     V65
-                     H27
-                     Z"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                />
-
-                <path
-                  d="M32 43
-                     H68
-                     M32 53
-                     H58"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              Postepay
-            </div>
-
-          </button>
-
-
-          <button class="home-operation">
-
-            <div class="home-operation-circle">
-
-              <svg viewBox="0 0 100 100">
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="48"
-                  fill="#f1f8ff"
-                />
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="22"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                />
-
-                <path
-                  d="M50 38
-                     V50
-                     L58 56"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              Pagamenti
-            </div>
-
-          </button>
-
-        </div>
-
-      </section>
-
-
-      <!-- NUMERO -->
-      <section class="home-section">
-
-        <div class="numero-box">
-
-          <div class="numero-text">
-
-            <div class="numero-title">
-              Associa il tuo numero di cellulare
-            </div>
-
-            <div class="numero-description">
-              Per utilizzare tutti i servizi
-              disponibili nell'app.
-            </div>
-
-          </div>
-
-          <div class="numero-illustration">
-
-            <svg viewBox="0 0 160 130">
-
-              <rect
-                x="52"
-                y="20"
-                width="48"
-                height="85"
-                rx="8"
-                fill="#0755c7"
-              />
-
-              <rect
-                x="57"
-                y="27"
-                width="38"
-                height="68"
-                rx="3"
-                fill="#fff"
-              />
-
-              <circle
-                cx="76"
-                cy="100"
-                r="3"
-                fill="#fff"
-              />
-
-              <circle
-                cx="116"
-                cy="47"
-                r="20"
-                fill="#ffd500"
-              />
-
-              <path
-                d="M106 47
-                   L113 54
-                   L126 40"
-                fill="none"
-                stroke="#0755c7"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-
-            </svg>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- SITUAZIONE FINANZIARIA -->
-      <section class="home-section">
-
-        <div class="home-section-title-row">
-
-          <h2>
-            Situazione finanziaria
-          </h2>
-
-          <div class="home-more-icon">
-            →
-          </div>
-
-        </div>
-
-
-        <div class="patrimonio-card">
-
-          <div class="patrimonio-image">
-
-            <svg viewBox="0 0 150 130">
-
-              <circle
-                cx="75"
-                cy="65"
-                r="60"
-                fill="#f1f8ff"
-              />
-
-              <circle
-                cx="35"
-                cy="42"
-                r="9"
-                fill="#f0c4a1"
-              />
-
-              <path
-                d="M27 51
-                   C18 57 17 72 21 87
-                   H47
-                   L44 60
-                   L39 51
-                   Z"
-                fill="#8674e8"
-              />
-
-              <path
-                d="M34 88
-                   L31 99"
-                stroke="#555"
-                stroke-width="5"
-                stroke-linecap="round"
-              />
-
-              <path
-                d="M43 88
-                   L49 98"
-                stroke="#555"
-                stroke-width="5"
-                stroke-linecap="round"
-              />
-
-              <circle
-                cx="118"
-                cy="42"
-                r="9"
-                fill="#f0c4a1"
-              />
-
-              <path
-                d="M110 51
-                   C103 57 104 72 109 81
-                   H130
-                   L127 57
-                   L123 50
-                   Z"
-                fill="#e5b735"
-              />
-
-              <rect
-                x="107"
-                y="82"
-                width="25"
-                height="4"
-                rx="2"
-                fill="#e4b600"
-              />
-
-            </svg>
-
-          </div>
-
-
-          <div class="patrimonio-text">
-
-            <div class="patrimonio-title">
-              Patrimonio
-            </div>
-
-            <div class="patrimonio-description">
-              Abilita la vista aggregata<br>
-              dei tuoi prodotti<br>
-              finanziari.
-            </div>
-
-          </div>
-
-
-          <div class="patrimonio-arrow">
-            →
-          </div>
-
-        </div>
-
-      </section>
-
-
-      <!-- IL MONDO POSTE -->
-      <section class="mondo-poste">
-
-        <div class="mondo-title-row">
-
-          <h2>
-            Il mondo Poste
-          </h2>
-
-          <div class="nascondi-saldo">
-
-            <span class="saldo-eye">
-
-              <svg
-                viewBox="0 0 32 32"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-
-                <path
-                  d="M7 16
-                     C9.5 12
-                     12.5 9.5
-                     16 9.5
-                     C19.5 9.5
-                     22.5 12
-                     25 16
-                     C22.5 20
-                     19.5 22.5
-                     16 22.5
-                     C12.5 22.5
-                     9.5 20
-                     7 16Z"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="2.2"
-                  stroke-linejoin="round"
-                />
-
-                <circle
-                  cx="16"
-                  cy="16"
-                  r="3.2"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="2.2"
-                />
-
-                <path
-                  d="M16 5 V27"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                />
-
-              </svg>
-
-            </span>
-
-            Nascondi saldo
-
-          </div>
-
-        </div>
-
-
-        <div class="mondo-grid">
-
-
-          <div class="poste-card">
-
-            <div class="poste-card-title">
-              Conti
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-number">
-                678<span>,03 €</span>
-              </div>
-
-              <div class="poste-description">
-                Saldo disponibile
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="poste-card">
-
-            <div class="poste-card-title">
-              Carte Postepay
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-number">
-                1
-                <span class="normal-number">
-                  Carta Debit
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="poste-card">
-
-            <div class="poste-card-title">
-              Posta e pacchi
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-description large">
-                Accedi ai servizi
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="poste-card">
-
-            <div class="poste-card-title">
-              Libretti
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-description info-description">
-
-                <span class="info-circle">
-                  i
-                </span>
-
-                Abilita il tuo<br>
-                Libretto
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <button
-            class="poste-card risparmio-card"
-            onclick="apriRisparmio()"
-          >
-
-            <div class="poste-card-title">
-              Risparmio
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-number">
-                17.000<span>,00 €</span>
-              </div>
-
-              <div class="poste-description">
-                Totale Buoni
-              </div>
-
-            </div>
-
-          </button>
-
-
-        </div>
-
-
-        <div class="mondo-banner">
-
-          <div class="banner-text">
-
-            <div>
-              Hai ancora molto
-            </div>
-
-            <div>
-              da scoprire
-            </div>
-
-            <div class="banner-link">
-              Tutto il mondo Poste →
-            </div>
-
-          </div>
-
-        </div>
-
-
-      </section>
-
-    </main>
-
-
-    <!-- NAVIGAZIONE INFERIORE -->
-    <nav class="home-bottom-nav">
-
-      <div class="nav-item active">
-
-        <svg viewBox="0 0 50 50">
-
-          <path
-            d="M8 24
-               L25 10
-               L42 24
-               V43
-               H30
-               V31
-               H20
-               V43
-               H8
-               Z"
-            fill="#0755c7"
-          />
-
-        </svg>
-
-        <span>
-          MyPoste
-        </span>
-
-      </div>
-
-
-      <div class="nav-item">
-
-        <svg viewBox="0 0 50 50">
-
-          <rect
-            x="8"
-            y="8"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <rect
-            x="29"
-            y="8"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <rect
-            x="8"
-            y="29"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <rect
-            x="29"
-            y="29"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-        </svg>
-
-        <span>
-          Operazioni
-        </span>
-
-      </div>
-
-
-      <div class="nav-item">
-
-        <svg viewBox="0 0 50 50">
-
-          <path
-            d="M12 8
-               L20 42
-               L31 42
-               L23 8
-               Z"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <path
-            d="M27 8
-               L35 42
-               L42 42
-               L34 8
-               Z"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <circle
-            cx="35"
-            cy="13"
-            r="4"
-            fill="none"
-            stroke="#111"
-            stroke-width="2"
-          />
-
-        </svg>
-
-        <span>
-          Pwallet
-        </span>
-
-      </div>
-
-
-      <div class="nav-item">
-
-        <svg viewBox="0 0 50 50">
-
-          <path
-            d="M25 43
-               C25 43 39 29 39 19
-               C39 11 33 6 25 6
-               C17 6 11 11 11 19
-               C11 29 25 43 25 43 Z"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <circle
-            cx="25"
-            cy="19"
-            r="5"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-        </svg>
-
-        <span>
-          Mappe
-        </span>
-
-      </div>
-
-
-      <div class="nav-item">
-
-        <svg viewBox="0 0 50 50">
-
-          <line
-            x1="8"
-            y1="15"
-            x2="42"
-            y2="15"
-            stroke="#111"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-
-          <line
-            x1="8"
-            y1="25"
-            x2="42"
-            y2="25"
-            stroke="#111"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-
-          <line
-            x1="8"
-            y1="35"
-            x2="42"
-            y2="35"
-            stroke="#111"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-
-        </svg>
-
-        <span>
-          Menu
-        </span>
-
-      </div>
-
-    </nav>
-
-  </div>
-    <!-- =====================================================
-       PAGINA RISPARMIO / BUONI
-       ===================================================== -->
-
-  <div
-    id="mainPage"
-    style="display: block;"
-  >
-
-    <!-- HEADER BUONI -->
     <header class="top-header">
 
       <button
         class="back-button"
+        type="button"
         onclick="tornaAllaHome()"
-        aria-label="Torna alla home"
+        aria-label="Indietro"
       >
 
         <svg
@@ -1030,12 +43,10 @@
         >
 
           <path
-            d="M24 8
-               L12 20
-               L24 32"
+            d="M25 7 L12 20 L25 33"
             fill="none"
             stroke="#111"
-            stroke-width="2.5"
+            stroke-width="5"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
@@ -1045,126 +56,84 @@
       </button>
 
 
-      <div class="top-title">
-        Risparmio
-      </div>
+      <h1>Buoni</h1>
 
 
       <div class="top-icons">
 
-        <button
-          aria-label="Cerca"
+        <!-- OCCHIO -->
+
+        <svg
+          class="eye-icon"
+          viewBox="0 0 50 50"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
         >
 
-          <svg
-            viewBox="0 0 40 40"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <path
+            d="
+              M5 25
+              C11 14 18 9 25 9
+              C32 9 39 14 45 25
+              C39 36 32 41 25 41
+              C18 41 11 36 5 25Z
+            "
+            fill="none"
+            stroke="#111"
+            stroke-width="3.5"
+          />
 
-            <circle
-              cx="17"
-              cy="17"
-              r="9"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.2"
-            />
+          <circle
+            cx="25"
+            cy="25"
+            r="7"
+            fill="none"
+            stroke="#111"
+            stroke-width="3.5"
+          />
 
-            <path
-              d="M24 24
-                 L32 32"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.2"
-              stroke-linecap="round"
-            />
+          <line
+            x1="8"
+            y1="8"
+            x2="42"
+            y2="42"
+            stroke="#111"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
 
-          </svg>
-
-        </button>
+        </svg>
 
 
-        <button
-          aria-label="Assistenza"
-        >
+        <!-- ? -->
 
-          <svg
-            viewBox="0 0 40 40"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-
-            <circle
-              cx="20"
-              cy="20"
-              r="14"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.2"
-            />
-
-            <path
-              d="M15 16
-                 C15 13
-                 17 11
-                 20 11
-                 C23 11
-                 25 13
-                 25 16
-                 C25 19
-                 22 20
-                 20 22
-                 V24"
-              fill="none"
-              stroke="#111"
-              stroke-width="2.2"
-              stroke-linecap="round"
-            />
-
-            <circle
-              cx="20"
-              cy="29"
-              r="1.5"
-              fill="#111"
-            />
-
-          </svg>
-
-        </button>
+        <span class="question">?</span>
 
       </div>
 
     </header>
 
 
-    <!-- MAIN BUONI -->
+
+    <!-- CONTENUTO BUONI -->
+
     <main>
 
-      <!-- RIEPILOGO -->
+
+      <!-- =================================================
+           RIEPILOGO
+           ================================================= -->
+
       <section class="summary-card">
 
-        <div class="summary-item">
-
-          <div
-            class="summary-label"
-          >
-            Totale Buoni
-          </div>
-
-          <div
-            class="summary-value"
-            id="totaleBuoni"
-          >
-            20 Buoni
-          </div>
-
-        </div>
+        <h2 id="totaleBuoni">
+          20 Buoni
+        </h2>
 
 
         <div class="summary-item">
 
-          <div
-            class="summary-label"
-          >
+          <div class="summary-label">
             Valore nominale
           </div>
 
@@ -1178,11 +147,9 @@
         </div>
 
 
-        <div class="summary-item">
+        <div class="summary-item second">
 
-          <div
-            class="summary-label"
-          >
+          <div class="summary-label">
             Valore rimborso lordo
           </div>
 
@@ -1198,321 +165,386 @@
       </section>
 
 
-      <!-- OPERAZIONI -->
+
+      <!-- =================================================
+           OPERAZIONI
+           ================================================= -->
+
+      <h2 class="section-title">
+        Operazioni
+      </h2>
+
+
       <section class="operations">
 
-        <h2>
-          Operazioni
-        </h2>
 
+        <!-- ACQUISTA -->
 
-        <div class="operations-scroll">
+        <button
+          class="operation-button"
+          type="button"
+          onclick="operationMessage('Acquista Buono')"
+        >
 
-          <button
-            class="operation-button"
-            onclick="operationMessage('Acquista Buono')"
-          >
+          <div class="operation-icon">
 
-            <div class="operation-icon">
+            <svg
+              viewBox="0 0 170 170"
+              xmlns="http://www.w3.org/2000/svg"
+            >
 
-              <svg
-                viewBox="0 0 70 70"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <circle
+                cx="85"
+                cy="85"
+                r="85"
+                fill="#f1f8ff"
+              />
 
-                <circle
-                  cx="35"
-                  cy="35"
-                  r="34"
-                  fill="#f1f8ff"
-                />
+              <g transform="rotate(-10 85 85)">
 
                 <rect
-                  x="19"
-                  y="21"
-                  width="32"
-                  height="27"
+                  x="45"
+                  y="52"
+                  width="78"
+                  height="50"
                   rx="3"
                   fill="#f4d000"
                 />
 
                 <rect
-                  x="31"
-                  y="21"
-                  width="6"
-                  height="27"
+                  x="69"
+                  y="52"
+                  width="9"
+                  height="50"
                   fill="#1764c0"
                 />
 
-                <text
-                  x="22"
-                  y="41"
-                  font-family="Arial"
-                  font-size="17"
-                  font-weight="700"
-                  fill="#1261b9"
-                >€</text>
-
-              </svg>
-
-            </div>
-
-            <span>
-              Acquista
-            </span>
-
-          </button>
+              </g>
 
 
-          <button
-            class="operation-button"
-            onclick="operationMessage('Rimborsa Buono')"
-          >
-
-            <div class="operation-icon">
-
-              <svg
-                viewBox="0 0 70 70"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-
-                <circle
-                  cx="35"
-                  cy="35"
-                  r="34"
-                  fill="#f1f8ff"
-                />
-
-                <path
-                  d="M22 35
-                     C22 26
-                     29 20
-                     38 20
-                     C44 20
-                     48 23
-                     51 28"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-
-                <path
-                  d="M47 23
-                     L51 28
-                     L45 29"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-
-                <path
-                  d="M48 35
-                     C48 44
-                     41 50
-                     32 50
-                     C26 50
-                     22 47
-                     19 42"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-
-                <path
-                  d="M23 47
-                     L19 42
-                     L25 41"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-
-              </svg>
-
-            </div>
-
-            <span>
-              Rimborsa
-            </span>
-
-          </button>
-
-
-          <button
-            class="operation-button"
-            onclick="operationMessage('Gestisci Buoni')"
-          >
-
-            <div class="operation-icon">
-
-              <svg
-                viewBox="0 0 70 70"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-
-                <circle
-                  cx="35"
-                  cy="35"
-                  r="34"
-                  fill="#f1f8ff"
-                />
-
-                <path
-                  d="M23 25
-                     H47
-                     V45
-                     H23
-                     Z"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                />
-
-                <path
-                  d="M28 31
-                     H42
-                     M28 37
-                     H42"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                />
-
-              </svg>
-
-            </div>
-
-            <span>
-              Gestisci
-            </span>
-
-          </button>
-
-        </div>
-
-      </section>
-
-
-      <!-- ELENCO BUONI -->
-      <section class="your-bonds">
-
-        <div class="your-bonds-header">
-
-          <h2>
-            I tuoi Buoni
-          </h2>
-
-        </div>
-
-
-        <!-- FILTRI -->
-        <div class="filtri">
-
-          <button
-            class="filtro filtro-filtra"
-          >
-
-            <svg
-              class="filtro-sliders-icon"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <line
-                x1="4"
-                y1="6"
-                x2="20"
-                y2="6"
+              <rect
+                x="39"
+                y="69"
+                width="91"
+                height="48"
+                rx="3"
+                fill="#f4d000"
               />
 
-              <line
-                x1="4"
-                y1="12"
-                x2="20"
-                y2="12"
+              <rect
+                x="65"
+                y="69"
+                width="10"
+                height="48"
+                fill="#1764c0"
               />
 
-              <line
-                x1="4"
-                y1="18"
-                x2="20"
-                y2="18"
+              <text
+                x="48"
+                y="102"
+                font-family="Arial"
+                font-size="26"
+                font-weight="700"
+                fill="#1261b9"
+              >€</text>
+
+
+              <rect
+                x="80"
+                y="89"
+                width="39"
+                height="5"
+                rx="1"
+                fill="#fff"
               />
 
-              <line
-                x1="9"
-                y1="4"
-                x2="9"
-                y2="8"
+              <rect
+                x="80"
+                y="100"
+                width="31"
+                height="5"
+                rx="1"
+                fill="#fff"
               />
 
-              <line
-                x1="15"
-                y1="10"
-                x2="15"
-                y2="14"
+
+              <circle
+                cx="121"
+                cy="120"
+                r="22"
+                fill="#49b96a"
               />
 
-              <line
-                x1="7"
-                y1="16"
-                x2="7"
-                y2="20"
+              <rect
+                x="117"
+                y="108"
+                width="8"
+                height="24"
+                rx="2"
+                fill="#fff"
+              />
+
+              <rect
+                x="109"
+                y="116"
+                width="24"
+                height="8"
+                rx="2"
+                fill="#fff"
               />
 
             </svg>
 
+          </div>
 
-            <u>
-              Filtra
-            </u>
+          <span>
+            Acquista<br>
+            Buono
+          </span>
 
-          </button>
-
-
-          <button
-            class="filtro prodotto"
-          >
-
-            <u>
-              Prodotti
-            </u>
-
-            <span class="freccia-down"></span>
-
-          </button>
+        </button>
 
 
-          <button
-            class="filtro periodo"
-          >
 
-            <u>
-              Periodo di scadenza
-            </u>
+        <!-- RIMBORSO -->
 
-          </button>
+        <button
+          class="operation-button"
+          type="button"
+          onclick="operationMessage('Richiedi rimborso')"
+        >
 
-        </div>
+          <div class="operation-icon">
 
+            <svg
+              viewBox="0 0 170 170"
+              xmlns="http://www.w3.org/2000/svg"
+            >
 
-        <!-- CONTENITORE DINAMICO DEI 20 BUONI -->
-        <div
-          id="listaBuoni"
-        ></div>
+              <circle
+                cx="85"
+                cy="85"
+                r="85"
+                fill="#f1f8ff"
+              />
+
+              <circle
+                cx="51"
+                cy="57"
+                r="13"
+                fill="#ffd52a"
+                stroke="#e5b800"
+                stroke-width="2"
+              />
+
+              <circle
+                cx="64"
+                cy="54"
+                r="13"
+                fill="#ffd52a"
+                stroke="#e5b800"
+                stroke-width="2"
+              />
+
+              <rect
+                x="38"
+                y="62"
+                width="80"
+                height="48"
+                rx="5"
+                fill="#159957"
+              />
+
+              <rect
+                x="45"
+                y="68"
+                width="66"
+                height="34"
+                rx="3"
+                fill="#42b96d"
+              />
+
+              <path
+                d="
+                  M45 72
+                  H106
+                  C113 72 118 77 118 84
+                  V103
+                  C118 110 113 114 106 114
+                  H46
+                  C39 114 35 110 35 103
+                  V83
+                  C35 76 39 72 45 72
+                  Z
+                "
+                fill="#f4d000"
+              />
+
+              <path
+                d="
+                  M35 125
+                  V96
+                  H25
+                  L41 79
+                  L57 96
+                  H47
+                  V125
+                  Z
+                "
+                fill="#3eb969"
+              />
+
+              <rect
+                x="96"
+                y="82"
+                width="27"
+                height="20"
+                rx="7"
+                fill="#145db5"
+              />
+
+              <circle
+                cx="104"
+                cy="92"
+                r="3.5"
+                fill="#ffd900"
+              />
+
+            </svg>
+
+          </div>
+
+          <span>
+            Richiedi<br>
+            rimborso
+          </span>
+
+        </button>
+
 
       </section>
+
+
+
+      <!-- =================================================
+           ELENCO
+           ================================================= -->
+
+      <h2 class="section-title your-bonds">
+        Elenco Buoni
+      </h2>
+
+
+      <!-- FILTRI -->
+
+      <div class="filtri">
+
+
+        <button
+          class="filtro filtro-filtra"
+          type="button"
+        >
+
+          <svg
+            class="filtro-sliders-icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+            />
+
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+            />
+
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+            />
+
+            <line
+              x1="9"
+              y1="4"
+              x2="9"
+              y2="8"
+            />
+
+            <line
+              x1="15"
+              y1="10"
+              x2="15"
+              y2="14"
+            />
+
+            <line
+              x1="7"
+              y1="16"
+              x2="7"
+              y2="20"
+            />
+
+          </svg>
+
+          <u>Filtra</u>
+
+        </button>
+
+
+
+        <button
+          class="filtro prodotto"
+          type="button"
+        >
+
+          <u>
+            Prodotti
+          </u>
+
+          <span class="freccia-down"></span>
+
+        </button>
+
+
+
+        <button
+          class="filtro periodo"
+          type="button"
+        >
+
+          <u>
+            Periodo di scadenza
+          </u>
+
+        </button>
+
+
+      </div>
+
+
+
+      <!--
+        IL JS INSERIRÀ QUI TUTTI I 20 BUONI.
+        OGNI RIGA SARÀ CLICCABILE.
+      -->
+
+      <section id="listaBuoni"></section>
+
 
     </main>
 
   </div>
+
 
 
   <!-- =====================================================
@@ -1520,31 +552,29 @@
        ===================================================== -->
 
   <div
-    id="detailPage"
+    id="paginaDettaglio"
     class="pagina-dettaglio"
     style="display:none;"
   >
 
+
     <header class="detail-header">
 
+
       <button
-        class="back-button"
+        class="detail-back"
+        type="button"
         onclick="tornaAllaLista()"
         aria-label="Indietro"
       >
 
-        <svg
-          viewBox="0 0 40 40"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg viewBox="0 0 40 40">
 
           <path
-            d="M24 8
-               L12 20
-               L24 32"
+            d="M25 7 L12 20 L25 33"
             fill="none"
             stroke="#111"
-            stroke-width="2.5"
+            stroke-width="5.5"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
@@ -1558,14 +588,23 @@
         Buono 3×4 con premio
       </h1>
 
+
     </header>
+
 
 
     <main class="detail-main">
 
+
+      <!-- =================================================
+           CARD PRINCIPALE
+           ================================================= -->
+
       <section class="detail-card">
 
+
         <div class="detail-card-top">
+
 
           <div class="detail-buono-icon">
 
@@ -1581,10 +620,7 @@
                 fill="#a9bcf5"
               />
 
-
-              <g
-                transform="rotate(-10 85 85)"
-              >
+              <g transform="rotate(-10 85 85)">
 
                 <rect
                   x="45"
@@ -1659,7 +695,7 @@
           <div class="detail-rimborso">
 
             <span id="detailValoreRimborso">
-              900,00 €
+              500,00 €
             </span>
 
           </div>
@@ -1669,16 +705,19 @@
             Valore di rimborso lordo
           </div>
 
+
         </div>
 
 
+
+        <!-- CONTO -->
+
         <div class="detail-account">
+
 
           <div class="account-icon">
 
-            <svg
-              viewBox="0 0 80 60"
-            >
+            <svg viewBox="0 0 80 60">
 
               <rect
                 x="15"
@@ -1721,18 +760,28 @@
 
 
           <div class="account-text">
+
             Regolato su Conto<br>
             001062627284
+
           </div>
 
+
         </div>
+
 
       </section>
 
 
+
+      <!-- =================================================
+           RIEPILOGO DATI
+           ================================================= -->
+
       <h2 class="detail-section-title">
         Riepilogo dei dati
       </h2>
+
 
 
       <div class="detail-field">
@@ -1745,10 +794,11 @@
           class="detail-value"
           id="detailSottoscritto"
         >
-          12 Agosto 2026
+          16 Settembre 2026
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1761,10 +811,11 @@
           class="detail-value"
           id="detailScadenza"
         >
-          12 Agosto 2038
+          16 Settembre 2038
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1777,10 +828,11 @@
           class="detail-value"
           id="detailNominale"
         >
-          900,00 €
+          500,00 €
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1789,14 +841,19 @@
           Ritenuta fiscale
         </div>
 
-        <div class="detail-value">
+        <div
+          class="detail-value"
+          id="detailRitenuta"
+        >
           0,00 €
         </div>
 
       </div>
 
 
+
       <div class="detail-divider"></div>
+
 
 
       <div class="detail-field">
@@ -1809,13 +866,15 @@
           class="detail-value"
           id="detailNetto"
         >
-          900,00 €
+          500,00 €
         </div>
 
       </div>
 
 
+
       <div class="detail-divider"></div>
+
 
 
       <div class="detail-field">
@@ -1828,10 +887,11 @@
           class="detail-value"
           id="detailLordoSenzaPremio"
         >
-          1210,40 €
+          672,44 €
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1844,10 +904,11 @@
           class="detail-value"
           id="detailRitenutaScadenza"
         >
-          38,80 €
+          21,56 €
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1860,13 +921,15 @@
           class="detail-value"
           id="detailNettoSenzaPremio"
         >
-          1171,60 €
+          650,89 €
         </div>
 
       </div>
 
 
+
       <div class="detail-divider"></div>
+
 
 
       <div class="detail-field">
@@ -1879,10 +942,11 @@
           class="detail-value"
           id="detailPremioLordo"
         >
-          72,00 €
+          40,00 €
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1895,10 +959,11 @@
           class="detail-value"
           id="detailRitenutaPremio"
         >
-          9,00 €
+          5,00 €
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1911,13 +976,15 @@
           class="detail-value"
           id="detailPremioNetto"
         >
-          63,00 €
+          35,00 €
         </div>
 
       </div>
 
 
+
       <div class="detail-divider"></div>
+
 
 
       <div class="detail-field">
@@ -1930,10 +997,11 @@
           class="detail-value"
           id="detailLordoConPremio"
         >
-          1282,40 €
+          712,44 €
         </div>
 
       </div>
+
 
 
       <div class="detail-field">
@@ -1946,15 +1014,14 @@
           class="detail-value"
           id="detailRitenutaTotale"
         >
-          47,80 €
+          26,56 €
         </div>
 
       </div>
 
 
-      <div
-        class="detail-field last-detail-field"
-      >
+
+      <div class="detail-field last-detail-field">
 
         <div class="detail-label">
           Valore netto a scadenza con il premio
@@ -1964,17 +1031,24 @@
           class="detail-value"
           id="detailNettoConPremio"
         >
-          1234,60 €
+          685,89 €
         </div>
 
       </div>
 
+
     </main>
 
+
+
+    <!-- =================================================
+         PULSANTE FINALE
+         ================================================= -->
 
     <div class="bottom-action">
 
       <button
+        type="button"
         onclick="operationMessage('Richiedi rimborso')"
       >
 
@@ -1986,20 +1060,18 @@
 
     </div>
 
+
   </div>
 
 
+
   <!-- =====================================================
-       SCRIPT
+       JAVASCRIPT
        ===================================================== -->
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
+
 
 </body>
-</html>
-  <!-- CACHE BUST: VERSIONE 7 -->
 
-  <script src="script.js?v=7"></script>
-
-</body>
 </html>
