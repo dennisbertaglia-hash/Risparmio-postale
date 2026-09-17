@@ -1,31 +1,57 @@
-const VERSIONE = "risparmio-postale-v10";
+const CACHE_NAME = "risparmio-postale-v3";
+
+const FILES_TO_CACHE = [
+  "./",
+  "./index.html",
+  "./style.css",
+  "./script.js",
+  "./manifest.json"
+];
 
 self.addEventListener("install", event => {
-  console.log(VERSIONE + " installato");
+
   self.skipWaiting();
+
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(FILES_TO_CACHE))
+  );
+
 });
+
 
 self.addEventListener("activate", event => {
+
   event.waitUntil(
-    (async () => {
 
-      // Elimina qualsiasi cache precedente
-      const cacheNames = await caches.keys();
+    caches.keys()
+      .then(cacheNames => {
 
-      await Promise.all(
-        cacheNames.map(cacheName => caches.delete(cacheName))
-      );
+        return Promise.all(
 
-      // Prende immediatamente il controllo delle pagine aperte
-      await self.clients.claim();
+          cacheNames
+            .filter(name => name !== CACHE_NAME)
+            .map(name => caches.delete(name))
 
-      // Disinstalla completamente questo Service Worker
-      await self.registration.unregister();
+        );
 
-    })()
+      })
+      .then(() => self.clients.claim())
+
   );
+
 });
 
-// NESSUN fetch handler.
-// HTML, CSS, JS e immagini vengono quindi gestiti
-// direttamente dal browser/rete senza cache del Service Worker.
+
+self.addEventListener("fetch", event => {
+
+  event.respondWith(
+
+    caches.match(event.request)
+      .then(cachedResponse => {
+
+        return cachedResponse || fetch(event.request);
+
+      })
+
+  );
