@@ -2118,10 +2118,9 @@ input:focus-visible {
   }
 }
 /* =====================================================
-   MODIFICHE FINALI PAGINA BUONI
+   ULTIME FINITURE PAGINA BUONI
    ===================================================== */
 
-/* BOX BLU */
 .summary-card {
   min-height: 0 !important;
   padding-top: 23px !important;
@@ -2153,8 +2152,6 @@ input:focus-visible {
   font-weight: 400 !important;
 }
 
-
-/* FILTRA */
 .filtro-filtra {
   display: inline-flex !important;
   align-items: center !important;
@@ -2163,7 +2160,6 @@ input:focus-visible {
 }
 
 .filtro-sliders-icon {
-  display: block !important;
   width: 19px !important;
   height: 19px !important;
   flex: 0 0 19px !important;
@@ -2181,8 +2177,6 @@ input:focus-visible {
   stroke-width: 2.5 !important;
 }
 
-
-/* RIGHE DEI BUONI */
 .buono {
   min-height: 86px !important;
   padding: 12px 0 !important;
@@ -2222,8 +2216,6 @@ input:focus-visible {
   font-weight: 500 !important;
 }
 
-
-/* VALORE RIMBORSO LORDO */
 .buono-valore {
   flex: 0 0 auto !important;
   min-width: 112px !important;
@@ -2249,8 +2241,6 @@ input:focus-visible {
   white-space: nowrap !important;
 }
 
-
-/* IPHONE */
 @media (max-width: 600px) {
 
   .summary-card {
@@ -2292,8 +2282,6 @@ input:focus-visible {
   }
 }
 
-
-/* IPHONE PICCOLO */
 @media (max-width: 390px) {
 
   .summary-card {
