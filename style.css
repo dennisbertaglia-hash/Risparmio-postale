@@ -27,6 +27,7 @@ u {
   text-underline-offset: 3px;
 }
 
+
 /* =========================================================
    PAGINA PRINCIPALE
    ========================================================= */
@@ -42,6 +43,7 @@ u {
   padding: 0 18px 80px;
 }
 
+
 /* =========================================================
    HEADER
    ========================================================= */
@@ -49,7 +51,7 @@ u {
 .top-header {
   position: relative;
   width: 100%;
-  height: 132px;
+  height: 138px;
   background: #ffffff;
 }
 
@@ -62,8 +64,10 @@ u {
   height: 48px;
 
   padding: 0;
+
   border: 1.5px solid #111111;
   border-radius: 50%;
+
   background: #ffffff;
 
   display: flex;
@@ -81,6 +85,7 @@ u {
   border-bottom: 4px solid #111111;
 
   transform: rotate(45deg);
+
   margin-left: 4px;
 }
 
@@ -94,7 +99,9 @@ u {
 
   font-size: 30px;
   line-height: 1;
+
   font-weight: 700;
+
   letter-spacing: -0.6px;
 }
 
@@ -106,18 +113,20 @@ u {
 
   display: flex;
   align-items: center;
-  gap: 16px;
+
+  gap: 14px;
 }
 
 .eye-icon {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
+
   display: block;
 }
 
 .question {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
 
   display: flex;
   align-items: center;
@@ -126,23 +135,27 @@ u {
   border: 1.5px solid #111111;
   border-radius: 50%;
 
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1;
+
   font-weight: 500;
 }
 
+
 /* =========================================================
-   RIQUADRO RIEPILOGO
+   RIQUADRO RIASSUNTIVO
    ========================================================= */
 
 .summary-card {
   width: 100%;
+
   height: 184px;
 
   background: #edf6ff;
+
   border-radius: 24px;
 
-  padding: 20px 22px;
+  padding: 22px 22px;
 }
 
 .summary-card h2 {
@@ -150,7 +163,9 @@ u {
 
   font-size: 19px;
   line-height: 1.1;
+
   font-weight: 700;
+
   letter-spacing: -0.3px;
 }
 
@@ -172,6 +187,7 @@ u {
 
   font-size: 14px;
   line-height: 1.2;
+
   font-weight: 300;
 }
 
@@ -180,20 +196,29 @@ u {
 
   font-size: 19px;
   line-height: 1.1;
+
   font-weight: 700;
+
   letter-spacing: -0.2px;
 }
+
 
 /* =========================================================
    OPERAZIONI
    ========================================================= */
+
+.operations-section {
+  width: 100%;
+}
 
 .section-title {
   margin: 28px 0 0;
 
   font-size: 25px;
   line-height: 1.1;
+
   font-weight: 700;
+
   letter-spacing: -0.5px;
 }
 
@@ -201,23 +226,27 @@ u {
   display: flex;
   align-items: flex-start;
 
-  gap: 34px;
+  gap: 46px;
 
-  margin-top: 21px;
-  padding-left: 3px;
+  margin-top: 20px;
+
+  padding-left: 2px;
 }
 
 .operation-button {
   width: 105px;
   min-width: 105px;
+
   flex: 0 0 105px;
 
   padding: 0;
 
   border: 0;
+
   background: transparent;
 
   text-align: center;
+
   color: #111111;
 }
 
@@ -228,6 +257,7 @@ u {
   margin: 0 auto 9px;
 
   border-radius: 50%;
+
   background: #edf6ff;
 
   display: flex;
@@ -252,16 +282,19 @@ u {
 
   font-size: 15px;
   line-height: 1.15;
+
   font-weight: 400;
 }
+
 
 /* =========================================================
    ELENCO BUONI
    ========================================================= */
 
 .your-bonds {
-  margin-top: 35px;
+  margin-top: 36px;
 }
+
 
 /* =========================================================
    FILTRI
@@ -275,7 +308,8 @@ u {
 
   gap: 8px;
 
-  margin-top: 16px;
+  margin-top: 17px;
+
   padding: 0;
 
   overflow-x: auto;
@@ -296,9 +330,11 @@ u {
   padding: 0 12px;
 
   border: 1.8px solid #0759c9;
+
   border-radius: 23px;
 
   background: #ffffff;
+
   color: #0759c9;
 
   display: flex;
@@ -307,6 +343,7 @@ u {
 
   font-size: 14px;
   line-height: 1;
+
   font-weight: 600;
 
   white-space: nowrap;
@@ -332,7 +369,9 @@ u {
 
 .filtro-sliders-icon line {
   stroke: #0759c9;
+
   stroke-width: 1.8;
+
   stroke-linecap: round;
 }
 
@@ -365,50 +404,60 @@ u {
   margin-top: -4px;
 }
 
+
 /* =========================================================
    LISTA BUONI
    ========================================================= */
 
 #listaBuoni {
   width: 100%;
-  margin-top: 5px;
+
+  margin-top: 10px;
 }
 
 .bond-item {
   width: 100%;
 
   margin: 0;
-  padding: 10px 0;
+
+  padding: 7px 0;
 
   background: #ffffff;
 }
 
 .bond-item-button {
   width: 100%;
-  min-height: 62px;
+
+  min-height: 48px;
 
   padding: 0;
 
   border: 0;
+
   background: transparent;
 
   display: grid;
 
-  grid-template-columns: 48px minmax(0, 1fr) 105px;
+  grid-template-columns: 36px minmax(0, 1fr) 112px;
 
-  column-gap: 9px;
+  column-gap: 10px;
 
   align-items: center;
 
   text-align: left;
+
   color: #111111;
 }
 
 .bond-item-icon {
-  width: 46px;
-  height: 46px;
+  width: 32px;
+  height: 32px;
+
+  min-width: 32px;
+  min-height: 32px;
 
   border-radius: 50%;
+
   background: #edf6ff;
 
   display: flex;
@@ -419,11 +468,11 @@ u {
 }
 
 .bond-item-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 23px !important;
+  height: 23px !important;
 
-  max-width: 32px;
-  max-height: 32px;
+  max-width: 23px !important;
+  max-height: 23px !important;
 
   display: block;
 }
@@ -433,12 +482,14 @@ u {
 }
 
 .bond-item-info .data {
-  margin: 0 0 3px;
+  margin: 0 0 2px;
 
   color: #777777;
 
   font-size: 12px;
-  line-height: 1.2;
+
+  line-height: 1.15;
+
   font-weight: 300;
 }
 
@@ -448,8 +499,12 @@ u {
   color: #111111;
 
   font-size: 15px;
-  line-height: 1.2;
+
+  line-height: 1.15;
+
   font-weight: 400;
+
+  white-space: nowrap;
 }
 
 .bond-item-value {
@@ -461,13 +516,17 @@ u {
 .bond-item-value .label {
   display: block;
 
-  margin: 0 0 3px;
+  margin: 0 0 2px;
 
   color: #777777;
 
   font-size: 10px;
+
   line-height: 1.1;
+
   font-weight: 300;
+
+  white-space: nowrap;
 }
 
 .bond-item-value .valore {
@@ -476,11 +535,14 @@ u {
   color: #111111;
 
   font-size: 15px;
+
   line-height: 1.1;
+
   font-weight: 700;
 
   white-space: nowrap;
 }
+
 
 /* =========================================================
    PAGINA DETTAGLIO
@@ -488,6 +550,7 @@ u {
 
 #paginaDettaglio {
   width: 100%;
+
   min-height: 100vh;
 
   padding: 0 18px 105px;
@@ -501,6 +564,7 @@ u {
   width: 100%;
 }
 
+
 /* =========================================================
    HEADER DETTAGLIO
    ========================================================= */
@@ -509,7 +573,8 @@ u {
   position: relative;
 
   width: 100%;
-  height: 132px;
+
+  height: 238px;
 }
 
 .detail-back {
@@ -524,6 +589,7 @@ u {
   padding: 0;
 
   border: 1.5px solid #111111;
+
   border-radius: 50%;
 
   background: #ffffff;
@@ -531,26 +597,39 @@ u {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  z-index: 5;
 }
 
 .detail-back svg {
   width: 32px;
   height: 32px;
+
+  display: block;
 }
 
 .detail-header h1 {
   position: absolute;
 
   left: 0;
-  bottom: 8px;
+
+  bottom: 34px;
+
+  width: 100%;
 
   margin: 0;
 
   font-size: 25px;
+
   line-height: 1.05;
+
   font-weight: 700;
+
   letter-spacing: -0.5px;
+
+  white-space: nowrap;
 }
+
 
 /* =========================================================
    CONTENUTO DETTAGLIO
@@ -559,6 +638,7 @@ u {
 .detail-main {
   width: 100%;
 }
+
 
 /* =========================================================
    CARD DETTAGLIO
@@ -573,38 +653,46 @@ u {
 
   border-radius: 24px;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 .detail-card-top {
   position: relative;
 
   width: 100%;
-  height: 245px;
+
+  height: 285px;
+
+  border-radius: 24px 24px 0 0;
+
+  background: #edf6ff;
 }
 
 .detail-buono-icon {
   position: absolute;
 
-  top: 17px;
+  top: -60px;
+
   left: 50%;
 
   transform: translateX(-50%);
 
-  width: 88px;
-  height: 88px;
+  width: 168px;
+  height: 168px;
 
   border-radius: 50%;
 
   overflow: hidden;
+
+  z-index: 3;
 }
 
 .detail-buono-icon svg {
-  width: 88px;
-  height: 88px;
+  width: 168px;
+  height: 168px;
 
-  max-width: 88px;
-  max-height: 88px;
+  max-width: 168px;
+  max-height: 168px;
 
   display: block;
 }
@@ -614,13 +702,15 @@ u {
 
   left: 0;
   right: 0;
-  bottom: 50px;
+
+  bottom: 70px;
 
   text-align: center;
 }
 
 .detail-rimborso span {
-  font-size: 29px;
+  font-size: 30px;
+
   line-height: 1;
 
   font-weight: 700;
@@ -633,24 +723,29 @@ u {
 
   left: 0;
   right: 0;
-  bottom: 20px;
+
+  bottom: 35px;
 
   text-align: center;
 
-  font-size: 14px;
+  font-size: 15px;
+
   line-height: 1.1;
 
   font-weight: 400;
 }
+
 
 /* =========================================================
    CONTO
    ========================================================= */
 
 .detail-account {
-  min-height: 72px;
+  min-height: 108px;
 
   border-top: 2px solid #ffffff;
+
+  border-radius: 0 0 24px 24px;
 
   background: #edf6ff;
 
@@ -658,9 +753,9 @@ u {
   align-items: center;
   justify-content: center;
 
-  gap: 10px;
+  gap: 14px;
 
-  padding: 10px 16px;
+  padding: 16px 16px;
 }
 
 .account-icon {
@@ -676,22 +771,28 @@ u {
 
   max-width: 48px;
   max-height: 38px;
+
+  display: block;
 }
 
 .account-text {
   font-size: 15px;
+
   line-height: 1.2;
+
   font-weight: 400;
 }
+
 
 /* =========================================================
    RIEPILOGO DATI
    ========================================================= */
 
 .detail-section-title {
-  margin: 31px 0 25px;
+  margin: 34px 0 25px;
 
   font-size: 25px;
+
   line-height: 1.1;
 
   font-weight: 700;
@@ -711,6 +812,7 @@ u {
   color: #777777;
 
   font-size: 14px;
+
   line-height: 1.2;
 
   font-weight: 400;
@@ -722,6 +824,7 @@ u {
   color: #111111;
 
   font-size: 17px;
+
   line-height: 1.25;
 
   font-weight: 400;
@@ -729,6 +832,7 @@ u {
 
 .detail-divider {
   width: 100%;
+
   height: 1px;
 
   margin: 23px 0;
@@ -739,6 +843,7 @@ u {
 .last-detail-field {
   margin-bottom: 0;
 }
+
 
 /* =========================================================
    PULSANTE FISSO
@@ -762,22 +867,28 @@ u {
 
 .bottom-action button {
   width: 100%;
+
   height: 54px;
 
   border: 0;
+
   border-radius: 28px;
 
   background: #0759c9;
+
   color: #ffffff;
 
   font-size: 18px;
+
   line-height: 1;
 
   font-weight: 600;
 
   text-decoration: underline;
+
   text-underline-offset: 3px;
 }
+
 
 /* =========================================================
    IPHONE
@@ -791,7 +902,7 @@ u {
   }
 
   .top-header {
-    height: 132px;
+    height: 138px;
   }
 
   .top-header .back-button {
@@ -828,18 +939,20 @@ u {
     font-size: 21px;
   }
 
+
   /* RIQUADRO */
 
   .summary-card {
     height: 184px;
 
-    padding: 20px 22px;
+    padding: 22px 22px;
 
     border-radius: 24px;
   }
 
   .summary-card h2 {
     font-size: 19px;
+
     margin-bottom: 17px;
   }
 
@@ -851,22 +964,28 @@ u {
     font-size: 19px;
   }
 
+
   /* OPERAZIONI */
 
   .section-title {
     font-size: 25px;
+
     margin-top: 28px;
   }
 
   .operations {
-    gap: 34px;
-    margin-top: 21px;
-    padding-left: 3px;
+    gap: 46px;
+
+    margin-top: 20px;
+
+    padding-left: 2px;
   }
 
   .operation-button {
     width: 105px;
+
     min-width: 105px;
+
     flex-basis: 105px;
   }
 
@@ -884,17 +1003,20 @@ u {
     font-size: 15px;
   }
 
+
   /* ELENCO */
 
   .your-bonds {
-    margin-top: 35px;
+    margin-top: 36px;
   }
+
 
   /* FILTRI */
 
   .filtri {
     gap: 8px;
-    margin-top: 16px;
+
+    margin-top: 17px;
   }
 
   .filtro {
@@ -921,30 +1043,38 @@ u {
   }
 
   #listaBuoni {
-    margin-top: 5px;
+    margin-top: 10px;
   }
+
 
   /* BUONI */
 
   .bond-item {
-    padding: 10px 0;
+    padding: 7px 0;
   }
 
   .bond-item-button {
-    grid-template-columns: 48px minmax(0, 1fr) 105px;
-    column-gap: 9px;
+    grid-template-columns: 36px minmax(0, 1fr) 112px;
 
-    min-height: 62px;
+    column-gap: 10px;
+
+    min-height: 48px;
   }
 
   .bond-item-icon {
-    width: 46px;
-    height: 46px;
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+    min-height: 32px;
   }
 
   .bond-item-icon svg {
-    width: 32px;
-    height: 32px;
+    width: 23px !important;
+    height: 23px !important;
+
+    max-width: 23px !important;
+    max-height: 23px !important;
   }
 
   .bond-item-info .data {
@@ -963,16 +1093,18 @@ u {
     font-size: 15px;
   }
 
+
   /* DETTAGLIO */
 
   #paginaDettaglio {
     padding-left: 18px;
     padding-right: 18px;
+
     padding-bottom: 105px;
   }
 
   .detail-header {
-    height: 132px;
+    height: 238px;
   }
 
   .detail-back {
@@ -985,43 +1117,56 @@ u {
 
   .detail-header h1 {
     left: 0;
-    bottom: 8px;
+
+    bottom: 34px;
 
     font-size: 25px;
+
+    white-space: nowrap;
+  }
+
+  .detail-card {
+    border-radius: 24px;
+
+    overflow: visible;
   }
 
   .detail-card-top {
-    height: 245px;
+    height: 285px;
+
+    border-radius: 24px 24px 0 0;
   }
 
   .detail-buono-icon {
-    width: 88px;
-    height: 88px;
+    width: 168px;
+    height: 168px;
 
-    top: 17px;
+    top: -60px;
   }
 
   .detail-buono-icon svg {
-    width: 88px;
-    height: 88px;
+    width: 168px;
+    height: 168px;
   }
 
   .detail-rimborso {
-    bottom: 50px;
+    bottom: 70px;
   }
 
   .detail-rimborso span {
-    font-size: 29px;
+    font-size: 30px;
   }
 
   .detail-rimborso-label {
-    bottom: 20px;
-    font-size: 14px;
+    bottom: 35px;
+
+    font-size: 15px;
   }
 
   .detail-account {
-    min-height: 72px;
-    gap: 10px;
+    min-height: 108px;
+
+    gap: 14px;
   }
 
   .account-icon {
@@ -1039,7 +1184,7 @@ u {
   }
 
   .detail-section-title {
-    margin-top: 31px;
+    margin-top: 34px;
     margin-bottom: 25px;
 
     font-size: 25px;
@@ -1054,6 +1199,7 @@ u {
   }
 }
 
+
 /* =========================================================
    IPHONE PIÙ STRETTO
    ========================================================= */
@@ -1066,6 +1212,7 @@ u {
 
   .summary-card {
     height: 181px;
+
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1087,12 +1234,14 @@ u {
   }
 
   .operations {
-    gap: 25px;
+    gap: 27px;
   }
 
   .operation-button {
     width: 102px;
+
     min-width: 102px;
+
     flex-basis: 102px;
   }
 
@@ -1116,6 +1265,7 @@ u {
 
   .filtro {
     height: 42px;
+
     font-size: 13px;
   }
 
@@ -1134,19 +1284,29 @@ u {
     min-width: 154px;
   }
 
+
+  /* LISTA */
+
   .bond-item-button {
-    grid-template-columns: 45px minmax(0, 1fr) 100px;
-    column-gap: 8px;
+    grid-template-columns: 34px minmax(0, 1fr) 108px;
+
+    column-gap: 9px;
   }
 
   .bond-item-icon {
-    width: 43px;
-    height: 43px;
+    width: 30px;
+    height: 30px;
+
+    min-width: 30px;
+    min-height: 30px;
   }
 
   .bond-item-icon svg {
-    width: 30px;
-    height: 30px;
+    width: 22px !important;
+    height: 22px !important;
+
+    max-width: 22px !important;
+    max-height: 22px !important;
   }
 
   .bond-item-info .data {
@@ -1165,26 +1325,51 @@ u {
     font-size: 14px;
   }
 
+
+  /* DETTAGLIO */
+
+  .detail-header {
+    height: 225px;
+  }
+
   .detail-header h1 {
     font-size: 23px;
+
+    bottom: 30px;
   }
 
   .detail-card-top {
-    height: 235px;
+    height: 270px;
   }
 
   .detail-buono-icon {
-    width: 84px;
-    height: 84px;
+    width: 158px;
+    height: 158px;
+
+    top: -56px;
   }
 
   .detail-buono-icon svg {
-    width: 84px;
-    height: 84px;
+    width: 158px;
+    height: 158px;
+  }
+
+  .detail-rimborso {
+    bottom: 65px;
   }
 
   .detail-rimborso span {
     font-size: 28px;
+  }
+
+  .detail-rimborso-label {
+    bottom: 32px;
+
+    font-size: 14px;
+  }
+
+  .detail-account {
+    min-height: 100px;
   }
 
   .detail-section-title {
