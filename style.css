@@ -1165,3 +1165,58 @@ u {
     font-size: 13px;
   }
 }
+/* =========================================================
+   DIMENSIONI TITOLI - VERSIONE DEFINITIVA
+   ========================================================= */
+
+.top-header h1 {
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.4px !important;
+}
+
+.summary-card h2 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.3px !important;
+}
+
+.section-title {
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.4px !important;
+}
+
+.elenco-title {
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.4px !important;
+}
+
+
+/* =========================================================
+   IPHONE PICCOLO
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .top-header h1 {
+    font-size: 22px !important;
+  }
+
+  .summary-card h2 {
+    font-size: 18px !important;
+  }
+
+  .section-title {
+    font-size: 21px !important;
+  }
+
+  .elenco-title {
+    font-size: 21px !important;
+  }
+}
