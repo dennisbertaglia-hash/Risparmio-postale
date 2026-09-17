@@ -11,7 +11,225 @@
 
   <title>Buoni</title>
 
-  <link rel="stylesheet" href="style.css?v=34">
+  <link rel="stylesheet" href="style.css?v=35">
+
+
+  <!-- =====================================================
+       MODIFICHE VISUALI
+       ===================================================== -->
+
+  <style>
+
+    /* =========================
+       TITOLO BUONI
+       ========================= */
+
+    .top-header h1 {
+      bottom: 42px !important;
+      font-size: 22px !important;
+      line-height: 1 !important;
+      font-weight: 500 !important;
+      letter-spacing: -0.4px !important;
+    }
+
+
+    /* =========================
+       RIQUADRO AZZURRO
+       ========================= */
+
+    .summary-card {
+      margin-top: 18px !important;
+      height: 215px !important;
+      padding: 30px 22px 8px !important;
+    }
+
+
+    /* =========================
+       20 BUONI
+       ========================= */
+
+    .summary-card h2 {
+      margin-top: 4px !important;
+      margin-bottom: 57px !important;
+
+      font-size: 18px !important;
+      line-height: 1.1 !important;
+
+      font-weight: 500 !important;
+      letter-spacing: -0.35px !important;
+    }
+
+
+    /* =========================
+       CONTENUTO RIQUADRO
+       ========================= */
+
+    .summary-item {
+      margin-bottom: 18px !important;
+    }
+
+    .summary-item.second {
+      margin-bottom: 0 !important;
+    }
+
+    .summary-label {
+      margin-bottom: 3px !important;
+
+      font-size: 15px !important;
+      line-height: 1.2 !important;
+
+      font-weight: 300 !important;
+    }
+
+    .summary-value {
+      font-size: 20px !important;
+      line-height: 1.1 !important;
+
+      font-weight: 500 !important;
+      letter-spacing: -0.2px !important;
+    }
+
+
+    /* =========================
+       OPERAZIONI
+       ========================= */
+
+    .section-title {
+      font-size: 22px !important;
+      line-height: 1.1 !important;
+
+      font-weight: 500 !important;
+      letter-spacing: -0.4px !important;
+    }
+
+
+    /* =========================
+       ELENCO BUONI
+       ========================= */
+
+    .elenco-title {
+      font-size: 22px !important;
+      line-height: 1.1 !important;
+
+      font-weight: 500 !important;
+      letter-spacing: -0.4px !important;
+    }
+
+
+    /* =========================
+       FILTRI SCHIACCIATI
+       ========================= */
+
+    .filtro {
+      height: 35px !important;
+      border-radius: 18px !important;
+    }
+
+
+    /* =========================
+       PUNTO INTERROGATIVO NERO
+       ========================= */
+
+    .question-button {
+      color: #111111 !important;
+    }
+
+
+    /* =========================
+       LISTA BUONI
+       ========================= */
+
+    .bond-item {
+      width: 100% !important;
+
+      display: grid !important;
+
+      grid-template-columns:
+        50px
+        minmax(0, 1fr)
+        112px !important;
+
+      column-gap: 8px !important;
+
+      align-items: center !important;
+
+      padding: 9px 0 !important;
+
+      background: #ffffff !important;
+    }
+
+
+    .bond-item-icon {
+      width: 50px !important;
+      height: 50px !important;
+
+      border-radius: 50% !important;
+
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+
+      background: #edf6ff !important;
+    }
+
+
+    .bond-item-icon svg {
+      width: 38px !important;
+      height: 38px !important;
+    }
+
+
+    .bond-item-info .data {
+      margin: 0 0 3px !important;
+
+      font-size: 12px !important;
+      line-height: 1.2 !important;
+
+      font-weight: 300 !important;
+
+      color: #777777 !important;
+    }
+
+
+    .bond-item-info .nome {
+      margin: 0 !important;
+
+      font-size: 15px !important;
+      line-height: 1.2 !important;
+
+      font-weight: 500 !important;
+
+      color: #111111 !important;
+    }
+
+
+    .bond-item-value {
+      text-align: right !important;
+    }
+
+
+    .bond-item-value .label {
+      margin: 0 0 3px !important;
+
+      font-size: 10px !important;
+      line-height: 1.1 !important;
+
+      font-weight: 300 !important;
+
+      color: #777777 !important;
+    }
+
+
+    .bond-item-value .valore {
+      font-size: 15px !important;
+      line-height: 1.1 !important;
+
+      font-weight: 500 !important;
+
+      color: #111111 !important;
+    }
+
+  </style>
 
 </head>
 
@@ -34,6 +252,7 @@
 
       <header class="top-header">
 
+
         <button
           class="back-button"
           type="button"
@@ -45,6 +264,9 @@
 
 
         <div class="top-icons">
+
+
+          <!-- OCCHIO -->
 
           <button
             class="eye-button"
@@ -82,6 +304,8 @@
           </button>
 
 
+          <!-- ? -->
+
           <button
             class="question-button"
             type="button"
@@ -100,6 +324,7 @@
            ================================================= -->
 
       <section class="summary-card">
+
 
         <h2 id="totaleBuoni">
           20 Buoni
@@ -135,6 +360,7 @@
 
         </div>
 
+
       </section>
 
 
@@ -145,6 +371,7 @@
 
       <section class="operations-section">
 
+
         <h2 class="section-title">
           Operazioni
         </h2>
@@ -153,11 +380,14 @@
         <div class="operations">
 
 
-          <!-- ACQUISTA BUONO -->
+          <!-- ===============================
+               ACQUISTA BUONO
+               =============================== -->
 
           <button
             class="operation-button"
             type="button">
+
 
             <span class="operation-icon">
 
@@ -232,15 +462,19 @@
               Buono
             </span>
 
+
           </button>
 
 
 
-          <!-- RICHIEDI RIMBORSO -->
+          <!-- ===============================
+               RICHIEDI RIMBORSO
+               =============================== -->
 
           <button
             class="operation-button"
             type="button">
+
 
             <span class="operation-icon">
 
@@ -293,7 +527,9 @@
               rimborso
             </span>
 
+
           </button>
+
 
         </div>
 
@@ -321,6 +557,7 @@
           <button
             class="filtro filtro-filtra"
             type="button">
+
 
             <svg
               class="filtro-sliders-icon"
@@ -363,7 +600,9 @@
 
             </svg>
 
+
             Filtra
+
 
           </button>
 
@@ -393,12 +632,15 @@
 
           </button>
 
+
         </div>
 
 
         <div id="listaBuoni"></div>
 
+
       </section>
+
 
     </main>
 
@@ -414,15 +656,18 @@
     id="paginaDettaglio"
     style="display:none;">
 
+
     <div class="pagina-dettaglio">
 
 
       <header class="detail-header">
 
+
         <button
           class="detail-back"
           type="button"
           aria-label="Torna indietro">
+
 
           <svg
             viewBox="0 0 32 32"
@@ -438,12 +683,14 @@
 
           </svg>
 
+
         </button>
 
 
         <h1 id="detailTitolo">
           Buono 3×4 con premio
         </h1>
+
 
       </header>
 
@@ -457,7 +704,9 @@
 
           <div class="detail-card-top">
 
+
             <div class="detail-buono-icon">
+
 
               <svg
                 viewBox="0 0 72 72"
@@ -507,20 +756,25 @@
 
               </svg>
 
+
             </div>
 
 
             <div class="detail-rimborso">
 
+
               <span id="detailRimborso">
                 685,89 €
               </span>
+
 
               <div class="detail-rimborso-label">
                 Valore rimborso netto
               </div>
 
+
             </div>
+
 
           </div>
 
@@ -528,7 +782,9 @@
 
           <div class="detail-account">
 
+
             <div class="account-icon">
+
 
               <svg
                 viewBox="0 0 44 34"
@@ -565,6 +821,7 @@
 
               </svg>
 
+
             </div>
 
 
@@ -572,7 +829,9 @@
               Accredito sul conto corrente
             </div>
 
+
           </div>
+
 
         </section>
 
@@ -581,6 +840,7 @@
         <h2 class="detail-section-title">
           Dettagli
         </h2>
+
 
 
         <div class="detail-field">
@@ -598,6 +858,7 @@
         </div>
 
 
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -611,6 +872,7 @@
           </span>
 
         </div>
+
 
 
         <div class="detail-field">
@@ -628,7 +890,9 @@
         </div>
 
 
+
         <div class="detail-divider"></div>
+
 
 
         <div class="detail-field">
@@ -646,6 +910,7 @@
         </div>
 
 
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -659,6 +924,7 @@
           </span>
 
         </div>
+
 
 
         <div class="detail-field last-detail-field">
@@ -675,6 +941,7 @@
 
         </div>
 
+
       </main>
 
 
@@ -687,13 +954,19 @@
 
       </div>
 
+
     </div>
 
   </div>
 
 
 
+  <!-- =====================================================
+       SCRIPT
+       ===================================================== -->
+
   <script src="script.js?v=34"></script>
+
 
 </body>
 
