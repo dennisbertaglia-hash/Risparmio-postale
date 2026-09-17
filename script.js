@@ -1,5 +1,5 @@
 /* =========================================================
-   BUONI - SCRIPT COMPLETO
+   BUONI - SCRIPT
    ========================================================= */
 
 const buoni = [
@@ -107,7 +107,7 @@ const buoni = [
 
 
 /* =========================================================
-   FORMATTAZIONE EURO
+   EURO
    ========================================================= */
 
 function euro(valore) {
@@ -119,7 +119,7 @@ function euro(valore) {
 
 
 /* =========================================================
-   CALCOLI DETTAGLIO
+   CALCOLI
    ========================================================= */
 
 function calcolaDati(nominale) {
@@ -184,31 +184,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function aggiornaRiepilogo() {
 
+  const totale =
+    buoni.reduce(function (somma, buono) {
+      return somma + buono.nominale;
+    }, 0);
+
+  const totaleBuoni =
+    document.getElementById("totaleBuoni");
+
   const valoreNominale =
     document.getElementById("valoreNominale");
 
   const valoreRimborsoLordo =
     document.getElementById("valoreRimborsoLordo");
 
-  const totale = buoni.reduce(function (somma, buono) {
-    return somma + buono.nominale;
-  }, 0);
-
-
-  if (valoreNominale) {
-    valoreNominale.textContent = euro(totale);
+  if (totaleBuoni) {
+    totaleBuoni.textContent =
+      buoni.length + " Buoni";
   }
 
-  /*
-   * IMPORTANTE:
-   * nel riepilogo il rimborso lordo visualizzato
-   * rimane uguale al valore principale dei Buoni.
-   *
-   * Quindi:
-   * 17.000,00 € -> 17.000,00 €
-   */
+  if (valoreNominale) {
+    valoreNominale.textContent =
+      euro(totale);
+  }
+
   if (valoreRimborsoLordo) {
-    valoreRimborsoLordo.textContent = euro(totale);
+    valoreRimborsoLordo.textContent =
+      euro(totale);
   }
 
 }
@@ -229,7 +231,6 @@ function generaListaBuoni() {
 
   lista.innerHTML = "";
 
-
   buoni.forEach(function (buono, indice) {
 
     const riga =
@@ -238,9 +239,9 @@ function generaListaBuoni() {
     riga.className = "buono";
 
 
-    /* =====================================================
-       ICONA
-       ===================================================== */
+    /* =========================
+       ICONA PICCOLA
+       ========================= */
 
     const icona =
       document.createElement("div");
@@ -256,15 +257,15 @@ function generaListaBuoni() {
         <circle
           cx="24"
           cy="24"
-          r="22"
+          r="20"
           fill="#eef7ff"
         />
 
         <rect
-          x="14"
-          y="12"
-          width="20"
-          height="25"
+          x="13"
+          y="16"
+          width="22"
+          height="16"
           rx="3"
           fill="none"
           stroke="#0759c9"
@@ -272,46 +273,44 @@ function generaListaBuoni() {
         />
 
         <line
-          x1="19"
-          y1="19"
-          x2="29"
-          y2="19"
+          x1="18"
+          y1="21"
+          x2="30"
+          y2="21"
           stroke="#0759c9"
           stroke-width="2"
           stroke-linecap="round"
         />
 
         <line
-          x1="19"
-          y1="24"
-          x2="29"
-          y2="24"
+          x1="18"
+          y1="26"
+          x2="27"
+          y2="26"
           stroke="#0759c9"
           stroke-width="2"
           stroke-linecap="round"
         />
 
-        <line
-          x1="19"
-          y1="29"
-          x2="26"
-          y2="29"
-          stroke="#0759c9"
-          stroke-width="2"
-          stroke-linecap="round"
+        <circle
+          cx="18"
+          cy="24"
+          r="1.5"
+          fill="#0759c9"
         />
       </svg>
     `;
 
 
-    /* =====================================================
-       PARTE SINISTRA
-       ===================================================== */
+    /* =========================
+       TESTO CENTRALE
+       ========================= */
 
     const informazioni =
       document.createElement("div");
 
-    informazioni.className = "buono-info";
+    informazioni.className =
+      "buono-info";
 
     informazioni.innerHTML = `
       <div class="data">
@@ -324,14 +323,15 @@ function generaListaBuoni() {
     `;
 
 
-    /* =====================================================
-       PARTE DESTRA
-       ===================================================== */
+    /* =========================
+       VALORE A DESTRA
+       ========================= */
 
     const valore =
       document.createElement("div");
 
-    valore.className = "buono-valore";
+    valore.className =
+      "buono-valore";
 
     valore.innerHTML = `
       <div class="buono-valore-label">
@@ -344,31 +344,27 @@ function generaListaBuoni() {
     `;
 
 
-    /* =====================================================
-       RIGA
-       ===================================================== */
+    /* =========================
+       ASSEMBLA RIGA
+       ========================= */
 
     riga.appendChild(icona);
-
     riga.appendChild(informazioni);
-
     riga.appendChild(valore);
 
 
-    /* =====================================================
+    /* =========================
        CLICK
-       ===================================================== */
+       ========================= */
 
     riga.addEventListener("click", function () {
       apriDettaglio(indice);
     });
 
 
-    /*
-     * Accessibilità / comportamento da elemento cliccabile
-     */
     riga.setAttribute("role", "button");
     riga.setAttribute("tabindex", "0");
+
 
     riga.addEventListener("keydown", function (event) {
 
@@ -396,12 +392,12 @@ function generaListaBuoni() {
 
 function apriDettaglio(indice) {
 
-  const buono = buoni[indice];
+  const buono =
+    buoni[indice];
 
   if (!buono) {
     return;
   }
-
 
   const dati =
     calcolaDati(buono.nominale);
@@ -423,9 +419,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
+  /* =========================
      TITOLO
-     ===================================================== */
+     ========================= */
 
   const titolo =
     document.getElementById("detailTitolo");
@@ -436,20 +432,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     VALORE PRINCIPALE
-     ===================================================== */
-
-  /*
-   * IMPORTANTE:
-   * il valore grande in alto rappresenta il valore
-   * nominale/sottoscritto del Buono.
-   *
-   * Quindi un Buono da 500 € mostra:
-   * 500,00 €
-   *
-   * NON il valore calcolato del rimborso.
-   */
+  /* =========================
+     VALORE GRANDE
+     ========================= */
 
   const valoreRimborso =
     document.getElementById("detailValoreRimborso");
@@ -460,9 +445,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
+  /* =========================
      DATI PRINCIPALI
-     ===================================================== */
+     ========================= */
 
   const sottoscritto =
     document.getElementById("detailSottoscritto");
@@ -491,9 +476,22 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     NETTO SENZA PREMIO
-     ===================================================== */
+  /* =========================
+     RITENUTA FISCALE INIZIALE
+     ========================= */
+
+  const ritenuta =
+    document.getElementById("detailRitenuta");
+
+  if (ritenuta) {
+    ritenuta.textContent =
+      euro(0);
+  }
+
+
+  /* =========================
+     VALORE RIMBORSO NETTO
+     ========================= */
 
   const netto =
     document.getElementById("detailNetto");
@@ -504,9 +502,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     CALCOLO SENZA PREMIO
-     ===================================================== */
+  /* =========================
+     SENZA PREMIO
+     ========================= */
 
   const lordoSenzaPremio =
     document.getElementById(
@@ -541,9 +539,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
+  /* =========================
      PREMIO
-     ===================================================== */
+     ========================= */
 
   const premioLordo =
     document.getElementById(
@@ -578,9 +576,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     TOTALE CON PREMIO
-     ===================================================== */
+  /* =========================
+     CON PREMIO
+     ========================= */
 
   const lordoConPremio =
     document.getElementById(
@@ -615,9 +613,9 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
+  /* =========================
      TORNA IN ALTO
-     ===================================================== */
+     ========================= */
 
   window.scrollTo({
     top: 0,
