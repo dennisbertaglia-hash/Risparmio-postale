@@ -7,18 +7,14 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  margin: 0;
-  padding: 0;
-  background: #ffffff;
-  overflow-x: hidden;
-}
-
+html,
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
-  color: #111111;
+  width: 100%;
+  min-height: 100%;
+  background: #fff;
+  color: #111;
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -44,7 +40,7 @@ button:focus {
 #paginaPrincipale {
   width: 100%;
   min-height: 100vh;
-  background: #ffffff;
+  background: #fff;
 }
 
 #paginaPrincipale > main {
@@ -60,9 +56,9 @@ button:focus {
 .top-header {
   position: relative;
   width: 100%;
-  height: 155px;
-  padding: 0 18px;
+  height: 145px;
   margin: 0;
+  padding: 0 18px;
 }
 
 .back-button {
@@ -73,14 +69,14 @@ button:focus {
   width: 48px;
   height: 48px;
 
-  border: 1.5px solid #111111;
+  border: 1.5px solid #111;
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #ffffff;
+  background: #fff;
 }
 
 .back-button svg {
@@ -91,9 +87,8 @@ button:focus {
 
 .top-header h1 {
   position: absolute;
-
   left: 18px;
-  top: 112px;
+  top: 105px;
 
   margin: 0;
 
@@ -105,20 +100,25 @@ button:focus {
 
 .top-icons {
   position: absolute;
-
   right: 18px;
   top: 28px;
 
+  width: 72px;
   height: 48px;
+
+  border: 1.5px solid #111;
+  border-radius: 26px;
 
   display: flex;
   align-items: center;
-  gap: 24px;
+  justify-content: space-evenly;
+
+  background: #fff;
 }
 
 .eye-icon {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   display: block;
 }
 
@@ -126,32 +126,31 @@ button:focus {
   width: 24px;
   height: 24px;
 
-  border: 1.5px solid #111111;
+  border: 1.5px solid #111;
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1;
   font-weight: 700;
 }
 
 
 /* =========================================================
-   CARD RIEPILOGO
+   RIEPILOGO
    ========================================================= */
 
 .summary-card {
   width: 100%;
-  height: 235px;
+  height: 185px;
 
   margin: 0;
+  padding: 20px 20px;
 
-  padding: 27px 28px;
-
-  border-radius: 22px;
+  border-radius: 28px;
 
   background: #f0f7ff;
 
@@ -159,7 +158,7 @@ button:focus {
 }
 
 .summary-card h2 {
-  margin: 0 0 30px;
+  margin: 0 0 20px;
 
   font-size: 24px;
   line-height: 1.05;
@@ -173,42 +172,47 @@ button:focus {
 }
 
 .summary-item.second {
-  margin-top: 27px;
+  margin-top: 17px;
 }
 
 .summary-label {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 
   font-size: 17px;
   line-height: 1.2;
   font-weight: 400;
 
-  color: #111111;
+  color: #111;
 }
 
 .summary-value {
   margin: 0;
 
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.1;
   font-weight: 700;
 
-  color: #111111;
+  color: #111;
 }
 
 
 /* =========================================================
-   OPERAZIONI
+   TITOLI SEZIONE
    ========================================================= */
 
 .section-title {
-  margin: 31px 0 0;
+  margin: 30px 0 0;
 
   font-size: 30px;
   line-height: 1.05;
   font-weight: 800;
   letter-spacing: -1px;
 }
+
+
+/* =========================================================
+   OPERAZIONI
+   ========================================================= */
 
 .operations {
   width: 100%;
@@ -217,15 +221,16 @@ button:focus {
 
   display: flex;
   align-items: flex-start;
-  gap: 34px;
+  justify-content: flex-start;
+
+  gap: 42px;
 
   overflow: visible;
 }
 
 .operation-button {
-  width: 120px;
-
-  flex: 0 0 120px;
+  width: 110px;
+  flex: 0 0 110px;
 
   display: flex;
   flex-direction: column;
@@ -237,10 +242,10 @@ button:focus {
 }
 
 .operation-icon {
-  width: 108px;
-  height: 108px;
+  width: 92px;
+  height: 92px;
 
-  flex: 0 0 108px;
+  flex: 0 0 92px;
 
   display: block;
 
@@ -248,8 +253,8 @@ button:focus {
 }
 
 .operation-icon svg {
-  width: 108px;
-  height: 108px;
+  width: 92px;
+  height: 92px;
 
   display: block;
 
@@ -259,9 +264,9 @@ button:focus {
 .operation-button > span {
   display: block;
 
-  margin-top: 10px;
+  margin-top: 12px;
 
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.12;
   font-weight: 400;
 
@@ -290,12 +295,13 @@ button:focus {
 
   display: flex;
   align-items: center;
-  gap: 12px;
+
+  gap: 8px;
 
   overflow-x: auto;
   overflow-y: hidden;
 
-  padding: 0 0 5px;
+  padding: 0 0 4px;
 
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -306,12 +312,12 @@ button:focus {
 }
 
 .filtro {
-  height: 48px;
+  height: 44px;
 
   flex: 0 0 auto;
 
   border: 1.5px solid #075dcc;
-  border-radius: 24px;
+  border-radius: 25px;
 
   color: #075dcc;
 
@@ -319,7 +325,7 @@ button:focus {
   align-items: center;
   justify-content: center;
 
-  background: #ffffff;
+  background: #fff;
 
   white-space: nowrap;
 
@@ -333,17 +339,11 @@ button:focus {
 }
 
 
-/* =========================================================
-   FILTRA
-   ========================================================= */
+/* FILTRA */
 
 .filtro-filtra {
-  width: 145px;
-  height: 48px;
-
-  gap: 8px;
-
-  flex: 0 0 145px;
+  width: 82px;
+  gap: 5px;
 }
 
 .filtro-sliders-icon {
@@ -367,17 +367,11 @@ button:focus {
 }
 
 
-/* =========================================================
-   PRODOTTI
-   ========================================================= */
+/* PRODOTTI */
 
 .filtro.prodotto {
-  width: 145px;
-  height: 48px;
-
-  gap: 14px;
-
-  flex: 0 0 145px;
+  width: 105px;
+  gap: 10px;
 }
 
 .freccia-down {
@@ -393,20 +387,15 @@ button:focus {
 }
 
 
-/* =========================================================
-   PERIODO
-   ========================================================= */
+/* PERIODO */
 
 .filtro.periodo {
-  width: 190px;
-  height: 48px;
-
-  flex: 0 0 190px;
+  width: 174px;
 }
 
 
 /* =========================================================
-   LISTA BUONI
+   LISTA
    ========================================================= */
 
 #listaBuoni {
@@ -427,7 +416,7 @@ button:focus {
   width: 100%;
 
   margin: 0;
-  padding: 15px 0 14px;
+  padding: 17px 0 16px;
 
   border-bottom: 1px solid #e5e5e5;
 
@@ -439,7 +428,7 @@ button:focus {
 
   display: grid;
 
-  grid-template-columns: 42px minmax(0, 1fr) 115px;
+  grid-template-columns: 38px minmax(0, 1fr) 112px;
 
   column-gap: 10px;
 
@@ -453,13 +442,11 @@ button:focus {
 }
 
 
-/* =========================================================
-   ICONA BUONO
-   ========================================================= */
+/* ICONA */
 
 .bond-item-icon {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
 
   border-radius: 50%;
 
@@ -473,30 +460,27 @@ button:focus {
 }
 
 .bond-item-icon svg {
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
 
   display: block;
 }
 
 
-/* =========================================================
-   PARTE CENTRALE
-   ========================================================= */
+/* TESTO CENTRALE */
 
 .bond-item-info {
   min-width: 0;
 
   display: flex;
   flex-direction: column;
-
   justify-content: center;
 }
 
 .bond-item-date {
   margin: 0 0 4px;
 
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.15;
   font-weight: 300;
 
@@ -512,15 +496,13 @@ button:focus {
   line-height: 1.15;
   font-weight: 700;
 
-  color: #111111;
+  color: #111;
 
   white-space: nowrap;
 }
 
 
-/* =========================================================
-   PARTE DESTRA
-   ========================================================= */
+/* VALORE */
 
 .bond-item-value {
   min-width: 0;
@@ -535,7 +517,7 @@ button:focus {
 .bond-item-value-label {
   margin: 0 0 4px;
 
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.1;
   font-weight: 300;
 
@@ -551,7 +533,7 @@ button:focus {
   line-height: 1.1;
   font-weight: 700;
 
-  color: #111111;
+  color: #111;
 
   white-space: nowrap;
 }
@@ -565,16 +547,16 @@ button:focus {
   width: 100%;
   min-height: 100vh;
 
-  background: #ffffff;
+  background: #fff;
 
-  padding-bottom: 90px;
+  padding-bottom: 100px;
 }
 
 .detail-header {
   position: relative;
 
   width: 100%;
-  height: 95px;
+  height: 155px;
 
   padding: 0 18px;
 }
@@ -588,14 +570,14 @@ button:focus {
   width: 48px;
   height: 48px;
 
-  border: 1.5px solid #111111;
+  border: 1.5px solid #111;
   border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: #ffffff;
+  background: #fff;
 }
 
 .detail-back svg {
@@ -614,6 +596,8 @@ button:focus {
   font-size: 28px;
   line-height: 1.1;
   font-weight: 800;
+
+  letter-spacing: -0.8px;
 }
 
 
@@ -633,85 +617,118 @@ button:focus {
    ========================================================= */
 
 .detail-card {
+  position: relative;
+
   width: 100%;
 
-  margin-top: 72px;
+  margin-top: 0;
 
-  border-radius: 22px;
+  border-radius: 24px;
 
   background: #f0f7ff;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 .detail-card-top {
-  padding: 25px 20px 20px;
+  position: relative;
+
+  min-height: 285px;
+
+  padding: 0 20px 22px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
 }
 
 .detail-buono-icon {
-  width: 70px;
-  height: 70px;
+  width: 84px;
+  height: 84px;
 
-  display: block;
+  margin-top: -30px;
+
+  position: relative;
+
+  z-index: 2;
 }
 
 .detail-buono-icon svg {
-  width: 70px;
-  height: 70px;
+  width: 84px;
+  height: 84px;
 
   display: block;
 }
 
 .detail-rimborso {
-  margin-top: 17px;
+  margin-top: 24px;
 }
 
 .detail-rimborso span {
   display: block;
 
-  font-size: 28px;
+  font-size: 42px;
   line-height: 1;
 
   font-weight: 700;
+  letter-spacing: -1px;
 }
 
 .detail-rimborso-label {
-  margin-top: 5px;
+  margin-top: 9px;
 
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.15;
-  font-weight: 300;
+  font-weight: 400;
 
-  color: #777777;
+  color: #111;
 }
 
+
+/* =========================================================
+   CONTO
+   ========================================================= */
+
 .detail-account {
+  min-height: 76px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  gap: 8px;
+  gap: 10px;
 
-  padding: 16px 20px;
+  padding: 12px 20px;
 
-  background: #ffffff;
+  border-top: 2px solid #fff;
+
+  background: #f0f7ff;
+
+  border-radius: 0 0 24px 24px;
 }
 
 .account-icon {
-  width: 38px;
-  height: 30px;
+  width: 48px;
+  height: 36px;
 
-  flex: 0 0 38px;
+  flex: 0 0 48px;
 }
 
 .account-icon svg {
-  width: 38px;
-  height: 30px;
+  width: 48px;
+  height: 36px;
+
+  display: block;
 }
 
 .account-text {
-  font-size: 13px;
-  line-height: 1.3;
+  font-size: 18px;
+  line-height: 1.2;
   font-weight: 400;
+
+  text-align: left;
 }
 
 
@@ -720,11 +737,13 @@ button:focus {
    ========================================================= */
 
 .detail-section-title {
-  margin: 32px 0 22px;
+  margin: 36px 0 22px;
 
   font-size: 27px;
   line-height: 1.1;
   font-weight: 800;
+
+  letter-spacing: -0.6px;
 }
 
 .detail-field {
@@ -737,32 +756,34 @@ button:focus {
 }
 
 .detail-label {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.25;
   font-weight: 300;
 
-  color: #777777;
+  color: #777;
 }
 
 .detail-value {
-  margin-top: 4px;
+  margin-top: 5px;
 
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: 400;
+
+  color: #111;
 }
 
 .detail-divider {
   width: 100%;
   height: 1px;
 
-  margin: 8px 0;
+  margin: 9px 0;
 
   background: #e4e4e4;
 }
 
 .last-detail-field {
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
 
@@ -779,7 +800,8 @@ button:focus {
 
   padding: 12px 18px;
 
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(255,255,255,0.97);
+
   border-top: 1px solid #eeeeee;
 
   z-index: 50;
@@ -792,7 +814,7 @@ button:focus {
   border-radius: 30px;
 
   background: #075dcc;
-  color: #ffffff;
+  color: #fff;
 
   font-size: 21px;
   font-weight: 700;
@@ -800,7 +822,7 @@ button:focus {
 
 
 /* =========================================================
-   IPHONE 16 / SCHERMI PICCOLI
+   IPHONE 16
    ========================================================= */
 
 @media (max-width: 430px) {
@@ -810,13 +832,8 @@ button:focus {
     padding-right: 18px;
   }
 
-
-  /* HEADER */
-
   .top-header {
-    height: 155px;
-    padding-left: 18px;
-    padding-right: 18px;
+    height: 145px;
   }
 
   .back-button {
@@ -826,8 +843,7 @@ button:focus {
 
   .top-header h1 {
     left: 18px;
-    top: 112px;
-
+    top: 105px;
     font-size: 42px;
   }
 
@@ -836,12 +852,9 @@ button:focus {
     top: 28px;
   }
 
-
-  /* RIEPILOGO */
-
   .summary-card {
-    height: 235px;
-    padding: 27px 28px;
+    height: 185px;
+    padding: 20px;
   }
 
   .summary-card h2 {
@@ -853,75 +866,59 @@ button:focus {
   }
 
   .summary-value {
-    font-size: 18px;
+    font-size: 19px;
   }
-
-
-  /* OPERAZIONI */
 
   .section-title {
     font-size: 30px;
   }
 
   .operations {
-    gap: 34px;
+    gap: 42px;
   }
 
   .operation-button {
-    width: 120px;
-    flex-basis: 120px;
+    width: 110px;
+    flex-basis: 110px;
   }
 
   .operation-icon,
   .operation-icon svg {
-    width: 108px;
-    height: 108px;
+    width: 92px;
+    height: 92px;
   }
 
-
-  /* ELENCO */
+  .operation-button > span {
+    font-size: 17px;
+  }
 
   .your-bonds {
     margin-top: 38px;
   }
 
-
-  /* FILTRI */
-
   .filtri {
-    width: 100%;
-    margin-top: 20px;
+    gap: 8px;
   }
 
   .filtro-filtra {
-    width: 145px;
-    flex-basis: 145px;
+    width: 82px;
   }
 
   .filtro.prodotto {
-    width: 145px;
-    flex-basis: 145px;
+    width: 105px;
   }
 
   .filtro.periodo {
-    width: 190px;
-    flex-basis: 190px;
-  }
-
-
-  /* BUONI */
-
-  #listaBuoni {
-    margin-top: 8px;
+    width: 174px;
   }
 
   .bond-item-button {
-    grid-template-columns: 42px minmax(0, 1fr) 115px;
+    grid-template-columns: 38px minmax(0, 1fr) 112px;
     column-gap: 10px;
   }
 
   .bond-item-date {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .bond-item-name {
@@ -929,76 +926,102 @@ button:focus {
   }
 
   .bond-item-value-label {
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .bond-item-amount {
     font-size: 17px;
   }
+
+  .detail-header {
+    height: 155px;
+  }
+
+  .detail-header h1 {
+    left: 18px;
+    top: 84px;
+    font-size: 28px;
+  }
+
+  .detail-card-top {
+    min-height: 285px;
+  }
+
+  .detail-rimborso span {
+    font-size: 42px;
+  }
+
+  .detail-rimborso-label {
+    font-size: 18px;
+  }
+
+  .account-text {
+    font-size: 18px;
+  }
+
+  .detail-label {
+    font-size: 18px;
+  }
+
+  .detail-value {
+    font-size: 20px;
+  }
 }
 
 
 /* =========================================================
-   IPHONE MOLTO STRETTO
+   SCHERMI MOLTO STRETTI
    ========================================================= */
 
 @media (max-width: 390px) {
 
-  #paginaPrincipale > main {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .top-header {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .top-header h1 {
-    left: 15px;
-    font-size: 39px;
-  }
-
-  .top-icons {
-    right: 15px;
-    gap: 18px;
-  }
-
   .operations {
-    gap: 18px;
+    gap: 24px;
   }
 
   .operation-button {
-    width: 112px;
-    flex-basis: 112px;
+    width: 105px;
+    flex-basis: 105px;
   }
 
   .operation-icon,
   .operation-icon svg {
+    width: 86px;
+    height: 86px;
+  }
+
+  .filtri {
+    gap: 6px;
+  }
+
+  .filtro {
+    font-size: 15px;
+  }
+
+  .filtro-filtra {
+    width: 78px;
+  }
+
+  .filtro.prodotto {
     width: 100px;
-    height: 100px;
+  }
+
+  .filtro.periodo {
+    width: 168px;
   }
 
   .bond-item-button {
-    grid-template-columns: 38px minmax(0, 1fr) 105px;
+    grid-template-columns: 36px minmax(0, 1fr) 105px;
     column-gap: 8px;
   }
 
   .bond-item-icon {
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
   }
 
   .bond-item-icon svg {
-    width: 27px;
-    height: 27px;
-  }
-
-  .bond-item-value-label {
-    font-size: 10px;
-  }
-
-  .bond-item-amount {
-    font-size: 16px;
+    width: 25px;
+    height: 25px;
   }
 }
