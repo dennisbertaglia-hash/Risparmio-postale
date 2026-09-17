@@ -1,247 +1,177 @@
 /* =========================================================
-   DATI DEI 20 BUONI
+   BUONI - SCRIPT COMPLETO
    ========================================================= */
 
 const buoni = [
-
   {
     nominale: 500,
     sottoscritto: "16 Settembre 2026",
     scadenza: "16 Settembre 2038"
   },
-
   {
     nominale: 1500,
     sottoscritto: "14 Luglio 2026",
     scadenza: "14 Luglio 2038"
   },
-
   {
     nominale: 1000,
     sottoscritto: "12 Giugno 2026",
     scadenza: "12 Giugno 2038"
   },
-
   {
     nominale: 1500,
     sottoscritto: "16 Aprile 2026",
     scadenza: "16 Aprile 2038"
   },
-
   {
     nominale: 1500,
     sottoscritto: "11 Febbraio 2026",
     scadenza: "11 Febbraio 2038"
   },
-
   {
     nominale: 1200,
     sottoscritto: "15 Novembre 2025",
     scadenza: "15 Novembre 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "13 Ottobre 2025",
     scadenza: "13 Ottobre 2037"
   },
-
   {
     nominale: 900,
     sottoscritto: "11 Ottobre 2025",
     scadenza: "11 Ottobre 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "18 Giugno 2025",
     scadenza: "18 Giugno 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "14 Maggio 2025",
     scadenza: "14 Maggio 2037"
   },
-
   {
     nominale: 500,
     sottoscritto: "11 Aprile 2025",
     scadenza: "11 Aprile 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "16 Marzo 2025",
     scadenza: "16 Marzo 2037"
   },
-
   {
     nominale: 700,
     sottoscritto: "12 Febbraio 2025",
     scadenza: "12 Febbraio 2037"
   },
-
   {
     nominale: 500,
     sottoscritto: "15 Gennaio 2025",
     scadenza: "15 Gennaio 2037"
   },
-
   {
     nominale: 1000,
     sottoscritto: "13 Dicembre 2024",
     scadenza: "13 Dicembre 2036"
   },
-
   {
     nominale: 500,
     sottoscritto: "11 Novembre 2024",
     scadenza: "11 Novembre 2036"
   },
-
   {
     nominale: 800,
     sottoscritto: "10 Ottobre 2024",
     scadenza: "10 Ottobre 2036"
   },
-
   {
     nominale: 700,
     sottoscritto: "18 Settembre 2024",
     scadenza: "18 Settembre 2036"
   },
-
   {
     nominale: 500,
     sottoscritto: "10 Luglio 2024",
     scadenza: "10 Luglio 2036"
   },
-
   {
     nominale: 500,
     sottoscritto: "12 Maggio 2024",
     scadenza: "12 Maggio 2036"
   }
-
 ];
 
 
 /* =========================================================
-   FORMATO EURO
+   FORMATTAZIONE EURO
    ========================================================= */
 
-function euro(numero) {
-
-  return numero.toLocaleString("it-IT", {
+function euro(valore) {
+  return Number(valore).toLocaleString("it-IT", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }) + " €";
-
 }
 
 
 /* =========================================================
-   CALCOLI DEL BUONO
+   CALCOLI DETTAGLIO
    ========================================================= */
 
 function calcolaDati(nominale) {
 
   const lordoSenzaPremio =
-    nominale * (1210.40 / 900);
+    nominale * 1210.40 / 900;
 
   const ritenutaSenzaPremio =
-    nominale * (38.80 / 900);
+    nominale * 38.80 / 900;
 
   const nettoSenzaPremio =
-    nominale * (1171.60 / 900);
+    nominale * 1171.60 / 900;
 
   const premioLordo =
-    nominale * (72 / 900);
+    nominale * 72 / 900;
 
   const ritenutaPremio =
-    nominale * (9 / 900);
+    nominale * 9 / 900;
 
   const premioNetto =
-    nominale * (63 / 900);
+    nominale * 63 / 900;
 
   const lordoConPremio =
-    nominale * (1282.40 / 900);
+    nominale * 1282.40 / 900;
 
   const ritenutaTotale =
-    nominale * (47.80 / 900);
+    nominale * 47.80 / 900;
 
   const nettoConPremio =
-    nominale * (1234.60 / 900);
+    nominale * 1234.60 / 900;
 
   return {
-
     lordoSenzaPremio,
     ritenutaSenzaPremio,
     nettoSenzaPremio,
-
     premioLordo,
     ritenutaPremio,
     premioNetto,
-
     lordoConPremio,
     ritenutaTotale,
     nettoConPremio
-
   };
-
 }
 
 
 /* =========================================================
-   TOTALE
-   ========================================================= */
-
-const totaleBuoni = buoni.reduce(
-  (totale, buono) => totale + buono.nominale,
-  0
-);
-
-
-/* =========================================================
-   AGGIORNA IL RIEPILOGO
+   AVVIO
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  const titoloRiepilogo =
-    document.getElementById("totaleBuoni");
-
-  const valoreNominale =
-    document.getElementById("valoreNominale");
-
-  const valoreRimborsoLordo =
-    document.getElementById("valoreRimborsoLordo");
-
-
-  if (titoloRiepilogo) {
-
-    titoloRiepilogo.textContent =
-      buoni.length + " Buoni";
-
-  }
-
-
-  if (valoreNominale) {
-
-    valoreNominale.textContent =
-      euro(totaleBuoni);
-
-  }
-
-
-  if (valoreRimborsoLordo) {
-
-    valoreRimborsoLordo.textContent =
-      euro(totaleBuoni);
-
-  }
-
+  aggiornaRiepilogo();
 
   generaListaBuoni();
 
@@ -249,134 +179,211 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* =========================================================
-   GENERA LA LISTA
+   RIEPILOGO
+   ========================================================= */
+
+function aggiornaRiepilogo() {
+
+  const valoreNominale =
+    document.getElementById("valoreNominale");
+
+  const valoreRimborsoLordo =
+    document.getElementById("valoreRimborsoLordo");
+
+  const totale = buoni.reduce(function (somma, buono) {
+    return somma + buono.nominale;
+  }, 0);
+
+
+  if (valoreNominale) {
+    valoreNominale.textContent = euro(totale);
+  }
+
+  /*
+   * IMPORTANTE:
+   * nel riepilogo il rimborso lordo visualizzato
+   * rimane uguale al valore principale dei Buoni.
+   *
+   * Quindi:
+   * 17.000,00 € -> 17.000,00 €
+   */
+  if (valoreRimborsoLordo) {
+    valoreRimborsoLordo.textContent = euro(totale);
+  }
+
+}
+
+
+/* =========================================================
+   LISTA BUONI
    ========================================================= */
 
 function generaListaBuoni() {
 
-  /*
-     Supporta entrambi gli ID:
-     - listaBuoni
-     - buoni
-  */
+  const lista =
+    document.getElementById("listaBuoni");
 
-  const listaBuoni =
-    document.getElementById("listaBuoni") ||
-    document.getElementById("buoni");
-
-
-  if (!listaBuoni) {
+  if (!lista) {
     return;
   }
 
-
-  listaBuoni.innerHTML = "";
+  lista.innerHTML = "";
 
 
   buoni.forEach(function (buono, indice) {
 
-    const elemento =
+    const riga =
       document.createElement("div");
 
-    elemento.className = "bond-item";
+    riga.className = "buono";
 
 
-    /*
-       Usiamo un vero BUTTON:
-       così ogni Buono è realmente cliccabile
-       anche su iPhone.
-    */
+    /* =====================================================
+       ICONA
+       ===================================================== */
 
-    elemento.innerHTML = `
+    const icona =
+      document.createElement("div");
 
-      <button
-        type="button"
-        class="bond-item-button"
-        onclick="apriDettaglio(${indice})"
+    icona.className = "buono-icon";
+
+    icona.innerHTML = `
+      <svg
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
+        <circle
+          cx="24"
+          cy="24"
+          r="22"
+          fill="#eef7ff"
+        />
 
-        <div class="bond-icon">
+        <rect
+          x="14"
+          y="12"
+          width="20"
+          height="25"
+          rx="3"
+          fill="none"
+          stroke="#0759c9"
+          stroke-width="2"
+        />
 
-          <svg
-            viewBox="0 0 80 80"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+        <line
+          x1="19"
+          y1="19"
+          x2="29"
+          y2="19"
+          stroke="#0759c9"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
 
-            <circle
-              cx="40"
-              cy="40"
-              r="40"
-              fill="#f0f7ff"
-            />
+        <line
+          x1="19"
+          y1="24"
+          x2="29"
+          y2="24"
+          stroke="#0759c9"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
 
-            <rect
-              x="19"
-              y="24"
-              width="42"
-              height="32"
-              rx="4"
-              fill="none"
-              stroke="#0759c9"
-              stroke-width="3"
-            />
-
-            <path
-              d="M27 33H53"
-              stroke="#0759c9"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M27 41H53"
-              stroke="#0759c9"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M27 49H43"
-              stroke="#0759c9"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="bond-info">
-
-          <div class="bond-date">
-            Scade il ${buono.scadenza}
-          </div>
-
-          <div class="bond-type">
-            Buono 3×4 con premio
-          </div>
-
-        </div>
-
-
-        <div class="bond-value">
-
-          <span class="bond-value-label">
-            Valore rimborso lordo
-          </span>
-
-          <strong>
-            ${euro(calcolaDati(buono.nominale).lordoConPremio)}
-          </strong>
-
-        </div>
-
-      </button>
-
+        <line
+          x1="19"
+          y1="29"
+          x2="26"
+          y2="29"
+          stroke="#0759c9"
+          stroke-width="2"
+          stroke-linecap="round"
+        />
+      </svg>
     `;
 
 
-    listaBuoni.appendChild(elemento);
+    /* =====================================================
+       PARTE SINISTRA
+       ===================================================== */
+
+    const informazioni =
+      document.createElement("div");
+
+    informazioni.className = "buono-info";
+
+    informazioni.innerHTML = `
+      <div class="data">
+        scade il ${buono.scadenza}
+      </div>
+
+      <div class="nome">
+        Buono 3×4 con premio
+      </div>
+    `;
+
+
+    /* =====================================================
+       PARTE DESTRA
+       ===================================================== */
+
+    const valore =
+      document.createElement("div");
+
+    valore.className = "buono-valore";
+
+    valore.innerHTML = `
+      <div class="buono-valore-label">
+        valore rimborso lordo
+      </div>
+
+      <div class="valore">
+        ${euro(buono.nominale)}
+      </div>
+    `;
+
+
+    /* =====================================================
+       RIGA
+       ===================================================== */
+
+    riga.appendChild(icona);
+
+    riga.appendChild(informazioni);
+
+    riga.appendChild(valore);
+
+
+    /* =====================================================
+       CLICK
+       ===================================================== */
+
+    riga.addEventListener("click", function () {
+      apriDettaglio(indice);
+    });
+
+
+    /*
+     * Accessibilità / comportamento da elemento cliccabile
+     */
+    riga.setAttribute("role", "button");
+    riga.setAttribute("tabindex", "0");
+
+    riga.addEventListener("keydown", function (event) {
+
+      if (
+        event.key === "Enter" ||
+        event.key === " "
+      ) {
+        event.preventDefault();
+        apriDettaglio(indice);
+      }
+
+    });
+
+
+    lista.appendChild(riga);
 
   });
 
@@ -389,9 +396,7 @@ function generaListaBuoni() {
 
 function apriDettaglio(indice) {
 
-  const buono =
-    buoni[indice];
-
+  const buono = buoni[indice];
 
   if (!buono) {
     return;
@@ -402,34 +407,56 @@ function apriDettaglio(indice) {
     calcolaDati(buono.nominale);
 
 
-  /*
-     Supporta sia la versione nuova
-     sia quella precedente dell'HTML.
-  */
-
   const paginaPrincipale =
-    document.getElementById("mainPage") ||
     document.getElementById("paginaPrincipale");
 
-
   const paginaDettaglio =
-    document.getElementById("detailPage") ||
     document.getElementById("paginaDettaglio");
 
 
   if (paginaPrincipale) {
+    paginaPrincipale.style.display = "none";
+  }
 
-    paginaPrincipale.style.display =
-      "none";
-
+  if (paginaDettaglio) {
+    paginaDettaglio.style.display = "block";
   }
 
 
-  if (paginaDettaglio) {
+  /* =====================================================
+     TITOLO
+     ===================================================== */
 
-    paginaDettaglio.style.display =
-      "block";
+  const titolo =
+    document.getElementById("detailTitolo");
 
+  if (titolo) {
+    titolo.textContent =
+      "Buono 3×4 con premio";
+  }
+
+
+  /* =====================================================
+     VALORE PRINCIPALE
+     ===================================================== */
+
+  /*
+   * IMPORTANTE:
+   * il valore grande in alto rappresenta il valore
+   * nominale/sottoscritto del Buono.
+   *
+   * Quindi un Buono da 500 € mostra:
+   * 500,00 €
+   *
+   * NON il valore calcolato del rimborso.
+   */
+
+  const valoreRimborso =
+    document.getElementById("detailValoreRimborso");
+
+  if (valoreRimborso) {
+    valoreRimborso.textContent =
+      euro(buono.nominale);
   }
 
 
@@ -437,215 +464,159 @@ function apriDettaglio(indice) {
      DATI PRINCIPALI
      ===================================================== */
 
-  const detailTitolo =
-    document.getElementById("detailTitolo");
-
-
-  const detailValoreRimborso =
-    document.getElementById("detailValoreRimborso");
-
-
-  const detailSottoscritto =
+  const sottoscritto =
     document.getElementById("detailSottoscritto");
 
+  if (sottoscritto) {
+    sottoscritto.textContent =
+      buono.sottoscritto;
+  }
 
-  const detailScadenza =
+
+  const scadenza =
     document.getElementById("detailScadenza");
 
+  if (scadenza) {
+    scadenza.textContent =
+      buono.scadenza;
+  }
 
-  const detailNominale =
+
+  const nominale =
     document.getElementById("detailNominale");
 
-
-  const detailNetto =
-    document.getElementById("detailNetto");
-
-
-  if (detailTitolo) {
-
-    detailTitolo.textContent =
-      "Buono 3×4 con premio";
-
-  }
-
-
-  /*
-     Valore grande nella card:
-     valore di rimborso lordo
-  */
-
-  if (detailValoreRimborso) {
-
-    detailValoreRimborso.textContent =
-      euro(dati.lordoConPremio);
-
-  }
-
-
-  if (detailSottoscritto) {
-
-    detailSottoscritto.textContent =
-      buono.sottoscritto;
-
-  }
-
-
-  if (detailScadenza) {
-
-    detailScadenza.textContent =
-      buono.scadenza;
-
-  }
-
-
-  if (detailNominale) {
-
-    detailNominale.textContent =
+  if (nominale) {
+    nominale.textContent =
       euro(buono.nominale);
-
-  }
-
-
-  if (detailNetto) {
-
-    detailNetto.textContent =
-      euro(dati.nettoConPremio);
-
   }
 
 
   /* =====================================================
-     DETTAGLIO CALCOLI
+     NETTO SENZA PREMIO
      ===================================================== */
 
-  const detailLordoSenzaPremio =
+  const netto =
+    document.getElementById("detailNetto");
+
+  if (netto) {
+    netto.textContent =
+      euro(dati.nettoSenzaPremio);
+  }
+
+
+  /* =====================================================
+     CALCOLO SENZA PREMIO
+     ===================================================== */
+
+  const lordoSenzaPremio =
     document.getElementById(
       "detailLordoSenzaPremio"
     );
 
+  if (lordoSenzaPremio) {
+    lordoSenzaPremio.textContent =
+      euro(dati.lordoSenzaPremio);
+  }
 
-  const detailRitenutaScadenza =
+
+  const ritenutaScadenza =
     document.getElementById(
       "detailRitenutaScadenza"
     );
 
+  if (ritenutaScadenza) {
+    ritenutaScadenza.textContent =
+      euro(dati.ritenutaSenzaPremio);
+  }
 
-  const detailNettoSenzaPremio =
+
+  const nettoSenzaPremio =
     document.getElementById(
       "detailNettoSenzaPremio"
     );
 
-
-  const detailPremioLordo =
-    document.getElementById(
-      "detailPremioLordo"
-    );
-
-
-  const detailRitenutaPremio =
-    document.getElementById(
-      "detailRitenutaPremio"
-    );
-
-
-  const detailPremioNetto =
-    document.getElementById(
-      "detailPremioNetto"
-    );
-
-
-  const detailLordoConPremio =
-    document.getElementById(
-      "detailLordoConPremio"
-    );
-
-
-  const detailRitenutaTotale =
-    document.getElementById(
-      "detailRitenutaTotale"
-    );
-
-
-  const detailNettoConPremio =
-    document.getElementById(
-      "detailNettoConPremio"
-    );
-
-
-  if (detailLordoSenzaPremio) {
-
-    detailLordoSenzaPremio.textContent =
-      euro(dati.lordoSenzaPremio);
-
-  }
-
-
-  if (detailRitenutaScadenza) {
-
-    detailRitenutaScadenza.textContent =
-      euro(dati.ritenutaSenzaPremio);
-
-  }
-
-
-  if (detailNettoSenzaPremio) {
-
-    detailNettoSenzaPremio.textContent =
+  if (nettoSenzaPremio) {
+    nettoSenzaPremio.textContent =
       euro(dati.nettoSenzaPremio);
-
-  }
-
-
-  if (detailPremioLordo) {
-
-    detailPremioLordo.textContent =
-      euro(dati.premioLordo);
-
-  }
-
-
-  if (detailRitenutaPremio) {
-
-    detailRitenutaPremio.textContent =
-      euro(dati.ritenutaPremio);
-
-  }
-
-
-  if (detailPremioNetto) {
-
-    detailPremioNetto.textContent =
-      euro(dati.premioNetto);
-
-  }
-
-
-  if (detailLordoConPremio) {
-
-    detailLordoConPremio.textContent =
-      euro(dati.lordoConPremio);
-
-  }
-
-
-  if (detailRitenutaTotale) {
-
-    detailRitenutaTotale.textContent =
-      euro(dati.ritenutaTotale);
-
-  }
-
-
-  if (detailNettoConPremio) {
-
-    detailNettoConPremio.textContent =
-      euro(dati.nettoConPremio);
-
   }
 
 
   /* =====================================================
-     TORNA IN CIMA
+     PREMIO
+     ===================================================== */
+
+  const premioLordo =
+    document.getElementById(
+      "detailPremioLordo"
+    );
+
+  if (premioLordo) {
+    premioLordo.textContent =
+      euro(dati.premioLordo);
+  }
+
+
+  const ritenutaPremio =
+    document.getElementById(
+      "detailRitenutaPremio"
+    );
+
+  if (ritenutaPremio) {
+    ritenutaPremio.textContent =
+      euro(dati.ritenutaPremio);
+  }
+
+
+  const premioNetto =
+    document.getElementById(
+      "detailPremioNetto"
+    );
+
+  if (premioNetto) {
+    premioNetto.textContent =
+      euro(dati.premioNetto);
+  }
+
+
+  /* =====================================================
+     TOTALE CON PREMIO
+     ===================================================== */
+
+  const lordoConPremio =
+    document.getElementById(
+      "detailLordoConPremio"
+    );
+
+  if (lordoConPremio) {
+    lordoConPremio.textContent =
+      euro(dati.lordoConPremio);
+  }
+
+
+  const ritenutaTotale =
+    document.getElementById(
+      "detailRitenutaTotale"
+    );
+
+  if (ritenutaTotale) {
+    ritenutaTotale.textContent =
+      euro(dati.ritenutaTotale);
+  }
+
+
+  const nettoConPremio =
+    document.getElementById(
+      "detailNettoConPremio"
+    );
+
+  if (nettoConPremio) {
+    nettoConPremio.textContent =
+      euro(dati.nettoConPremio);
+  }
+
+
+  /* =====================================================
+     TORNA IN ALTO
      ===================================================== */
 
   window.scrollTo({
@@ -664,28 +635,18 @@ function apriDettaglio(indice) {
 function tornaAllaLista() {
 
   const paginaPrincipale =
-    document.getElementById("mainPage") ||
     document.getElementById("paginaPrincipale");
 
-
   const paginaDettaglio =
-    document.getElementById("detailPage") ||
     document.getElementById("paginaDettaglio");
 
 
   if (paginaDettaglio) {
-
-    paginaDettaglio.style.display =
-      "none";
-
+    paginaDettaglio.style.display = "none";
   }
 
-
   if (paginaPrincipale) {
-
-    paginaPrincipale.style.display =
-      "block";
-
+    paginaPrincipale.style.display = "block";
   }
 
 
@@ -702,17 +663,17 @@ function tornaAllaLista() {
    OPERAZIONI
    ========================================================= */
 
-function operationMessage(nome) {
+function operationMessage(messaggio) {
 
   alert(
-    nome + " — operazione simulata."
+    messaggio + "\n\nOperazione simulata."
   );
 
 }
 
 
 /* =========================================================
-   ESPORTAZIONE FUNZIONI
+   FUNZIONI GLOBALI
    ========================================================= */
 
 window.apriDettaglio =
