@@ -60,15 +60,10 @@ u {
 
 .top-header {
   position: relative;
-
   width: 100%;
   height: 140px;
-
   background: #ffffff;
 }
-
-
-/* FRECCIA INDIETRO */
 
 .top-header .back-button {
   position: absolute;
@@ -104,9 +99,6 @@ u {
 
   margin-left: 4px;
 }
-
-
-/* TITOLO */
 
 .top-header h1 {
   position: absolute;
@@ -215,9 +207,6 @@ u {
   border-radius: 24px;
 }
 
-
-/* 20 BUONI */
-
 .summary-card h2 {
   margin: 4px 0 38px;
 
@@ -231,9 +220,6 @@ u {
   position: relative;
   top: 0;
 }
-
-
-/* BLOCCO VALORE */
 
 .summary-item {
   margin: 0 0 20px;
@@ -250,9 +236,6 @@ u {
   margin-bottom: 0;
 }
 
-
-/* ETICHETTA */
-
 .summary-label {
   display: block;
 
@@ -265,9 +248,6 @@ u {
 
   color: #111111;
 }
-
-
-/* NUMERO */
 
 .summary-value {
   display: block;
@@ -418,6 +398,7 @@ u {
   padding: 0 11px;
 
   border: 1.5px solid #0759c9;
+
   border-radius: 17px;
 
   background: #ffffff;
@@ -435,9 +416,6 @@ u {
 
   white-space: nowrap;
 }
-
-
-/* FILTRA */
 
 .filtro-filtra {
   width: 106px;
@@ -471,24 +449,15 @@ u {
   stroke-width: 1.8;
 }
 
-
-/* PRODOTTI */
-
 .filtro.prodotto {
   width: 105px;
   min-width: 105px;
 }
 
-
-/* PERIODO */
-
 .filtro.periodo {
   width: 161px;
   min-width: 161px;
 }
-
-
-/* FRECCIA */
 
 .freccia-down {
   width: 8px;
@@ -539,9 +508,6 @@ u {
   cursor: pointer;
 }
 
-
-/* ICONA */
-
 .bond-item-icon {
   width: 50px;
   height: 50px;
@@ -566,9 +532,6 @@ u {
 
   display: block;
 }
-
-
-/* TESTO SINISTRA */
 
 .bond-item-info {
   min-width: 0;
@@ -595,9 +558,6 @@ u {
 
   font-weight: 500;
 }
-
-
-/* VALORE DESTRA */
 
 .bond-item-value {
   min-width: 0;
@@ -665,9 +625,6 @@ u {
   height: 132px;
 }
 
-
-/* FRECCIA DETTAGLIO */
-
 .detail-back {
   position: absolute;
 
@@ -696,9 +653,6 @@ u {
   width: 30px;
   height: 30px;
 }
-
-
-/* TITOLO DETTAGLIO */
 
 .detail-header h1 {
   position: absolute;
@@ -748,9 +702,6 @@ u {
   height: 230px;
 }
 
-
-/* ICONA BUONO */
-
 .detail-buono-icon {
   position: absolute;
 
@@ -776,9 +727,6 @@ u {
 
   display: block;
 }
-
-
-/* RIMBORSO */
 
 .detail-rimborso {
   position: absolute;
@@ -1019,9 +967,6 @@ u {
     font-size: 19px;
   }
 
-
-  /* RIQUADRO */
-
   .summary-card {
     height: 210px;
 
@@ -1043,9 +988,6 @@ u {
   .summary-value {
     font-size: 19px;
   }
-
-
-  /* OPERAZIONI */
 
   .section-title {
     font-size: 20px;
@@ -1076,9 +1018,6 @@ u {
     font-size: 13px;
   }
 
-
-  /* ELENCO */
-
   .your-bonds {
     margin-top: 30px;
   }
@@ -1086,9 +1025,6 @@ u {
   .elenco-title {
     font-size: 20px;
   }
-
-
-  /* FILTRI */
 
   .filtro {
     height: 32px;
@@ -1110,9 +1046,6 @@ u {
     width: 154px;
     min-width: 154px;
   }
-
-
-  /* LISTA */
 
   .bond-item {
     grid-template-columns:
@@ -1152,9 +1085,6 @@ u {
   .bond-item-value .valore {
     font-size: 14px;
   }
-
-
-  /* DETTAGLIO */
 
   #paginaDettaglio {
     padding-left: 16px;
