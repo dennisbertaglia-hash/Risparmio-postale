@@ -10,7 +10,7 @@
 
   <title>Buoni</title>
 
-  <link rel="stylesheet" href="style.css?v=21">
+  <link rel="stylesheet" href="style.css?v=22">
 </head>
 
 <body>
@@ -20,6 +20,8 @@
        ===================================================== -->
 
   <div id="paginaPrincipale">
+
+    <!-- HEADER -->
 
     <header class="top-header">
 
@@ -38,7 +40,7 @@
       <h1>Buoni</h1>
 
 
-      <!-- OCCHIO + AIUTO -->
+      <!-- OCCHIO + ? -->
 
       <div class="top-icons">
 
@@ -47,13 +49,19 @@
           type="button"
           aria-label="Nascondi valori"
         >
+
           <svg
             class="eye-icon"
             viewBox="0 0 32 32"
             aria-hidden="true"
           >
+
             <path
-              d="M3 16s4.5-8 13-8 13 8 13 8-4.5 8-13 8S3 16 3 16Z"
+              d="M3 16
+                 C6.5 10.5 10.8 8 16 8
+                 C21.2 8 25.5 10.5 29 16
+                 C25.5 21.5 21.2 24 16 24
+                 C10.8 24 6.5 21.5 3 16Z"
               fill="none"
               stroke="#111111"
               stroke-width="2"
@@ -74,10 +82,12 @@
               d="M4 4L28 28"
               fill="none"
               stroke="#111111"
-              stroke-width="2.4"
+              stroke-width="2.3"
               stroke-linecap="round"
             />
+
           </svg>
+
         </button>
 
 
@@ -94,7 +104,12 @@
     </header>
 
 
+    <!-- =====================================================
+         CONTENUTO PRINCIPALE
+         ===================================================== -->
+
     <main class="main-content">
+
 
       <!-- =================================================
            RIEPILOGO
@@ -118,7 +133,7 @@
         </div>
 
 
-        <div class="summary-item">
+        <div class="summary-item second">
 
           <span class="summary-label">
             Valore rimborso lordo
@@ -147,7 +162,9 @@
         <div class="operations">
 
 
-          <!-- ACQUISTA BUONO -->
+          <!-- =============================================
+               ACQUISTA BUONO
+               ============================================= -->
 
           <button
             class="operation-button"
@@ -161,7 +178,7 @@
                 aria-hidden="true"
               >
 
-                <!-- cerchio -->
+                <!-- CERCHIO -->
 
                 <circle
                   cx="50"
@@ -171,49 +188,48 @@
                 />
 
 
-                <!-- buono -->
+                <!-- BUONO -->
 
                 <g transform="rotate(-7 50 48)">
 
                   <rect
-                    x="25"
-                    y="27"
-                    width="48"
-                    height="34"
+                    x="26"
+                    y="29"
+                    width="47"
+                    height="32"
                     rx="3"
                     fill="#ffd400"
                   />
 
                   <rect
-                    x="31"
-                    y="27"
+                    x="32"
+                    y="29"
                     width="7"
-                    height="34"
+                    height="32"
                     fill="#1766d1"
                   />
 
                   <text
-                    x="28"
-                    y="49"
-                    font-size="18"
+                    x="29"
+                    y="50"
+                    font-size="17"
                     font-weight="700"
                     fill="#1766d1"
                   >€</text>
 
-
                   <rect
-                    x="43"
-                    y="45"
-                    width="24"
+                    x="44"
+                    y="46"
+                    width="23"
                     height="3"
                     rx="1.5"
                     fill="#ffffff"
                   />
 
                   <rect
-                    x="43"
+                    x="44"
                     y="52"
-                    width="20"
+                    width="18"
                     height="3"
                     rx="1.5"
                     fill="#ffffff"
@@ -222,17 +238,17 @@
                 </g>
 
 
-                <!-- + -->
+                <!-- PLUS -->
 
                 <circle
-                  cx="72"
+                  cx="71"
                   cy="71"
                   r="11"
                   fill="#48c66a"
                 />
 
                 <path
-                  d="M72 65V77M66 71H78"
+                  d="M71 65V77M65 71H77"
                   fill="none"
                   stroke="#ffffff"
                   stroke-width="3"
@@ -252,7 +268,9 @@
           </button>
 
 
-          <!-- RICHIEDI RIMBORSO -->
+          <!-- =============================================
+               RICHIEDI RIMBORSO
+               ============================================= -->
 
           <button
             class="operation-button"
@@ -266,7 +284,7 @@
                 aria-hidden="true"
               >
 
-                <!-- cerchio -->
+                <!-- CERCHIO -->
 
                 <circle
                   cx="50"
@@ -276,42 +294,48 @@
                 />
 
 
-                <!-- monete -->
+                <!-- MONETE -->
 
                 <circle
                   cx="45"
-                  cy="30"
+                  cy="31"
                   r="8"
                   fill="#ffd400"
                 />
 
                 <circle
                   cx="57"
-                  cy="30"
+                  cy="31"
                   r="8"
                   fill="#ffd400"
                 />
 
 
-                <!-- portafoglio -->
+                <!-- PORTAFOGLIO VERDE -->
 
                 <rect
                   x="29"
-                  y="39"
+                  y="40"
                   width="44"
-                  height="29"
+                  height="28"
                   rx="6"
                   fill="#45c66a"
                 />
 
+
+                <!-- PORTAFOGLIO GIALLO -->
+
                 <rect
                   x="34"
-                  y="44"
+                  y="45"
                   width="39"
-                  height="24"
+                  height="23"
                   rx="5"
                   fill="#ffd400"
                 />
+
+
+                <!-- CHIUSURA -->
 
                 <rect
                   x="54"
@@ -330,7 +354,7 @@
                 />
 
 
-                <!-- freccia -->
+                <!-- FRECCIA VERDE -->
 
                 <path
                   d="M23 72L39 56L55 72H47V82H31V72Z"
@@ -458,7 +482,9 @@
         </div>
 
 
-        <!-- LISTA GENERATA DA SCRIPT.JS -->
+        <!-- =================================================
+             I 20 BUONI VENGONO INSERITI DA SCRIPT.JS
+             ================================================= -->
 
         <section id="listaBuoni"></section>
 
@@ -479,6 +505,8 @@
     class="pagina-dettaglio"
     style="display:none;"
   >
+
+    <!-- HEADER DETTAGLIO -->
 
     <header class="detail-header">
 
@@ -511,7 +539,7 @@
       </button>
 
 
-      <!-- TITOLO DETTAGLIO -->
+      <!-- TITOLO -->
 
       <h1 id="detailTitolo">
         Buono 3×4 con premio
@@ -520,13 +548,17 @@
     </header>
 
 
+    <!-- =====================================================
+         CONTENUTO DETTAGLIO
+         ===================================================== -->
+
     <main class="detail-main">
 
       <section class="detail-card">
 
 
         <!-- =================================================
-             PARTE SUPERIORE
+             PARTE SUPERIORE DEL RIQUADRO
              ================================================= -->
 
         <div class="detail-card-top">
@@ -692,6 +724,8 @@
         </h2>
 
 
+        <!-- SOTTOSCRITTO -->
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -705,6 +739,8 @@
 
         </div>
 
+
+        <!-- SCADENZA -->
 
         <div class="detail-field">
 
@@ -720,6 +756,8 @@
         </div>
 
 
+        <!-- NOMINALE -->
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -733,6 +771,8 @@
 
         </div>
 
+
+        <!-- RITENUTA -->
 
         <div class="detail-field">
 
@@ -748,6 +788,8 @@
         </div>
 
 
+        <!-- NETTO -->
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -762,8 +804,12 @@
         </div>
 
 
+        <!-- DIVISORE -->
+
         <div class="detail-divider"></div>
 
+
+        <!-- LORDO SENZA PREMIO -->
 
         <div class="detail-field">
 
@@ -779,6 +825,8 @@
         </div>
 
 
+        <!-- RITENUTA ALLA SCADENZA -->
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -792,6 +840,8 @@
 
         </div>
 
+
+        <!-- NETTO SENZA PREMIO -->
 
         <div class="detail-field">
 
@@ -807,6 +857,8 @@
         </div>
 
 
+        <!-- PREMIO LORDO -->
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -820,6 +872,8 @@
 
         </div>
 
+
+        <!-- RITENUTA PREMIO -->
 
         <div class="detail-field">
 
@@ -835,6 +889,8 @@
         </div>
 
 
+        <!-- PREMIO NETTO -->
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -849,8 +905,12 @@
         </div>
 
 
+        <!-- DIVISORE -->
+
         <div class="detail-divider"></div>
 
+
+        <!-- LORDO CON PREMIO -->
 
         <div class="detail-field">
 
@@ -866,6 +926,8 @@
         </div>
 
 
+        <!-- RITENUTA TOTALE -->
+
         <div class="detail-field">
 
           <span class="detail-label">
@@ -879,6 +941,8 @@
 
         </div>
 
+
+        <!-- NETTO CON PREMIO -->
 
         <div class="detail-field last-detail-field">
 
@@ -898,9 +962,9 @@
     </main>
 
 
-    <!-- =================================================
-         PULSANTE FISSO
-         ================================================= -->
+    <!-- =====================================================
+         PULSANTE RIMBORSO FISSO
+         ===================================================== -->
 
     <div class="bottom-action">
 
@@ -913,7 +977,11 @@
   </div>
 
 
-  <script src="script.js?v=20"></script>
+  <!-- =====================================================
+       SCRIPT
+       ===================================================== -->
+
+  <script src="script.js?v=22"></script>
 
 </body>
 </html>
