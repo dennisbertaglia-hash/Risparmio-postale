@@ -8,10 +8,20 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Helvetica Neue", Arial, sans-serif;
+
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "SF Pro Text",
+    "SF Pro Display",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
   background: #ffffff;
   color: #111111;
+
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -21,7 +31,6 @@ body {
 button {
   font: inherit;
   -webkit-tap-highlight-color: transparent;
-  appearance: none;
 }
 
 u {
@@ -39,36 +48,40 @@ u {
   background: #ffffff;
 }
 
-#paginaPrincipale > main,
 .main-content {
   width: 100%;
-  padding: 0 18px 90px;
+  padding: 0 18px 80px;
 }
 
 
 /* =========================================================
-   HEADER PRINCIPALE
+   HEADER
    ========================================================= */
 
 .top-header {
   position: relative;
+
   width: 100%;
-  height: 150px;
+  height: 132px;
+
   background: #ffffff;
 }
+
+
+/* FRECCIA INDIETRO */
 
 .top-header .back-button {
   position: absolute;
 
   left: 18px;
-  top: 31px;
+  top: 32px;
 
   width: 48px;
   height: 48px;
 
   padding: 0;
 
-  border: 1.4px solid #111111;
+  border: 1.5px solid #111111;
   border-radius: 50%;
 
   background: #ffffff;
@@ -78,13 +91,18 @@ u {
   justify-content: center;
 }
 
-.top-header .back-button svg {
-  width: 32px;
-  height: 32px;
-}
+.top-header .back-button::before {
+  content: "";
 
-.top-header .back-button svg path {
-  stroke-width: 2.4;
+  width: 12px;
+  height: 12px;
+
+  border-left: 4px solid #111111;
+  border-bottom: 4px solid #111111;
+
+  transform: rotate(45deg);
+
+  margin-left: 4px;
 }
 
 
@@ -94,7 +112,7 @@ u {
   position: absolute;
 
   left: 18px;
-  bottom: 9px;
+  bottom: 5px;
 
   margin: 0;
 
@@ -103,7 +121,7 @@ u {
 
   font-weight: 600;
 
-  letter-spacing: -0.6px;
+  letter-spacing: -0.7px;
 }
 
 
@@ -115,32 +133,34 @@ u {
   position: absolute;
 
   right: 18px;
-  top: 37px;
+  top: 35px;
 
-  height: 40px;
+  height: 50px;
+
+  padding: 5px 8px;
+
+  border: 1.5px solid #111111;
+  border-radius: 27px;
+
+  background: #ffffff;
 
   display: flex;
   align-items: center;
+  justify-content: center;
 
   gap: 8px;
-
-  padding: 0 7px;
-
-  border: 1.4px solid #111111;
-  border-radius: 22px;
-
-  background: #ffffff;
 }
 
 
-/* pulsanti senza bordi singoli */
+/* PULSANTE OCCHIO */
 
-.eye-button,
-.question-button {
+.eye-button {
+  width: 34px;
+  height: 34px;
+
   padding: 0;
 
   border: 0;
-
   background: transparent;
 
   display: flex;
@@ -148,35 +168,32 @@ u {
   justify-content: center;
 }
 
+.eye-icon {
+  width: 28px;
+  height: 28px;
 
-/* OCCHIO */
-
-.eye-button {
-  width: 34px;
-  height: 34px;
-}
-
-.eye-button svg {
-  width: 29px;
-  height: 29px;
-}
-
-.eye-button svg path,
-.eye-button svg circle {
-  stroke-width: 2;
+  display: block;
 }
 
 
-/* ? */
+/* PULSANTE ? */
 
 .question-button {
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
 
-  border: 1.4px solid #111111;
+  padding: 0;
+
+  border: 1.5px solid #111111;
   border-radius: 50%;
 
-  font-size: 18px;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
   line-height: 1;
 
   font-weight: 500;
@@ -189,12 +206,11 @@ u {
 
 .summary-card {
   width: 100%;
-
   height: 184px;
 
-  margin-top: 0;
+  margin: 0;
 
-  padding: 19px 22px;
+  padding: 20px 22px;
 
   background: #edf6ff;
 
@@ -205,41 +221,42 @@ u {
 /* 20 BUONI */
 
 .summary-card h2 {
-  margin: 0 0 16px;
+  margin: 0 0 17px;
 
   font-size: 20px;
   line-height: 1.1;
 
   font-weight: 600;
 
-  letter-spacing: -0.3px;
+  letter-spacing: -0.35px;
 }
 
 
-/* singoli blocchi */
+/* SINGOLO BLOCCO */
 
 .summary-item {
-  margin: 0 0 11px;
+  margin: 0 0 10px;
 }
 
-.summary-item:last-child {
+.summary-item.second {
+  margin-top: 0;
   margin-bottom: 0;
 }
 
 
-/* etichette */
+/* ETICHETTE */
 
 .summary-label {
   display: block;
 
-  margin: 0 0 3px;
-
-  color: #111111;
+  margin: 0 0 2px;
 
   font-size: 15px;
-  line-height: 1.15;
+  line-height: 1.2;
 
   font-weight: 300;
+
+  color: #111111;
 }
 
 
@@ -248,12 +265,14 @@ u {
 .summary-value {
   display: block;
 
+  margin: 0;
+
   font-size: 20px;
-  line-height: 1.05;
+  line-height: 1.1;
 
-  font-weight: 500;
+  font-weight: 600;
 
-  letter-spacing: -0.3px;
+  letter-spacing: -0.2px;
 }
 
 
@@ -265,8 +284,11 @@ u {
   width: 100%;
 }
 
+
+/* TITOLO */
+
 .section-title {
-  margin: 28px 0 0;
+  margin: 29px 0 0;
 
   font-size: 25px;
   line-height: 1.1;
@@ -277,46 +299,44 @@ u {
 }
 
 
-/* contenitore */
+/* CONTENITORE */
 
 .operations {
   display: flex;
   align-items: flex-start;
 
-  gap: 38px;
+  gap: 31px;
 
-  margin-top: 20px;
-
-  padding-left: 4px;
+  margin-top: 18px;
+  padding-left: 2px;
 }
 
 
-/* pulsanti */
+/* PULSANTI */
 
 .operation-button {
-  width: 102px;
-  min-width: 102px;
-  flex: 0 0 102px;
+  width: 105px;
+  min-width: 105px;
+  flex: 0 0 105px;
 
   padding: 0;
 
   border: 0;
-
   background: transparent;
 
-  text-align: center;
-
   color: #111111;
+
+  text-align: center;
 }
 
 
-/* cerchio */
+/* CERCHIO ICONA */
 
 .operation-icon {
-  width: 76px;
-  height: 76px;
+  width: 72px;
+  height: 72px;
 
-  margin: 0 auto 9px;
+  margin: 0 auto 10px;
 
   border-radius: 50%;
 
@@ -333,24 +353,22 @@ u {
 /* SVG */
 
 .operation-icon svg {
-  width: 76px;
-  height: 76px;
+  width: 72px;
+  height: 72px;
 
   display: block;
 }
 
 
-/* testo */
+/* TESTO */
 
 .operation-button > span:last-child {
   display: block;
 
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.15;
 
   font-weight: 400;
-
-  letter-spacing: -0.15px;
 }
 
 
@@ -359,9 +377,7 @@ u {
    ========================================================= */
 
 .your-bonds {
-  width: 100%;
-
-  margin-top: 43px;
+  margin-top: 32px;
 }
 
 
@@ -392,27 +408,26 @@ u {
 }
 
 
-/* tutti i filtri */
+/* FILTRO GENERALE */
 
 .filtro {
   flex: 0 0 auto;
 
-  height: 42px;
+  height: 40px;
 
   padding: 0 11px;
 
   border: 1.4px solid #0759c9;
-  border-radius: 22px;
+  border-radius: 21px;
 
   background: #ffffff;
-
   color: #0759c9;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
 
   font-weight: 600;
@@ -424,8 +439,8 @@ u {
 /* FILTRA */
 
 .filtro-filtra {
-  width: 78px;
-  min-width: 78px;
+  width: 77px;
+  min-width: 77px;
 
   padding: 0 7px;
 
@@ -433,59 +448,61 @@ u {
 }
 
 
-/* icona filtri */
+/* ICONE SLIDER */
 
 .filtro-sliders-icon {
-  width: 18px;
-  height: 18px;
+  width: 17px;
+  height: 17px;
 
-  flex: 0 0 18px;
+  flex: 0 0 17px;
 
   display: block;
 }
 
 .filtro-sliders-icon line {
   stroke: #0759c9;
-  stroke-width: 1.6;
+  stroke-width: 1.7;
+
   stroke-linecap: round;
 }
 
 .filtro-sliders-icon circle {
+  fill: #ffffff;
+
   stroke: #0759c9;
   stroke-width: 1.8;
-  fill: #ffffff;
 }
 
 
 /* PRODOTTI */
 
 .filtro.prodotto {
-  width: 112px;
-  min-width: 112px;
+  width: 105px;
+  min-width: 105px;
 }
 
 
 /* PERIODO */
 
 .filtro.periodo {
-  width: 169px;
-  min-width: 169px;
+  width: 161px;
+  min-width: 161px;
 }
 
 
-/* freccia */
+/* FRECCIA */
 
 .freccia-down {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
+
+  margin-left: 7px;
+  margin-top: -4px;
 
   border-right: 2px solid #0759c9;
   border-bottom: 2px solid #0759c9;
 
   transform: rotate(45deg);
-
-  margin-left: 8px;
-  margin-top: -5px;
 }
 
 
@@ -496,33 +513,28 @@ u {
 #listaBuoni {
   width: 100%;
 
-  margin-top: 18px;
-
-  overflow: hidden;
+  margin-top: 5px;
 }
 
 
-/* singolo buono */
+/* SINGOLO BUONO */
 
 .bond-item {
   width: 100%;
 
   margin: 0;
-
-  padding: 10px 0;
+  padding: 9px 0;
 
   background: #ffffff;
-
-  overflow: hidden;
 }
 
 
-/* pulsante del buono */
+/* RIGA */
 
 .bond-item-button {
   width: 100%;
 
-  min-height: 62px;
+  min-height: 56px;
 
   padding: 0;
 
@@ -532,9 +544,12 @@ u {
 
   display: grid;
 
-  grid-template-columns: 48px minmax(0, 1fr) 115px;
+  grid-template-columns:
+    50px
+    minmax(0, 1fr)
+    112px;
 
-  column-gap: 9px;
+  column-gap: 8px;
 
   align-items: center;
 
@@ -545,77 +560,66 @@ u {
 
 
 /* =========================================================
-   ICONA BUONO
+   ICONA BUONO NELLA LISTA
    ========================================================= */
 
 .bond-item-icon {
-  width: 46px !important;
-  height: 46px !important;
-
-  min-width: 46px !important;
-  max-width: 46px !important;
-
-  min-height: 46px !important;
-  max-height: 46px !important;
+  width: 50px;
+  height: 50px;
 
   border-radius: 50%;
 
   background: #edf6ff;
 
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
 
-  overflow: hidden !important;
-
-  position: relative;
+  overflow: hidden;
 }
 
 
-/* blocchiamo qualsiasi SVG gigante */
+/*
+   L'icona viene ridotta.
+   Il disegno vero viene eventualmente
+   gestito dallo script.
+*/
 
 .bond-item-icon svg {
-  width: 32px !important;
-  height: 32px !important;
+  width: 38px;
+  height: 38px;
 
-  min-width: 32px !important;
-  min-height: 32px !important;
-
-  max-width: 32px !important;
-  max-height: 32px !important;
+  max-width: 38px;
+  max-height: 38px;
 
   display: block;
-
-  overflow: hidden;
 }
 
 
 /* =========================================================
-   TESTO DEL BUONO
+   TESTI BUONO
    ========================================================= */
 
 .bond-item-info {
   min-width: 0;
-
-  overflow: hidden;
 }
 
 
-/* scadenza */
+/* DATA */
 
 .bond-item-info .data {
   margin: 0 0 3px;
 
   color: #777777;
 
-  font-size: 13px;
-  line-height: 1.15;
+  font-size: 12px;
+  line-height: 1.2;
 
   font-weight: 300;
 }
 
 
-/* nome */
+/* NOME */
 
 .bond-item-info .nome {
   margin: 0;
@@ -626,28 +630,21 @@ u {
   line-height: 1.2;
 
   font-weight: 500;
-
-  white-space: nowrap;
-
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 
 /* =========================================================
-   VALORE A DESTRA
+   IMPORTO A DESTRA
    ========================================================= */
 
 .bond-item-value {
   min-width: 0;
 
   text-align: right;
-
-  overflow: hidden;
 }
 
 
-/* etichetta valore */
+/* SCRITTA VALORE RIMBORSO LORDO */
 
 .bond-item-value .label {
   display: block;
@@ -656,7 +653,7 @@ u {
 
   color: #777777;
 
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.1;
 
   font-weight: 300;
@@ -665,7 +662,7 @@ u {
 }
 
 
-/* importo */
+/* IMPORTO */
 
 .bond-item-value .valore {
   display: block;
@@ -709,25 +706,24 @@ u {
   position: relative;
 
   width: 100%;
-
-  height: 150px;
+  height: 132px;
 }
 
 
-/* indietro */
+/* INDIETRO */
 
 .detail-back {
   position: absolute;
 
   left: 0;
-  top: 31px;
+  top: 32px;
 
   width: 48px;
   height: 48px;
 
   padding: 0;
 
-  border: 1.4px solid #111111;
+  border: 1.5px solid #111111;
   border-radius: 50%;
 
   background: #ffffff;
@@ -738,29 +734,29 @@ u {
 }
 
 .detail-back svg {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
 }
 
 
-/* titolo dettaglio */
+/* TITOLO DETTAGLIO */
 
 .detail-header h1 {
   position: absolute;
 
   left: 0;
-  bottom: 9px;
+  bottom: 7px;
 
   width: 100%;
 
   margin: 0;
 
-  font-size: 25px;
+  font-size: 23px;
   line-height: 1.05;
 
   font-weight: 600;
 
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 
   white-space: nowrap;
 }
@@ -788,35 +784,34 @@ u {
 
   border-radius: 24px;
 
-  overflow: visible;
+  overflow: hidden;
 }
 
 
-/* parte alta */
+/* PARTE SUPERIORE */
 
 .detail-card-top {
   position: relative;
 
   width: 100%;
-
-  height: 250px;
-
-  border-radius: 24px 24px 0 0;
+  height: 230px;
 }
 
 
-/* icona */
+/* =========================================================
+   ICONA DETTAGLIO
+   ========================================================= */
 
 .detail-buono-icon {
   position: absolute;
 
-  top: 17px;
+  top: 16px;
   left: 50%;
 
   transform: translateX(-50%);
 
-  width: 88px;
-  height: 88px;
+  width: 82px;
+  height: 82px;
 
   border-radius: 50%;
 
@@ -824,14 +819,19 @@ u {
 }
 
 .detail-buono-icon svg {
-  width: 88px;
-  height: 88px;
+  width: 82px;
+  height: 82px;
+
+  max-width: 82px;
+  max-height: 82px;
 
   display: block;
 }
 
 
-/* valore */
+/* =========================================================
+   VALORE RIMBORSO DETTAGLIO
+   ========================================================= */
 
 .detail-rimborso {
   position: absolute;
@@ -839,22 +839,27 @@ u {
   left: 0;
   right: 0;
 
-  bottom: 50px;
+  bottom: 48px;
 
   text-align: center;
 }
 
+
+/* NUMERO */
+
 .detail-rimborso span {
-  font-size: 31px;
+  display: block;
+
+  font-size: 29px;
   line-height: 1;
 
-  font-weight: 500;
+  font-weight: 600;
 
-  letter-spacing: -0.8px;
+  letter-spacing: -0.7px;
 }
 
 
-/* label */
+/* ETICHETTA */
 
 .detail-rimborso-label {
   position: absolute;
@@ -862,14 +867,14 @@ u {
   left: 0;
   right: 0;
 
-  bottom: 19px;
+  bottom: -28px;
 
   text-align: center;
 
   font-size: 14px;
   line-height: 1.1;
 
-  font-weight: 400;
+  font-weight: 300;
 }
 
 
@@ -878,48 +883,47 @@ u {
    ========================================================= */
 
 .detail-account {
-  min-height: 72px;
+  min-height: 68px;
 
-  border-top: 2px solid #ffffff;
+  border-top: 1.5px solid #ffffff;
 
   background: #edf6ff;
-
-  border-radius: 0 0 24px 24px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  gap: 10px;
+  gap: 8px;
 
-  padding: 10px 16px;
+  padding: 9px 16px;
 }
 
 
-/* icona conto */
+/* ICONA CONTO */
 
 .account-icon {
-  width: 48px;
-  height: 38px;
+  width: 44px;
+  height: 34px;
 
-  flex: 0 0 48px;
+  flex: 0 0 44px;
 }
 
 .account-icon svg {
-  width: 48px;
-  height: 38px;
+  width: 44px;
+  height: 34px;
 
-  display: block;
+  max-width: 44px;
+  max-height: 34px;
 }
 
 
-/* testo conto */
+/* TESTO CONTO */
 
 .account-text {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.2;
 
-  font-weight: 400;
+  font-weight: 300;
 }
 
 
@@ -928,41 +932,41 @@ u {
    ========================================================= */
 
 .detail-section-title {
-  margin: 31px 0 25px;
+  margin: 28px 0 22px;
 
   font-size: 24px;
   line-height: 1.1;
 
   font-weight: 600;
 
-  letter-spacing: -0.5px;
+  letter-spacing: -0.4px;
 }
 
 
-/* singolo campo */
+/* CAMPO */
 
 .detail-field {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 
 
-/* etichetta */
+/* ETICHETTA */
 
 .detail-label {
   display: block;
 
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 
   color: #777777;
 
   font-size: 14px;
   line-height: 1.2;
 
-  font-weight: 400;
+  font-weight: 300;
 }
 
 
-/* valore */
+/* VALORE */
 
 .detail-value {
   display: block;
@@ -970,19 +974,19 @@ u {
   color: #111111;
 
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.25;
 
   font-weight: 400;
 }
 
 
-/* separatore */
+/* DIVISORI */
 
 .detail-divider {
   width: 100%;
   height: 1px;
 
-  margin: 22px 0;
+  margin: 21px 0;
 
   background: #e3e3e3;
 }
@@ -1014,14 +1018,12 @@ u {
 
 .bottom-action button {
   width: 100%;
-  height: 54px;
+  height: 52px;
 
   border: 0;
-
-  border-radius: 28px;
+  border-radius: 27px;
 
   background: #0759c9;
-
   color: #ffffff;
 
   font-size: 18px;
@@ -1040,7 +1042,6 @@ u {
 
 @media (max-width: 430px) {
 
-  #paginaPrincipale > main,
   .main-content {
     padding-left: 18px;
     padding-right: 18px;
@@ -1050,12 +1051,12 @@ u {
   /* HEADER */
 
   .top-header {
-    height: 150px;
+    height: 132px;
   }
 
   .top-header .back-button {
     left: 18px;
-    top: 31px;
+    top: 32px;
 
     width: 48px;
     height: 48px;
@@ -1063,44 +1064,43 @@ u {
 
   .top-header h1 {
     left: 18px;
-    bottom: 9px;
+    bottom: 5px;
 
     font-size: 30px;
-
     font-weight: 600;
   }
 
 
-  /* OCCHIO */
+  /* OCCHIO + ? */
 
   .top-icons {
     right: 18px;
-    top: 37px;
+    top: 35px;
 
-    height: 40px;
+    height: 50px;
 
-    gap: 8px;
+    padding: 5px 8px;
 
-    padding: 0 7px;
+    gap: 7px;
 
-    border-width: 1.4px;
+    border-width: 1.5px;
   }
 
   .eye-button {
-    width: 34px;
-    height: 34px;
+    width: 33px;
+    height: 33px;
   }
 
-  .eye-button svg {
-    width: 29px;
-    height: 29px;
+  .eye-icon {
+    width: 27px;
+    height: 27px;
   }
 
   .question-button {
-    width: 30px;
-    height: 30px;
+    width: 33px;
+    height: 33px;
 
-    font-size: 18px;
+    font-size: 20px;
   }
 
 
@@ -1109,71 +1109,65 @@ u {
   .summary-card {
     height: 184px;
 
-    padding: 19px 22px;
+    padding: 20px 22px;
 
     border-radius: 24px;
   }
 
   .summary-card h2 {
     font-size: 20px;
-
-    margin-bottom: 16px;
+    font-weight: 600;
   }
 
   .summary-label {
     font-size: 15px;
+    font-weight: 300;
   }
 
   .summary-value {
     font-size: 20px;
-
-    font-weight: 500;
+    font-weight: 600;
   }
 
 
   /* OPERAZIONI */
 
   .section-title {
-    margin-top: 28px;
-
     font-size: 25px;
-
     font-weight: 600;
   }
 
   .operations {
-    gap: 38px;
-
-    margin-top: 20px;
-
-    padding-left: 4px;
+    gap: 31px;
+    margin-top: 18px;
   }
 
   .operation-button {
-    width: 102px;
-    min-width: 102px;
-    flex-basis: 102px;
+    width: 105px;
+    min-width: 105px;
+    flex-basis: 105px;
   }
 
   .operation-icon {
-    width: 76px;
-    height: 76px;
+    width: 72px;
+    height: 72px;
   }
 
   .operation-icon svg {
-    width: 76px;
-    height: 76px;
+    width: 72px;
+    height: 72px;
   }
 
   .operation-button > span:last-child {
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 400;
   }
 
 
   /* ELENCO */
 
   .your-bonds {
-    margin-top: 43px;
+    margin-top: 32px;
   }
 
 
@@ -1181,90 +1175,80 @@ u {
 
   .filtri {
     gap: 8px;
-
     margin-top: 17px;
   }
 
   .filtro {
-    height: 42px;
+    height: 40px;
 
-    font-size: 14px;
+    font-size: 13px;
 
     border-width: 1.4px;
   }
 
   .filtro-filtra {
-    width: 78px;
-    min-width: 78px;
+    width: 77px;
+    min-width: 77px;
   }
 
   .filtro.prodotto {
-    width: 112px;
-    min-width: 112px;
+    width: 105px;
+    min-width: 105px;
   }
 
   .filtro.periodo {
-    width: 169px;
-    min-width: 169px;
+    width: 161px;
+    min-width: 161px;
   }
 
 
   /* LISTA */
 
   #listaBuoni {
-    margin-top: 18px;
-
-    overflow: hidden;
+    margin-top: 5px;
   }
 
   .bond-item {
-    padding: 10px 0;
+    padding: 9px 0;
   }
 
   .bond-item-button {
-    grid-template-columns: 48px minmax(0, 1fr) 115px;
+    grid-template-columns:
+      50px
+      minmax(0, 1fr)
+      112px;
 
-    column-gap: 9px;
+    column-gap: 8px;
 
-    min-height: 62px;
+    min-height: 56px;
   }
 
   .bond-item-icon {
-    width: 46px !important;
-    height: 46px !important;
-
-    min-width: 46px !important;
-    max-width: 46px !important;
-
-    min-height: 46px !important;
-    max-height: 46px !important;
+    width: 50px;
+    height: 50px;
   }
 
   .bond-item-icon svg {
-    width: 32px !important;
-    height: 32px !important;
-
-    min-width: 32px !important;
-    max-width: 32px !important;
-
-    min-height: 32px !important;
-    max-height: 32px !important;
+    width: 38px;
+    height: 38px;
   }
 
   .bond-item-info .data {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .bond-item-info .nome {
     font-size: 15px;
+    font-weight: 500;
   }
 
   .bond-item-value .label {
-    font-size: 11px;
+    font-size: 10px;
   }
 
   .bond-item-value .valore {
     font-size: 15px;
+    font-weight: 600;
   }
 
 
@@ -1277,12 +1261,12 @@ u {
   }
 
   .detail-header {
-    height: 150px;
+    height: 132px;
   }
 
   .detail-back {
     left: 0;
-    top: 31px;
+    top: 32px;
 
     width: 48px;
     height: 48px;
@@ -1290,31 +1274,31 @@ u {
 
   .detail-header h1 {
     left: 0;
-    bottom: 9px;
+    bottom: 7px;
 
-    font-size: 25px;
-
+    font-size: 23px;
     font-weight: 600;
   }
 
   .detail-card-top {
-    height: 250px;
+    height: 230px;
   }
 
   .detail-buono-icon {
-    width: 88px;
-    height: 88px;
+    width: 82px;
+    height: 82px;
 
-    top: 17px;
+    top: 16px;
   }
 
   .detail-buono-icon svg {
-    width: 88px;
-    height: 88px;
+    width: 82px;
+    height: 82px;
   }
 
   .detail-rimborso span {
-    font-size: 31px;
+    font-size: 29px;
+    font-weight: 600;
   }
 
   .detail-rimborso-label {
@@ -1322,30 +1306,43 @@ u {
   }
 
   .detail-account {
-    min-height: 72px;
+    min-height: 68px;
+  }
+
+  .account-icon {
+    width: 44px;
+    height: 34px;
+  }
+
+  .account-icon svg {
+    width: 44px;
+    height: 34px;
   }
 
   .account-text {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .detail-section-title {
     font-size: 24px;
+    font-weight: 600;
 
-    margin-top: 31px;
-    margin-bottom: 25px;
+    margin-top: 28px;
+    margin-bottom: 22px;
   }
 
   .detail-field {
-    margin-bottom: 24px;
+    margin-bottom: 23px;
   }
 
   .detail-label {
     font-size: 14px;
+    font-weight: 300;
   }
 
   .detail-value {
     font-size: 16px;
+    font-weight: 400;
   }
 }
 
@@ -1360,19 +1357,15 @@ u {
     font-size: 29px;
   }
 
-  .top-icons {
-    right: 16px;
-  }
-
   .summary-card {
-    height: 181px;
+    height: 182px;
 
     padding-left: 20px;
     padding-right: 20px;
   }
 
   .summary-card h2 {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .summary-label {
@@ -1380,7 +1373,7 @@ u {
   }
 
   .summary-value {
-    font-size: 20px;
+    font-size: 19px;
   }
 
   .section-title {
@@ -1388,82 +1381,74 @@ u {
   }
 
   .operations {
-    gap: 28px;
+    gap: 25px;
   }
 
   .operation-button {
-    width: 100px;
-    min-width: 100px;
-    flex-basis: 100px;
+    width: 102px;
+    min-width: 102px;
+    flex-basis: 102px;
   }
 
   .operation-icon {
-    width: 74px;
-    height: 74px;
+    width: 70px;
+    height: 70px;
   }
 
   .operation-icon svg {
-    width: 74px;
-    height: 74px;
+    width: 70px;
+    height: 70px;
   }
 
   .operation-button > span:last-child {
-    font-size: 14px;
-  }
-
-  .your-bonds {
-    margin-top: 40px;
-  }
-
-  .filtro {
-    height: 41px;
     font-size: 13px;
   }
 
+  .your-bonds {
+    margin-top: 31px;
+  }
+
+  .filtro {
+    height: 39px;
+    font-size: 12.5px;
+  }
+
   .filtro-filtra {
-    width: 76px;
-    min-width: 76px;
+    width: 75px;
+    min-width: 75px;
   }
 
   .filtro.prodotto {
-    width: 108px;
-    min-width: 108px;
+    width: 103px;
+    min-width: 103px;
   }
 
   .filtro.periodo {
-    width: 164px;
-    min-width: 164px;
+    width: 157px;
+    min-width: 157px;
   }
 
   .bond-item-button {
-    grid-template-columns: 45px minmax(0, 1fr) 105px;
+    grid-template-columns:
+      46px
+      minmax(0, 1fr)
+      105px;
+
     column-gap: 8px;
   }
 
   .bond-item-icon {
-    width: 43px !important;
-    height: 43px !important;
-
-    min-width: 43px !important;
-    max-width: 43px !important;
-
-    min-height: 43px !important;
-    max-height: 43px !important;
+    width: 46px;
+    height: 46px;
   }
 
   .bond-item-icon svg {
-    width: 30px !important;
-    height: 30px !important;
-
-    min-width: 30px !important;
-    max-width: 30px !important;
-
-    min-height: 30px !important;
-    max-height: 30px !important;
+    width: 35px;
+    height: 35px;
   }
 
   .bond-item-info .data {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .bond-item-info .nome {
@@ -1471,7 +1456,7 @@ u {
   }
 
   .bond-item-value .label {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .bond-item-value .valore {
@@ -1479,25 +1464,25 @@ u {
   }
 
   .detail-header h1 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .detail-card-top {
-    height: 240px;
+    height: 225px;
   }
 
   .detail-buono-icon {
-    width: 84px;
-    height: 84px;
+    width: 80px;
+    height: 80px;
   }
 
   .detail-buono-icon svg {
-    width: 84px;
-    height: 84px;
+    width: 80px;
+    height: 80px;
   }
 
   .detail-rimborso span {
-    font-size: 29px;
+    font-size: 28px;
   }
 
   .detail-section-title {
