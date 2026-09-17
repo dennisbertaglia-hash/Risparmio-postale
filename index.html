@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 
 <meta charset="UTF-8">
@@ -11,12 +10,7 @@
 
 <title>Buoni</title>
 
-
 <style>
-
-/* =========================================================
-   BASE
-   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -76,10 +70,8 @@ button {
 
 .top-header {
   position: relative;
-
   width: 100%;
   height: 140px;
-
   background: #ffffff;
 }
 
@@ -333,13 +325,17 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  overflow: visible;
 }
 
 .operation-icon svg {
-  width: 64px;
-  height: 64px;
+  width: 70px;
+  height: 70px;
 
   display: block;
+
+  overflow: visible;
 }
 
 .operation-button > span:last-child {
@@ -479,8 +475,8 @@ button {
 
 #listaBuoni {
   width: 100%;
-
   margin-top: 5px;
+  display: block;
 }
 
 .bond-item {
@@ -524,8 +520,8 @@ button {
 }
 
 .bond-item-icon svg {
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
 
   display: block;
 }
@@ -699,12 +695,18 @@ button {
 
   border-radius: 50%;
 
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   overflow: hidden;
 }
 
 .detail-buono-icon svg {
-  width: 82px;
-  height: 82px;
+  width: 76px;
+  height: 76px;
 
   display: block;
 }
@@ -746,6 +748,11 @@ button {
 
   font-weight: 300;
 }
+
+
+/* =========================================================
+   ACCREDITO
+   ========================================================= */
 
 .detail-account {
   min-height: 68px;
@@ -881,7 +888,7 @@ button {
 
 
 /* =========================================================
-   IPHONE
+   IPHONE PICCOLO
    ========================================================= */
 
 @media (max-width: 390px) {
@@ -889,10 +896,6 @@ button {
   .main-content {
     padding-left: 16px;
     padding-right: 16px;
-  }
-
-  .top-header {
-    height: 140px;
   }
 
   .top-header .back-button {
@@ -906,7 +909,6 @@ button {
   .top-header h1 {
     left: 16px;
     bottom: 7px;
-
     font-size: 20px;
   }
 
@@ -934,7 +936,6 @@ button {
   .question-button {
     width: 32px;
     height: 32px;
-
     font-size: 19px;
   }
 
@@ -946,20 +947,12 @@ button {
     border-radius: 23px;
   }
 
-  .summary-card h2 {
-    font-size: 18px;
-  }
-
   .summary-label {
     font-size: 14px;
   }
 
   .summary-value {
     font-size: 18px;
-  }
-
-  .section-title {
-    font-size: 20px;
   }
 
   .operations {
@@ -978,8 +971,8 @@ button {
   }
 
   .operation-icon svg {
-    width: 60px;
-    height: 60px;
+    width: 66px;
+    height: 66px;
   }
 
   .operation-button > span:last-child {
@@ -988,20 +981,6 @@ button {
 
   .your-bonds {
     margin-top: 30px;
-  }
-
-  .elenco-title {
-    font-size: 20px;
-  }
-
-  .filtro {
-    height: 32px;
-    font-size: 14px;
-  }
-
-  .filtro-filtra {
-    width: 106px;
-    min-width: 106px;
   }
 
   .bond-item {
@@ -1023,8 +1002,8 @@ button {
   }
 
   .bond-item-icon svg {
-    width: 35px;
-    height: 35px;
+    width: 41px;
+    height: 41px;
   }
 
   .bond-item-info .data {
@@ -1078,8 +1057,8 @@ button {
   }
 
   .detail-buono-icon svg {
-    width: 78px;
-    height: 78px;
+    width: 72px;
+    height: 72px;
   }
 
   .detail-rimborso span {
@@ -1127,12 +1106,8 @@ button {
   }
 
   .operation-icon svg {
-    width: 56px;
-    height: 56px;
-  }
-
-  .elenco-title {
-    font-size: 20px;
+    width: 62px;
+    height: 62px;
   }
 
   .bond-item {
@@ -1150,8 +1125,8 @@ button {
   }
 
   .bond-item-icon svg {
-    width: 33px;
-    height: 33px;
+    width: 39px;
+    height: 39px;
   }
 
   .bond-item-info .data {
@@ -1172,9 +1147,7 @@ button {
 }
 
 </style>
-
 </head>
-
 
 <body>
 
@@ -1195,7 +1168,6 @@ button {
   type="button"
   aria-label="Indietro">
 </button>
-
 
 <h1>Buoni</h1>
 
@@ -1262,8 +1234,7 @@ button {
 
 
 <div
-  class="summary-item summary-item-nominale"
-  style="transform:translateY(-7px);">
+  class="summary-item summary-item-nominale">
 
 <span class="summary-label">
 Valore nominale
@@ -1279,8 +1250,7 @@ Valore nominale
 
 
 <div
-  class="summary-item summary-item-lordo"
-  style="transform:translateY(-7px);">
+  class="summary-item summary-item-lordo">
 
 <span class="summary-label">
 Valore rimborso lordo
@@ -1311,12 +1281,14 @@ Operazioni
 <div class="operations">
 
 
-<!-- ACQUISTA -->
+<!-- =====================================================
+     ACQUISTA BUONO
+     ===================================================== -->
 
 <button
   class="operation-button"
   type="button"
-  onclick="alert('Acquista Buono\\n\\nOperazione simulata.')">
+  onclick="operationMessage('Acquista Buono')">
 
 <span class="operation-icon">
 
@@ -1325,7 +1297,7 @@ Operazioni
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- foglio posteriore -->
+<!-- BUONO POSTERIORE -->
 
 <rect
   x="18"
@@ -1336,46 +1308,58 @@ Operazioni
   transform="rotate(-8 18 17)"
   fill="#FFD400"/>
 
-<path
-  d="M20 17L24.5 16.35L28.5 42L24 42.65L20 17Z"
+<rect
+  x="22"
+  y="18"
+  width="5"
+  height="25"
+  transform="rotate(-8 22 18)"
   fill="#0759C9"/>
 
-<!-- buono anteriore -->
+
+<!-- BUONO ANTERIORE -->
 
 <rect
-  x="18"
+  x="17"
   y="25"
-  width="39"
-  height="26"
-  rx="3.5"
+  width="40"
+  height="27"
+  rx="4"
   fill="#FFD400"/>
 
+<!-- FASCIA BLU -->
+
 <rect
-  x="18"
+  x="17"
   y="25"
-  width="6"
-  height="26"
+  width="7"
+  height="27"
   fill="#0759C9"/>
 
-<!-- righe bianche -->
+
+<!-- RIGA 1 -->
 
 <rect
-  x="32"
+  x="31"
   y="35"
-  width="18"
+  width="19"
   height="3"
   rx="1.5"
   fill="#FFFFFF"/>
+
+
+<!-- RIGA 2 -->
 
 <rect
-  x="32"
+  x="31"
   y="42"
-  width="13"
+  width="14"
   height="3"
   rx="1.5"
   fill="#FFFFFF"/>
 
-<!-- plus verde -->
+
+<!-- PLUS VERDE -->
 
 <circle
   cx="56"
@@ -1384,7 +1368,13 @@ Operazioni
   fill="#45C96B"/>
 
 <path
-  d="M56 47V59M50 53H62"
+  d="M56 47V59"
+  stroke="#FFFFFF"
+  stroke-width="3.2"
+  stroke-linecap="round"/>
+
+<path
+  d="M50 53H62"
   stroke="#FFFFFF"
   stroke-width="3.2"
   stroke-linecap="round"/>
@@ -1401,12 +1391,14 @@ Buono
 </button>
 
 
-<!-- RIMBORSO -->
+<!-- =====================================================
+     RICHIEDI RIMBORSO
+     ===================================================== -->
 
 <button
   class="operation-button"
   type="button"
-  onclick="alert('Richiedi rimborso\\n\\nOperazione simulata.')">
+  onclick="operationMessage('Richiedi rimborso')">
 
 <span class="operation-icon">
 
@@ -1415,53 +1407,69 @@ Buono
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- monete -->
+<!-- MONETA DIETRO -->
 
 <circle
-  cx="38"
-  cy="24"
+  cx="42"
+  cy="22"
   r="8"
   fill="#FFD400"/>
 
+<!-- MONETA DESTRA -->
+
 <circle
-  cx="47"
-  cy="25"
+  cx="49"
+  cy="27"
   r="8"
   fill="#FFD400"/>
 
+<!-- MONETA SINISTRA -->
+
 <circle
-  cx="30"
-  cy="28"
-  r="7"
+  cx="31"
+  cy="27"
+  r="8"
   fill="#FFD400"/>
 
-<!-- portafoglio -->
+
+<!-- PORTAFOGLIO -->
 
 <path
   d="M25 31H51C54.3 31 57 33.7 57 37V51C57 54.3 54.3 57 51 57H25C21.7 57 19 54.3 19 51V37C19 33.7 21.7 31 25 31Z"
   fill="#FFD400"/>
 
-<!-- freccia verde -->
+
+<!-- PARTE BLU PORTAFOGLIO -->
 
 <path
-  d="M18 39L30 28L43 39L31 49V57H18V39Z"
-  fill="#45C96B"/>
-
-<!-- chiusura blu -->
-
-<rect
-  x="45"
-  y="39"
-  width="14"
-  height="13"
-  rx="5"
+  d="M45 39H57V51H45C42.2 51 40 48.8 40 46C40 43.2 42.2 39 45 39Z"
   fill="#0759C9"/>
 
+
+<!-- PUNTO BIANCO -->
+
 <circle
-  cx="53"
-  cy="45.5"
+  cx="50"
+  cy="45"
   r="2"
   fill="#FFFFFF"/>
+
+
+<!-- FRECCIA VERDE -->
+
+<path
+  d="M18 40L30 28L42 40"
+  stroke="#45C96B"
+  stroke-width="7"
+  stroke-linecap="round"
+  stroke-linejoin="round"/>
+
+<path
+  d="M18 40V56H31V48"
+  stroke="#45C96B"
+  stroke-width="7"
+  stroke-linecap="round"
+  stroke-linejoin="round"/>
 
 </svg>
 
@@ -1480,7 +1488,7 @@ rimborso
 
 
 <!-- =========================================================
-     ELENCO
+     ELENCO BUONI
      ========================================================= -->
 
 <section class="your-bonds">
@@ -1605,46 +1613,61 @@ Buono 3×4 con premio
 <div class="detail-buono-icon">
 
 <svg
-  viewBox="0 0 48 48"
+  viewBox="0 0 72 72"
+  fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
+<!-- BUONO GIALLO -->
+
 <rect
-  x="7"
-  y="11"
-  width="34"
-  height="26"
-  rx="5"
-  fill="#FFFFFF"
-  stroke="#0759C9"
-  stroke-width="2.8"/>
+  x="10"
+  y="18"
+  width="52"
+  height="36"
+  rx="6"
+  fill="#FFD400"/>
+
+
+<!-- FASCIA BLU -->
+
+<rect
+  x="10"
+  y="18"
+  width="9"
+  height="36"
+  fill="#0759C9"/>
+
+
+<!-- EURO -->
 
 <text
-  x="11"
-  y="30"
+  x="24"
+  y="42"
   font-family="Arial, sans-serif"
-  font-size="14"
+  font-size="19"
   font-weight="700"
   fill="#0759C9">
 €
 </text>
 
-<line
-  x1="24"
-  y1="21"
-  x2="36"
-  y2="21"
-  stroke="#0759C9"
-  stroke-width="2.5"
-  stroke-linecap="round"/>
 
-<line
-  x1="24"
-  y1="28"
-  x2="34"
-  y2="28"
-  stroke="#0759C9"
-  stroke-width="2.5"
-  stroke-linecap="round"/>
+<!-- RIGHE -->
+
+<rect
+  x="40"
+  y="31"
+  width="15"
+  height="3"
+  rx="1.5"
+  fill="#FFFFFF"/>
+
+<rect
+  x="40"
+  y="39"
+  width="11"
+  height="3"
+  rx="1.5"
+  fill="#FFFFFF"/>
 
 </svg>
 
@@ -1818,8 +1841,12 @@ Valore rimborso netto
 
 <div class="bottom-action">
 
-<button type="button">
+<button
+  type="button"
+  onclick="operationMessage('Richiedi rimborso')">
+
 Richiedi rimborso
+
 </button>
 
 </div>
@@ -1831,6 +1858,7 @@ Richiedi rimborso
 
 
 <script>
+
 
 /* =========================================================
    DATI DEI 20 BUONI
@@ -1957,12 +1985,11 @@ const buoni = [
   sottoscritto: "12 Maggio 2024",
   scadenza: "12 Maggio 2036"
 }
-
 ];
 
 
 /* =========================================================
-   FORMATO EURO
+   EURO
    ========================================================= */
 
 function euro(valore) {
@@ -2024,7 +2051,7 @@ function calcolaDati(nominale) {
 
 
 /* =========================================================
-   ICONA DEI BUONI
+   ICONA COLORATA DEI BUONI
    ========================================================= */
 
 function creaIconaBuono() {
@@ -2038,46 +2065,50 @@ function creaIconaBuono() {
   div.innerHTML = `
 
 <svg
-  viewBox="0 0 48 48"
+  viewBox="0 0 72 72"
+  fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
 <rect
-  x="7"
-  y="11"
-  width="34"
-  height="26"
-  rx="5"
-  fill="#FFFFFF"
-  stroke="#0759C9"
-  stroke-width="2.8"/>
+  x="10"
+  y="18"
+  width="52"
+  height="36"
+  rx="6"
+  fill="#FFD400"/>
+
+<rect
+  x="10"
+  y="18"
+  width="9"
+  height="36"
+  fill="#0759C9"/>
 
 <text
-  x="11"
-  y="30"
+  x="24"
+  y="42"
   font-family="Arial, sans-serif"
-  font-size="14"
+  font-size="19"
   font-weight="700"
   fill="#0759C9">
 €
 </text>
 
-<line
-  x1="24"
-  y1="21"
-  x2="36"
-  y2="21"
-  stroke="#0759C9"
-  stroke-width="2.5"
-  stroke-linecap="round"/>
+<rect
+  x="40"
+  y="31"
+  width="15"
+  height="3"
+  rx="1.5"
+  fill="#FFFFFF"/>
 
-<line
-  x1="24"
-  y1="28"
-  x2="34"
-  y2="28"
-  stroke="#0759C9"
-  stroke-width="2.5"
-  stroke-linecap="round"/>
+<rect
+  x="40"
+  y="39"
+  width="11"
+  height="3"
+  rx="1.5"
+  fill="#FFFFFF"/>
 
 </svg>
 
@@ -2089,13 +2120,15 @@ function creaIconaBuono() {
 
 
 /* =========================================================
-   GENERA I 20 BUONI
+   GENERA LISTA
    ========================================================= */
 
 function generaListaBuoni() {
 
   const lista =
-    document.getElementById("listaBuoni");
+    document.getElementById(
+      "listaBuoni"
+    );
 
   if (!lista) {
     return;
@@ -2104,41 +2137,42 @@ function generaListaBuoni() {
   lista.innerHTML = "";
 
 
-  buoni.forEach(function(buono, indice) {
+  buoni.forEach(
+    function(buono, indice) {
 
-    const riga =
-      document.createElement("div");
+      const riga =
+        document.createElement("div");
 
-    riga.className =
-      "bond-item";
+      riga.className =
+        "bond-item";
 
-    riga.setAttribute(
-      "role",
-      "button"
-    );
+      riga.setAttribute(
+        "role",
+        "button"
+      );
 
-    riga.setAttribute(
-      "tabindex",
-      "0"
-    );
-
-
-    /* ICONA */
-
-    riga.appendChild(
-      creaIconaBuono()
-    );
+      riga.setAttribute(
+        "tabindex",
+        "0"
+      );
 
 
-    /* TESTO */
+      /* ICONA */
 
-    const informazioni =
-      document.createElement("div");
+      riga.appendChild(
+        creaIconaBuono()
+      );
 
-    informazioni.className =
-      "bond-item-info";
 
-    informazioni.innerHTML = `
+      /* TESTO */
+
+      const informazioni =
+        document.createElement("div");
+
+      informazioni.className =
+        "bond-item-info";
+
+      informazioni.innerHTML = `
 
 <div class="data">
 scade il ${buono.scadenza}
@@ -2150,20 +2184,20 @@ Buono 3×4 con premio
 
 `;
 
-    riga.appendChild(
-      informazioni
-    );
+      riga.appendChild(
+        informazioni
+      );
 
 
-    /* VALORE */
+      /* VALORE */
 
-    const valore =
-      document.createElement("div");
+      const valore =
+        document.createElement("div");
 
-    valore.className =
-      "bond-item-value";
+      valore.className =
+        "bond-item-value";
 
-    valore.innerHTML = `
+      valore.innerHTML = `
 
 <div class="label">
 valore rimborso lordo
@@ -2175,45 +2209,48 @@ ${euro(buono.nominale)}
 
 `;
 
-    riga.appendChild(
-      valore
-    );
+      riga.appendChild(
+        valore
+      );
 
 
-    /* CLICK */
+      /* CLICK */
 
-    riga.addEventListener(
-      "click",
-      function() {
-
-        apriDettaglio(indice);
-
-      }
-    );
-
-
-    riga.addEventListener(
-      "keydown",
-      function(event) {
-
-        if (
-          event.key === "Enter" ||
-          event.key === " "
-        ) {
-
-          event.preventDefault();
+      riga.addEventListener(
+        "click",
+        function() {
 
           apriDettaglio(indice);
 
         }
-
-      }
-    );
+      );
 
 
-    lista.appendChild(riga);
+      /* TASTIERA */
 
-  });
+      riga.addEventListener(
+        "keydown",
+        function(event) {
+
+          if (
+            event.key === "Enter" ||
+            event.key === " "
+          ) {
+
+            event.preventDefault();
+
+            apriDettaglio(indice);
+
+          }
+
+        }
+      );
+
+
+      lista.appendChild(riga);
+
+    }
+  );
 
 }
 
@@ -2227,7 +2264,9 @@ function aggiornaRiepilogo() {
   const totale =
     buoni.reduce(
       function(somma, buono) {
+
         return somma + buono.nominale;
+
       },
       0
     );
@@ -2368,6 +2407,20 @@ function tornaAllaLista() {
 
 
 /* =========================================================
+   MESSAGGIO OPERAZIONI
+   ========================================================= */
+
+function operationMessage(messaggio) {
+
+  alert(
+    messaggio +
+    "\n\nOperazione simulata."
+  );
+
+}
+
+
+/* =========================================================
    AVVIO
    ========================================================= */
 
@@ -2385,5 +2438,4 @@ document.addEventListener(
 </script>
 
 </body>
-
 </html>
