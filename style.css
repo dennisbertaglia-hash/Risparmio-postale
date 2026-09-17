@@ -68,7 +68,7 @@ u {
 }
 
 
-/* FRECCIA INDIETRO */
+/* FRECCIA */
 
 .top-header .back-button {
   position: absolute;
@@ -119,7 +119,7 @@ u {
   font-size: 30px;
   line-height: 1;
 
-  font-weight: 600;
+  font-weight: 400;
 
   letter-spacing: -0.7px;
 }
@@ -151,9 +151,6 @@ u {
   gap: 8px;
 }
 
-
-/* PULSANTE OCCHIO */
-
 .eye-button {
   width: 34px;
   height: 34px;
@@ -174,9 +171,6 @@ u {
 
   display: block;
 }
-
-
-/* PULSANTE ? */
 
 .question-button {
   width: 34px;
@@ -206,9 +200,15 @@ u {
 
 .summary-card {
   width: 100%;
-  height: 184px;
 
-  margin: 0;
+  /* PIÙ ALTO COME NEL MODELLO */
+  height: 214px;
+
+  /*
+     Distanza maggiore tra "Buoni"
+     e riquadro azzurro
+  */
+  margin-top: 17px;
 
   padding: 20px 22px;
 
@@ -226,7 +226,7 @@ u {
   font-size: 20px;
   line-height: 1.1;
 
-  font-weight: 600;
+  font-weight: 400;
 
   letter-spacing: -0.35px;
 }
@@ -270,7 +270,7 @@ u {
   font-size: 20px;
   line-height: 1.1;
 
-  font-weight: 600;
+  font-weight: 400;
 
   letter-spacing: -0.2px;
 }
@@ -284,22 +284,16 @@ u {
   width: 100%;
 }
 
-
-/* TITOLO */
-
 .section-title {
   margin: 29px 0 0;
 
   font-size: 25px;
   line-height: 1.1;
 
-  font-weight: 600;
+  font-weight: 400;
 
   letter-spacing: -0.5px;
 }
-
-
-/* CONTENITORE */
 
 .operations {
   display: flex;
@@ -310,9 +304,6 @@ u {
   margin-top: 18px;
   padding-left: 2px;
 }
-
-
-/* PULSANTI */
 
 .operation-button {
   width: 105px;
@@ -328,9 +319,6 @@ u {
 
   text-align: center;
 }
-
-
-/* CERCHIO ICONA */
 
 .operation-icon {
   width: 72px;
@@ -349,18 +337,12 @@ u {
   overflow: hidden;
 }
 
-
-/* SVG */
-
 .operation-icon svg {
   width: 72px;
   height: 72px;
 
   display: block;
 }
-
-
-/* TESTO */
 
 .operation-button > span:last-child {
   display: block;
@@ -407,9 +389,6 @@ u {
   display: none;
 }
 
-
-/* FILTRO GENERALE */
-
 .filtro {
   flex: 0 0 auto;
 
@@ -435,9 +414,6 @@ u {
   white-space: nowrap;
 }
 
-
-/* FILTRA */
-
 .filtro-filtra {
   width: 77px;
   min-width: 77px;
@@ -446,9 +422,6 @@ u {
 
   gap: 4px;
 }
-
-
-/* ICONE SLIDER */
 
 .filtro-sliders-icon {
   width: 17px;
@@ -473,24 +446,15 @@ u {
   stroke-width: 1.8;
 }
 
-
-/* PRODOTTI */
-
 .filtro.prodotto {
   width: 105px;
   min-width: 105px;
 }
 
-
-/* PERIODO */
-
 .filtro.periodo {
   width: 161px;
   min-width: 161px;
 }
-
-
-/* FRECCIA */
 
 .freccia-down {
   width: 8px;
@@ -516,27 +480,13 @@ u {
   margin-top: 5px;
 }
 
-
-/* SINGOLO BUONO */
-
-.bond-item {
-  width: 100%;
-
-  margin: 0;
-  padding: 9px 0;
-
-  background: #ffffff;
-}
-
-
-/* RIGA */
-
 .bond-item-button {
   width: 100%;
 
   min-height: 56px;
 
-  padding: 0;
+  margin: 0;
+  padding: 9px 0;
 
   border: 0;
 
@@ -559,9 +509,7 @@ u {
 }
 
 
-/* =========================================================
-   ICONA BUONO NELLA LISTA
-   ========================================================= */
+/* ICONA */
 
 .bond-item-icon {
   width: 50px;
@@ -578,13 +526,6 @@ u {
   overflow: hidden;
 }
 
-
-/*
-   L'icona viene ridotta.
-   Il disegno vero viene eventualmente
-   gestito dallo script.
-*/
-
 .bond-item-icon svg {
   width: 38px;
   height: 38px;
@@ -596,18 +537,15 @@ u {
 }
 
 
-/* =========================================================
-   TESTI BUONO
-   ========================================================= */
+/* TESTI */
 
 .bond-item-info {
   min-width: 0;
 }
 
-
-/* DATA */
-
 .bond-item-info .data {
+  display: block;
+
   margin: 0 0 3px;
 
   color: #777777;
@@ -618,10 +556,9 @@ u {
   font-weight: 300;
 }
 
-
-/* NOME */
-
 .bond-item-info .nome {
+  display: block;
+
   margin: 0;
 
   color: #111111;
@@ -629,22 +566,17 @@ u {
   font-size: 15px;
   line-height: 1.2;
 
-  font-weight: 500;
+  font-weight: 400;
 }
 
 
-/* =========================================================
-   IMPORTO A DESTRA
-   ========================================================= */
+/* VALORE */
 
 .bond-item-value {
   min-width: 0;
 
   text-align: right;
 }
-
-
-/* SCRITTA VALORE RIMBORSO LORDO */
 
 .bond-item-value .label {
   display: block;
@@ -661,9 +593,6 @@ u {
   white-space: nowrap;
 }
 
-
-/* IMPORTO */
-
 .bond-item-value .valore {
   display: block;
 
@@ -672,7 +601,7 @@ u {
   font-size: 15px;
   line-height: 1.1;
 
-  font-weight: 600;
+  font-weight: 400;
 
   white-space: nowrap;
 }
@@ -698,9 +627,7 @@ u {
 }
 
 
-/* =========================================================
-   HEADER DETTAGLIO
-   ========================================================= */
+/* HEADER DETTAGLIO */
 
 .detail-header {
   position: relative;
@@ -708,9 +635,6 @@ u {
   width: 100%;
   height: 132px;
 }
-
-
-/* INDIETRO */
 
 .detail-back {
   position: absolute;
@@ -738,9 +662,6 @@ u {
   height: 30px;
 }
 
-
-/* TITOLO DETTAGLIO */
-
 .detail-header h1 {
   position: absolute;
 
@@ -754,7 +675,7 @@ u {
   font-size: 23px;
   line-height: 1.05;
 
-  font-weight: 600;
+  font-weight: 400;
 
   letter-spacing: -0.4px;
 
@@ -762,18 +683,14 @@ u {
 }
 
 
-/* =========================================================
-   CONTENUTO DETTAGLIO
-   ========================================================= */
+/* CONTENUTO */
 
 .detail-main {
   width: 100%;
 }
 
 
-/* =========================================================
-   CARD DETTAGLIO
-   ========================================================= */
+/* CARD */
 
 .detail-card {
   width: 100%;
@@ -787,9 +704,6 @@ u {
   overflow: hidden;
 }
 
-
-/* PARTE SUPERIORE */
-
 .detail-card-top {
   position: relative;
 
@@ -798,9 +712,7 @@ u {
 }
 
 
-/* =========================================================
-   ICONA DETTAGLIO
-   ========================================================= */
+/* ICONA */
 
 .detail-buono-icon {
   position: absolute;
@@ -829,9 +741,7 @@ u {
 }
 
 
-/* =========================================================
-   VALORE RIMBORSO DETTAGLIO
-   ========================================================= */
+/* VALORE */
 
 .detail-rimborso {
   position: absolute;
@@ -844,22 +754,16 @@ u {
   text-align: center;
 }
 
-
-/* NUMERO */
-
 .detail-rimborso span {
   display: block;
 
   font-size: 29px;
   line-height: 1;
 
-  font-weight: 600;
+  font-weight: 400;
 
   letter-spacing: -0.7px;
 }
-
-
-/* ETICHETTA */
 
 .detail-rimborso-label {
   position: absolute;
@@ -878,9 +782,7 @@ u {
 }
 
 
-/* =========================================================
-   CONTO
-   ========================================================= */
+/* CONTO */
 
 .detail-account {
   min-height: 68px;
@@ -898,9 +800,6 @@ u {
   padding: 9px 16px;
 }
 
-
-/* ICONA CONTO */
-
 .account-icon {
   width: 44px;
   height: 34px;
@@ -916,9 +815,6 @@ u {
   max-height: 34px;
 }
 
-
-/* TESTO CONTO */
-
 .account-text {
   font-size: 14px;
   line-height: 1.2;
@@ -927,9 +823,7 @@ u {
 }
 
 
-/* =========================================================
-   RIEPILOGO DATI
-   ========================================================= */
+/* RIEPILOGO */
 
 .detail-section-title {
   margin: 28px 0 22px;
@@ -937,20 +831,14 @@ u {
   font-size: 24px;
   line-height: 1.1;
 
-  font-weight: 600;
+  font-weight: 400;
 
   letter-spacing: -0.4px;
 }
 
-
-/* CAMPO */
-
 .detail-field {
   margin-bottom: 23px;
 }
-
-
-/* ETICHETTA */
 
 .detail-label {
   display: block;
@@ -965,9 +853,6 @@ u {
   font-weight: 300;
 }
 
-
-/* VALORE */
-
 .detail-value {
   display: block;
 
@@ -978,9 +863,6 @@ u {
 
   font-weight: 400;
 }
-
-
-/* DIVISORI */
 
 .detail-divider {
   width: 100%;
@@ -996,9 +878,7 @@ u {
 }
 
 
-/* =========================================================
-   PULSANTE FISSO
-   ========================================================= */
+/* PULSANTE FISSO */
 
 .bottom-action {
   position: fixed;
@@ -1047,9 +927,6 @@ u {
     padding-right: 18px;
   }
 
-
-  /* HEADER */
-
   .top-header {
     height: 132px;
   }
@@ -1067,11 +944,8 @@ u {
     bottom: 5px;
 
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 400;
   }
-
-
-  /* OCCHIO + ? */
 
   .top-icons {
     right: 18px;
@@ -1107,7 +981,9 @@ u {
   /* RIQUADRO */
 
   .summary-card {
-    height: 184px;
+    height: 214px;
+
+    margin-top: 17px;
 
     padding: 20px 22px;
 
@@ -1116,7 +992,7 @@ u {
 
   .summary-card h2 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .summary-label {
@@ -1126,7 +1002,7 @@ u {
 
   .summary-value {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
 
@@ -1134,7 +1010,7 @@ u {
 
   .section-title {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .operations {
@@ -1208,10 +1084,6 @@ u {
     margin-top: 5px;
   }
 
-  .bond-item {
-    padding: 9px 0;
-  }
-
   .bond-item-button {
     grid-template-columns:
       50px
@@ -1239,7 +1111,7 @@ u {
 
   .bond-item-info .nome {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .bond-item-value .label {
@@ -1248,7 +1120,7 @@ u {
 
   .bond-item-value .valore {
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
 
@@ -1277,7 +1149,7 @@ u {
     bottom: 7px;
 
     font-size: 23px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .detail-card-top {
@@ -1298,7 +1170,7 @@ u {
 
   .detail-rimborso span {
     font-size: 29px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   .detail-rimborso-label {
@@ -1325,7 +1197,7 @@ u {
 
   .detail-section-title {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 400;
 
     margin-top: 28px;
     margin-bottom: 22px;
@@ -1358,7 +1230,9 @@ u {
   }
 
   .summary-card {
-    height: 182px;
+    height: 214px;
+
+    margin-top: 17px;
 
     padding-left: 20px;
     padding-right: 20px;
@@ -1453,6 +1327,7 @@ u {
 
   .bond-item-info .nome {
     font-size: 14px;
+    font-weight: 400;
   }
 
   .bond-item-value .label {
@@ -1461,6 +1336,7 @@ u {
 
   .bond-item-value .valore {
     font-size: 14px;
+    font-weight: 400;
   }
 
   .detail-header h1 {
