@@ -2,6 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, viewport-fit=cover"
@@ -9,7 +10,7 @@
 
   <title>Buoni</title>
 
-  <link rel="stylesheet" href="style.css?v=20">
+  <link rel="stylesheet" href="style.css?v=21">
 </head>
 
 <body>
@@ -22,25 +23,22 @@
 
     <header class="top-header">
 
+      <!-- INDIETRO -->
+
       <button
         class="back-button"
         type="button"
         onclick="tornaAllaLista()"
         aria-label="Indietro"
-      >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path
-            d="M14.5 5L7.5 12L14.5 19"
-            fill="none"
-            stroke="#111111"
-            stroke-width="2.4"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </button>
+      ></button>
+
+
+      <!-- TITOLO -->
 
       <h1>Buoni</h1>
+
+
+      <!-- OCCHIO + AIUTO -->
 
       <div class="top-icons">
 
@@ -49,7 +47,11 @@
           type="button"
           aria-label="Nascondi valori"
         >
-          <svg viewBox="0 0 32 32" aria-hidden="true">
+          <svg
+            class="eye-icon"
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+          >
             <path
               d="M3 16s4.5-8 13-8 13 8 13 8-4.5 8-13 8S3 16 3 16Z"
               fill="none"
@@ -58,6 +60,7 @@
               stroke-linecap="round"
               stroke-linejoin="round"
             />
+
             <circle
               cx="16"
               cy="16"
@@ -66,6 +69,7 @@
               stroke="#111111"
               stroke-width="2"
             />
+
             <path
               d="M4 4L28 28"
               fill="none"
@@ -75,6 +79,7 @@
             />
           </svg>
         </button>
+
 
         <button
           class="question-button"
@@ -91,40 +96,72 @@
 
     <main class="main-content">
 
-      <!-- RIEPILOGO -->
+      <!-- =================================================
+           RIEPILOGO
+           ================================================= -->
 
       <section class="summary-card">
 
         <h2>20 Buoni</h2>
 
-        <div class="summary-item">
-          <span class="summary-label">Valore nominale</span>
-          <strong class="summary-value">17.000,00 €</strong>
-        </div>
 
         <div class="summary-item">
-          <span class="summary-label">Valore rimborso lordo</span>
-          <strong class="summary-value">17.000,00 €</strong>
+
+          <span class="summary-label">
+            Valore nominale
+          </span>
+
+          <strong class="summary-value">
+            17.000,00 €
+          </strong>
+
+        </div>
+
+
+        <div class="summary-item">
+
+          <span class="summary-label">
+            Valore rimborso lordo
+          </span>
+
+          <strong class="summary-value">
+            17.000,00 €
+          </strong>
+
         </div>
 
       </section>
 
 
-      <!-- OPERAZIONI -->
+      <!-- =================================================
+           OPERAZIONI
+           ================================================= -->
 
       <section class="operations-section">
 
-        <h2 class="section-title">Operazioni</h2>
+        <h2 class="section-title">
+          Operazioni
+        </h2>
+
 
         <div class="operations">
 
-          <!-- ACQUISTA -->
 
-          <button class="operation-button" type="button">
+          <!-- ACQUISTA BUONO -->
+
+          <button
+            class="operation-button"
+            type="button"
+          >
 
             <span class="operation-icon">
 
-              <svg viewBox="0 0 100 100" aria-hidden="true">
+              <svg
+                viewBox="0 0 100 100"
+                aria-hidden="true"
+              >
+
+                <!-- cerchio -->
 
                 <circle
                   cx="50"
@@ -133,60 +170,70 @@
                   fill="#edf6ff"
                 />
 
-                <g transform="rotate(-7 50 45)">
+
+                <!-- buono -->
+
+                <g transform="rotate(-7 50 48)">
+
                   <rect
-                    x="28"
-                    y="25"
-                    width="42"
+                    x="25"
+                    y="27"
+                    width="48"
                     height="34"
                     rx="3"
                     fill="#ffd400"
                   />
 
                   <rect
-                    x="34"
-                    y="25"
+                    x="31"
+                    y="27"
                     width="7"
                     height="34"
                     fill="#1766d1"
                   />
 
                   <text
-                    x="31"
-                    y="48"
-                    font-size="17"
+                    x="28"
+                    y="49"
+                    font-size="18"
                     font-weight="700"
                     fill="#1766d1"
                   >€</text>
 
+
                   <rect
-                    x="46"
-                    y="44"
-                    width="19"
+                    x="43"
+                    y="45"
+                    width="24"
                     height="3"
                     rx="1.5"
                     fill="#ffffff"
                   />
 
                   <rect
-                    x="46"
-                    y="50"
-                    width="15"
+                    x="43"
+                    y="52"
+                    width="20"
                     height="3"
                     rx="1.5"
                     fill="#ffffff"
                   />
+
                 </g>
 
+
+                <!-- + -->
+
                 <circle
-                  cx="69"
-                  cy="69"
+                  cx="72"
+                  cy="71"
                   r="11"
                   fill="#48c66a"
                 />
 
                 <path
-                  d="M69 63V75M63 69H75"
+                  d="M72 65V77M66 71H78"
+                  fill="none"
                   stroke="#ffffff"
                   stroke-width="3"
                   stroke-linecap="round"
@@ -196,18 +243,30 @@
 
             </span>
 
-            <span>Acquista<br>Buono</span>
+
+            <span>
+              Acquista<br>
+              Buono
+            </span>
 
           </button>
 
 
-          <!-- RIMBORSO -->
+          <!-- RICHIEDI RIMBORSO -->
 
-          <button class="operation-button" type="button">
+          <button
+            class="operation-button"
+            type="button"
+          >
 
             <span class="operation-icon">
 
-              <svg viewBox="0 0 100 100" aria-hidden="true">
+              <svg
+                viewBox="0 0 100 100"
+                aria-hidden="true"
+              >
+
+                <!-- cerchio -->
 
                 <circle
                   cx="50"
@@ -216,53 +275,62 @@
                   fill="#edf6ff"
                 />
 
+
+                <!-- monete -->
+
                 <circle
                   cx="45"
-                  cy="31"
+                  cy="30"
                   r="8"
                   fill="#ffd400"
                 />
 
                 <circle
                   cx="57"
-                  cy="31"
+                  cy="30"
                   r="8"
                   fill="#ffd400"
                 />
 
+
+                <!-- portafoglio -->
+
                 <rect
-                  x="30"
+                  x="29"
                   y="39"
-                  width="43"
+                  width="44"
                   height="29"
-                  rx="5"
+                  rx="6"
                   fill="#45c66a"
                 />
 
                 <rect
                   x="34"
-                  y="45"
+                  y="44"
                   width="39"
-                  height="23"
+                  height="24"
                   rx="5"
                   fill="#ffd400"
                 />
 
                 <rect
                   x="54"
-                  y="51"
-                  width="14"
-                  height="9"
+                  y="50"
+                  width="15"
+                  height="10"
                   rx="4"
                   fill="#1766d1"
                 />
 
                 <circle
                   cx="63"
-                  cy="55.5"
+                  cy="55"
                   r="2.5"
                   fill="#ffffff"
                 />
+
+
+                <!-- freccia -->
 
                 <path
                   d="M23 72L39 56L55 72H47V82H31V72Z"
@@ -273,7 +341,11 @@
 
             </span>
 
-            <span>Richiedi<br>rimborso</span>
+
+            <span>
+              Richiedi<br>
+              rimborso
+            </span>
 
           </button>
 
@@ -282,31 +354,75 @@
       </section>
 
 
-      <!-- ELENCO -->
+      <!-- =================================================
+           ELENCO BUONI
+           ================================================= -->
 
       <section class="your-bonds">
 
-        <h2 class="section-title">Elenco Buoni</h2>
+        <h2 class="section-title">
+          Elenco Buoni
+        </h2>
 
 
         <!-- FILTRI -->
 
         <div class="filtri">
 
-          <button class="filtro filtro-filtra" type="button">
+
+          <!-- FILTRA -->
+
+          <button
+            class="filtro filtro-filtra"
+            type="button"
+          >
 
             <svg
               class="filtro-sliders-icon"
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
-              <line x1="3" y1="6" x2="21" y2="6"></line>
-              <line x1="3" y1="12" x2="21" y2="12"></line>
-              <line x1="3" y1="18" x2="21" y2="18"></line>
 
-              <circle cx="8" cy="6" r="2"></circle>
-              <circle cx="16" cy="12" r="2"></circle>
-              <circle cx="10" cy="18" r="2"></circle>
+              <line
+                x1="3"
+                y1="6"
+                x2="21"
+                y2="6"
+              ></line>
+
+              <line
+                x1="3"
+                y1="12"
+                x2="21"
+                y2="12"
+              ></line>
+
+              <line
+                x1="3"
+                y1="18"
+                x2="21"
+                y2="18"
+              ></line>
+
+
+              <circle
+                cx="8"
+                cy="6"
+                r="2"
+              ></circle>
+
+              <circle
+                cx="16"
+                cy="12"
+                r="2"
+              ></circle>
+
+              <circle
+                cx="10"
+                cy="18"
+                r="2"
+              ></circle>
+
             </svg>
 
             <u>Filtra</u>
@@ -314,7 +430,12 @@
           </button>
 
 
-          <button class="filtro prodotto" type="button">
+          <!-- PRODOTTI -->
+
+          <button
+            class="filtro prodotto"
+            type="button"
+          >
 
             <u>Prodotti</u>
 
@@ -323,7 +444,12 @@
           </button>
 
 
-          <button class="filtro periodo" type="button">
+          <!-- PERIODO -->
+
+          <button
+            class="filtro periodo"
+            type="button"
+          >
 
             <u>Periodo di scadenza</u>
 
@@ -356,13 +482,21 @@
 
     <header class="detail-header">
 
+
+      <!-- INDIETRO -->
+
       <button
         class="detail-back"
         type="button"
         onclick="tornaAllaLista()"
         aria-label="Indietro"
       >
-        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+        <svg
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+
           <path
             d="M14.5 5L7.5 12L14.5 19"
             fill="none"
@@ -371,10 +505,17 @@
             stroke-linecap="round"
             stroke-linejoin="round"
           />
+
         </svg>
+
       </button>
 
-      <h1 id="detailTitolo">Buono 3×4 con premio</h1>
+
+      <!-- TITOLO DETTAGLIO -->
+
+      <h1 id="detailTitolo">
+        Buono 3×4 con premio
+      </h1>
 
     </header>
 
@@ -384,15 +525,21 @@
       <section class="detail-card">
 
 
-        <!-- PARTE SUPERIORE DEL RIQUADRO -->
+        <!-- =================================================
+             PARTE SUPERIORE
+             ================================================= -->
 
         <div class="detail-card-top">
 
-          <!-- ICONA CHE ESCE DAL RIQUADRO -->
+
+          <!-- ICONA BUONO -->
 
           <div class="detail-buono-icon">
 
-            <svg viewBox="0 0 100 100" aria-hidden="true">
+            <svg
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
 
               <circle
                 cx="50"
@@ -400,6 +547,7 @@
                 r="50"
                 fill="#a8bdfb"
               />
+
 
               <g transform="rotate(-7 50 50)">
 
@@ -453,9 +601,13 @@
           </div>
 
 
+          <!-- VALORE RIMBORSO -->
+
           <div class="detail-rimborso">
 
-            <span id="detailValoreRimborso">500,00 €</span>
+            <span id="detailValoreRimborso">
+              500,00 €
+            </span>
 
             <div class="detail-rimborso-label">
               Valore di rimborso lordo
@@ -466,13 +618,18 @@
         </div>
 
 
-        <!-- CONTO -->
+        <!-- =================================================
+             CONTO
+             ================================================= -->
 
         <div class="detail-account">
 
           <div class="account-icon">
 
-            <svg viewBox="0 0 70 48" aria-hidden="true">
+            <svg
+              viewBox="0 0 70 48"
+              aria-hidden="true"
+            >
 
               <rect
                 x="13"
@@ -524,7 +681,9 @@
       </section>
 
 
-      <!-- RIEPILOGO DATI -->
+      <!-- =================================================
+           RIEPILOGO DATI
+           ================================================= -->
 
       <section class="detail-summary">
 
@@ -739,7 +898,9 @@
     </main>
 
 
-    <!-- PULSANTE FISSO -->
+    <!-- =================================================
+         PULSANTE FISSO
+         ================================================= -->
 
     <div class="bottom-action">
 
