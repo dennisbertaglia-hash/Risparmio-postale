@@ -287,7 +287,7 @@ if (contenitoreBuoni) {
       <div class="buono-info">
 
         <div class="data">
-          ${buono.sottoscritto}
+         scade il ${buono.scadenza}
         </div>
 
         <div class="nome">
@@ -297,8 +297,16 @@ if (contenitoreBuoni) {
       </div>
 
 
-      <div class="valore">
-        ${euro(buono.nominale)}
+      <div class="buono-valore">
+     
+        <div class="buono-valore-label">
+         valore rimborso lordo
+       </div>
+
+        <div class="valore">       
+         ${euro(buono.nominale)}
+      </div>
+
       </div>
 
     `;
