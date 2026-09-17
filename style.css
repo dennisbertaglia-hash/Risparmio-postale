@@ -67,6 +67,9 @@ u {
   background: #ffffff;
 }
 
+
+/* FRECCIA INDIETRO */
+
 .top-header .back-button {
   position: absolute;
 
@@ -102,6 +105,9 @@ u {
   margin-left: 4px;
 }
 
+
+/* TITOLO */
+
 .top-header h1 {
   position: absolute;
 
@@ -110,8 +116,8 @@ u {
 
   margin: 0;
 
-  font-size: 22px;
-  line-height: 1;
+  font-size: 20px;
+  line-height: 1.1;
 
   font-weight: 500;
 
@@ -192,7 +198,7 @@ u {
 
 
 /* =========================================================
-   RIQUADRO BLU
+   RIQUADRO AZZURRO
    ========================================================= */
 
 .summary-card {
@@ -200,39 +206,57 @@ u {
 
   height: 215px;
 
-  margin: 0;
+  margin-top: 18px;
 
-  padding: 20px 22px 8px;
+  padding: 30px 22px 8px;
 
   background: #edf6ff;
 
   border-radius: 24px;
 }
 
+
+/* 20 BUONI */
+
 .summary-card h2 {
-  margin: 0 0 48px;
+  margin: 4px 0 38px;
 
   font-size: 18px;
   line-height: 1.1;
 
   font-weight: 500;
 
-  letter-spacing: -0.3px;
+  letter-spacing: -0.35px;
+
+  position: relative;
+  top: 0;
 }
+
+
+/* BLOCCO VALORE */
 
 .summary-item {
-  margin: 0 0 18px;
+  margin: 0 0 20px;
+
+  position: relative;
+  top: -7px;
 }
 
-.summary-item.second {
-  margin-top: 0;
+.summary-item-nominale {
+  margin-bottom: 20px;
+}
+
+.summary-item-lordo {
   margin-bottom: 0;
 }
+
+
+/* ETICHETTA */
 
 .summary-label {
   display: block;
 
-  margin: 0 0 2px;
+  margin: 0 0 3px;
 
   font-size: 15px;
   line-height: 1.2;
@@ -241,6 +265,9 @@ u {
 
   color: #111111;
 }
+
+
+/* NUMERO */
 
 .summary-value {
   display: block;
@@ -265,14 +292,14 @@ u {
 }
 
 .section-title {
-  margin: 29px 0 0;
+  margin: 24px 0 0;
 
-  font-size: 22px;
-  line-height: 1.1;
+  font-size: 20px;
+  line-height: 1.15;
 
   font-weight: 500;
 
-  letter-spacing: -0.4px;
+  letter-spacing: -0.3px;
 }
 
 .operations {
@@ -348,12 +375,12 @@ u {
 .elenco-title {
   margin: 0;
 
-  font-size: 22px;
-  line-height: 1.1;
+  font-size: 20px;
+  line-height: 1.15;
 
   font-weight: 500;
 
-  letter-spacing: -0.4px;
+  letter-spacing: -0.3px;
 }
 
 
@@ -386,13 +413,12 @@ u {
 .filtro {
   flex: 0 0 auto;
 
-  height: 40px;
+  height: 32px;
 
   padding: 0 11px;
 
-  border: 1.4px solid #0759c9;
-
-  border-radius: 21px;
+  border: 1.5px solid #0759c9;
+  border-radius: 17px;
 
   background: #ffffff;
 
@@ -402,7 +428,7 @@ u {
   align-items: center;
   justify-content: center;
 
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1;
 
   font-weight: 600;
@@ -410,9 +436,12 @@ u {
   white-space: nowrap;
 }
 
+
+/* FILTRA */
+
 .filtro-filtra {
-  width: 77px;
-  min-width: 77px;
+  width: 106px;
+  min-width: 106px;
 
   padding: 0 7px;
 
@@ -442,15 +471,24 @@ u {
   stroke-width: 1.8;
 }
 
+
+/* PRODOTTI */
+
 .filtro.prodotto {
   width: 105px;
   min-width: 105px;
 }
 
+
+/* PERIODO */
+
 .filtro.periodo {
   width: 161px;
   min-width: 161px;
 }
+
+
+/* FRECCIA */
 
 .freccia-down {
   width: 8px;
@@ -501,6 +539,9 @@ u {
   cursor: pointer;
 }
 
+
+/* ICONA */
+
 .bond-item-icon {
   width: 50px;
   height: 50px;
@@ -525,6 +566,9 @@ u {
 
   display: block;
 }
+
+
+/* TESTO SINISTRA */
 
 .bond-item-info {
   min-width: 0;
@@ -551,6 +595,9 @@ u {
 
   font-weight: 500;
 }
+
+
+/* VALORE DESTRA */
 
 .bond-item-value {
   min-width: 0;
@@ -618,6 +665,9 @@ u {
   height: 132px;
 }
 
+
+/* FRECCIA DETTAGLIO */
+
 .detail-back {
   position: absolute;
 
@@ -638,12 +688,17 @@ u {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  cursor: pointer;
 }
 
 .detail-back svg {
   width: 30px;
   height: 30px;
 }
+
+
+/* TITOLO DETTAGLIO */
 
 .detail-header h1 {
   position: absolute;
@@ -693,6 +748,9 @@ u {
   height: 230px;
 }
 
+
+/* ICONA BUONO */
+
 .detail-buono-icon {
   position: absolute;
 
@@ -718,6 +776,9 @@ u {
 
   display: block;
 }
+
+
+/* RIMBORSO */
 
 .detail-rimborso {
   position: absolute;
@@ -759,7 +820,7 @@ u {
 
 
 /* =========================================================
-   CONTO
+   ACCREDITO
    ========================================================= */
 
 .detail-account {
@@ -927,7 +988,7 @@ u {
     left: 16px;
     bottom: 7px;
 
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .top-icons {
@@ -956,20 +1017,21 @@ u {
     height: 32px;
 
     font-size: 19px;
-
-    color: #111111;
   }
+
+
+  /* RIQUADRO */
 
   .summary-card {
     height: 210px;
 
-    padding: 19px 20px 8px;
+    padding: 30px 20px 8px;
 
     border-radius: 23px;
   }
 
   .summary-card h2 {
-    margin-bottom: 46px;
+    margin-bottom: 36px;
 
     font-size: 18px;
   }
@@ -982,8 +1044,11 @@ u {
     font-size: 19px;
   }
 
+
+  /* OPERAZIONI */
+
   .section-title {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .operations {
@@ -1011,23 +1076,29 @@ u {
     font-size: 13px;
   }
 
+
+  /* ELENCO */
+
   .your-bonds {
     margin-top: 30px;
   }
 
   .elenco-title {
-    font-size: 21px;
+    font-size: 20px;
   }
 
-  .filtro {
-    height: 38px;
 
-    font-size: 12px;
+  /* FILTRI */
+
+  .filtro {
+    height: 32px;
+
+    font-size: 13px;
   }
 
   .filtro-filtra {
-    width: 74px;
-    min-width: 74px;
+    width: 106px;
+    min-width: 106px;
   }
 
   .filtro.prodotto {
@@ -1039,6 +1110,9 @@ u {
     width: 154px;
     min-width: 154px;
   }
+
+
+  /* LISTA */
 
   .bond-item {
     grid-template-columns:
@@ -1078,6 +1152,9 @@ u {
   .bond-item-value .valore {
     font-size: 14px;
   }
+
+
+  /* DETTAGLIO */
 
   #paginaDettaglio {
     padding-left: 16px;
@@ -1126,6 +1203,7 @@ u {
   .detail-section-title {
     font-size: 23px;
   }
+
 }
 
 
@@ -1136,7 +1214,7 @@ u {
 @media (max-width: 360px) {
 
   .top-header h1 {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .summary-card {
@@ -1146,7 +1224,7 @@ u {
 
   .summary-card h2 {
     font-size: 17px;
-    margin-bottom: 44px;
+    margin-bottom: 34px;
   }
 
   .summary-value {
@@ -1212,279 +1290,5 @@ u {
   .bond-item-value .valore {
     font-size: 13px;
   }
-}
-/* =========================================================
-   MODIFICA DEFINITIVA PAGINA BUONI
-   ========================================================= */
 
-/* TITOLO BUONI */
-.top-header h1 {
-  font-size: 20px !important;
-  font-weight: 500 !important;
-  line-height: 1.1 !important;
-  margin: 12px 0 3px !important;
-}
-
-
-/* RIQUADRO AZZURRO */
-.summary-card {
-  margin-top: 28px !important;
-
-  min-height: 0 !important;
-
-  padding-top: 31px !important;
-  padding-bottom: 14px !important;
-}
-
-
-/* 20 BUONI */
-.summary-card h2 {
-  margin-top: 4px !important;
-  margin-bottom: 0 !important;
-
-  font-size: 18px !important;
-  line-height: 1.2 !important;
-
-  font-weight: 500 !important;
-}
-
-
-/* PRIMO BLOCCO */
-.summary-item {
-  margin-top: 51px !important;
-}
-
-
-/* SECONDO BLOCCO */
-.summary-item.second {
-  margin-top: 27px !important;
-}
-
-
-/* ETICHETTE */
-.summary-label {
-  font-size: 15px !important;
-  line-height: 1.2 !important;
-
-  font-weight: 300 !important;
-}
-
-
-/* NUMERI */
-.summary-value {
-  margin-top: 4px !important;
-
-  font-size: 18px !important;
-  line-height: 1.15 !important;
-
-  font-weight: 400 !important;
-}
-
-
-/* OPERAZIONI */
-.section-title {
-  margin-top: 24px !important;
-
-  font-size: 20px !important;
-  line-height: 1.15 !important;
-
-  font-weight: 500 !important;
-
-  letter-spacing: -0.3px !important;
-}
-
-
-/* ELENCO BUONI
-   Nel tuo HTML è:
-   <h2 class="section-title your-bonds">
-*/
-.section-title.your-bonds {
-  margin-top: 29px !important;
-
-  font-size: 20px !important;
-  line-height: 1.15 !important;
-
-  font-weight: 500 !important;
-}
-
-
-/* FILTRI PIÙ SCHIACCIATI */
-.filtro {
-  height: 32px !important;
-
-  border-width: 1.5px !important;
-  border-radius: 17px !important;
-
-  font-size: 14px !important;
-}
-
-
-/* FILTRA */
-.filtro-filtra {
-  min-width: 106px !important;
-
-  height: 32px !important;
-}
-
-
-/* PRODOTTI */
-.filtro.prodotto {
-  height: 32px !important;
-}
-
-
-/* PERIODO */
-.filtro.periodo {
-  height: 32px !important;
-}
-
-
-/* ? NERO */
-.question {
-  color: #111111 !important;
-  border-color: #111111 !important;
-}
-
-
-/* LISTA BUONI */
-.buono {
-  min-height: 86px !important;
-  padding: 12px 0 !important;
-}
-
-
-/* ICONA BUONO */
-.buono-icon {
-  width: 36px !important;
-  height: 36px !important;
-
-  flex: 0 0 36px !important;
-}
-
-
-/* TESTO DATA */
-.buono-info .data {
-  font-size: 12.5px !important;
-  font-weight: 300 !important;
-}
-
-
-/* NOME BUONO */
-.buono-info .nome {
-  font-size: 13.5px !important;
-  font-weight: 500 !important;
-}
-
-
-/* VALORE */
-.buono-valore-label {
-  font-size: 11px !important;
-  font-weight: 300 !important;
-}
-
-
-.buono-valore .valore {
-  font-size: 15.5px !important;
-  font-weight: 500 !important;
-}
-
-
-/* =========================================================
-   BLOCCO MOBILE
-   QUESTO È IMPORTANTE PER IPHONE:
-   sovrascrive le vecchie regole @media
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-  .top-header h1 {
-    font-size: 20px !important;
-    font-weight: 500 !important;
-    margin: 12px 0 3px !important;
-  }
-
-
-  .summary-card {
-    margin-top: 28px !important;
-
-    padding-top: 31px !important;
-    padding-bottom: 14px !important;
-  }
-
-
-  .summary-card h2 {
-    font-size: 18px !important;
-    font-weight: 500 !important;
-
-    margin-top: 4px !important;
-    margin-bottom: 0 !important;
-  }
-
-
-  .summary-item {
-    margin-top: 51px !important;
-  }
-
-
-  .summary-item.second {
-    margin-top: 27px !important;
-  }
-
-
-  .summary-label {
-    font-size: 15px !important;
-    font-weight: 300 !important;
-  }
-
-
-  .summary-value {
-    font-size: 18px !important;
-    font-weight: 400 !important;
-  }
-
-
-  .section-title {
-    font-size: 20px !important;
-    font-weight: 500 !important;
-  }
-
-
-  .section-title.your-bonds {
-    font-size: 20px !important;
-    font-weight: 500 !important;
-  }
-
-
-  .filtro {
-    height: 32px !important;
-    border-radius: 17px !important;
-    font-size: 14px !important;
-  }
-
-
-  .filtro-filtra,
-  .filtro.prodotto,
-  .filtro.periodo {
-    height: 32px !important;
-  }
-
-
-  .question {
-    color: #111111 !important;
-    border-color: #111111 !important;
-  }
-
-}
-/* SPOSTA SOLO I CONTENUTI DEL RIQUADRO AZZURRO */
-.summary-item {
-  transform: translateY(-7px) !important;
-}
-
-.summary-item.second {
-  transform: translateY(-7px) !important;
-}
-
-/* 20 BUONI RESTA FERMO */
-.summary-card h2 {
-  transform: none !important;
 }
