@@ -1,134 +1,113 @@
 /* =========================================================
-   BUONI - SCRIPT
+   BUONI - SCRIPT DEFINITIVO
    ========================================================= */
 
 
 /* =========================================================
-   DATI DEI 20 BUONI
+   20 BUONI
    ========================================================= */
 
 const buoni = [
-
   {
     nominale: 500,
     sottoscritto: "16 Settembre 2026",
     scadenza: "16 Settembre 2038"
   },
-
   {
     nominale: 1500,
     sottoscritto: "14 Luglio 2026",
     scadenza: "14 Luglio 2038"
   },
-
   {
     nominale: 1000,
     sottoscritto: "12 Giugno 2026",
     scadenza: "12 Giugno 2038"
   },
-
   {
     nominale: 1500,
     sottoscritto: "16 Aprile 2026",
     scadenza: "16 Aprile 2038"
   },
-
   {
     nominale: 1500,
     sottoscritto: "11 Febbraio 2026",
     scadenza: "11 Febbraio 2038"
   },
-
   {
     nominale: 1200,
     sottoscritto: "15 Novembre 2025",
     scadenza: "15 Novembre 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "13 Ottobre 2025",
     scadenza: "13 Ottobre 2037"
   },
-
   {
     nominale: 900,
     sottoscritto: "11 Ottobre 2025",
     scadenza: "11 Ottobre 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "18 Giugno 2025",
     scadenza: "18 Giugno 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "14 Maggio 2025",
     scadenza: "14 Maggio 2037"
   },
-
   {
     nominale: 500,
     sottoscritto: "11 Aprile 2025",
     scadenza: "11 Aprile 2037"
   },
-
   {
     nominale: 800,
     sottoscritto: "16 Marzo 2025",
     scadenza: "16 Marzo 2037"
   },
-
   {
     nominale: 700,
     sottoscritto: "12 Febbraio 2025",
     scadenza: "12 Febbraio 2037"
   },
-
   {
     nominale: 500,
     sottoscritto: "15 Gennaio 2025",
     scadenza: "15 Gennaio 2037"
   },
-
   {
     nominale: 1000,
     sottoscritto: "13 Dicembre 2024",
     scadenza: "13 Dicembre 2036"
   },
-
   {
     nominale: 500,
     sottoscritto: "11 Novembre 2024",
     scadenza: "11 Novembre 2036"
   },
-
   {
     nominale: 800,
     sottoscritto: "10 Ottobre 2024",
     scadenza: "10 Ottobre 2036"
   },
-
   {
     nominale: 700,
     sottoscritto: "18 Settembre 2024",
     scadenza: "18 Settembre 2036"
   },
-
   {
     nominale: 500,
     sottoscritto: "10 Luglio 2024",
     scadenza: "10 Luglio 2036"
   },
-
   {
     nominale: 500,
     sottoscritto: "12 Maggio 2024",
     scadenza: "12 Maggio 2036"
   }
-
 ];
 
 
@@ -137,12 +116,10 @@ const buoni = [
    ========================================================= */
 
 function euro(valore) {
-
   return Number(valore).toLocaleString("it-IT", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }) + " €";
-
 }
 
 
@@ -190,23 +167,242 @@ function calcolaDati(nominale) {
     ritenutaTotale,
     nettoConPremio
   };
-
 }
 
 
 /* =========================================================
-   AVVIO
+   ICONA BUONO - MODELLO
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
+function iconaBuonoSVG() {
 
-  aggiornaRiepilogo();
+  return `
+    <svg
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true">
 
-  generaListaBuoni();
+      <rect
+        x="7"
+        y="11"
+        width="34"
+        height="26"
+        rx="5"
+        fill="#FFFFFF"
+        stroke="#0759C9"
+        stroke-width="2.8"/>
 
-  collegaFrecciaIndietro();
+      <text
+        x="11"
+        y="30"
+        font-family="Arial, sans-serif"
+        font-size="14"
+        font-weight="700"
+        fill="#0759C9">
+        €
+      </text>
 
-});
+      <line
+        x1="24"
+        y1="21"
+        x2="36"
+        y2="21"
+        stroke="#0759C9"
+        stroke-width="2.5"
+        stroke-linecap="round"/>
+
+      <line
+        x1="24"
+        y1="28"
+        x2="34"
+        y2="28"
+        stroke="#0759C9"
+        stroke-width="2.5"
+        stroke-linecap="round"/>
+
+    </svg>
+  `;
+}
+
+
+/* =========================================================
+   ICONA ACQUISTA
+   ========================================================= */
+
+function iconaAcquistaSVG() {
+
+  return `
+    <svg
+      viewBox="0 0 72 72"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <!-- BUONO POSTERIORE -->
+
+      <rect
+        x="18"
+        y="17"
+        width="39"
+        height="26"
+        rx="4"
+        transform="rotate(-8 18 17)"
+        fill="#FFD400"/>
+
+      <path
+        d="M20 17L24.5 16.35L28.5 42L24 42.65L20 17Z"
+        fill="#0759C9"/>
+
+
+      <!-- BUONO ANTERIORE -->
+
+      <rect
+        x="18"
+        y="25"
+        width="39"
+        height="26"
+        rx="3.5"
+        fill="#FFD400"/>
+
+      <rect
+        x="18"
+        y="25"
+        width="6"
+        height="26"
+        fill="#0759C9"/>
+
+
+      <!-- RIGHE -->
+
+      <rect
+        x="32"
+        y="35"
+        width="18"
+        height="3"
+        rx="1.5"
+        fill="#FFFFFF"/>
+
+      <rect
+        x="32"
+        y="42"
+        width="13"
+        height="3"
+        rx="1.5"
+        fill="#FFFFFF"/>
+
+
+      <!-- PLUS -->
+
+      <circle
+        cx="56"
+        cy="53"
+        r="11"
+        fill="#45C96B"/>
+
+      <path
+        d="M56 47V59M50 53H62"
+        stroke="#FFFFFF"
+        stroke-width="3.2"
+        stroke-linecap="round"/>
+
+    </svg>
+  `;
+}
+
+
+/* =========================================================
+   ICONA RIMBORSO
+   ========================================================= */
+
+function iconaRimborsoSVG() {
+
+  return `
+    <svg
+      viewBox="0 0 72 72"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <!-- MONETE -->
+
+      <circle
+        cx="38"
+        cy="24"
+        r="8"
+        fill="#FFD400"/>
+
+      <circle
+        cx="47"
+        cy="25"
+        r="8"
+        fill="#FFD400"/>
+
+      <circle
+        cx="30"
+        cy="28"
+        r="7"
+        fill="#FFD400"/>
+
+
+      <!-- PORTAFOGLIO -->
+
+      <path
+        d="M25 31H51C54.3 31 57 33.7 57 37V51C57 54.3 54.3 57 51 57H25C21.7 57 19 54.3 19 51V37C19 33.7 21.7 31 25 31Z"
+        fill="#FFD400"/>
+
+
+      <!-- FRECCIA VERDE -->
+
+      <path
+        d="M18 39L30 28L43 39L31 49V57H18V39Z"
+        fill="#45C96B"/>
+
+
+      <!-- CHIUSURA BLU -->
+
+      <rect
+        x="45"
+        y="39"
+        width="14"
+        height="13"
+        rx="5"
+        fill="#0759C9"/>
+
+      <circle
+        cx="53"
+        cy="45.5"
+        r="2"
+        fill="#FFFFFF"/>
+
+    </svg>
+  `;
+}
+
+
+/* =========================================================
+   SOSTITUISCE LE ICONE OPERAZIONI
+   ========================================================= */
+
+function aggiornaIconeOperazioni() {
+
+  const operazioni =
+    document.querySelectorAll(
+      ".operation-button .operation-icon svg"
+    );
+
+  if (operazioni.length >= 1) {
+
+    operazioni[0].outerHTML =
+      iconaAcquistaSVG();
+
+  }
+
+  if (operazioni.length >= 2) {
+
+    operazioni[1].outerHTML =
+      iconaRimborsoSVG();
+
+  }
+
+}
 
 
 /* =========================================================
@@ -260,8 +456,7 @@ function aggiornaRiepilogo() {
 
 
 /* =========================================================
-   ICONA BUONO
-   MODELLO BIANCO + BLU
+   CREA ICONA BUONO
    ========================================================= */
 
 function creaIconaBuono() {
@@ -272,67 +467,8 @@ function creaIconaBuono() {
   icona.className =
     "bond-item-icon";
 
-
-  icona.innerHTML = `
-
-    <svg
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-
-      <!-- TESSERA BIANCA -->
-
-      <rect
-        x="8"
-        y="12"
-        width="32"
-        height="24"
-        rx="4"
-        fill="#FFFFFF"
-        stroke="#0759C9"
-        stroke-width="2.6"
-      />
-
-
-      <!-- EURO -->
-
-      <text
-        x="12"
-        y="29"
-        font-family="Arial, sans-serif"
-        font-size="13"
-        font-weight="700"
-        fill="#0759C9"
-      >€</text>
-
-
-      <!-- RIGHE BLU -->
-
-      <line
-        x1="24"
-        y1="21"
-        x2="35"
-        y2="21"
-        stroke="#0759C9"
-        stroke-width="2.4"
-        stroke-linecap="round"
-      />
-
-      <line
-        x1="24"
-        y1="28"
-        x2="33"
-        y2="28"
-        stroke="#0759C9"
-        stroke-width="2.4"
-        stroke-linecap="round"
-      />
-
-    </svg>
-
-  `;
-
+  icona.innerHTML =
+    iconaBuonoSVG();
 
   return icona;
 
@@ -340,7 +476,7 @@ function creaIconaBuono() {
 
 
 /* =========================================================
-   LISTA BUONI
+   GENERA LISTA
    ========================================================= */
 
 function generaListaBuoni() {
@@ -352,7 +488,13 @@ function generaListaBuoni() {
 
 
   if (!lista) {
+
+    console.error(
+      "ERRORE: elemento #listaBuoni non trovato."
+    );
+
     return;
+
   }
 
 
@@ -370,9 +512,25 @@ function generaListaBuoni() {
       "bond-item";
 
 
+    riga.setAttribute(
+      "role",
+      "button"
+    );
+
+
+    riga.setAttribute(
+      "tabindex",
+      "0"
+    );
+
+
+    /* ICONA */
+
     const icona =
       creaIconaBuono();
 
+
+    /* INFORMAZIONI */
 
     const informazioni =
       document.createElement("div");
@@ -395,6 +553,8 @@ function generaListaBuoni() {
     `;
 
 
+    /* VALORE */
+
     const valore =
       document.createElement("div");
 
@@ -416,6 +576,8 @@ function generaListaBuoni() {
     `;
 
 
+    /* ASSEMBLA */
+
     riga.appendChild(icona);
 
     riga.appendChild(informazioni);
@@ -432,18 +594,6 @@ function generaListaBuoni() {
         apriDettaglio(indice);
 
       }
-    );
-
-
-    riga.setAttribute(
-      "role",
-      "button"
-    );
-
-
-    riga.setAttribute(
-      "tabindex",
-      "0"
     );
 
 
@@ -471,6 +621,13 @@ function generaListaBuoni() {
     lista.appendChild(riga);
 
   });
+
+
+  console.log(
+    "Lista caricata:",
+    buoni.length,
+    "buoni"
+  );
 
 }
 
@@ -508,37 +665,28 @@ function apriDettaglio(indice) {
     );
 
 
-  if (
-    !paginaPrincipale ||
-    !paginaDettaglio
-  ) {
+  if (!paginaPrincipale ||
+      !paginaDettaglio) {
 
     return;
 
   }
 
 
-  /* NASCONDE LISTA */
-
   paginaPrincipale.style.display =
     "none";
 
-
-  /* MOSTRA DETTAGLIO */
 
   paginaDettaglio.style.display =
     "block";
 
 
-  /* =====================================================
-     TITOLO
-     ===================================================== */
+  /* TITOLO */
 
   const titolo =
     document.getElementById(
       "detailTitolo"
     );
-
 
   if (titolo) {
 
@@ -548,33 +696,27 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     RIMBORSO NETTO
-     ===================================================== */
+  /* RIMBORSO NETTO */
 
-  const valoreRimborso =
+  const rimborso =
     document.getElementById(
       "detailRimborso"
     );
 
+  if (rimborso) {
 
-  if (valoreRimborso) {
-
-    valoreRimborso.textContent =
+    rimborso.textContent =
       euro(dati.nettoConPremio);
 
   }
 
 
-  /* =====================================================
-     NOMINALE
-     ===================================================== */
+  /* NOMINALE */
 
   const nominale =
     document.getElementById(
       "detailNominale"
     );
-
 
   if (nominale) {
 
@@ -584,51 +726,42 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     DATA SOTTOSCRIZIONE
-     ===================================================== */
+  /* SOTTOSCRIZIONE */
 
-  const dataSottoscrizione =
+  const sottoscrizione =
     document.getElementById(
       "detailDataSottoscrizione"
     );
 
+  if (sottoscrizione) {
 
-  if (dataSottoscrizione) {
-
-    dataSottoscrizione.textContent =
+    sottoscrizione.textContent =
       buono.sottoscritto;
 
   }
 
 
-  /* =====================================================
-     DATA SCADENZA
-     ===================================================== */
+  /* SCADENZA */
 
-  const dataScadenza =
+  const scadenza =
     document.getElementById(
       "detailDataScadenza"
     );
 
+  if (scadenza) {
 
-  if (dataScadenza) {
-
-    dataScadenza.textContent =
+    scadenza.textContent =
       buono.scadenza;
 
   }
 
 
-  /* =====================================================
-     LORDO
-     ===================================================== */
+  /* LORDO */
 
   const lordo =
     document.getElementById(
       "detailLordo"
     );
-
 
   if (lordo) {
 
@@ -638,15 +771,12 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     RITENUTA
-     ===================================================== */
+  /* RITENUTA */
 
   const ritenuta =
     document.getElementById(
       "detailRitenuta"
     );
-
 
   if (ritenuta) {
 
@@ -656,15 +786,12 @@ function apriDettaglio(indice) {
   }
 
 
-  /* =====================================================
-     NETTO
-     ===================================================== */
+  /* NETTO */
 
   const netto =
     document.getElementById(
       "detailNetto"
     );
-
 
   if (netto) {
 
@@ -674,12 +801,7 @@ function apriDettaglio(indice) {
   }
 
 
-  /* TORNA IN ALTO */
-
-  window.scrollTo(
-    0,
-    0
-  );
+  window.scrollTo(0, 0);
 
 }
 
@@ -718,16 +840,13 @@ function tornaAllaLista() {
   }
 
 
-  window.scrollTo(
-    0,
-    0
-  );
+  window.scrollTo(0, 0);
 
 }
 
 
 /* =========================================================
-   FRECCIA DETTAGLIO
+   FRECCIA INDIETRO
    ========================================================= */
 
 function collegaFrecciaIndietro() {
@@ -743,18 +862,52 @@ function collegaFrecciaIndietro() {
   }
 
 
-  freccia.addEventListener(
-    "click",
+  freccia.onclick =
     function (event) {
 
       event.preventDefault();
 
-      event.stopPropagation();
-
       tornaAllaLista();
 
-    }
+    };
+
+}
+
+
+/* =========================================================
+   AVVIO
+   ========================================================= */
+
+function avviaApp() {
+
+  aggiornaRiepilogo();
+
+  generaListaBuoni();
+
+  aggiornaIconeOperazioni();
+
+  collegaFrecciaIndietro();
+
+}
+
+
+/* =========================================================
+   DOM
+   ========================================================= */
+
+if (
+  document.readyState ===
+  "loading"
+) {
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    avviaApp
   );
+
+} else {
+
+  avviaApp();
 
 }
 
