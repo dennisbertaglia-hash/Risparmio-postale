@@ -10,975 +10,405 @@
     content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
   >
 
-  <title>MyPoste</title>
+  <title>Risparmio Postale</title>
 
-  <link rel="stylesheet" href="style(2).css">
-
-  <style>
-
-    /* =====================================================
-       MODIFICHE HOME MYPOSTE
-       NON MODIFICA PAGINA BUONI / DETTAGLIO
-       ===================================================== */
-
-    .home-header {
-      height: 144px !important;
-      min-height: 144px !important;
-      padding: 18px 24px 12px !important;
-      box-sizing: border-box !important;
-      position: relative !important;
-    }
-
-    .home-saluto {
-      position: absolute !important;
-      left: 24px !important;
-      bottom: 36px !important;
-      margin-top: 0 !important;
-      z-index: 5 !important;
-    }
-
-    .home-ciao {
-      font-size: 16px !important;
-      line-height: 1.05 !important;
-    }
-
-    .home-nome {
-      font-size: 25px !important;
-      line-height: 1.05 !important;
-      margin-top: 2px !important;
-    }
-
-    .home-header-icons {
-      gap: 22px !important;
-      align-items: flex-start !important;
-      margin-top: 14px !important;
-      transform: translateX(-8px) !important;
-    }
-
-    .home-header-item {
-      gap: 6px !important;
-    }
-
-    .home-round-icon {
-      width: 46px !important;
-      height: 46px !important;
-    }
-
-    .home-header-label {
-      font-size: 14px !important;
-      line-height: 1 !important;
-    }
-
-    .saldo-eye {
-      width: 25px !important;
-      height: 25px !important;
-      display: inline-block !important;
-      position: relative !important;
-      flex-shrink: 0 !important;
-    }
-
-    /* Nasconde completamente l'SVG precedente */
-    .nascondi-saldo .saldo-eye svg {
-      display: none !important;
-    }
-
-    /*
-       Nuovo occhio barrato disegnato via CSS.
-       In questo modo Safari non usa più il vecchio SVG.
-    */
-
-    .nascondi-saldo .saldo-eye::before {
-      content: "" !important;
-      position: absolute !important;
-      width: 19px !important;
-      height: 12px !important;
-      left: 3px !important;
-      top: 6px !important;
-      border: 2px solid #0755c7 !important;
-      border-radius: 50% !important;
-      box-sizing: border-box !important;
-    }
-
-    .nascondi-saldo .saldo-eye::after {
-      content: "" !important;
-      position: absolute !important;
-      width: 25px !important;
-      height: 2px !important;
-      left: 0 !important;
-      top: 11px !important;
-      background: #0755c7 !important;
-      border-radius: 2px !important;
-      transform: rotate(45deg) !important;
-      transform-origin: center center !important;
-    }
-
-    .home-operation-circle {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      overflow: hidden !important;
-    }
-
-    .home-operation-circle svg {
-      width: 100% !important;
-      height: 100% !important;
-      display: block !important;
-    }
-
-    .p2p-icon {
-      width: 58px !important;
-      height: 58px !important;
-      border-radius: 50% !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      font-size: 24px !important;
-      font-weight: 500 !important;
-      font-family: Arial, sans-serif !important;
-      letter-spacing: -1px !important;
-    }
-
-    /* =====================================================
-       BONIFICO SEPA
-       PORTAFOGLIO PERFETTAMENTE CENTRATO NEL CERCHIO
-       ===================================================== */
-
-    .bonifico-sepa-icon {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-    }
-
-    .bonifico-sepa-icon svg {
-      transform: none !important;
-      transform-origin: center center !important;
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css?v=11">
 
 </head>
-
 
 <body>
 
 
   <!-- =====================================================
-       PAGINA INIZIALE MYPOSTE
+       PAGINA HOME
        ===================================================== -->
 
-  <div id="paginaHome">
+  <div id="paginaHome" class="screen active">
 
 
     <header class="home-header">
 
-      <div class="home-saluto">
+      <div class="home-header-left">
 
-        <div class="home-ciao">
-          Ciao,
-        </div>
+        <button class="home-header-button">
+          Bacheca
+        </button>
 
-        <div class="home-nome">
-          Dennis
-        </div>
-
-      </div>
-
-
-      <div class="home-header-icons">
-
-
-        <!-- BACHECA -->
-
-        <div class="home-header-item">
-
-          <div class="home-round-icon">
-
-            <svg
-              viewBox="0 0 50 50"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <path
-                d="M17 21
-                   C17 15 20 11 25 11
-                   C30 11 33 15 33 21
-                   V29
-                   L36 33
-                   H14
-                   L17 29
-                   Z"
-                fill="none"
-                stroke="#111"
-                stroke-width="2.6"
-                stroke-linejoin="round"
-              />
-
-              <path
-                d="M22 36
-                   C22 39 28 39 28 36"
-                fill="none"
-                stroke="#111"
-                stroke-width="2.6"
-                stroke-linecap="round"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="home-header-label">
-            Bacheca
-          </div>
-
-        </div>
-
-
-        <!-- CERCA -->
-
-        <div class="home-header-item">
-
-          <div class="home-round-icon">
-
-            <svg
-              viewBox="0 0 50 50"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <circle
-                cx="22"
-                cy="22"
-                r="10"
-                fill="none"
-                stroke="#111"
-                stroke-width="2.7"
-              />
-
-              <line
-                x1="29"
-                y1="29"
-                x2="37"
-                y2="37"
-                stroke="#111"
-                stroke-width="2.7"
-                stroke-linecap="round"
-              />
-
-            </svg>
-
-          </div>
-
-          <div class="home-header-label">
-            Cerca
-          </div>
-
-        </div>
-
-
-        <!-- ASSISTENZA -->
-
-        <div class="home-header-item">
-
-          <div class="home-round-icon">
-
-            <svg
-              viewBox="0 0 50 50"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <circle
-                cx="25"
-                cy="25"
-                r="13"
-                fill="none"
-                stroke="#111"
-                stroke-width="2.6"
-              />
-
-              <text
-                x="25"
-                y="32"
-                text-anchor="middle"
-                font-family="Arial, sans-serif"
-                font-size="20"
-                fill="#111"
-              >?</text>
-
-            </svg>
-
-          </div>
-
-          <div class="home-header-label">
-            Assistenza
-          </div>
-
-        </div>
-
+        <button class="home-header-button">
+          Cerca
+        </button>
 
       </div>
+
+
+      <button class="home-header-button">
+        Assistenza
+      </button>
 
     </header>
 
 
 
-    <!-- CONTENUTO HOME -->
-
     <main class="home-main">
 
 
-      <!-- AVVISO NUMERO -->
+      <h1 class="home-saluto">
+        Ciao Dennis
+      </h1>
 
-      <section class="numero-box">
 
-        <div class="numero-text">
 
-          <div class="numero-title">
-            Associa il tuo numero
-          </div>
+      <!-- =================================================
+           NUMERO ASSOCIATO
+           ================================================= -->
 
-          <div class="numero-description">
-            Non hai ancora associato il tuo
-            numero di cellulare per operare
-            online sui tuoi prodotti finanziari?
-            Recati in Ufficio Postale o all'ATM
-            per rilasciare il numero.
-          </div>
+      <section class="numero-associato">
 
+        <div class="numero-title">
+          Associa il tuo numero
         </div>
 
-
-        <div class="numero-illustration">
-
-          <svg
-            viewBox="0 0 220 180"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-
-            <path
-              d="M68 20 H157 L181 45 V153 H68 Z"
-              fill="#a8cbd5"
-            />
-
-            <path
-              d="M157 20 V45 H181"
-              fill="#91b9c4"
-            />
-
-            <path
-              d="M157 20 L181 45 H157 Z"
-              fill="#8fb7c2"
-            />
-
-            <circle
-              cx="111"
-              cy="59"
-              r="20"
-              fill="#e18b2c"
-            />
-
-            <path
-              d="M104 52
-                 C100 57 101 65 107 69
-                 C113 73 121 69 122 62"
-              fill="none"
-              stroke="#fff"
-              stroke-width="4"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M116 66
-                 C121 61 120 53 114 49
-                 C108 45 101 49 100 55"
-              fill="none"
-              stroke="#fff"
-              stroke-width="4"
-              stroke-linecap="round"
-            />
-
-            <rect
-              x="104"
-              y="82"
-              width="55"
-              height="10"
-              rx="2"
-              fill="#fff"
-            />
-
-            <rect
-              x="104"
-              y="102"
-              width="55"
-              height="10"
-              rx="2"
-              fill="#fff"
-            />
-
-            <rect
-              x="103"
-              y="122"
-              width="42"
-              height="27"
-              rx="2"
-              fill="none"
-              stroke="#ef7569"
-              stroke-width="3"
-            />
-
-            <circle
-              cx="103"
-              cy="122"
-              r="3"
-              fill="#ef7569"
-            />
-
-            <circle
-              cx="145"
-              cy="149"
-              r="3"
-              fill="#ef7569"
-            />
-
-
-            <!-- PERSONA -->
-
-            <circle
-              cx="53"
-              cy="78"
-              r="9"
-              fill="#f1c6a5"
-            />
-
-            <path
-              d="M45 88
-                 C39 99 40 118 45 135
-                 L57 135
-                 L62 101
-                 L57 88
-                 Z"
-              fill="#72b85a"
-            />
-
-            <path
-              d="M47 92
-                 L30 108
-                 L35 113
-                 L51 102"
-              fill="#72b85a"
-            />
-
-            <path
-              d="M56 91
-                 L67 103
-                 L72 100
-                 L62 86"
-              fill="#72b85a"
-            />
-
-            <path
-              d="M46 135
-                 L43 158"
-              stroke="#333"
-              stroke-width="5"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M56 135
-                 L59 158"
-              stroke="#333"
-              stroke-width="5"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M43 158
-                 L38 162"
-              stroke="#333"
-              stroke-width="4"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M59 158
-                 L64 162"
-              stroke="#333"
-              stroke-width="4"
-              stroke-linecap="round"
-            />
-
-            <!-- MATITA -->
-
-            <path
-              d="M67 70
-                 L88 148"
-              stroke="#e0b82d"
-              stroke-width="7"
-              stroke-linecap="round"
-            />
-
-            <path
-              d="M88 148
-                 L91 158
-                 L84 151
-                 Z"
-              fill="#333"
-            />
-
-          </svg>
-
+        <div class="numero-description">
+          Non hai ancora associato il tuo
+          numero di cellulare per operare
+          online sui tuoi prodotti finanziari?
+          Recati in Ufficio Postale o all'ATM
+          per rilasciare il numero.
         </div>
 
       </section>
 
 
 
-      <!-- OPERAZIONI -->
+      <!-- =================================================
+           OPERAZIONI
+           ================================================= -->
 
       <section class="home-section">
 
-        <div class="home-section-title-row">
-
-          <h2>
-            Operazioni
-          </h2>
-
-          <div class="home-carousel-arrows">
-
-            <div class="home-arrow grey">
-              ←
-            </div>
-
-            <div class="home-arrow blue">
-              →
-            </div>
-
-          </div>
-
-        </div>
+        <h2 class="home-section-title">
+          Operazioni
+        </h2>
 
 
-        <div class="home-operations-scroll">
+        <div class="home-operazioni-wrapper">
+
+          <div class="home-operazioni">
 
 
-          <!-- BONIFICO SEPA -->
+            <!-- PAGA -->
 
-          <div class="home-operation">
+            <button
+              class="home-operazione"
+              onclick="operationMessage('Paga')"
+            >
 
-            <div class="home-operation-circle bonifico-sepa-icon">
+              <div class="home-operazione-icon">
 
-              <svg
-                viewBox="0 0 170 170"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-
-                <circle
-                  cx="85"
-                  cy="85"
-                  r="85"
-                  fill="#f1f8ff"
-                />
-
-                <g transform="translate(11 0)">
-
-                  <circle
-                    cx="51"
-                    cy="57"
-                    r="13"
-                    fill="#ffd52a"
-                    stroke="#e5b800"
-                    stroke-width="2"
-                  />
-
-                  <circle
-                    cx="64"
-                    cy="54"
-                    r="13"
-                    fill="#ffd52a"
-                    stroke="#e5b800"
-                    stroke-width="2"
-                  />
-
-                  <circle
-                    cx="51"
-                    cy="57"
-                    r="8"
-                    fill="none"
-                    stroke="#f0c000"
-                    stroke-width="2"
-                  />
-
-                  <circle
-                    cx="64"
-                    cy="54"
-                    r="8"
-                    fill="none"
-                    stroke="#f0c000"
-                    stroke-width="2"
-                  />
+                <svg
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
 
                   <rect
-                    x="38"
-                    y="62"
-                    width="80"
-                    height="48"
-                    rx="5"
-                    fill="#159957"
-                  />
-
-                  <rect
-                    x="45"
-                    y="68"
-                    width="66"
-                    height="34"
+                    x="9"
+                    y="13"
+                    width="30"
+                    height="22"
                     rx="3"
-                    fill="#42b96d"
+                    fill="none"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
                   />
 
                   <path
-                    d="
-                      M45 72
-                      H106
-                      C113 72 118 77 118 84
-                      V103
-                      C118 110 113 114 106 114
-                      H46
-                      C39 114 35 110 35 103
-                      V83
-                      C35 76 39 72 45 72
-                      Z
-                    "
-                    fill="#f4d000"
-                  />
-
-                  <path
-                    d="
-                      M45 72
-                      H106
-                      C113 72 118 77 118 84
-                      V88
-                      H47
-                      C40 88 35 84 35 79
-                      C36 75 40 72 45 72
-                      Z
-                    "
-                    fill="#f7d500"
-                  />
-
-                  <path
-                    d="
-                      M35 125
-                      V96
-                      H25
-                      L41 79
-                      L57 96
-                      H47
-                      V125
-                      Z
-                    "
-                    fill="#3eb969"
-                  />
-
-                  <path
-                    d="
-                      M35 82
-                      H47
-                      V114
-                      H46
-                      C39 114 35 110 35 103
-                      Z
-                    "
-                    fill="#3eb969"
-                  />
-
-                  <rect
-                    x="96"
-                    y="82"
-                    width="27"
-                    height="20"
-                    rx="7"
-                    fill="#145db5"
+                    d="M9 19H39"
+                    fill="none"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
                   />
 
                   <circle
-                    cx="104"
-                    cy="92"
-                    r="3.5"
-                    fill="#ffd900"
+                    cx="16"
+                    cy="27"
+                    r="2"
+                    fill="#0759c9"
                   />
 
-                </g>
+                </svg>
 
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              Bonifico SEPA
-            </div>
-
-          </div>
-
-
-
-          <!-- P2P -->
-
-          <div class="home-operation">
-
-            <div class="home-operation-circle">
-
-              <svg
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="50"
-                  fill="#f1f8ff"
-                />
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="31"
-                  fill="#f1d900"
-                />
-
-                <text
-                  x="50"
-                  y="54"
-                  text-anchor="middle"
-                  font-family="Arial, sans-serif"
-                  font-size="24"
-                  font-weight="500"
-                  fill="#111"
-                  letter-spacing="-1"
-                >p2p</text>
-
-
-                <!-- FRECCIA SUPERIORE -->
-
-                <g transform="translate(-1 -2)">
-
-                  <path
-                    d="M61 37
-                       C56 33
-                       49 32
-                       43 36"
-                    fill="none"
-                    stroke="#111"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  />
-
-                  <path
-                    d="M45 33
-                       L41 36
-                       L46 38"
-                    fill="none"
-                    stroke="#111"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                </g>
-
-
-                <!-- FRECCIA INFERIORE -->
-
-                <g transform="rotate(180 50 50)">
-
-                  <path
-                    d="M61 39
-                       C56 35
-                       49 34
-                       43 38"
-                    fill="none"
-                    stroke="#111"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                  />
-
-                  <path
-                    d="M45 35
-                       L41 38
-                       L46 40"
-                    fill="none"
-                    stroke="#111"
-                    stroke-width="1.8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                </g>
-
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              P2P - Invia e<br>
-              richiedi denaro
-            </div>
-
-          </div>
-
-
-
-          <!-- CERCA UFFICIO -->
-
-          <div class="home-operation">
-
-            <div class="home-operation-circle">
-
-              <svg
-                viewBox="0 0 100 100"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="50"
-                  fill="#f1f8ff"
-                />
-
-                <rect
-                  x="24"
-                  y="29"
-                  width="52"
-                  height="48"
-                  rx="4"
-                  fill="#fff"
-                  stroke="#42955d"
-                  stroke-width="5"
-                />
-
-                <rect
-                  x="24"
-                  y="29"
-                  width="52"
-                  height="13"
-                  fill="#f4dd00"
-                />
-
-                <line
-                  x1="36"
-                  y1="23"
-                  x2="36"
-                  y2="35"
-                  stroke="#777"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
-
-                <line
-                  x1="50"
-                  y1="23"
-                  x2="50"
-                  y2="35"
-                  stroke="#777"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
-
-                <line
-                  x1="64"
-                  y1="23"
-                  x2="64"
-                  y2="35"
-                  stroke="#777"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                />
-
-                <rect
-                  x="34"
-                  y="50"
-                  width="9"
-                  height="9"
-                  rx="1"
-                  fill="#ddd"
-                />
-
-                <rect
-                  x="46"
-                  y="50"
-                  width="9"
-                  height="9"
-                  rx="1"
-                  fill="#ddd"
-                />
-
-                <rect
-                  x="58"
-                  y="50"
-                  width="9"
-                  height="9"
-                  rx="1"
-                  fill="#ddd"
-                />
-
-                <rect
-                  x="34"
-                  y="63"
-                  width="9"
-                  height="9"
-                  rx="1"
-                  fill="#ddd"
-                />
-
-                <rect
-                  x="46"
-                  y="63"
-                  width="9"
-                  height="9"
-                  rx="1"
-                  fill="#ddd"
-                />
-
-                <rect
-                  x="58"
-                  y="63"
-                  width="9"
-                  height="9"
-                  rx="1"
-                  fill="#ddd"
-                />
-
-              </svg>
-
-            </div>
-
-            <div class="home-operation-label">
-              Cerca ufficio e<br>
-              prenota
-            </div>
-
-          </div>
-
-
-
-          <!-- MOSTRA ALTRO -->
-
-          <div class="home-operation">
-
-            <div class="home-operation-circle">
-
-              <div class="home-more-icon">
-                +
               </div>
 
-            </div>
+              <span>
+                Paga
+              </span>
 
-            <div class="home-operation-label">
-              Mostra altro
-            </div>
+            </button>
+
+
+
+            <!-- BONIFICO -->
+
+            <button
+              class="home-operazione"
+              onclick="operationMessage('Bonifico')"
+            >
+
+              <div class="home-operazione-icon bonifico-sepa-icon">
+
+                <svg
+                  viewBox="0 0 54 54"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+
+                  <g transform="translate(11 0)">
+
+                    <path
+                      d="M16 13
+                         C12 13 9 16 9 20
+                         C9 24 12 27 16 27
+                         H25"
+                      fill="none"
+                      stroke="#0759c9"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+
+                    <path
+                      d="M22 23
+                         L26 27
+                         L22 31"
+                      fill="none"
+                      stroke="#0759c9"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                    <path
+                      d="M25 41
+                         C29 41 32 38 32 34
+                         C32 30 29 27 25 27
+                         H16"
+                      fill="none"
+                      stroke="#0759c9"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+
+                    <path
+                      d="M19 31
+                         L15 27
+                         L19 23"
+                      fill="none"
+                      stroke="#0759c9"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                  </g>
+
+                </svg>
+
+              </div>
+
+              <span>
+                Bonifico
+              </span>
+
+            </button>
+
+
+
+            <!-- F24 -->
+
+            <button
+              class="home-operazione"
+              onclick="operationMessage('F24')"
+            >
+
+              <div class="home-operazione-icon">
+
+                <svg
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+
+                  <rect
+                    x="9"
+                    y="8"
+                    width="30"
+                    height="32"
+                    rx="3"
+                    fill="none"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M14 16H34"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M14 22H34"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M14 28H28"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                </svg>
+
+              </div>
+
+              <span>
+                F24
+              </span>
+
+            </button>
+
+
+
+            <!-- RICARICA -->
+
+            <button
+              class="home-operazione"
+              onclick="operationMessage('Ricarica')"
+            >
+
+              <div class="home-operazione-icon">
+
+                <svg
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+
+                  <rect
+                    x="11"
+                    y="14"
+                    width="26"
+                    height="20"
+                    rx="3"
+                    fill="none"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
+                  />
+
+                  <path
+                    d="M15 20H33"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                  <path
+                    d="M18 27H24"
+                    stroke="#0759c9"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+
+                </svg>
+
+              </div>
+
+              <span>
+                Ricarica
+              </span>
+
+            </button>
+
+
+
+            <!-- P2P -->
+
+            <button
+              class="home-operazione"
+              onclick="operationMessage('P2P')"
+            >
+
+              <div class="home-operazione-icon p2p-icon">
+
+                <svg
+                  viewBox="0 0 100 100"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+
+                  <g transform="translate(-1 -2)">
+
+                    <path
+                      d="M61 37
+                         C56 33
+                         49 32
+                         43 36"
+                      fill="none"
+                      stroke="#111"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+
+                    <path
+                      d="M45 33
+                         L41 36
+                         L46 38"
+                      fill="none"
+                      stroke="#111"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                  </g>
+
+
+                  <g transform="rotate(180 50 50)">
+
+                    <path
+                      d="M61 39
+                         C56 35
+                         49 34
+                         43 38"
+                      fill="none"
+                      stroke="#111"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                    />
+
+                    <path
+                      d="M45 35
+                         L41 38
+                         L46 40"
+                      fill="none"
+                      stroke="#111"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+
+                  </g>
+
+                </svg>
+
+              </div>
+
+              <span>
+                P2P
+              </span>
+
+            </button>
+
 
           </div>
-
 
         </div>
 
@@ -986,154 +416,56 @@
 
 
 
-      <!-- SITUAZIONE FINANZIARIA -->
+      <!-- =================================================
+           SITUAZIONE FINANZIARIA
+           ================================================= -->
 
-      <section class="home-section situazione">
+      <section class="home-section">
 
-        <h2>
+        <h2 class="home-section-title">
           Situazione finanziaria
         </h2>
 
 
-        <div class="patrimonio-card">
+        <div class="situazione-card">
 
 
-          <div class="patrimonio-image">
+          <div class="situazione-row">
 
-            <svg
-              viewBox="0 0 150 120"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-
-              <rect
-                x="49"
-                y="18"
-                width="58"
-                height="76"
-                rx="3"
-                fill="#edf1f5"
-                stroke="#7c8997"
-                stroke-width="2"
-              />
-
-              <circle
-                cx="78"
-                cy="45"
-                r="17"
-                fill="#fff"
-                stroke="#6f7d8c"
-                stroke-width="2"
-              />
-
-              <path
-                d="M78 45 L78 31 A14 14 0 0 1 91 52 Z"
-                fill="#f1d900"
-              />
-
-              <path
-                d="M78 45 L91 52 A14 14 0 0 1 67 55 Z"
-                fill="#78b96a"
-              />
-
-              <rect
-                x="61"
-                y="69"
-                width="34"
-                height="5"
-                rx="2"
-                fill="#c2cad2"
-              />
-
-              <rect
-                x="61"
-                y="79"
-                width="24"
-                height="5"
-                rx="2"
-                fill="#c2cad2"
-              />
-
-              <circle
-                cx="35"
-                cy="59"
-                r="10"
-                fill="#f0c4a1"
-              />
-
-              <path
-                d="M27 70
-                   C18 75 17 90 21 105
-                   H47
-                   L44 78
-                   L39 70
-                   Z"
-                fill="#8674e8"
-              />
-
-              <path
-                d="M34 106
-                   L31 117"
-                stroke="#555"
-                stroke-width="5"
-                stroke-linecap="round"
-              />
-
-              <path
-                d="M43 106
-                   L49 116"
-                stroke="#555"
-                stroke-width="5"
-                stroke-linecap="round"
-              />
-
-              <circle
-                cx="118"
-                cy="70"
-                r="9"
-                fill="#f0c4a1"
-              />
-
-              <path
-                d="M110 79
-                   C103 85 104 100 109 109
-                   H130
-                   L127 85
-                   L123 78
-                   Z"
-                fill="#e5b735"
-              />
-
-              <rect
-                x="107"
-                y="110"
-                width="25"
-                height="4"
-                rx="2"
-                fill="#e4b600"
-              />
-
-            </svg>
-
-          </div>
-
-
-          <div class="patrimonio-text">
-
-            <div class="patrimonio-title">
+            <div class="situazione-label">
               Patrimonio
             </div>
 
-            <div class="patrimonio-description">
-              Abilita la vista aggregata<br>
-              dei tuoi prodotti<br>
-              finanziari.
+            <div class="situazione-value">
+              17.000,00 €
             </div>
 
           </div>
 
 
-          <div class="patrimonio-arrow">
-            →
+          <div class="situazione-row">
+
+            <div class="situazione-label">
+              Disponibilità
+            </div>
+
+            <div class="situazione-value">
+              678,03 €
+            </div>
+
+          </div>
+
+
+          <div class="situazione-row">
+
+            <div class="situazione-label">
+              Totale Buoni
+            </div>
+
+            <div class="situazione-value">
+              17.000,00 €
+            </div>
+
           </div>
 
 
@@ -1143,198 +475,86 @@
 
 
 
-      <!-- IL MONDO POSTE -->
+      <!-- =================================================
+           IL MONDO POSTE
+           ================================================= -->
 
-      <section class="mondo-poste">
+      <section class="home-section mondo-poste">
 
-        <div class="mondo-title-row">
-
-          <h2>
-            Il mondo Poste
-          </h2>
+        <h2 class="home-section-title">
+          Il mondo Poste
+        </h2>
 
 
-          <div class="nascondi-saldo">
+        <div class="mondo-card">
 
-            <span class="saldo-eye">
+          <div class="mondo-card-title">
+            Patrimonio
+          </div>
 
-              <!-- SVG NASCOSTO VIA CSS -->
+          <div class="mondo-card-text">
+            Abilita la vista aggregata<br>
+            dei tuoi prodotti<br>
+            finanziari.
+          </div>
 
-              <svg
-                viewBox="0 0 32 32"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+        </div>
 
-                <path
-                  d="M5.5 16
-                     C8.5 11.5
-                     12 9
-                     16 9
-                     C20 9
-                     23.5 11.5
-                     26.5 16
-                     C23.5 20.5
-                     20 23
-                     16 23
-                     C12 23
-                     8.5 20.5
-                     5.5 16Z"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="2.2"
-                />
 
-                <circle
-                  cx="16"
-                  cy="16"
-                  r="3.2"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="2.2"
-                />
+        <div class="mondo-card">
 
-                <path
-                  d="M5 5 L27 27"
-                  fill="none"
-                  stroke="#0755c7"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                />
+          <div class="mondo-card-title">
+            Posta e pacchi
+          </div>
 
-              </svg>
+          <div class="mondo-card-content">
 
-            </span>
-
-            Nascondi saldo
+            <div class="mondo-card-text large">
+              Accedi ai servizi
+            </div>
 
           </div>
 
         </div>
 
 
-        <div class="mondo-grid">
+        <div class="mondo-card">
 
+          <div class="mondo-card-title">
+            Libretti
+          </div>
 
-          <div class="poste-card">
+          <div class="mondo-card-content">
 
-            <div class="poste-card-title">
-              Conti
-            </div>
+            <div class="mondo-card-text info-description">
 
-            <div class="poste-card-content">
+              <span class="info-circle">
+                i
+              </span>
 
-              <div class="poste-number">
-                678<span>,03 €</span>
-              </div>
-
-              <div class="poste-description">
-                Saldo disponibile
-              </div>
+              Scopri i tuoi Libretti
 
             </div>
 
           </div>
-
-
-          <div class="poste-card">
-
-            <div class="poste-card-title">
-              Carte Postepay
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-number">
-                1 <span class="normal-number">Carta Debit</span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="poste-card">
-
-            <div class="poste-card-title">
-              Posta e pacchi
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-description large">
-                Accedi ai servizi
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <div class="poste-card">
-
-            <div class="poste-card-title">
-              Libretti
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-description info-description">
-
-                <span class="info-circle">
-                  i
-                </span>
-
-                Abilita il tuo<br>
-                Libretto
-
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <button
-            class="poste-card risparmio-card"
-            onclick="apriRisparmio()"
-          >
-
-            <div class="poste-card-title">
-              Risparmio
-            </div>
-
-            <div class="poste-card-content">
-
-              <div class="poste-number">
-                17.000<span>,00 €</span>
-              </div>
-
-              <div class="poste-description">
-                Totale Buoni
-              </div>
-
-            </div>
-
-          </button>
-
 
         </div>
 
 
-        <div class="mondo-banner">
+        <div class="mondo-card">
 
-          <div class="banner-text">
+          <div class="mondo-card-title">
+            Buoni
+          </div>
 
-            <div>
-              Hai ancora molto
+          <div class="mondo-card-content">
+
+            <div class="poste-number">
+              17.000<span>,00 €</span>
             </div>
 
-            <div>
-              da scoprire
-            </div>
-
-            <div class="banner-link">
-              Tutto il mondo Poste →
+            <div class="poste-description">
+              Totale Buoni
             </div>
 
           </div>
@@ -1349,71 +569,127 @@
 
 
 
-    <!-- NAVIGAZIONE INFERIORE -->
+    <!-- =================================================
+         NAVIGAZIONE INFERIORE
+         ================================================= -->
 
-    <nav class="home-bottom-nav">
+    <nav class="bottom-nav">
 
 
-      <div class="nav-item active">
+      <button
+        class="bottom-nav-item active"
+        onclick="tornaAllaHome()"
+      >
 
-        <svg viewBox="0 0 50 50">
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
 
           <path
-            d="M8 24 L25 10 L42 24 V43 H30 V31 H20 V43 H8 Z"
-            fill="#0755c7"
+            d="M4 10
+               L12 4
+               L20 10
+               V20
+               H4
+               Z"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M9 20V13H15V20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
           />
 
         </svg>
 
         <span>
-          MyPoste
+          Home
         </span>
 
-      </div>
+      </button>
 
 
-      <div class="nav-item">
 
-        <svg viewBox="0 0 50 50">
+      <button
+        class="bottom-nav-item"
+        onclick="operationMessage('Prodotti')"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
 
           <rect
-            x="8"
-            y="8"
-            width="13"
-            height="13"
+            x="4"
+            y="5"
+            width="16"
+            height="14"
+            rx="2"
             fill="none"
-            stroke="#111"
-            stroke-width="2.5"
+            stroke="currentColor"
+            stroke-width="1.7"
           />
 
-          <rect
-            x="29"
-            y="8"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
+          <path
+            d="M7 9H17"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
           />
 
-          <rect
-            x="8"
-            y="29"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
+          <path
+            d="M7 13H14"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
           />
 
-          <rect
-            x="29"
-            y="29"
-            width="13"
-            height="13"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
+        </svg>
+
+        <span>
+          Prodotti
+        </span>
+
+      </button>
+
+
+
+      <button
+        class="bottom-nav-item"
+        onclick="operationMessage('Operazioni')"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+
+          <path
+            d="M6 7H18"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M6 12H18"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M6 17H18"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
           />
 
         </svg>
@@ -1422,119 +698,50 @@
           Operazioni
         </span>
 
-      </div>
+      </button>
 
 
-      <div class="nav-item">
 
-        <svg viewBox="0 0 50 50">
+      <button
+        class="bottom-nav-item"
+        onclick="operationMessage('Profilo')"
+      >
 
-          <path
-            d="M12 8 L20 42 L31 42 L23 8 Z"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <path
-            d="M27 8 L35 42 L42 42 L34 8 Z"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
 
           <circle
-            cx="35"
-            cy="13"
-            r="4"
+            cx="12"
+            cy="8"
+            r="3.2"
             fill="none"
-            stroke="#111"
-            stroke-width="2"
+            stroke="currentColor"
+            stroke-width="1.7"
           />
-
-        </svg>
-
-        <span>
-          Pwallet
-        </span>
-
-      </div>
-
-
-      <div class="nav-item">
-
-        <svg viewBox="0 0 50 50">
 
           <path
-            d="M25 43
-               C25 43 39 29 39 19
-               C39 11 33 6 25 6
-               C17 6 11 11 11 19
-               C11 29 25 43 25 43 Z"
+            d="M5 20
+               C5.8 15.8
+               8.2 14
+               12 14
+               C15.8 14
+               18.2 15.8
+               19 20"
             fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-          <circle
-            cx="25"
-            cy="19"
-            r="5"
-            fill="none"
-            stroke="#111"
-            stroke-width="2.5"
-          />
-
-        </svg>
-
-        <span>
-          Mappe
-        </span>
-
-      </div>
-
-
-      <div class="nav-item">
-
-        <svg viewBox="0 0 50 50">
-
-          <line
-            x1="8"
-            y1="15"
-            x2="42"
-            y2="15"
-            stroke="#111"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-
-          <line
-            x1="8"
-            y1="25"
-            x2="42"
-            y2="25"
-            stroke="#111"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-
-          <line
-            x1="8"
-            y1="35"
-            x2="42"
-            y2="35"
-            stroke="#111"
-            stroke-width="3"
+            stroke="currentColor"
+            stroke-width="1.7"
             stroke-linecap="round"
           />
 
         </svg>
 
         <span>
-          Menu
+          Profilo
         </span>
 
-      </div>
+      </button>
 
 
     </nav>
@@ -1544,105 +751,81 @@
 
 
 
-
   <!-- =====================================================
        PAGINA BUONI
        ===================================================== -->
 
-  <div id="paginaPrincipale" style="display:none;">
+  <div
+    id="paginaPrincipale"
+    style="display:none;"
+  >
 
 
     <header class="top-header">
 
 
-      <button
-        class="back-button"
-        onclick="tornaAllaHome()"
-      >
+      <div class="top-header-left">
 
-        <svg viewBox="0 0 40 40">
-
-          <path
-            d="M25 7 L12 20 L25 33"
-            fill="none"
-            stroke="#111111"
-            stroke-width="5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-
-        </svg>
-
-      </button>
-
-
-      <h1>
-        Buoni
-      </h1>
-
-
-      <div class="top-icons">
-
-
-        <svg
-          class="eye-icon"
-          viewBox="0 0 50 50"
-          xmlns="http://www.w3.org/2000/svg"
+        <button
+          onclick="tornaAllaHome()"
+          aria-label="Indietro"
         >
 
-          <path
-            d="M5 25
-               C11 14 18 9 25 9
-               C32 9 39 14 45 25
-               C39 36 32 41 25 41
-               C18 41 11 36 5 25Z"
-            fill="none"
-            stroke="#111"
-            stroke-width="3.5"
-          />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
 
-          <circle
-            cx="25"
-            cy="25"
-            r="7"
-            fill="none"
-            stroke="#111"
-            stroke-width="3.5"
-          />
+            <path
+              d="M15 5L8 12L15 19"
+              fill="none"
+              stroke="#111"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
 
-          <line
-            x1="8"
-            y1="8"
-            x2="42"
-            y2="42"
-            stroke="#111"
-            stroke-width="4"
-            stroke-linecap="round"
-          />
+          </svg>
 
-        </svg>
-
-
-        <span class="question">
-          ?
-        </span>
-
+        </button>
 
       </div>
+
+
+      <div class="top-header-title">
+        Buoni
+      </div>
+
+
+      <div class="top-header-right">
+
+        <button
+          onclick="operationMessage('Assistenza')"
+        >
+          Assistenza
+        </button>
+
+      </div>
+
 
     </header>
 
 
 
-    <main>
+    <main class="buoni-main">
 
+
+      <!-- =================================================
+           RIEPILOGO
+           ================================================= -->
 
       <section class="summary-card">
 
-
-        <h2 id="totaleBuoni">
+        <h1 id="totaleBuoni">
           20 Buoni
-        </h2>
+        </h1>
 
 
         <div class="summary-item">
@@ -1681,353 +864,327 @@
 
 
 
-      <h2 class="section-title">
-        Operazioni
-      </h2>
+      <!-- =================================================
+           OPERAZIONI BUONI
+           ================================================= -->
+
+      <section>
+
+        <h2 class="operations-title">
+          Operazioni
+        </h2>
 
 
-      <section class="operations">
+        <div class="operations">
 
 
-        <button
-          class="operation-button"
-          onclick="operationMessage('Acquista Buono')"
-        >
+          <button
+            class="operation-card"
+            onclick="operationMessage('Acquista')"
+          >
 
-          <div class="operation-icon">
+            <div class="operation-card-icon">
 
-            <svg
-              viewBox="0 0 170 170"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              <svg
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
 
-              <circle
-                cx="85"
-                cy="85"
-                r="85"
-                fill="#f1f8ff"
-              />
-
-              <g transform="rotate(-10 85 85)">
-
-                <rect
-                  x="45"
-                  y="52"
-                  width="78"
-                  height="50"
-                  rx="3"
-                  fill="#f4d000"
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="16"
+                  fill="none"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
                 />
 
-                <rect
-                  x="69"
-                  y="52"
-                  width="9"
-                  height="50"
-                  fill="#1764c0"
+                <path
+                  d="M24 16V32"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
                 />
 
-              </g>
+                <path
+                  d="M18 24H30"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
 
+              </svg>
 
-              <rect
-                x="39"
-                y="69"
-                width="91"
-                height="48"
-                rx="3"
-                fill="#f4d000"
-              />
+            </div>
 
-              <rect
-                x="65"
-                y="69"
-                width="10"
-                height="48"
-                fill="#1764c0"
-              />
+            <div class="operation-card-label">
+              Acquista
+            </div>
 
-              <text
-                x="48"
-                y="102"
-                font-family="Arial"
-                font-size="26"
-                font-weight="700"
-                fill="#1261b9"
-              >€</text>
-
-              <rect
-                x="80"
-                y="89"
-                width="39"
-                height="5"
-                rx="1"
-                fill="#fff"
-              />
-
-              <rect
-                x="80"
-                y="100"
-                width="31"
-                height="5"
-                rx="1"
-                fill="#fff"
-              />
-
-              <circle
-                cx="121"
-                cy="120"
-                r="22"
-                fill="#49b96a"
-              />
-
-              <rect
-                x="117"
-                y="108"
-                width="8"
-                height="24"
-                rx="2"
-                fill="#fff"
-              />
-
-              <rect
-                x="109"
-                y="116"
-                width="24"
-                height="8"
-                rx="2"
-                fill="#fff"
-              />
-
-            </svg>
-
-          </div>
-
-
-          <span>
-            Acquista<br>
-            Buono
-          </span>
-
-        </button>
+          </button>
 
 
 
-        <button
-          class="operation-button"
-          onclick="operationMessage('Richiedi rimborso')"
-        >
+          <button
+            class="operation-card"
+            onclick="operationMessage('Vendi')"
+          >
 
-          <div class="operation-icon">
+            <div class="operation-card-icon">
 
-            <svg
-              viewBox="0 0 170 170"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+              <svg
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
 
-              <circle
-                cx="85"
-                cy="85"
-                r="85"
-                fill="#f1f8ff"
-              />
+                <circle
+                  cx="24"
+                  cy="24"
+                  r="16"
+                  fill="none"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                />
 
-              <circle
-                cx="51"
-                cy="57"
-                r="13"
-                fill="#ffd52a"
-                stroke="#e5b800"
-                stroke-width="2"
-              />
+                <path
+                  d="M18 24H30"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
 
-              <circle
-                cx="64"
-                cy="54"
-                r="13"
-                fill="#ffd52a"
-                stroke="#e5b800"
-                stroke-width="2"
-              />
+              </svg>
 
-              <circle
-                cx="51"
-                cy="57"
-                r="8"
-                fill="none"
-                stroke="#f0c000"
-                stroke-width="2"
-              />
+            </div>
 
-              <circle
-                cx="64"
-                cy="54"
-                r="8"
-                fill="none"
-                stroke="#f0c000"
-                stroke-width="2"
-              />
+            <div class="operation-card-label">
+              Vendi
+            </div>
 
-              <rect
-                x="38"
-                y="62"
-                width="80"
-                height="48"
-                rx="5"
-                fill="#159957"
-              />
-
-              <rect
-                x="45"
-                y="68"
-                width="66"
-                height="34"
-                rx="3"
-                fill="#42b96d"
-              />
-
-              <path
-                d="
-                  M45 72
-                  H106
-                  C113 72 118 77 118 84
-                  V103
-                  C118 110 113 114 106 114
-                  H46
-                  C39 114 35 110 35 103
-                  V83
-                  C35 76 39 72 45 72
-                  Z
-                "
-                fill="#f4d000"
-              />
-
-              <path
-                d="
-                  M45 72
-                  H106
-                  C113 72 118 77 118 84
-                  V88
-                  H47
-                  C40 88 35 84 35 79
-                  C36 75 40 72 45 72
-                  Z
-                "
-                fill="#f7d500"
-              />
-
-              <path
-                d="
-                  M35 125
-                  V96
-                  H25
-                  L41 79
-                  L57 96
-                  H47
-                  V125
-                  Z
-                "
-                fill="#3eb969"
-              />
-
-              <path
-                d="
-                  M35 82
-                  H47
-                  V114
-                  H46
-                  C39 114 35 110 35 103
-                  Z
-                "
-                fill="#3eb969"
-              />
-
-              <rect
-                x="96"
-                y="82"
-                width="27"
-                height="20"
-                rx="7"
-                fill="#145db5"
-              />
-
-              <circle
-                cx="104"
-                cy="92"
-                r="3.5"
-                fill="#ffd900"
-              />
-
-            </svg>
-
-          </div>
+          </button>
 
 
-          <span>
-            Richiedi<br>
-            rimborso
-          </span>
 
-        </button>
+          <button
+            class="operation-card"
+            onclick="operationMessage('Regala')"
+          >
 
+            <div class="operation-card-icon">
+
+              <svg
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <path
+                  d="M10 20H38V36H10Z"
+                  fill="none"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                  stroke-linejoin="round"
+                />
+
+                <path
+                  d="M24 20V36"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                />
+
+                <path
+                  d="M8 15H40V20H8Z"
+                  fill="none"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                />
+
+                <path
+                  d="M24 15
+                     C20 15 15 13 15 10
+                     C15 8 17 7 19 8
+                     C22 9 24 15 24 15Z"
+                  fill="none"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                />
+
+                <path
+                  d="M24 15
+                     C28 15 33 13 33 10
+                     C33 8 31 7 29 8
+                     C26 9 24 15 24 15Z"
+                  fill="none"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                />
+
+              </svg>
+
+            </div>
+
+            <div class="operation-card-label">
+              Regala
+            </div>
+
+          </button>
+
+
+
+          <button
+            class="operation-card"
+            onclick="operationMessage('Consulta')"
+          >
+
+            <div class="operation-card-icon">
+
+              <svg
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <circle
+                  cx="21"
+                  cy="21"
+                  r="10"
+                  fill="none"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                />
+
+                <path
+                  d="M29 29L36 36"
+                  stroke="#0759c9"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </div>
+
+            <div class="operation-card-label">
+              Consulta
+            </div>
+
+          </button>
+
+
+        </div>
 
       </section>
 
 
 
-      <h2 class="section-title your-bonds">
-        Elenco Buoni
-      </h2>
-
-
+      <!-- =================================================
+           FILTRI
+           ================================================= -->
 
       <div class="filtri">
 
-  <button class="filtro filtro-filtra">
 
-    <svg
-      class="filtro-sliders-icon"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <line x1="4" y1="6" x2="20" y2="6"/>
-      <line x1="4" y1="12" x2="20" y2="12"/>
-      <line x1="4" y1="18" x2="20" y2="18"/>
-
-      <line x1="9" y1="4" x2="9" y2="8"/>
-      <line x1="15" y1="10" x2="15" y2="14"/>
-      <line x1="7" y1="16" x2="7" y2="20"/>
-    </svg>
-
-    <u>Filtra</u>
-
-  </button>
-
-  <button class="filtro prodotto">
-    <u>
-      Prodotti
-    </u>
-
-    <span class="freccia-down"></span>
-  </button>
-
-  <button class="filtro periodo">
-    <u>
-      Periodo di scadenza
-    </u>
-  </button>
-
-</div>
+        <button class="filtro filtro-filtra">
 
 
-      <section id="buoni"></section>
+          <svg
+            class="filtro-sliders-icon"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <line
+              x1="4"
+              y1="6"
+              x2="20"
+              y2="6"
+            />
+
+            <line
+              x1="4"
+              y1="12"
+              x2="20"
+              y2="12"
+            />
+
+            <line
+              x1="4"
+              y1="18"
+              x2="20"
+              y2="18"
+            />
+
+
+            <line
+              x1="9"
+              y1="4"
+              x2="9"
+              y2="8"
+            />
+
+            <line
+              x1="15"
+              y1="10"
+              x2="15"
+              y2="14"
+            />
+
+            <line
+              x1="7"
+              y1="16"
+              x2="7"
+              y2="20"
+            />
+
+          </svg>
+
+
+          <u>
+            Filtra
+          </u>
+
+
+        </button>
+
+
+
+        <button class="filtro prodotto">
+
+          <u>
+            Prodotti
+          </u>
+
+          <span class="freccia-down"></span>
+
+        </button>
+
+
+
+        <button class="filtro periodo">
+
+          <u>
+            Periodo di scadenza
+          </u>
+
+        </button>
+
+
+      </div>
+
+
+
+      <!-- =================================================
+           ELENCO BUONI
+           ================================================= -->
+
+      <div
+        id="buoni"
+        class="lista-buoni"
+      ></div>
 
 
     </main>
 
 
   </div>
-
 
 
 
@@ -2037,25 +1194,29 @@
 
   <div
     id="paginaDettaglio"
-    class="pagina-dettaglio"
+    style="display:none;"
   >
 
 
-    <header class="detail-header">
+    <header class="dettaglio-header">
 
 
       <button
-        class="detail-back"
+        class="dettaglio-back"
         onclick="tornaAllaLista()"
+        aria-label="Indietro"
       >
 
-        <svg viewBox="0 0 40 40">
+        <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
 
           <path
-            d="M25 7 L12 20 L25 33"
+            d="M15 5L8 12L15 19"
             fill="none"
-            stroke="#111111"
-            stroke-width="5.5"
+            stroke="#111"
+            stroke-width="1.8"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
@@ -2065,178 +1226,120 @@
       </button>
 
 
-      <h1 id="detailTitolo">
+      <div
+        class="dettaglio-header-title"
+        id="detailTitolo"
+      >
         Buono 3×4 con premio
-      </h1>
+      </div>
 
 
     </header>
 
 
 
-    <main class="detail-main">
+    <main class="dettaglio-main">
 
 
-      <section class="detail-card">
+      <section class="dettaglio-hero">
 
 
-        <div class="detail-card-top">
+        <div class="dettaglio-tipo">
+          Buono 3×4 con premio
+        </div>
 
 
-          <div class="detail-buono-icon">
+        <div
+          class="dettaglio-valore"
+          id="detailValoreRimborso"
+        >
+          500,00 €
+        </div>
 
-            <svg
-              viewBox="0 0 170 170"
-              xmlns="http://www.w3.org/2000/svg"
-            >
 
-              <circle
-                cx="85"
-                cy="85"
-                r="85"
-                fill="#a9bcf5"
-              />
+        <div
+          class="dettaglio-valore-label detail-rimborso-label"
+        >
+          Valore nominale
+        </div>
 
-              <g transform="rotate(-10 85 85)">
 
-                <rect
-                  x="45"
-                  y="52"
-                  width="78"
-                  height="50"
-                  rx="3"
-                  fill="#d1b600"
-                />
+      </section>
 
-                <rect
-                  x="69"
-                  y="52"
-                  width="9"
-                  height="50"
-                  fill="#1764c0"
-                />
 
-              </g>
 
-              <rect
-                x="39"
-                y="69"
-                width="91"
-                height="48"
-                rx="3"
-                fill="#f4d000"
-              />
+      <!-- =================================================
+           DATI DEL BUONO
+           ================================================= -->
 
-              <rect
-                x="65"
-                y="69"
-                width="10"
-                height="48"
-                fill="#1764c0"
-              />
+      <section class="dettaglio-sezione">
 
-              <text
-                x="48"
-                y="102"
-                font-family="Arial"
-                font-size="26"
-                font-weight="700"
-                fill="#1261b9"
-              >€</text>
 
-              <rect
-                x="80"
-                y="89"
-                width="39"
-                height="5"
-                rx="1"
-                fill="#fff"
-              />
+        <h2 class="dettaglio-sezione-title">
+          Dati del Buono
+        </h2>
 
-              <rect
-                x="80"
-                y="100"
-                width="31"
-                height="5"
-                rx="1"
-                fill="#fff"
-              />
 
-            </svg>
+        <div class="dettaglio-riga">
 
+          <div class="dettaglio-riga-label">
+            Data sottoscrizione
           </div>
 
-
-          <div class="detail-rimborso">
-
-            <span id="detailValoreRimborso">
-              900,00 €
-            </span>
-
+          <div
+            class="dettaglio-riga-value"
+            id="detailSottoscritto"
+          >
+            16 Settembre 2026
           </div>
-
-
-          <div class="detail-rimborso-label">
-            Valore di rimborso lordo
-          </div>
-
 
         </div>
 
 
+        <div class="dettaglio-riga">
 
-        <div class="detail-account">
-
-
-          <div class="account-icon">
-
-            <svg viewBox="0 0 80 60">
-
-              <rect
-                x="15"
-                y="10"
-                width="55"
-                height="40"
-                rx="7"
-                fill="#0755c7"
-              />
-
-              <rect
-                x="15"
-                y="10"
-                width="8"
-                height="40"
-                fill="#ffd900"
-              />
-
-              <rect
-                x="28"
-                y="18"
-                width="22"
-                height="6"
-                rx="3"
-                fill="white"
-              />
-
-              <line
-                x1="28"
-                y1="34"
-                x2="58"
-                y2="34"
-                stroke="white"
-                stroke-width="3"
-              />
-
-            </svg>
-
+          <div class="dettaglio-riga-label">
+            Data scadenza
           </div>
 
-
-          <div class="account-text">
-            Regolato su Conto<br>
-            001062627284
+          <div
+            class="dettaglio-riga-value"
+            id="detailScadenza"
+          >
+            16 Settembre 2038
           </div>
 
+        </div>
+
+
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Valore nominale
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailNominale"
+          >
+            500,00 €
+          </div>
+
+        </div>
+
+
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Valore netto
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailNetto"
+          >
+            500,00 €
+          </div>
 
         </div>
 
@@ -2245,284 +1348,246 @@
 
 
 
-      <h2 class="detail-section-title">
-        Riepilogo dei dati
-      </h2>
+      <!-- =================================================
+           RIMBORSO SENZA PREMIO
+           ================================================= -->
+
+      <section class="dettaglio-sezione">
 
 
+        <h2 class="dettaglio-sezione-title">
+          Rimborso senza premio
+        </h2>
 
-      <div class="detail-field">
 
-        <div class="detail-label">
-          Sottoscritto il
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Valore lordo
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailLordoSenzaPremio"
+          >
+            672,44 €
+          </div>
+
         </div>
 
-        <div
-          class="detail-value"
-          id="detailSottoscritto"
-        >
-          12 Agosto 2026
+
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Ritenuta
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailRitenutaScadenza"
+          >
+            21,56 €
+          </div>
+
         </div>
 
-      </div>
 
+        <div class="dettaglio-riga">
 
+          <div class="dettaglio-riga-label">
+            Valore netto
+          </div>
 
-      <div class="detail-field">
+          <div
+            class="dettaglio-riga-value"
+            id="detailNettoSenzaPremio"
+          >
+            650,89 €
+          </div>
 
-        <div class="detail-label">
-          Scade il
         </div>
 
-        <div
-          class="detail-value"
-          id="detailScadenza"
-        >
-          12 Agosto 2038
+
+      </section>
+
+
+
+      <!-- =================================================
+           PREMIO
+           ================================================= -->
+
+      <section class="dettaglio-sezione">
+
+
+        <h2 class="dettaglio-sezione-title">
+          Premio
+        </h2>
+
+
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Premio lordo
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailPremioLordo"
+          >
+            40,00 €
+          </div>
+
         </div>
 
-      </div>
 
+        <div class="dettaglio-riga">
 
+          <div class="dettaglio-riga-label">
+            Ritenuta premio
+          </div>
 
-      <div class="detail-field">
+          <div
+            class="dettaglio-riga-value"
+            id="detailRitenutaPremio"
+          >
+            5,00 €
+          </div>
 
-        <div class="detail-label">
-          Valore nominale
         </div>
 
-        <div
-          class="detail-value"
-          id="detailNominale"
-        >
-          900,00 €
+
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Premio netto
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailPremioNetto"
+          >
+            35,00 €
+          </div>
+
         </div>
 
-      </div>
+
+      </section>
 
 
 
-      <div class="detail-field">
+      <!-- =================================================
+           RIMBORSO CON PREMIO
+           ================================================= -->
 
-        <div class="detail-label">
-          Ritenuta fiscale
+      <section class="dettaglio-sezione">
+
+
+        <h2 class="dettaglio-sezione-title">
+          Rimborso con premio
+        </h2>
+
+
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Valore lordo
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailLordoConPremio"
+          >
+            712,44 €
+          </div>
+
         </div>
 
-        <div class="detail-value">
-          0,00 €
+
+        <div class="dettaglio-riga">
+
+          <div class="dettaglio-riga-label">
+            Ritenuta totale
+          </div>
+
+          <div
+            class="dettaglio-riga-value"
+            id="detailRitenutaTotale"
+          >
+            26,56 €
+          </div>
+
         </div>
 
-      </div>
 
+        <div class="dettaglio-riga">
 
+          <div class="dettaglio-riga-label">
+            Valore netto
+          </div>
 
-      <div class="detail-divider"></div>
+          <div
+            class="dettaglio-riga-value"
+            id="detailNettoConPremio"
+          >
+            685,89 €
+          </div>
 
-
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Valore di rimborso netto
         </div>
 
-        <div
-          class="detail-value"
-          id="detailNetto"
-        >
-          900,00 €
+
+      </section>
+
+
+
+      <!-- =================================================
+           INFORMAZIONI
+           ================================================= -->
+
+      <section class="dettaglio-box">
+
+
+        <div class="dettaglio-box-title">
+          Informazioni
         </div>
 
-      </div>
 
+        <div class="dettaglio-box-text">
 
+          I valori indicati sono una simulazione
+          del rimborso del Buono alla scadenza.
 
-      <div class="detail-divider"></div>
-
-
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Valore lordo a scadenza senza il premio
         </div>
 
-        <div
-          class="detail-value"
-          id="detailLordoSenzaPremio"
-        >
-          1210,40 €
-        </div>
 
-      </div>
+      </section>
 
 
 
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Ritenuta fiscale a scadenza
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailRitenutaScadenza"
-        >
-          38,80 €
-        </div>
-
-      </div>
+      <button
+        class="dettaglio-button"
+        onclick="operationMessage('Richiedi rimborso')"
+      >
+        Richiedi rimborso
+      </button>
 
 
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Valore netto a scadenza senza il premio
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailNettoSenzaPremio"
-        >
-          1171,60 €
-        </div>
-
-      </div>
-
-
-
-      <div class="detail-divider"></div>
-
-
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Valore premio lordo a scadenza riferito al valore nominale
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailPremioLordo"
-        >
-          72,00 €
-        </div>
-
-      </div>
-
-
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Ritenuta fiscale sul premio
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailRitenutaPremio"
-        >
-          9,00 €
-        </div>
-
-      </div>
-
-
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Valore premio netto a scadenza riferito al valore nominale
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailPremioNetto"
-        >
-          63,00 €
-        </div>
-
-      </div>
-
-
-
-      <div class="detail-divider"></div>
-
-
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Valore lordo a scadenza con il premio
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailLordoConPremio"
-        >
-          1282,40 €
-        </div>
-
-      </div>
-
-
-
-      <div class="detail-field">
-
-        <div class="detail-label">
-          Ritenuta fiscale sugli interessi e sul premio a scadenza
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailRitenutaTotale"
-        >
-          47,80 €
-        </div>
-
-      </div>
-
-
-
-      <div class="detail-field last-detail-field">
-
-        <div class="detail-label">
-          Valore netto a scadenza con il premio
-        </div>
-
-        <div
-          class="detail-value"
-          id="detailNettoConPremio"
-        >
-          1234,60 €
-        </div>
-
+      <div class="dettaglio-link">
+        Consulta le condizioni del Buono
       </div>
 
 
     </main>
 
 
-
-    <div class="bottom-action">
-
-      <button>
-        <u>
-          Richiedi rimborso
-        </u>
-      </button>
-
-    </div>
-
-
   </div>
 
 
 
-  <!-- CACHE BUST: VERSIONE 10 -->
+  <!-- CACHE BUST: VERSIONE 11 -->
 
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
+
 
 </body>
 
