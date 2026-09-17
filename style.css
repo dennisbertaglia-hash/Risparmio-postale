@@ -8,6 +8,7 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
+
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -16,8 +17,10 @@ body {
     "Helvetica Neue",
     Arial,
     sans-serif;
+
   background: #ffffff;
   color: #111111;
+
   -webkit-font-smoothing: antialiased;
 }
 
@@ -57,13 +60,16 @@ u {
 
 .top-header {
   position: relative;
+
   width: 100%;
-  height: 132px;
+  height: 140px;
+
   background: #ffffff;
 }
 
 .top-header .back-button {
   position: absolute;
+
   left: 18px;
   top: 32px;
 
@@ -71,6 +77,7 @@ u {
   height: 48px;
 
   padding: 0;
+
   border: 1.5px solid #111111;
   border-radius: 50%;
 
@@ -91,20 +98,24 @@ u {
   border-bottom: 4px solid #111111;
 
   transform: rotate(45deg);
+
   margin-left: 4px;
 }
 
 .top-header h1 {
   position: absolute;
+
   left: 18px;
   bottom: 7px;
 
   margin: 0;
 
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1;
+
   font-weight: 500;
-  letter-spacing: -0.5px;
+
+  letter-spacing: -0.4px;
 }
 
 
@@ -114,6 +125,7 @@ u {
 
 .top-icons {
   position: absolute;
+
   right: 18px;
   top: 35px;
 
@@ -138,6 +150,7 @@ u {
   height: 34px;
 
   padding: 0;
+
   border: 0;
 
   background: transparent;
@@ -150,6 +163,7 @@ u {
 .eye-icon {
   width: 28px;
   height: 28px;
+
   display: block;
 }
 
@@ -170,38 +184,44 @@ u {
 
   font-size: 20px;
   line-height: 1;
+
   font-weight: 500;
 
-  color: #0759c9;
+  color: #111111;
 }
 
 
 /* =========================================================
-   RIEPILOGO
+   RIQUADRO BLU
    ========================================================= */
 
 .summary-card {
   width: 100%;
-  height: 184px;
+
+  height: 215px;
 
   margin: 0;
-  padding: 20px 22px;
+
+  padding: 20px 22px 8px;
 
   background: #edf6ff;
+
   border-radius: 24px;
 }
 
 .summary-card h2 {
-  margin: 0 0 17px;
+  margin: 0 0 48px;
 
   font-size: 18px;
   line-height: 1.1;
+
   font-weight: 500;
+
   letter-spacing: -0.3px;
 }
 
 .summary-item {
-  margin: 0 0 10px;
+  margin: 0 0 18px;
 }
 
 .summary-item.second {
@@ -216,6 +236,7 @@ u {
 
   font-size: 15px;
   line-height: 1.2;
+
   font-weight: 300;
 
   color: #111111;
@@ -228,7 +249,9 @@ u {
 
   font-size: 20px;
   line-height: 1.1;
+
   font-weight: 500;
+
   letter-spacing: -0.2px;
 }
 
@@ -246,7 +269,9 @@ u {
 
   font-size: 22px;
   line-height: 1.1;
+
   font-weight: 500;
+
   letter-spacing: -0.4px;
 }
 
@@ -257,17 +282,20 @@ u {
   gap: 31px;
 
   margin-top: 18px;
+
   padding-left: 2px;
 }
 
 .operation-button {
   width: 105px;
   min-width: 105px;
+
   flex: 0 0 105px;
 
   padding: 0;
 
   border: 0;
+
   background: transparent;
 
   color: #111111;
@@ -304,6 +332,7 @@ u {
 
   font-size: 14px;
   line-height: 1.15;
+
   font-weight: 400;
 }
 
@@ -321,7 +350,9 @@ u {
 
   font-size: 22px;
   line-height: 1.1;
+
   font-weight: 500;
+
   letter-spacing: -0.4px;
 }
 
@@ -360,9 +391,11 @@ u {
   padding: 0 11px;
 
   border: 1.4px solid #0759c9;
+
   border-radius: 21px;
 
   background: #ffffff;
+
   color: #0759c9;
 
   display: flex;
@@ -371,6 +404,7 @@ u {
 
   font-size: 13px;
   line-height: 1;
+
   font-weight: 600;
 
   white-space: nowrap;
@@ -397,11 +431,13 @@ u {
 .filtro-sliders-icon line {
   stroke: #0759c9;
   stroke-width: 1.7;
+
   stroke-linecap: round;
 }
 
 .filtro-sliders-icon circle {
   fill: #ffffff;
+
   stroke: #0759c9;
   stroke-width: 1.8;
 }
@@ -431,21 +467,14 @@ u {
 
 
 /* =========================================================
-   LISTA DEI BUONI
+   LISTA BUONI
    ========================================================= */
 
 #listaBuoni {
   width: 100%;
+
   margin-top: 5px;
 }
-
-
-/*
-   IMPORTANTE:
-   Il JavaScript crea direttamente .bond-item.
-   Quindi la griglia viene applicata a .bond-item,
-   non a .bond-item-button.
-*/
 
 .bond-item {
   width: 100%;
@@ -453,13 +482,17 @@ u {
   min-height: 68px;
 
   margin: 0;
+
   padding: 9px 0;
 
   background: #ffffff;
 
   display: grid;
 
-  grid-template-columns: 50px minmax(0, 1fr) 112px;
+  grid-template-columns:
+    50px
+    minmax(0, 1fr)
+    112px;
 
   column-gap: 8px;
 
@@ -467,11 +500,6 @@ u {
 
   cursor: pointer;
 }
-
-
-/* =========================================================
-   ICONA DEL BUONO
-   ========================================================= */
 
 .bond-item-icon {
   width: 50px;
@@ -498,11 +526,6 @@ u {
   display: block;
 }
 
-
-/* =========================================================
-   TESTI DEL BUONO
-   ========================================================= */
-
 .bond-item-info {
   min-width: 0;
 }
@@ -514,6 +537,7 @@ u {
 
   font-size: 12px;
   line-height: 1.2;
+
   font-weight: 300;
 }
 
@@ -524,13 +548,9 @@ u {
 
   font-size: 15px;
   line-height: 1.2;
+
   font-weight: 500;
 }
-
-
-/* =========================================================
-   VALORE RIMBORSO
-   ========================================================= */
 
 .bond-item-value {
   min-width: 0;
@@ -547,6 +567,7 @@ u {
 
   font-size: 10px;
   line-height: 1.1;
+
   font-weight: 300;
 
   white-space: nowrap;
@@ -559,6 +580,7 @@ u {
 
   font-size: 15px;
   line-height: 1.1;
+
   font-weight: 500;
 
   white-space: nowrap;
@@ -608,6 +630,7 @@ u {
   padding: 0;
 
   border: 1.5px solid #111111;
+
   border-radius: 50%;
 
   background: #ffffff;
@@ -634,7 +657,9 @@ u {
 
   font-size: 23px;
   line-height: 1.05;
+
   font-weight: 600;
+
   letter-spacing: -0.4px;
 
   white-space: nowrap;
@@ -710,6 +735,7 @@ u {
 
   font-size: 29px;
   line-height: 1;
+
   font-weight: 600;
 
   letter-spacing: -0.7px;
@@ -727,6 +753,7 @@ u {
 
   font-size: 14px;
   line-height: 1.1;
+
   font-weight: 300;
 }
 
@@ -769,12 +796,13 @@ u {
 .account-text {
   font-size: 14px;
   line-height: 1.2;
+
   font-weight: 300;
 }
 
 
 /* =========================================================
-   DATI DETTAGLIO
+   DETTAGLI
    ========================================================= */
 
 .detail-section-title {
@@ -782,6 +810,7 @@ u {
 
   font-size: 24px;
   line-height: 1.1;
+
   font-weight: 600;
 
   letter-spacing: -0.4px;
@@ -800,6 +829,7 @@ u {
 
   font-size: 14px;
   line-height: 1.2;
+
   font-weight: 300;
 }
 
@@ -810,6 +840,7 @@ u {
 
   font-size: 16px;
   line-height: 1.25;
+
   font-weight: 400;
 }
 
@@ -852,13 +883,16 @@ u {
   height: 52px;
 
   border: 0;
+
   border-radius: 27px;
 
   background: #0759c9;
+
   color: #ffffff;
 
   font-size: 18px;
   line-height: 1;
+
   font-weight: 500;
 
   text-decoration: underline;
@@ -867,7 +901,7 @@ u {
 
 
 /* =========================================================
-   IPHONE PICCOLI
+   IPHONE PICCOLO
    ========================================================= */
 
 @media (max-width: 390px) {
@@ -878,7 +912,7 @@ u {
   }
 
   .top-header {
-    height: 128px;
+    height: 140px;
   }
 
   .top-header .back-button {
@@ -893,7 +927,7 @@ u {
     left: 16px;
     bottom: 7px;
 
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .top-icons {
@@ -922,17 +956,21 @@ u {
     height: 32px;
 
     font-size: 19px;
+
+    color: #111111;
   }
 
   .summary-card {
-    height: 180px;
+    height: 210px;
 
-    padding: 19px 20px;
+    padding: 19px 20px 8px;
 
     border-radius: 23px;
   }
 
   .summary-card h2 {
+    margin-bottom: 46px;
+
     font-size: 18px;
   }
 
@@ -955,6 +993,7 @@ u {
   .operation-button {
     width: 100px;
     min-width: 100px;
+
     flex-basis: 100px;
   }
 
@@ -1002,7 +1041,10 @@ u {
   }
 
   .bond-item {
-    grid-template-columns: 46px minmax(0, 1fr) 106px;
+    grid-template-columns:
+      46px
+      minmax(0, 1fr)
+      106px;
 
     column-gap: 7px;
 
@@ -1055,6 +1097,7 @@ u {
 
   .detail-header h1 {
     bottom: 7px;
+
     font-size: 22px;
   }
 
@@ -1093,7 +1136,7 @@ u {
 @media (max-width: 360px) {
 
   .top-header h1 {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .summary-card {
@@ -1103,6 +1146,7 @@ u {
 
   .summary-card h2 {
     font-size: 17px;
+    margin-bottom: 44px;
   }
 
   .summary-value {
@@ -1116,6 +1160,7 @@ u {
   .operation-button {
     width: 94px;
     min-width: 94px;
+
     flex-basis: 94px;
   }
 
@@ -1134,7 +1179,10 @@ u {
   }
 
   .bond-item {
-    grid-template-columns: 44px minmax(0, 1fr) 100px;
+    grid-template-columns:
+      44px
+      minmax(0, 1fr)
+      100px;
 
     column-gap: 6px;
   }
@@ -1163,60 +1211,5 @@ u {
 
   .bond-item-value .valore {
     font-size: 13px;
-  }
-}
-/* =========================================================
-   DIMENSIONI TITOLI - VERSIONE DEFINITIVA
-   ========================================================= */
-
-.top-header h1 {
-  font-size: 22px !important;
-  font-weight: 500 !important;
-  line-height: 1 !important;
-  letter-spacing: -0.4px !important;
-}
-
-.summary-card h2 {
-  font-size: 18px !important;
-  font-weight: 500 !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.3px !important;
-}
-
-.section-title {
-  font-size: 22px !important;
-  font-weight: 500 !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.4px !important;
-}
-
-.elenco-title {
-  font-size: 22px !important;
-  font-weight: 500 !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.4px !important;
-}
-
-
-/* =========================================================
-   IPHONE PICCOLO
-   ========================================================= */
-
-@media (max-width: 390px) {
-
-  .top-header h1 {
-    font-size: 22px !important;
-  }
-
-  .summary-card h2 {
-    font-size: 18px !important;
-  }
-
-  .section-title {
-    font-size: 21px !important;
-  }
-
-  .elenco-title {
-    font-size: 21px !important;
   }
 }
