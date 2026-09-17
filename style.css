@@ -1167,3 +1167,208 @@ u {
     font-size: 15px;
   }
 }
+/* =========================================================
+   CORREZIONE DEFINITIVA LISTA BUONI
+   ========================================================= */
+
+.buono {
+  width: 100%;
+  margin: 0;
+  padding: 9px 0;
+
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr) 112px;
+  column-gap: 8px;
+  align-items: center;
+
+  background: #ffffff;
+  cursor: pointer;
+}
+
+
+/* PALLINO DEL BUONO */
+
+.buono-icon {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: #edf6ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* SIMBOLO DEL BUONO */
+.buono-icon svg {
+  width: 38px !important;
+  height: 38px !important;
+
+  max-width: 38px !important;
+  max-height: 38px !important;
+
+  display: block;
+}
+
+
+/* TESTO CENTRALE */
+
+.buono-info {
+  min-width: 0;
+}
+
+.buono-info .data {
+  margin: 0 0 3px;
+
+  color: #777777;
+
+  font-size: 12px;
+  line-height: 1.2;
+
+  font-weight: 300;
+}
+
+.buono-info .nome {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 15px;
+  line-height: 1.2;
+
+  font-weight: 500;
+}
+
+
+/* IMPORTO A DESTRA */
+
+.buono-valore {
+  min-width: 0;
+
+  text-align: right;
+}
+
+.buono-valore-label {
+  display: block;
+
+  margin: 0 0 3px;
+
+  color: #777777;
+
+  font-size: 10px;
+  line-height: 1.1;
+
+  font-weight: 300;
+
+  white-space: nowrap;
+}
+
+.buono-valore .valore {
+  display: block;
+
+  color: #111111;
+
+  font-size: 15px;
+  line-height: 1.1;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   RIQUADRO AZZURRO
+   ========================================================= */
+
+.summary-card h2 {
+  font-weight: 500 !important;
+}
+
+.summary-label {
+  font-weight: 300 !important;
+}
+
+.summary-value {
+  font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   OPERAZIONI
+   ========================================================= */
+
+.section-title {
+  font-weight: 400 !important;
+}
+
+
+/* CENTRATURA ICONA ACQUISTA BUONO */
+
+.operation-icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.operation-icon svg {
+  width: 62px !important;
+  height: 62px !important;
+
+  display: block !important;
+
+  transform: translate(2px, 0) !important;
+}
+
+
+/* =========================================================
+   ELENCO BUONI
+   ========================================================= */
+
+.your-bonds .section-title {
+  font-weight: 400 !important;
+}
+
+
+/* =========================================================
+   SCHERMI IPHONE STRETTI
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+  .buono {
+    grid-template-columns: 46px minmax(0, 1fr) 105px;
+    column-gap: 8px;
+  }
+
+  .buono-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .buono-icon svg {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  .buono-info .data {
+    font-size: 11px;
+  }
+
+  .buono-info .nome {
+    font-size: 14px;
+  }
+
+  .buono-valore-label {
+    font-size: 9px;
+  }
+
+  .buono-valore .valore {
+    font-size: 14px;
+  }
+}
