@@ -219,7 +219,9 @@ button {
 }
 
 
-/* 20 BUONI */
+/* =========================================================
+   TOTALE BUONI
+   ========================================================= */
 
 .summary-card h2 {
   position: absolute;
@@ -238,7 +240,9 @@ button {
 }
 
 
-/* BLOCCO VALORE NOMINALE */
+/* =========================================================
+   VALORE NOMINALE
+   ========================================================= */
 
 .summary-item-nominale {
   position: absolute;
@@ -250,19 +254,25 @@ button {
 }
 
 
-/* BLOCCO RIMBORSO LORDO */
+/* =========================================================
+   VALORE RIMBORSO LORDO
+   ========================================================= */
 
 .summary-item-lordo {
   position: absolute;
 
   left: 22px;
-  top: 181px;
+
+  /* PIÙ IN BASSO */
+  top: 158px;
 
   margin: 0;
 }
 
 
-/* ETICHETTE */
+/* =========================================================
+   TESTI RIQUADRO
+   ========================================================= */
 
 .summary-label {
   display: block;
@@ -276,9 +286,6 @@ button {
 
   color: #111111;
 }
-
-
-/* VALORI */
 
 .summary-value {
   display: block;
@@ -996,6 +1003,9 @@ button {
     font-size: 17px;
   }
 
+
+  /* RIQUADRO */
+
   .summary-card {
     height: 210px;
 
@@ -1014,9 +1024,14 @@ button {
     top: 105px;
   }
 
+  /*
+     IL RIMBORSO LORDO VIENE
+     PIÙ IN BASSO
+  */
+
   .summary-item-lordo {
     left: 20px;
-    top: 176px;
+    top: 158px;
   }
 
   .summary-label {
@@ -1026,6 +1041,9 @@ button {
   .summary-value {
     font-size: 18px;
   }
+
+
+  /* OPERAZIONI */
 
   .section-title {
     font-size: 20px;
@@ -1056,6 +1074,9 @@ button {
     font-size: 13px;
   }
 
+
+  /* ELENCO */
+
   .your-bonds {
     margin-top: 30px;
   }
@@ -1063,6 +1084,9 @@ button {
   .elenco-title {
     font-size: 20px;
   }
+
+
+  /* FILTRI */
 
   .filtro {
     height: 32px;
@@ -1084,6 +1108,9 @@ button {
     width: 154px;
     min-width: 154px;
   }
+
+
+  /* LISTA */
 
   .bond-item {
     grid-template-columns:
@@ -1123,6 +1150,9 @@ button {
   .bond-item-value .valore {
     font-size: 14px;
   }
+
+
+  /* DETTAGLIO */
 
   #paginaDettaglio {
     padding-left: 16px;
@@ -1171,6 +1201,7 @@ button {
   .detail-section-title {
     font-size: 23px;
   }
+
 }
 
 
@@ -1198,7 +1229,9 @@ button {
 
   .summary-item-lordo {
     left: 18px;
-    top: 171px;
+
+    /* PIÙ IN BASSO ANCHE SUI MODELLI STRETTI */
+    top: 153px;
   }
 
   .summary-value {
@@ -1264,6 +1297,7 @@ button {
   .bond-item-value .valore {
     font-size: 13px;
   }
+
 }
 
 </style>
@@ -1930,6 +1964,7 @@ Richiedi rimborso
 
 
 <script>
+
 
 /* =========================================================
    DATI DEI 20 BUONI
