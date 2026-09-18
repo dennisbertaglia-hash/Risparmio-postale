@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
 
@@ -249,8 +249,11 @@ button {
 
   left: 22px;
 
-  /* SOLO POCHI PIXEL PIÙ IN ALTO */
-  top: 103px;
+  /*
+     SOLO POCHI PIXEL PIÙ IN ALTO
+     RISPETTO ALLA POSIZIONE PRECEDENTE
+  */
+  top: 105px;
 
   margin: 0;
 }
@@ -265,8 +268,10 @@ button {
 
   left: 22px;
 
-  /* PIÙ IN BASSO, CON SPAZIO DAL NOMINALE */
-  top: 153px;
+  /*
+     QUESTA POSIZIONE NON VIENE ALZATA
+  */
+  top: 132px;
 
   margin: 0;
 }
@@ -1024,15 +1029,20 @@ button {
   .summary-item-nominale {
     left: 20px;
 
-    /* SOLO POCHI PIXEL PIÙ IN ALTO */
-    top: 100px;
+    /*
+       RESTA LEGGERMENTE PIÙ IN ALTO
+       ANCHE SU IPHONE PICCOLO
+    */
+    top: 102px !important;
   }
 
   .summary-item-lordo {
     left: 20px;
 
-    /* PIÙ IN BASSO */
-    top: 150px;
+    /*
+       RIMANE NELLA POSIZIONE PRECEDENTE
+    */
+    top: 132px !important;
   }
 
   .summary-label {
@@ -1226,15 +1236,19 @@ button {
   .summary-item-nominale {
     left: 18px;
 
-    /* SOLO POCHI PIXEL PIÙ IN ALTO */
-    top: 96px;
+    /*
+       SOLO POCHI PIXEL PIÙ IN ALTO
+    */
+    top: 98px !important;
   }
 
   .summary-item-lordo {
     left: 18px;
 
-    /* PIÙ IN BASSO */
-    top: 146px;
+    /*
+       NON ALZARE IL RIMBORSO LORDO
+    */
+    top: 132px !important;
   }
 
   .summary-value {
@@ -1393,7 +1407,9 @@ button {
 </h2>
 
 
-<div class="summary-item-nominale">
+<div
+  class="summary-item-nominale"
+  style="top:102px !important;">
 
 <span class="summary-label">
 Valore nominale
@@ -1408,7 +1424,9 @@ Valore nominale
 </div>
 
 
-<div class="summary-item-lordo">
+<div
+  class="summary-item-lordo"
+  style="top:132px !important;">
 
 <span class="summary-label">
 Valore rimborso lordo
