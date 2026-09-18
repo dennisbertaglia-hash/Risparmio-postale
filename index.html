@@ -846,7 +846,7 @@ button {
 
 
 /* =========================================================
-   ACCREDITO
+   ACCREDITO SU CONTO
    ========================================================= */
 
 .detail-account {
@@ -862,21 +862,21 @@ button {
   align-items: center;
   justify-content: center;
 
-  gap: 8px;
+  gap: 12px;
 
   padding: 9px 16px;
 }
 
 .account-icon {
-  width: 44px;
-  height: 34px;
+  width: 58px;
+  height: 42px;
 
-  flex: 0 0 44px;
+  flex: 0 0 58px;
 }
 
 .account-icon svg {
-  width: 44px;
-  height: 34px;
+  width: 58px;
+  height: 42px;
 
   display: block;
 }
@@ -885,7 +885,9 @@ button {
   font-size: 14px;
   line-height: 1.2;
 
-  font-weight: 300;
+  font-weight: 400;
+
+  text-align: left;
 }
 
 
@@ -1264,6 +1266,24 @@ button {
     min-height: 66px;
 
     border-radius: 0 0 23px 23px;
+
+    gap: 10px;
+  }
+
+  .account-icon {
+    width: 54px;
+    height: 40px;
+
+    flex-basis: 54px;
+  }
+
+  .account-icon svg {
+    width: 54px;
+    height: 40px;
+  }
+
+  .account-text {
+    font-size: 14px;
   }
 
   .detail-section-title {
@@ -1639,9 +1659,6 @@ Buono
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-
-<!-- MONETINE A SINISTRA -->
-
 <circle
   cx="29"
   cy="24"
@@ -1658,9 +1675,6 @@ Buono
   stroke="#E0B900"
   stroke-width="1.5"/>
 
-
-<!-- BANCONOTA VERDE -->
-
 <rect
   x="24"
   y="25"
@@ -1669,9 +1683,6 @@ Buono
   rx="2"
   transform="rotate(-4 24 25)"
   fill="#45C96B"/>
-
-
-<!-- PORTAFOGLIO -->
 
 <path
   d="M18 30
@@ -1685,15 +1696,11 @@ Buono
      V30Z"
   fill="#FFD400"/>
 
-
 <path
   d="M22 26H53C55.2 26 57 27.8 57 30"
   stroke="#E0B900"
   stroke-width="2"
   stroke-linecap="round"/>
-
-
-<!-- CHIUSURA BLU -->
 
 <path
   d="M44 36H57V48H44
@@ -1706,9 +1713,6 @@ Buono
   cy="42"
   r="2.2"
   fill="#FFFFFF"/>
-
-
-<!-- FRECCIA VERDE -->
 
 <path
   d="M17 48L24 41L31 48"
@@ -1858,16 +1862,12 @@ Buono 3×4 con premio
 <div class="detail-card-top">
 
 
-<!-- ICONA STILE ESEMPIO -->
-
 <div class="detail-buono-icon">
 
 <svg
   viewBox="0 0 72 72"
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
-
-<!-- BANCONOTA POSTERIORE -->
 
 <rect
   x="18"
@@ -1878,17 +1878,11 @@ Buono 3×4 con premio
   transform="rotate(-15 18 23)"
   fill="#D8C000"/>
 
-
-<!-- PICCOLO SEGNO BLU -->
-
 <path
   d="M38 21L40 28"
   stroke="#0759C9"
   stroke-width="3"
   stroke-linecap="round"/>
-
-
-<!-- BUONO PRINCIPALE -->
 
 <rect
   x="13"
@@ -1897,9 +1891,6 @@ Buono 3×4 con premio
   height="27"
   rx="2"
   fill="#FFD400"/>
-
-
-<!-- EURO -->
 
 <text
   x="18"
@@ -1910,9 +1901,6 @@ Buono 3×4 con premio
   fill="#0759C9">
 €
 </text>
-
-
-<!-- RIGHE -->
 
 <rect
   x="34"
@@ -1940,7 +1928,7 @@ Buono 3×4 con premio
 <div id="detailRimborso"></div>
 
 <div class="detail-rimborso-label">
-Valore di rimborso netto
+Valore di rimborso lordo
 </div>
 
 </div>
@@ -1952,45 +1940,52 @@ Valore di rimborso netto
 
 <div class="account-icon">
 
+<!-- CARTA BLU E GIALLA DEL MODELLO -->
+
 <svg
-  viewBox="0 0 44 34"
+  viewBox="0 0 58 42"
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
 <rect
-  x="4"
+  x="7"
   y="6"
-  width="36"
-  height="22"
-  rx="4"
-  fill="#FFFFFF"
-  stroke="#0759C9"
-  stroke-width="2"/>
-
-<path
-  d="M10 13H34"
-  stroke="#0759C9"
-  stroke-width="2"
-  stroke-linecap="round"/>
-
-<path
-  d="M10 19H25"
-  stroke="#0759C9"
-  stroke-width="2"
-  stroke-linecap="round"/>
-
-<circle
-  cx="33"
-  cy="19"
-  r="2"
+  width="44"
+  height="30"
+  rx="6"
   fill="#0759C9"/>
+
+<rect
+  x="7"
+  y="6"
+  width="6"
+  height="30"
+  rx="3"
+  fill="#FFD400"/>
+
+<rect
+  x="16"
+  y="13"
+  width="20"
+  height="4"
+  rx="2"
+  fill="#FFFFFF"/>
+
+<rect
+  x="16"
+  y="22"
+  width="27"
+  height="3"
+  rx="1.5"
+  fill="#FFFFFF"/>
 
 </svg>
 
 </div>
 
 <div class="account-text">
-Accredito sul conto corrente
+Regolato su Conto<br>
+001062627284
 </div>
 
 </div>
@@ -2728,10 +2723,14 @@ function apriDettaglio(indice) {
     "Buono 3×4 con premio";
 
 
+  /*
+   * QUI MOSTRIAMO IL VALORE NOMINALE
+   * DEL BUONO, NON IL RIMBORSO NETTO.
+   */
   document.getElementById(
     "detailRimborso"
   ).innerHTML =
-    euroGrande(dati.nettoConPremio);
+    euroGrande(buono.nominale);
 
 
   document.getElementById(
