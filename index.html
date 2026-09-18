@@ -248,9 +248,16 @@ button {
   position: absolute;
 
   left: 22px;
-  top: 105px;
+
+  /*
+     POSIZIONE FISSA.
+     LABEL E VALORE RESTANO UNO SOTTO L'ALTRO.
+  */
+  top: 101px;
 
   margin: 0;
+
+  height: auto;
 }
 
 
@@ -262,9 +269,16 @@ button {
   position: absolute;
 
   left: 22px;
-  top: 132px;
+
+  /*
+     DISTANZA SUFFICIENTE DAL VALORE NOMINALE
+     PER EVITARE QUALSIASI SOVRAPPOSIZIONE.
+  */
+  top: 151px;
 
   margin: 0;
+
+  height: auto;
 }
 
 
@@ -535,7 +549,7 @@ button {
   display: grid;
 
   grid-template-columns:
-    52px
+    50px
     minmax(0, 1fr)
     112px;
 
@@ -546,9 +560,14 @@ button {
   cursor: pointer;
 }
 
+
+/* =========================================================
+   ICONA BUONO
+   ========================================================= */
+
 .bond-item-icon {
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
 
   border-radius: 50%;
 
@@ -562,11 +581,16 @@ button {
 }
 
 .bond-item-icon svg {
-  width: 46px;
-  height: 46px;
+  width: 39px;
+  height: 39px;
 
   display: block;
 }
+
+
+/* =========================================================
+   TESTO BUONO
+   ========================================================= */
 
 .bond-item-info {
   min-width: 0;
@@ -593,6 +617,11 @@ button {
 
   font-weight: 500;
 }
+
+
+/* =========================================================
+   VALORE BUONO
+   ========================================================= */
 
 .bond-item-value {
   min-width: 0;
@@ -1019,12 +1048,14 @@ button {
 
   .summary-item-nominale {
     left: 20px;
-    top: 102px !important;
+
+    top: 101px !important;
   }
 
   .summary-item-lordo {
     left: 20px;
-    top: 132px !important;
+
+    top: 151px !important;
   }
 
   .summary-label {
@@ -1119,13 +1150,13 @@ button {
   }
 
   .bond-item-icon {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
   }
 
   .bond-item-icon svg {
-    width: 44px;
-    height: 44px;
+    width: 39px;
+    height: 39px;
   }
 
   .bond-item-info .data {
@@ -1219,12 +1250,14 @@ button {
 
   .summary-item-nominale {
     left: 18px;
+
     top: 98px !important;
   }
 
   .summary-item-lordo {
     left: 18px;
-    top: 132px !important;
+
+    top: 146px !important;
   }
 
   .summary-value {
@@ -1273,13 +1306,13 @@ button {
   }
 
   .bond-item-icon {
-    width: 48px;
-    height: 48px;
+    width: 46px;
+    height: 46px;
   }
 
   .bond-item-icon svg {
-    width: 42px;
-    height: 42px;
+    width: 39px;
+    height: 39px;
   }
 
   .bond-item-info .data {
@@ -1390,9 +1423,7 @@ button {
 </h2>
 
 
-<div
-  class="summary-item-nominale"
-  style="top:102px !important;">
+<div class="summary-item-nominale">
 
 <span class="summary-label">
 Valore nominale
@@ -1407,9 +1438,7 @@ Valore nominale
 </div>
 
 
-<div
-  class="summary-item-lordo"
-  style="top:132px !important;">
+<div class="summary-item-lordo">
 
 <span class="summary-label">
 Valore rimborso lordo
@@ -1748,16 +1777,8 @@ Buono 3×4 con premio
   stroke="#0759C9"
   stroke-width="2"/>
 
-<rect
-  x="10"
-  y="18"
-  width="9"
-  height="36"
-  rx="3"
-  fill="#0759C9"/>
-
 <text
-  x="23"
+  x="20"
   y="42"
   font-family="Arial, sans-serif"
   font-size="19"
@@ -2182,54 +2203,46 @@ function creaIconaBuono() {
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- Buono bianco con bordo blu -->
+<!-- Rettangolo bianco con bordo blu -->
 
 <rect
-  x="10"
-  y="18"
-  width="52"
-  height="36"
+  x="11"
+  y="20"
+  width="50"
+  height="32"
   rx="6"
   fill="#FFFFFF"
   stroke="#0759C9"
-  stroke-width="2"/>
+  stroke-width="2.5"/>
 
-<!-- Fascia blu a sinistra -->
-
-<rect
-  x="10"
-  y="18"
-  width="9"
-  height="36"
-  rx="3"
-  fill="#0759C9"/>
-
-<!-- Simbolo euro -->
+<!-- Simbolo euro a sinistra -->
 
 <text
-  x="23"
-  y="42"
+  x="19"
+  y="41.5"
   font-family="Arial, sans-serif"
-  font-size="19"
+  font-size="18"
   font-weight="700"
   fill="#0759C9">
 €
 </text>
 
-<!-- Due righe -->
+<!-- Prima riga -->
 
 <rect
   x="39"
   y="31"
-  width="16"
+  width="15"
   height="3"
   rx="1.5"
   fill="#0759C9"/>
 
+<!-- Seconda riga -->
+
 <rect
   x="39"
   y="39"
-  width="12"
+  width="11"
   height="3"
   rx="1.5"
   fill="#0759C9"/>
