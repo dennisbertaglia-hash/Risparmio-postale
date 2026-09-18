@@ -676,14 +676,17 @@ button {
   height: 132px;
 }
 
+
+/* FRECCIA */
+
 .detail-back {
   position: absolute;
 
   left: 0;
-  top: 32px;
+  top: 0;
 
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
 
   padding: 0;
 
@@ -707,17 +710,22 @@ button {
   height: 30px;
 }
 
+
+/* TITOLO */
+
 .detail-header h1 {
   position: absolute;
 
+  top: 59px;
   left: 0;
-  bottom: 7px;
 
   width: 100%;
 
   margin: 0;
 
-  font-size: 23px;
+  text-align: center;
+
+  font-size: 22px;
   line-height: 1.05;
 
   font-weight: 600;
@@ -745,20 +753,27 @@ button {
 
   border-radius: 24px;
 
-  overflow: hidden;
+  overflow: visible;
 }
 
 .detail-card-top {
   position: relative;
 
   width: 100%;
-  height: 230px;
+  height: 135px;
+
+  border-radius: 24px 24px 0 0;
 }
+
+
+/* =========================================================
+   ICONA BUONO
+   ========================================================= */
 
 .detail-buono-icon {
   position: absolute;
 
-  top: 16px;
+  top: -30px;
   left: 50%;
 
   transform: translateX(-50%);
@@ -768,13 +783,15 @@ button {
 
   border-radius: 50%;
 
-  background: #ffffff;
+  background: #aebfff;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   overflow: hidden;
+
+  z-index: 2;
 }
 
 .detail-buono-icon svg {
@@ -784,20 +801,23 @@ button {
   display: block;
 }
 
+
+/* =========================================================
+   RIMBORSO PRINCIPALE
+   ========================================================= */
+
 .detail-rimborso {
   position: absolute;
 
   left: 0;
   right: 0;
 
-  bottom: 48px;
+  bottom: 22px;
 
   text-align: center;
 }
 
-.detail-rimborso span {
-  display: block;
-
+.detail-rimborso .parte-intera {
   font-size: 29px;
   line-height: 1;
 
@@ -806,15 +826,17 @@ button {
   letter-spacing: -0.7px;
 }
 
+.detail-rimborso .parte-decimale {
+  font-size: 21px;
+  line-height: 1;
+
+  font-weight: 400;
+
+  letter-spacing: -0.3px;
+}
+
 .detail-rimborso-label {
-  position: absolute;
-
-  left: 0;
-  right: 0;
-
-  bottom: -28px;
-
-  text-align: center;
+  margin-top: 9px;
 
   font-size: 14px;
   line-height: 1.1;
@@ -831,6 +853,8 @@ button {
   min-height: 68px;
 
   border-top: 1.5px solid #ffffff;
+
+  border-radius: 0 0 24px 24px;
 
   background: #edf6ff;
 
@@ -866,13 +890,13 @@ button {
 
 
 /* =========================================================
-   DETTAGLI
+   RIEPILOGO DATI
    ========================================================= */
 
 .detail-section-title {
-  margin: 28px 0 22px;
+  margin: 34px 0 28px;
 
-  font-size: 24px;
+  font-size: 23px;
   line-height: 1.1;
 
   font-weight: 600;
@@ -881,18 +905,18 @@ button {
 }
 
 .detail-field {
-  margin-bottom: 23px;
+  margin-bottom: 30px;
 }
 
 .detail-label {
   display: block;
 
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 
   color: #777777;
 
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.25;
 
   font-weight: 300;
 }
@@ -912,9 +936,13 @@ button {
   width: 100%;
   height: 1px;
 
-  margin: 21px 0;
+  margin: 26px 0;
 
   background: #e3e3e3;
+}
+
+.detail-group {
+  width: 100%;
 }
 
 .last-detail-field {
@@ -1178,18 +1206,18 @@ button {
   }
 
   .detail-header {
-    height: 128px;
+    height: 132px;
   }
 
   .detail-back {
-    top: 30px;
+    top: 0;
 
     width: 46px;
     height: 46px;
   }
 
   .detail-header h1 {
-    bottom: 7px;
+    top: 59px;
 
     font-size: 22px;
   }
@@ -1199,12 +1227,16 @@ button {
   }
 
   .detail-card-top {
-    height: 220px;
+    height: 135px;
+
+    border-radius: 23px 23px 0 0;
   }
 
   .detail-buono-icon {
     width: 78px;
     height: 78px;
+
+    top: -29px;
   }
 
   .detail-buono-icon svg {
@@ -1212,12 +1244,44 @@ button {
     height: 72px;
   }
 
-  .detail-rimborso span {
-    font-size: 27px;
+  .detail-rimborso {
+    bottom: 21px;
+  }
+
+  .detail-rimborso .parte-intera {
+    font-size: 28px;
+  }
+
+  .detail-rimborso .parte-decimale {
+    font-size: 20px;
+  }
+
+  .detail-rimborso-label {
+    font-size: 14px;
+  }
+
+  .detail-account {
+    min-height: 66px;
+
+    border-radius: 0 0 23px 23px;
   }
 
   .detail-section-title {
+    margin-top: 32px;
+
     font-size: 23px;
+  }
+
+  .detail-field {
+    margin-bottom: 29px;
+  }
+
+  .detail-label {
+    font-size: 14px;
+  }
+
+  .detail-value {
+    font-size: 16px;
   }
 
 }
@@ -1321,6 +1385,37 @@ button {
 
   .bond-item-value .valore {
     font-size: 13px;
+  }
+
+
+  /* DETTAGLIO */
+
+  .detail-header h1 {
+    font-size: 21px;
+  }
+
+  .detail-card-top {
+    height: 132px;
+  }
+
+  .detail-buono-icon {
+    width: 76px;
+    height: 76px;
+
+    top: -28px;
+  }
+
+  .detail-buono-icon svg {
+    width: 70px;
+    height: 70px;
+  }
+
+  .detail-rimborso .parte-intera {
+    font-size: 27px;
+  }
+
+  .detail-rimborso .parte-decimale {
+    font-size: 19px;
   }
 
 }
@@ -1447,10 +1542,6 @@ Operazioni
 <div class="operations">
 
 
-<!-- =====================================================
-     ACQUISTA BUONO
-     ===================================================== -->
-
 <button
   class="operation-button"
   type="button"
@@ -1463,7 +1554,6 @@ Operazioni
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- BIGLIETTO POSTERIORE -->
 <rect
   x="19"
   y="20"
@@ -1473,7 +1563,6 @@ Operazioni
   transform="rotate(-7 19 20)"
   fill="#E6C900"/>
 
-<!-- BIGLIETTO PRINCIPALE -->
 <rect
   x="14"
   y="27"
@@ -1482,7 +1571,6 @@ Operazioni
   rx="4"
   fill="#FFD400"/>
 
-<!-- EURO BLU PICCOLO -->
 <text
   x="19"
   y="44"
@@ -1493,7 +1581,6 @@ Operazioni
 €
 </text>
 
-<!-- RIGHE BIANCHE -->
 <rect
   x="29"
   y="36"
@@ -1510,7 +1597,6 @@ Operazioni
   rx="1.5"
   fill="#FFFFFF"/>
 
-<!-- PLUS VERDE LEGGERMENTE PIU PICCOLO -->
 <circle
   cx="56"
   cy="53"
@@ -1541,10 +1627,6 @@ Buono
 </button>
 
 
-<!-- =====================================================
-     RICHIEDI RIMBORSO
-     ===================================================== -->
-
 <button
   class="operation-button"
   type="button"
@@ -1558,10 +1640,7 @@ Buono
   xmlns="http://www.w3.org/2000/svg">
 
 
-<!-- =====================================================
-     MONETINE:
-     SONO A SINISTRA E SPUNTANO SOLO UN PO'
-     ===================================================== -->
+<!-- MONETINE A SINISTRA -->
 
 <circle
   cx="29"
@@ -1580,10 +1659,7 @@ Buono
   stroke-width="1.5"/>
 
 
-<!-- =====================================================
-     BANCONOTA VERDE:
-     SPUNTA DA DIETRO IL PORTAFOGLIO
-     ===================================================== -->
+<!-- BANCONOTA VERDE -->
 
 <rect
   x="24"
@@ -1595,9 +1671,7 @@ Buono
   fill="#45C96B"/>
 
 
-<!-- =====================================================
-     PORTAFOGLIO GIALLO
-     ===================================================== -->
+<!-- PORTAFOGLIO -->
 
 <path
   d="M18 30
@@ -1612,8 +1686,6 @@ Buono
   fill="#FFD400"/>
 
 
-<!-- BORDO SUPERIORE -->
-
 <path
   d="M22 26H53C55.2 26 57 27.8 57 30"
   stroke="#E0B900"
@@ -1621,9 +1693,7 @@ Buono
   stroke-linecap="round"/>
 
 
-<!-- =====================================================
-     CHIUSURA BLU
-     ===================================================== -->
+<!-- CHIUSURA BLU -->
 
 <path
   d="M44 36H57V48H44
@@ -1638,11 +1708,7 @@ Buono
   fill="#FFFFFF"/>
 
 
-<!-- =====================================================
-     FRECCIA VERDE:
-     PIU' PICCOLA, SCHIACCIATA E CICCIOTTA
-     APPOGGIATA AL BORDO SINISTRO
-     ===================================================== -->
+<!-- FRECCIA VERDE -->
 
 <path
   d="M17 48L24 41L31 48"
@@ -1656,7 +1722,6 @@ Buono
   stroke="#45C96B"
   stroke-width="9"
   stroke-linecap="round"/>
-
 
 </svg>
 
@@ -1793,6 +1858,8 @@ Buono 3×4 con premio
 <div class="detail-card-top">
 
 
+<!-- ICONA STILE ESEMPIO -->
+
 <div class="detail-buono-icon">
 
 <svg
@@ -1800,41 +1867,68 @@ Buono 3×4 con premio
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
+<!-- BANCONOTA POSTERIORE -->
+
 <rect
-  x="10"
-  y="18"
-  width="52"
-  height="36"
-  rx="6"
-  fill="#FFFFFF"
+  x="18"
+  y="23"
+  width="42"
+  height="27"
+  rx="2"
+  transform="rotate(-15 18 23)"
+  fill="#D8C000"/>
+
+
+<!-- PICCOLO SEGNO BLU -->
+
+<path
+  d="M38 21L40 28"
   stroke="#0759C9"
-  stroke-width="2"/>
+  stroke-width="3"
+  stroke-linecap="round"/>
+
+
+<!-- BUONO PRINCIPALE -->
+
+<rect
+  x="13"
+  y="29"
+  width="47"
+  height="27"
+  rx="2"
+  fill="#FFD400"/>
+
+
+<!-- EURO -->
 
 <text
-  x="20"
-  y="42"
+  x="18"
+  y="47"
   font-family="Arial, sans-serif"
-  font-size="19"
+  font-size="16"
   font-weight="700"
   fill="#0759C9">
 €
 </text>
 
-<rect
-  x="39"
-  y="31"
-  width="16"
-  height="3"
-  rx="1.5"
-  fill="#0759C9"/>
+
+<!-- RIGHE -->
 
 <rect
-  x="39"
-  y="39"
-  width="12"
+  x="34"
+  y="38"
+  width="22"
   height="3"
   rx="1.5"
-  fill="#0759C9"/>
+  fill="#FFFFFF"/>
+
+<rect
+  x="34"
+  y="45"
+  width="22"
+  height="3"
+  rx="1.5"
+  fill="#FFFFFF"/>
 
 </svg>
 
@@ -1843,12 +1937,10 @@ Buono 3×4 con premio
 
 <div class="detail-rimborso">
 
-<span id="detailRimborso">
-685,89 €
-</span>
+<div id="detailRimborso"></div>
 
 <div class="detail-rimborso-label">
-Valore rimborso netto
+Valore di rimborso netto
 </div>
 
 </div>
@@ -1906,9 +1998,43 @@ Accredito sul conto corrente
 </section>
 
 
+<!-- =========================================================
+     RIEPILOGO
+     ========================================================= -->
+
 <h2 class="detail-section-title">
-Dettagli
+Riepilogo dei dati
 </h2>
+
+
+<div class="detail-field">
+
+<span class="detail-label">
+Sottoscritto il
+</span>
+
+<span
+  class="detail-value"
+  id="detailDataSottoscrizione">
+16 Settembre 2026
+</span>
+
+</div>
+
+
+<div class="detail-field">
+
+<span class="detail-label">
+Scade il
+</span>
+
+<span
+  class="detail-value"
+  id="detailDataScadenza">
+16 Settembre 2038
+</span>
+
+</div>
 
 
 <div class="detail-field">
@@ -1929,28 +2055,13 @@ Valore nominale
 <div class="detail-field">
 
 <span class="detail-label">
-Data sottoscrizione
+Ritenuta fiscale
 </span>
 
 <span
   class="detail-value"
-  id="detailDataSottoscrizione">
-16 Settembre 2026
-</span>
-
-</div>
-
-
-<div class="detail-field">
-
-<span class="detail-label">
-Data scadenza
-</span>
-
-<span
-  class="detail-value"
-  id="detailDataScadenza">
-16 Settembre 2038
+  id="detailRitenuta">
+0,00 €
 </span>
 
 </div>
@@ -1959,10 +2070,118 @@ Data scadenza
 <div class="detail-divider"></div>
 
 
+<!-- =========================================================
+     SENZA PREMIO
+     ========================================================= -->
+
 <div class="detail-field">
 
 <span class="detail-label">
-Valore rimborso lordo
+Valore lordo a scadenza senza il premio
+</span>
+
+<span
+  class="detail-value"
+  id="detailLordoSenzaPremio">
+672,44 €
+</span>
+
+</div>
+
+
+<div class="detail-field">
+
+<span class="detail-label">
+Ritenuta fiscale a scadenza
+</span>
+
+<span
+  class="detail-value"
+  id="detailRitenutaSenzaPremio">
+21,56 €
+</span>
+
+</div>
+
+
+<div class="detail-field">
+
+<span class="detail-label">
+Valore netto a scadenza senza il premio
+</span>
+
+<span
+  class="detail-value"
+  id="detailNettoSenzaPremio">
+650,89 €
+</span>
+
+</div>
+
+
+<div class="detail-divider"></div>
+
+
+<!-- =========================================================
+     PREMIO
+     ========================================================= -->
+
+<div class="detail-field">
+
+<span class="detail-label">
+Valore premio lordo a scadenza riferito al valore nominale
+</span>
+
+<span
+  class="detail-value"
+  id="detailPremioLordo">
+40,00 €
+</span>
+
+</div>
+
+
+<div class="detail-field">
+
+<span class="detail-label">
+Ritenuta fiscale sul premio
+</span>
+
+<span
+  class="detail-value"
+  id="detailRitenutaPremio">
+5,00 €
+</span>
+
+</div>
+
+
+<div class="detail-field">
+
+<span class="detail-label">
+Valore premio netto a scadenza riferito al valore nominale
+</span>
+
+<span
+  class="detail-value"
+  id="detailPremioNetto">
+35,00 €
+</span>
+
+</div>
+
+
+<div class="detail-divider"></div>
+
+
+<!-- =========================================================
+     CON PREMIO
+     ========================================================= -->
+
+<div class="detail-field">
+
+<span class="detail-label">
+Valore lordo a scadenza con il premio
 </span>
 
 <span
@@ -1977,12 +2196,12 @@ Valore rimborso lordo
 <div class="detail-field">
 
 <span class="detail-label">
-Ritenuta fiscale
+Ritenuta fiscale sugli interessi e sul premio a scadenza
 </span>
 
 <span
   class="detail-value"
-  id="detailRitenuta">
+  id="detailRitenutaTotale">
 26,56 €
 </span>
 
@@ -1992,7 +2211,7 @@ Ritenuta fiscale
 <div class="detail-field last-detail-field">
 
 <span class="detail-label">
-Valore rimborso netto
+Valore netto a scadenza con il premio
 </span>
 
 <span
@@ -2002,6 +2221,7 @@ Valore rimborso netto
 </span>
 
 </div>
+
 
 </main>
 
@@ -2165,6 +2385,32 @@ function euro(valore) {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2
   }) + " €";
+
+}
+
+
+/* =========================================================
+   EURO GRANDE
+   ========================================================= */
+
+function euroGrande(valore) {
+
+  const numero =
+    Number(valore).toLocaleString("it-IT", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+
+  const parti =
+    numero.split(",");
+
+  return `
+    <span class="parte-intera">
+      ${parti[0]}
+    </span><span class="parte-decimale">
+      ,${parti[1]} €
+    </span>
+  `;
 
 }
 
@@ -2484,8 +2730,8 @@ function apriDettaglio(indice) {
 
   document.getElementById(
     "detailRimborso"
-  ).textContent =
-    euro(dati.nettoConPremio);
+  ).innerHTML =
+    euroGrande(dati.nettoConPremio);
 
 
   document.getElementById(
@@ -2507,13 +2753,55 @@ function apriDettaglio(indice) {
 
 
   document.getElementById(
+    "detailRitenuta"
+  ).textContent =
+    "0,00 €";
+
+
+  document.getElementById(
+    "detailLordoSenzaPremio"
+  ).textContent =
+    euro(dati.lordoSenzaPremio);
+
+
+  document.getElementById(
+    "detailRitenutaSenzaPremio"
+  ).textContent =
+    euro(dati.ritenutaSenzaPremio);
+
+
+  document.getElementById(
+    "detailNettoSenzaPremio"
+  ).textContent =
+    euro(dati.nettoSenzaPremio);
+
+
+  document.getElementById(
+    "detailPremioLordo"
+  ).textContent =
+    euro(dati.premioLordo);
+
+
+  document.getElementById(
+    "detailRitenutaPremio"
+  ).textContent =
+    euro(dati.ritenutaPremio);
+
+
+  document.getElementById(
+    "detailPremioNetto"
+  ).textContent =
+    euro(dati.premioNetto);
+
+
+  document.getElementById(
     "detailLordo"
   ).textContent =
     euro(dati.lordoConPremio);
 
 
   document.getElementById(
-    "detailRitenuta"
+    "detailRitenutaTotale"
   ).textContent =
     euro(dati.ritenutaTotale);
 
