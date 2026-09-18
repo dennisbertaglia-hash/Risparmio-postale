@@ -248,11 +248,6 @@ button {
   position: absolute;
 
   left: 22px;
-
-  /*
-     SOLO POCHI PIXEL PIÙ IN ALTO
-     RISPETTO ALLA POSIZIONE PRECEDENTE
-  */
   top: 105px;
 
   margin: 0;
@@ -267,10 +262,6 @@ button {
   position: absolute;
 
   left: 22px;
-
-  /*
-     QUESTA POSIZIONE NON VIENE ALZATA
-  */
   top: 132px;
 
   margin: 0;
@@ -533,18 +524,18 @@ button {
 .bond-item {
   width: 100%;
 
-  min-height: 68px;
+  min-height: 72px;
 
   margin: 0;
 
-  padding: 9px 0;
+  padding: 10px 0;
 
   background: #ffffff;
 
   display: grid;
 
   grid-template-columns:
-    50px
+    52px
     minmax(0, 1fr)
     112px;
 
@@ -556,8 +547,8 @@ button {
 }
 
 .bond-item-icon {
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
 
   border-radius: 50%;
 
@@ -571,8 +562,8 @@ button {
 }
 
 .bond-item-icon svg {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
 
   display: block;
 }
@@ -582,7 +573,7 @@ button {
 }
 
 .bond-item-info .data {
-  margin: 0 0 3px;
+  margin: 0 0 4px;
 
   color: #777777;
 
@@ -1028,20 +1019,11 @@ button {
 
   .summary-item-nominale {
     left: 20px;
-
-    /*
-       RESTA LEGGERMENTE PIÙ IN ALTO
-       ANCHE SU IPHONE PICCOLO
-    */
     top: 102px !important;
   }
 
   .summary-item-lordo {
     left: 20px;
-
-    /*
-       RIMANE NELLA POSIZIONE PRECEDENTE
-    */
     top: 132px !important;
   }
 
@@ -1121,33 +1103,35 @@ button {
   }
 
 
-  /* LISTA */
+  /* LISTA BUONI */
 
   .bond-item {
     grid-template-columns:
-      46px
+      50px
       minmax(0, 1fr)
       106px;
 
     column-gap: 7px;
 
-    min-height: 64px;
+    min-height: 70px;
 
-    padding: 8px 0;
+    padding: 9px 0;
   }
 
   .bond-item-icon {
-    width: 46px;
-    height: 46px;
+    width: 50px;
+    height: 50px;
   }
 
   .bond-item-icon svg {
-    width: 41px;
-    height: 41px;
+    width: 44px;
+    height: 44px;
   }
 
   .bond-item-info .data {
     font-size: 11px;
+
+    margin-bottom: 4px;
   }
 
   .bond-item-info .nome {
@@ -1235,19 +1219,11 @@ button {
 
   .summary-item-nominale {
     left: 18px;
-
-    /*
-       SOLO POCHI PIXEL PIÙ IN ALTO
-    */
     top: 98px !important;
   }
 
   .summary-item-lordo {
     left: 18px;
-
-    /*
-       NON ALZARE IL RIMBORSO LORDO
-    */
     top: 132px !important;
   }
 
@@ -1280,23 +1256,30 @@ button {
     font-size: 20px;
   }
 
+
+  /* LISTA BUONI */
+
   .bond-item {
     grid-template-columns:
-      44px
+      48px
       minmax(0, 1fr)
       100px;
 
     column-gap: 6px;
+
+    min-height: 68px;
+
+    padding: 8px 0;
   }
 
   .bond-item-icon {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
   }
 
   .bond-item-icon svg {
-    width: 39px;
-    height: 39px;
+    width: 42px;
+    height: 42px;
   }
 
   .bond-item-info .data {
@@ -1761,17 +1744,20 @@ Buono 3×4 con premio
   width="52"
   height="36"
   rx="6"
-  fill="#FFD400"/>
+  fill="#FFFFFF"
+  stroke="#0759C9"
+  stroke-width="2"/>
 
 <rect
   x="10"
   y="18"
   width="9"
   height="36"
+  rx="3"
   fill="#0759C9"/>
 
 <text
-  x="24"
+  x="23"
   y="42"
   font-family="Arial, sans-serif"
   font-size="19"
@@ -1781,20 +1767,20 @@ Buono 3×4 con premio
 </text>
 
 <rect
-  x="40"
+  x="39"
   y="31"
-  width="15"
+  width="16"
   height="3"
   rx="1.5"
-  fill="#FFFFFF"/>
+  fill="#0759C9"/>
 
 <rect
-  x="40"
+  x="39"
   y="39"
-  width="11"
+  width="12"
   height="3"
   rx="1.5"
-  fill="#FFFFFF"/>
+  fill="#0759C9"/>
 
 </svg>
 
@@ -2196,23 +2182,32 @@ function creaIconaBuono() {
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
+<!-- Buono bianco con bordo blu -->
+
 <rect
   x="10"
   y="18"
   width="52"
   height="36"
   rx="6"
-  fill="#FFD400"/>
+  fill="#FFFFFF"
+  stroke="#0759C9"
+  stroke-width="2"/>
+
+<!-- Fascia blu a sinistra -->
 
 <rect
   x="10"
   y="18"
   width="9"
   height="36"
+  rx="3"
   fill="#0759C9"/>
 
+<!-- Simbolo euro -->
+
 <text
-  x="24"
+  x="23"
   y="42"
   font-family="Arial, sans-serif"
   font-size="19"
@@ -2221,21 +2216,23 @@ function creaIconaBuono() {
 €
 </text>
 
-<rect
-  x="40"
-  y="31"
-  width="15"
-  height="3"
-  rx="1.5"
-  fill="#FFFFFF"/>
+<!-- Due righe -->
 
 <rect
-  x="40"
-  y="39"
-  width="11"
+  x="39"
+  y="31"
+  width="16"
   height="3"
   rx="1.5"
-  fill="#FFFFFF"/>
+  fill="#0759C9"/>
+
+<rect
+  x="39"
+  y="39"
+  width="12"
+  height="3"
+  rx="1.5"
+  fill="#0759C9"/>
 
 </svg>
 
