@@ -1,4 +1,4 @@
-const CACHE_NAME = "risparmio-postale-v12";
+const CACHE_NAME = "risparmio-postale-v13";
 
 const FILES_TO_CACHE = [
   "./",
@@ -60,13 +60,23 @@ self.addEventListener("activate", event => {
 self.addEventListener("fetch", event => {
 
   /*
-     Per i file dell'app proviamo sempre a prendere
-     la versione aggiornata dalla rete.
+     Per le richieste GET proviamo prima la rete
+     senza utilizzare la cache HTTP del browser.
+
+     In questo modo index.html, style.css e script.js
+     vengono aggiornati realmente.
   */
+
+  if (event.request.method !== "GET") {
+    return;
+  }
 
   event.respondWith(
 
-    fetch(event.request)
+    fetch(event.request, {
+      cache: "no-store"
+    })
+
       .then(response => {
 
         if (
@@ -92,11 +102,10 @@ self.addEventListener("fetch", event => {
         return response;
 
       })
+
       .catch(() => {
 
-        return caches.match(
-          event.request
-        );
+        return caches.match(event.request);
 
       })
 
