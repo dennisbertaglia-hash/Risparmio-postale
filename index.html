@@ -47,10 +47,6 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-u {
-  text-underline-offset: 3px;
-}
-
 
 /* =========================================================
    PAGINA PRINCIPALE
@@ -252,6 +248,7 @@ u {
   position: absolute;
 
   left: 22px;
+
   top: 101px;
 
   margin: 0;
@@ -268,7 +265,8 @@ u {
   position: absolute;
 
   left: 22px;
-  top: 158px;
+
+  top: 151px;
 
   margin: 0;
 
@@ -560,8 +558,8 @@ u {
    ========================================================= */
 
 .bond-item-icon {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
 
   border-radius: 50%;
 
@@ -575,8 +573,8 @@ u {
 }
 
 .bond-item-icon svg {
-  width: 36px;
-  height: 36px;
+  width: 39px;
+  height: 39px;
 
   display: block;
 }
@@ -1049,7 +1047,7 @@ u {
   .summary-item-lordo {
     left: 20px;
 
-    top: 158px !important;
+    top: 151px !important;
   }
 
   .summary-label {
@@ -1144,13 +1142,13 @@ u {
   }
 
   .bond-item-icon {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
   }
 
   .bond-item-icon svg {
-    width: 36px;
-    height: 36px;
+    width: 39px;
+    height: 39px;
   }
 
   .bond-item-info .data {
@@ -1251,7 +1249,7 @@ u {
   .summary-item-lordo {
     left: 18px;
 
-    top: 153px !important;
+    top: 146px !important;
   }
 
   .summary-value {
@@ -1300,13 +1298,13 @@ u {
   }
 
   .bond-item-icon {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
   }
 
   .bond-item-icon svg {
-    width: 36px;
-    height: 36px;
+    width: 39px;
+    height: 39px;
   }
 
   .bond-item-info .data {
@@ -1477,70 +1475,82 @@ Operazioni
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<rect
-  x="18"
-  y="17"
-  width="39"
-  height="26"
-  rx="4"
-  transform="rotate(-8 18 17)"
-  fill="#FFD400"/>
+<!-- banconote sovrapposte -->
 
 <rect
-  x="22"
-  y="18"
-  width="5"
-  height="25"
-  transform="rotate(-8 22 18)"
-  fill="#0759C9"/>
-
-<rect
-  x="17"
-  y="25"
+  x="15"
+  y="22"
   width="40"
-  height="27"
-  rx="4"
-  fill="#FFD400"/>
+  height="25"
+  rx="3"
+  transform="rotate(-7 15 22)"
+  fill="#E6C900"/>
 
 <rect
-  x="17"
-  y="25"
-  width="7"
+  x="13"
+  y="27"
+  width="43"
+  height="27"
+  rx="3"
+  fill="#FFD400"/>
+
+<!-- fascia blu -->
+
+<rect
+  x="13"
+  y="27"
+  width="8"
   height="27"
   fill="#0759C9"/>
 
+<!-- simbolo euro -->
+
+<text
+  x="17"
+  y="45"
+  font-family="Arial, sans-serif"
+  font-size="15"
+  font-weight="700"
+  fill="#FFFFFF">
+€
+</text>
+
+<!-- righe bianche -->
+
 <rect
-  x="31"
-  y="35"
-  width="19"
+  x="28"
+  y="36"
+  width="20"
   height="3"
   rx="1.5"
   fill="#FFFFFF"/>
 
 <rect
-  x="31"
-  y="42"
-  width="14"
+  x="28"
+  y="43"
+  width="15"
   height="3"
   rx="1.5"
   fill="#FFFFFF"/>
+
+<!-- cerchio verde + -->
 
 <circle
   cx="56"
   cy="53"
-  r="11"
+  r="10"
   fill="#45C96B"/>
 
 <path
   d="M56 47V59"
   stroke="#FFFFFF"
-  stroke-width="3.2"
+  stroke-width="3"
   stroke-linecap="round"/>
 
 <path
   d="M50 53H62"
   stroke="#FFFFFF"
-  stroke-width="3.2"
+  stroke-width="3"
   stroke-linecap="round"/>
 
 </svg>
@@ -1569,51 +1579,74 @@ Buono
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
+<!-- monete dietro -->
+
 <circle
-  cx="42"
+  cx="47"
   cy="22"
   r="8"
-  fill="#FFD400"/>
+  fill="#FFD400"
+  stroke="#E0B900"
+  stroke-width="1.5"/>
 
 <circle
-  cx="49"
+  cx="39"
   cy="27"
   r="8"
-  fill="#FFD400"/>
+  fill="#FFD400"
+  stroke="#E0B900"
+  stroke-width="1.5"/>
 
-<circle
-  cx="31"
-  cy="27"
-  r="8"
-  fill="#FFD400"/>
+<!-- portafoglio -->
 
 <path
-  d="M25 31H51C54.3 31 57 33.7 57 37V51C57 54.3 54.3 57 51 57H25C21.7 57 19 54.3 19 51V37C19 33.7 21.7 31 25 31Z"
+  d="M18 30
+     C18 27.8 19.8 26 22 26
+     H53
+     C55.2 26 57 27.8 57 30
+     V50
+     C57 52.2 55.2 54 53 54
+     H22
+     C19.8 54 18 52.2 18 50
+     V30Z"
   fill="#FFD400"/>
 
+<!-- bordo superiore portafoglio -->
+
 <path
-  d="M45 39H57V51H45C42.2 51 40 48.8 40 46C40 43.2 42.2 39 45 39Z"
+  d="M22 26H53C55.2 26 57 27.8 57 30"
+  stroke="#E0B900"
+  stroke-width="2"
+  stroke-linecap="round"/>
+
+<!-- chiusura blu -->
+
+<path
+  d="M44 36H57V48H44
+     C40.7 48 38 45.3 38 42
+     C38 38.7 40.7 36 44 36Z"
   fill="#0759C9"/>
 
 <circle
-  cx="50"
-  cy="45"
-  r="2"
+  cx="49"
+  cy="42"
+  r="2.2"
   fill="#FFFFFF"/>
 
+<!-- freccia verde verso l'alto -->
+
 <path
-  d="M18 40L30 28L42 40"
+  d="M18 50L30 38L42 50"
   stroke="#45C96B"
   stroke-width="7"
   stroke-linecap="round"
   stroke-linejoin="round"/>
 
 <path
-  d="M18 40V56H31V48"
+  d="M30 38V56"
   stroke="#45C96B"
   stroke-width="7"
-  stroke-linecap="round"
-  stroke-linejoin="round"/>
+  stroke-linecap="round"/>
 
 </svg>
 
@@ -2197,8 +2230,6 @@ function creaIconaBuono() {
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- Rettangolo bianco con bordo blu -->
-
 <rect
   x="11"
   y="20"
@@ -2208,8 +2239,6 @@ function creaIconaBuono() {
   fill="#FFFFFF"
   stroke="#0759C9"
   stroke-width="2.5"/>
-
-<!-- Simbolo euro a sinistra -->
 
 <text
   x="19"
@@ -2221,8 +2250,6 @@ function creaIconaBuono() {
 €
 </text>
 
-<!-- Prima riga -->
-
 <rect
   x="39"
   y="31"
@@ -2230,8 +2257,6 @@ function creaIconaBuono() {
   height="3"
   rx="1.5"
   fill="#0759C9"/>
-
-<!-- Seconda riga -->
 
 <rect
   x="39"
