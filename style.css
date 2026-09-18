@@ -230,11 +230,13 @@ u {
 }
 
 .summary-item-nominale {
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .summary-item-lordo {
   margin-bottom: 0;
+
+  position: relative;
 
   top: -14px;
 }
@@ -981,10 +983,6 @@ u {
     font-size: 18px;
   }
 
-  .summary-item-lordo {
-    top: -14px;
-  }
-
   .summary-label {
     font-size: 14px;
   }
@@ -1185,10 +1183,6 @@ u {
     margin-bottom: 34px;
   }
 
-  .summary-item-lordo {
-    top: -14px;
-  }
-
   .summary-value {
     font-size: 18px;
   }
@@ -1252,47 +1246,4 @@ u {
   .bond-item-value .valore {
     font-size: 13px;
   }
-}
-/* =========================================================
-   CORREZIONE FINALE
-   ========================================================= */
-
-/* Valore rimborso lordo + importo più in alto */
-
-.summary-item-lordo {
-  position: relative !important;
-  top: -14px !important;
-  transform: none !important;
-}
-
-
-/* Riquadro occhio + ? più piccolo */
-
-.top-icons {
-  height: 44px !important;
-  padding: 3px 6px !important;
-  gap: 5px !important;
-  border-radius: 23px !important;
-}
-
-
-/* Occhio */
-
-.eye-button {
-  width: 30px !important;
-  height: 30px !important;
-}
-
-.eye-icon {
-  width: 24px !important;
-  height: 24px !important;
-}
-
-
-/* Punto interrogativo */
-
-.question-button {
-  width: 30px !important;
-  height: 30px !important;
-  font-size: 18px !important;
 }
