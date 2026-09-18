@@ -10,1143 +10,6 @@
 
 <title>Buoni</title>
 
-<style>
-
-* {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100%;
-
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "SF Pro Text",
-    "SF Pro Display",
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-
-  background: #ffffff;
-  color: #111111;
-
-  -webkit-font-smoothing: antialiased;
-}
-
-body {
-  overflow-x: hidden;
-}
-
-button {
-  font: inherit;
-  -webkit-tap-highlight-color: transparent;
-}
-
-
-/* =========================================================
-   PAGINA PRINCIPALE
-   ========================================================= */
-
-#paginaPrincipale {
-  width: 100%;
-  min-height: 100vh;
-  background: #ffffff;
-}
-
-.main-content {
-  width: 100%;
-  padding: 0 18px 80px;
-}
-
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-.top-header {
-  position: relative;
-  width: 100%;
-  height: 140px;
-  background: #ffffff;
-}
-
-.top-header .back-button {
-  position: absolute;
-
-  left: 18px;
-  top: 32px;
-
-  width: 48px;
-  height: 48px;
-
-  padding: 0;
-
-  border: 1.5px solid #111111;
-  border-radius: 50%;
-
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.top-header .back-button::before {
-  content: "";
-
-  width: 12px;
-  height: 12px;
-
-  border-left: 4px solid #111111;
-  border-bottom: 4px solid #111111;
-
-  transform: rotate(45deg);
-
-  margin-left: 4px;
-}
-
-.top-header h1 {
-  position: absolute;
-
-  left: 18px;
-  bottom: 7px;
-
-  margin: 0;
-
-  font-size: 20px;
-  line-height: 1.1;
-
-  font-weight: 500;
-
-  letter-spacing: -0.4px;
-}
-
-
-/* =========================================================
-   OCCHIO + ?
-   ========================================================= */
-
-.top-icons {
-  position: absolute;
-
-  right: 18px;
-  top: 35px;
-
-  height: 50px;
-
-  padding: 5px 8px;
-
-  border: 1.5px solid #111111;
-  border-radius: 27px;
-
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 8px;
-}
-
-.eye-button {
-  width: 34px;
-  height: 34px;
-
-  padding: 0;
-
-  border: 0;
-
-  background: transparent;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.eye-icon {
-  width: 28px;
-  height: 28px;
-
-  display: block;
-}
-
-.question-button {
-  width: 34px;
-  height: 34px;
-
-  padding: 0;
-
-  border: 1.5px solid #111111;
-  border-radius: 50%;
-
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 20px;
-  line-height: 1;
-
-  font-weight: 500;
-
-  color: #111111;
-}
-
-
-/* =========================================================
-   RIQUADRO AZZURRO
-   ========================================================= */
-
-.summary-card {
-  width: 100%;
-
-  height: 215px;
-
-  margin-top: 28px;
-
-  padding: 31px 22px 14px;
-
-  background: #edf6ff;
-
-  border-radius: 24px;
-}
-
-.summary-card h2 {
-  margin: 4px 0 0;
-
-  font-size: 18px;
-  line-height: 1.2;
-
-  font-weight: 500;
-
-  letter-spacing: -0.35px;
-}
-
-.summary-item {
-  position: relative;
-
-  margin-top: 51px;
-
-  transform: translateY(-7px);
-}
-
-.summary-item-lordo {
-  margin-top: 27px;
-}
-
-.summary-label {
-  display: block;
-
-  margin: 0 0 3px;
-
-  font-size: 15px;
-  line-height: 1.2;
-
-  font-weight: 300;
-}
-
-.summary-value {
-  display: block;
-
-  margin: 4px 0 0;
-
-  font-size: 18px;
-  line-height: 1.15;
-
-  font-weight: 400;
-
-  letter-spacing: -0.2px;
-}
-
-
-/* =========================================================
-   OPERAZIONI
-   ========================================================= */
-
-.operations-section {
-  width: 100%;
-}
-
-.section-title {
-  margin: 24px 0 0;
-
-  font-size: 20px;
-  line-height: 1.15;
-
-  font-weight: 500;
-
-  letter-spacing: -0.3px;
-}
-
-.operations {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 31px;
-
-  margin-top: 18px;
-
-  padding-left: 2px;
-}
-
-.operation-button {
-  width: 105px;
-  min-width: 105px;
-
-  flex: 0 0 105px;
-
-  padding: 0;
-
-  border: 0;
-
-  background: transparent;
-
-  color: #111111;
-
-  text-align: center;
-}
-
-.operation-icon {
-  width: 72px;
-  height: 72px;
-
-  margin: 0 auto 10px;
-
-  border-radius: 50%;
-
-  background: #edf6ff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: visible;
-}
-
-.operation-icon svg {
-  width: 70px;
-  height: 70px;
-
-  display: block;
-
-  overflow: visible;
-}
-
-.operation-button > span:last-child {
-  display: block;
-
-  font-size: 14px;
-  line-height: 1.15;
-
-  font-weight: 400;
-}
-
-
-/* =========================================================
-   ELENCO
-   ========================================================= */
-
-.your-bonds {
-  margin-top: 32px;
-}
-
-.elenco-title {
-  margin: 0;
-
-  font-size: 20px;
-  line-height: 1.15;
-
-  font-weight: 500;
-
-  letter-spacing: -0.3px;
-}
-
-
-/* =========================================================
-   FILTRI
-   ========================================================= */
-
-.filtri {
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  margin-top: 17px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  scrollbar-width: none;
-}
-
-.filtri::-webkit-scrollbar {
-  display: none;
-}
-
-.filtro {
-  flex: 0 0 auto;
-
-  height: 32px;
-
-  padding: 0 11px;
-
-  border: 1.5px solid #0759c9;
-
-  border-radius: 17px;
-
-  background: #ffffff;
-
-  color: #0759c9;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 14px;
-  line-height: 1;
-
-  font-weight: 600;
-
-  white-space: nowrap;
-}
-
-.filtro-filtra {
-  width: 106px;
-  min-width: 106px;
-
-  gap: 5px;
-}
-
-.filtro-sliders-icon {
-  width: 19px;
-  height: 19px;
-}
-
-.filtro-sliders-icon line {
-  stroke: #0759c9;
-  stroke-width: 1.7;
-
-  stroke-linecap: round;
-}
-
-.filtro-sliders-icon circle {
-  fill: #ffffff;
-
-  stroke: #0759c9;
-  stroke-width: 1.8;
-}
-
-.filtro.prodotto {
-  width: 105px;
-  min-width: 105px;
-}
-
-.filtro.periodo {
-  width: 161px;
-  min-width: 161px;
-}
-
-.freccia-down {
-  width: 9px;
-  height: 9px;
-
-  margin-left: 7px;
-  margin-top: -4px;
-
-  border-right: 2px solid #0759c9;
-  border-bottom: 2px solid #0759c9;
-
-  transform: rotate(45deg);
-}
-
-
-/* =========================================================
-   LISTA BUONI
-   ========================================================= */
-
-#listaBuoni {
-  width: 100%;
-  margin-top: 5px;
-  display: block;
-}
-
-.bond-item {
-  width: 100%;
-
-  min-height: 68px;
-
-  margin: 0;
-
-  padding: 9px 0;
-
-  background: #ffffff;
-
-  display: grid;
-
-  grid-template-columns:
-    50px
-    minmax(0, 1fr)
-    112px;
-
-  column-gap: 8px;
-
-  align-items: center;
-
-  cursor: pointer;
-}
-
-.bond-item-icon {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-
-  background: #edf6ff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-.bond-item-icon svg {
-  width: 44px;
-  height: 44px;
-
-  display: block;
-}
-
-.bond-item-info {
-  min-width: 0;
-}
-
-.bond-item-info .data {
-  margin: 0 0 3px;
-
-  color: #777777;
-
-  font-size: 12px;
-  line-height: 1.2;
-
-  font-weight: 300;
-}
-
-.bond-item-info .nome {
-  margin: 0;
-
-  color: #111111;
-
-  font-size: 15px;
-  line-height: 1.2;
-
-  font-weight: 500;
-}
-
-.bond-item-value {
-  min-width: 0;
-
-  text-align: right;
-}
-
-.bond-item-value .label {
-  display: block;
-
-  margin: 0 0 3px;
-
-  color: #777777;
-
-  font-size: 10px;
-  line-height: 1.1;
-
-  font-weight: 300;
-
-  white-space: nowrap;
-}
-
-.bond-item-value .valore {
-  display: block;
-
-  color: #111111;
-
-  font-size: 15px;
-  line-height: 1.1;
-
-  font-weight: 500;
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   DETTAGLIO
-   ========================================================= */
-
-#paginaDettaglio {
-  width: 100%;
-  min-height: 100vh;
-
-  padding: 0 18px 105px;
-
-  background: #ffffff;
-
-  overflow-x: hidden;
-}
-
-.pagina-dettaglio {
-  width: 100%;
-}
-
-.detail-header {
-  position: relative;
-
-  width: 100%;
-  height: 132px;
-}
-
-.detail-back {
-  position: absolute;
-
-  left: 0;
-  top: 32px;
-
-  width: 48px;
-  height: 48px;
-
-  padding: 0;
-
-  border: 1.5px solid #111111;
-
-  border-radius: 50%;
-
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  z-index: 5;
-}
-
-.detail-back svg {
-  width: 30px;
-  height: 30px;
-}
-
-.detail-header h1 {
-  position: absolute;
-
-  left: 0;
-  bottom: 7px;
-
-  width: 100%;
-
-  margin: 0;
-
-  font-size: 23px;
-  line-height: 1.05;
-
-  font-weight: 600;
-
-  letter-spacing: -0.4px;
-}
-
-
-/* =========================================================
-   CARD DETTAGLIO
-   ========================================================= */
-
-.detail-card {
-  width: 100%;
-
-  background: #edf6ff;
-
-  border-radius: 24px;
-
-  overflow: hidden;
-}
-
-.detail-card-top {
-  position: relative;
-
-  width: 100%;
-  height: 230px;
-}
-
-.detail-buono-icon {
-  position: absolute;
-
-  top: 16px;
-  left: 50%;
-
-  transform: translateX(-50%);
-
-  width: 82px;
-  height: 82px;
-
-  border-radius: 50%;
-
-  background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  overflow: hidden;
-}
-
-.detail-buono-icon svg {
-  width: 76px;
-  height: 76px;
-
-  display: block;
-}
-
-.detail-rimborso {
-  position: absolute;
-
-  left: 0;
-  right: 0;
-
-  bottom: 48px;
-
-  text-align: center;
-}
-
-.detail-rimborso span {
-  display: block;
-
-  font-size: 29px;
-  line-height: 1;
-
-  font-weight: 600;
-
-  letter-spacing: -0.7px;
-}
-
-.detail-rimborso-label {
-  position: absolute;
-
-  left: 0;
-  right: 0;
-
-  bottom: -28px;
-
-  text-align: center;
-
-  font-size: 14px;
-  line-height: 1.1;
-
-  font-weight: 300;
-}
-
-
-/* =========================================================
-   ACCREDITO
-   ========================================================= */
-
-.detail-account {
-  min-height: 68px;
-
-  border-top: 1.5px solid #ffffff;
-
-  background: #edf6ff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 8px;
-
-  padding: 9px 16px;
-}
-
-.account-icon {
-  width: 44px;
-  height: 34px;
-
-  flex: 0 0 44px;
-}
-
-.account-icon svg {
-  width: 44px;
-  height: 34px;
-}
-
-.account-text {
-  font-size: 14px;
-  line-height: 1.2;
-
-  font-weight: 300;
-}
-
-
-/* =========================================================
-   DETTAGLI
-   ========================================================= */
-
-.detail-section-title {
-  margin: 28px 0 22px;
-
-  font-size: 24px;
-  line-height: 1.1;
-
-  font-weight: 600;
-}
-
-.detail-field {
-  margin-bottom: 23px;
-}
-
-.detail-label {
-  display: block;
-
-  margin-bottom: 5px;
-
-  color: #777777;
-
-  font-size: 14px;
-  line-height: 1.2;
-
-  font-weight: 300;
-}
-
-.detail-value {
-  display: block;
-
-  color: #111111;
-
-  font-size: 16px;
-  line-height: 1.25;
-
-  font-weight: 400;
-}
-
-.detail-divider {
-  width: 100%;
-  height: 1px;
-
-  margin: 21px 0;
-
-  background: #e3e3e3;
-}
-
-.last-detail-field {
-  margin-bottom: 0;
-}
-
-
-/* =========================================================
-   PULSANTE
-   ========================================================= */
-
-.bottom-action {
-  position: fixed;
-
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  z-index: 100;
-
-  padding: 10px 18px 14px;
-
-  background: rgba(255,255,255,0.97);
-
-  border-top: 1px solid #dddddd;
-}
-
-.bottom-action button {
-  width: 100%;
-  height: 52px;
-
-  border: 0;
-
-  border-radius: 27px;
-
-  background: #0759c9;
-
-  color: #ffffff;
-
-  font-size: 18px;
-  line-height: 1;
-
-  font-weight: 500;
-
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-
-/* =========================================================
-   IPHONE PICCOLO
-   ========================================================= */
-
-@media (max-width: 390px) {
-
-  .main-content {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .top-header .back-button {
-    left: 16px;
-    top: 30px;
-
-    width: 46px;
-    height: 46px;
-  }
-
-  .top-header h1 {
-    left: 16px;
-    bottom: 7px;
-    font-size: 20px;
-  }
-
-  .top-icons {
-    right: 16px;
-    top: 33px;
-
-    height: 48px;
-
-    padding: 4px 7px;
-
-    gap: 6px;
-  }
-
-  .eye-button {
-    width: 32px;
-    height: 32px;
-  }
-
-  .eye-icon {
-    width: 26px;
-    height: 26px;
-  }
-
-  .question-button {
-    width: 32px;
-    height: 32px;
-    font-size: 19px;
-  }
-
-  .summary-card {
-    height: 210px;
-
-    padding: 31px 20px 14px;
-
-    border-radius: 23px;
-  }
-
-  .summary-label {
-    font-size: 14px;
-  }
-
-  .summary-value {
-    font-size: 18px;
-  }
-
-  .operations {
-    gap: 24px;
-  }
-
-  .operation-button {
-    width: 100px;
-    min-width: 100px;
-    flex-basis: 100px;
-  }
-
-  .operation-icon {
-    width: 68px;
-    height: 68px;
-  }
-
-  .operation-icon svg {
-    width: 66px;
-    height: 66px;
-  }
-
-  .operation-button > span:last-child {
-    font-size: 13px;
-  }
-
-  .your-bonds {
-    margin-top: 30px;
-  }
-
-  .bond-item {
-    grid-template-columns:
-      46px
-      minmax(0, 1fr)
-      106px;
-
-    column-gap: 7px;
-
-    min-height: 64px;
-
-    padding: 8px 0;
-  }
-
-  .bond-item-icon {
-    width: 46px;
-    height: 46px;
-  }
-
-  .bond-item-icon svg {
-    width: 41px;
-    height: 41px;
-  }
-
-  .bond-item-info .data {
-    font-size: 11px;
-  }
-
-  .bond-item-info .nome {
-    font-size: 14px;
-  }
-
-  .bond-item-value .label {
-    font-size: 9px;
-  }
-
-  .bond-item-value .valore {
-    font-size: 14px;
-  }
-
-  #paginaDettaglio {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .detail-header {
-    height: 128px;
-  }
-
-  .detail-back {
-    top: 30px;
-
-    width: 46px;
-    height: 46px;
-  }
-
-  .detail-header h1 {
-    bottom: 7px;
-    font-size: 22px;
-  }
-
-  .detail-card {
-    border-radius: 23px;
-  }
-
-  .detail-card-top {
-    height: 220px;
-  }
-
-  .detail-buono-icon {
-    width: 78px;
-    height: 78px;
-  }
-
-  .detail-buono-icon svg {
-    width: 72px;
-    height: 72px;
-  }
-
-  .detail-rimborso span {
-    font-size: 27px;
-  }
-
-  .detail-section-title {
-    font-size: 23px;
-  }
-}
-
-
-/* =========================================================
-   IPHONE MOLTO STRETTO
-   ========================================================= */
-
-@media (max-width: 360px) {
-
-  .summary-card {
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .summary-card h2 {
-    font-size: 17px;
-  }
-
-  .summary-value {
-    font-size: 18px;
-  }
-
-  .operations {
-    gap: 18px;
-  }
-
-  .operation-button {
-    width: 94px;
-    min-width: 94px;
-    flex-basis: 94px;
-  }
-
-  .operation-icon {
-    width: 64px;
-    height: 64px;
-  }
-
-  .operation-icon svg {
-    width: 62px;
-    height: 62px;
-  }
-
-  .bond-item {
-    grid-template-columns:
-      44px
-      minmax(0, 1fr)
-      100px;
-
-    column-gap: 6px;
-  }
-
-  .bond-item-icon {
-    width: 44px;
-    height: 44px;
-  }
-
-  .bond-item-icon svg {
-    width: 39px;
-    height: 39px;
-  }
-
-  .bond-item-info .data {
-    font-size: 10px;
-  }
-
-  .bond-item-info .nome {
-    font-size: 13px;
-  }
-
-  .bond-item-value .label {
-    font-size: 8.5px;
-  }
-
-  .bond-item-value .valore {
-    font-size: 13px;
-  }
-}
-
-</style>
 </head>
 
 <body>
@@ -1297,8 +160,6 @@ Operazioni
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- BUONO POSTERIORE -->
-
 <rect
   x="18"
   y="17"
@@ -1316,9 +177,6 @@ Operazioni
   transform="rotate(-8 22 18)"
   fill="#0759C9"/>
 
-
-<!-- BUONO ANTERIORE -->
-
 <rect
   x="17"
   y="25"
@@ -1327,17 +185,12 @@ Operazioni
   rx="4"
   fill="#FFD400"/>
 
-<!-- FASCIA BLU -->
-
 <rect
   x="17"
   y="25"
   width="7"
   height="27"
   fill="#0759C9"/>
-
-
-<!-- RIGA 1 -->
 
 <rect
   x="31"
@@ -1347,9 +200,6 @@ Operazioni
   rx="1.5"
   fill="#FFFFFF"/>
 
-
-<!-- RIGA 2 -->
-
 <rect
   x="31"
   y="42"
@@ -1357,9 +207,6 @@ Operazioni
   height="3"
   rx="1.5"
   fill="#FFFFFF"/>
-
-
-<!-- PLUS VERDE -->
 
 <circle
   cx="56"
@@ -1407,15 +254,11 @@ Buono
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- MONETA DIETRO -->
-
 <circle
   cx="42"
   cy="22"
   r="8"
   fill="#FFD400"/>
-
-<!-- MONETA DESTRA -->
 
 <circle
   cx="49"
@@ -1423,39 +266,25 @@ Buono
   r="8"
   fill="#FFD400"/>
 
-<!-- MONETA SINISTRA -->
-
 <circle
   cx="31"
   cy="27"
   r="8"
   fill="#FFD400"/>
 
-
-<!-- PORTAFOGLIO -->
-
 <path
   d="M25 31H51C54.3 31 57 33.7 57 37V51C57 54.3 54.3 57 51 57H25C21.7 57 19 54.3 19 51V37C19 33.7 21.7 31 25 31Z"
   fill="#FFD400"/>
 
-
-<!-- PARTE BLU PORTAFOGLIO -->
-
 <path
   d="M45 39H57V51H45C42.2 51 40 48.8 40 46C40 43.2 42.2 39 45 39Z"
   fill="#0759C9"/>
-
-
-<!-- PUNTO BIANCO -->
 
 <circle
   cx="50"
   cy="45"
   r="2"
   fill="#FFFFFF"/>
-
-
-<!-- FRECCIA VERDE -->
 
 <path
   d="M18 40L30 28L42 40"
@@ -1617,8 +446,6 @@ Buono 3×4 con premio
   fill="none"
   xmlns="http://www.w3.org/2000/svg">
 
-<!-- BUONO GIALLO -->
-
 <rect
   x="10"
   y="18"
@@ -1627,18 +454,12 @@ Buono 3×4 con premio
   rx="6"
   fill="#FFD400"/>
 
-
-<!-- FASCIA BLU -->
-
 <rect
   x="10"
   y="18"
   width="9"
   height="36"
   fill="#0759C9"/>
-
-
-<!-- EURO -->
 
 <text
   x="24"
@@ -1649,9 +470,6 @@ Buono 3×4 con premio
   fill="#0759C9">
 €
 </text>
-
-
-<!-- RIGHE -->
 
 <rect
   x="40"
@@ -2157,14 +975,10 @@ function generaListaBuoni() {
       );
 
 
-      /* ICONA */
-
       riga.appendChild(
         creaIconaBuono()
       );
 
-
-      /* TESTO */
 
       const informazioni =
         document.createElement("div");
@@ -2189,8 +1003,6 @@ Buono 3×4 con premio
       );
 
 
-      /* VALORE */
-
       const valore =
         document.createElement("div");
 
@@ -2214,8 +1026,6 @@ ${euro(buono.nominale)}
       );
 
 
-      /* CLICK */
-
       riga.addEventListener(
         "click",
         function() {
@@ -2225,8 +1035,6 @@ ${euro(buono.nominale)}
         }
       );
 
-
-      /* TASTIERA */
 
       riga.addEventListener(
         "keydown",
