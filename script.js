@@ -10,8 +10,8 @@
 const buoni = [
   {
     nominale: 500,
-    sottoscritto: "21 Ottobre 2026",
-    scadenza: "21 Ottobre 2038"
+    sottoscritto: "23 Ottobre 2026",
+    scadenza: "23 Ottobre 2038"
   },
   {
     nominale: 1500,
